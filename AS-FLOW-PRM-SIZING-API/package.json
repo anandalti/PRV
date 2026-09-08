@@ -7,7 +7,11 @@
     "start": "node ./bin/www",
     "dev": "nodemon ./bin/www",
     "start:dev": "env-cmd -f .env.dev nodemon ./bin/www",
-    "start:stage": "env-cmd -f .env.stage nodemon ./bin/www"
+    "start:stage": "env-cmd -f .env.stage nodemon ./bin/www",
+    "start:local": "node --env-file=.env.local ./bin/www",
+    "db:setup:local": "node --env-file=.env.local scripts/setup-local-db.js",
+    "db:workflow:local": "node --env-file=.env.local scripts/migrate-workflow-details.js --backfill",
+    "test:workflow:local": "node --env-file=.env.local --test test/workflow-persistence.test.js"
   },
   "repository": {
     "type": "git",

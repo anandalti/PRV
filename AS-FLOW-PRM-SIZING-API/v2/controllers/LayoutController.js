@@ -70,6 +70,9 @@ const updateWorkflowLayout = async(req,res) =>{
         }
         return res.status(200).json(data);
     } catch (error) {
+        if (error?.status) {
+            return res.status(error.status).json({ status: "Error", error: error.message });
+        }
         console.error('Error fetching workflow layout:', error);
         return res.status(500).json({ status: "Error", error: 'Internal Server Error' });
     }

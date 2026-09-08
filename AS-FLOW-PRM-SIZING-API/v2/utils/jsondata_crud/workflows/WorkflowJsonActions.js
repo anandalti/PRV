@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { saveWorkflowDetails, normalizeWorkflowId } = require('../../../service/layoutjsons/workflowPersistence');
 const { createSections, deleteSections, 
     //getWorkflowSections 
 
@@ -333,23 +334,17 @@ const fetchSectionFieldsData=()=>{
 }
 const updateWorkFlowFile = async (workFlowId) => {
     try {
-        // CWE-23: workFlowId must be a non-negative integer — enforced at controller;
-        // guard here as defence-in-depth.
-        if (!workFlowId || !/^\d+$/.test(String(workFlowId))) {
-            console.error('[updateWorkFlowFile] Invalid workFlowId:', workFlowId);
-            return { status: 'error', message: 'Invalid workFlowId' };
-        }
-        let filename = `workflowSections${workFlowId}.json`;
-        const layoutFilePath = path.join(__dirname, `../../../data/workflows/`);
+        workFlowId = normalizeWorkflowId(workFlowId);
         let WorkflowData = [];
         let PopupData = [];
+        let generatedWorkflow = [];
+        let generatedPopup = null;
         
         const fileDataMap = fetchSectionFieldsData();
         
         let sections = fileDataMap['workflowSections.json'].filter(section => parseInt(section.WorkflowId) === parseInt(workFlowId));
-        if (!sections) {
-            console.error('No sections found for workflowId:', workFlowId);
-            return;
+        if (!sections.length) {
+            throw Object.assign(new Error(`No sections found for workflowId: ${workFlowId}`), { status: 404 });
         }
         // console.log(' >>>>>>>>>>>>>> In updateWorkFlowFile >>>>> ',workFlowId,sections?.length);
         if (sections?.length > 0) {
@@ -385,9 +380,8 @@ const updateWorkFlowFile = async (workFlowId) => {
             
             let finalData=[];
             // console.log('sectionFieldIds >>> popupSectionFieldIds >>>>>>> ',sectionFieldIds?.length,popupSectionFieldIds?.length)
-            if (sectionFieldIds?.length > 0) {
+            if (WorkflowData.length > 0) {
                 // console.log('sectionFieldIds >>>>>>> ',sectionFieldIds?.length,path.join(layoutFilePath, filename))
-                filename = `workflowSections${workFlowId}.json`;
                 finalData = await getSectionFieldsDetails(sectionFieldIds, WorkflowData,fileDataMap,workFlowId);
 
                 let localSortedData=[];
@@ -397,34 +391,25 @@ const updateWorkFlowFile = async (workFlowId) => {
                     localSortedData.push({...section,fields:sortedFields});
                 }
                 // console.log(path.join(layoutFilePath, filename),finalData?.length)
-                const resolvedWorkflowWritePath = path.resolve(layoutFilePath, filename);
-                // CWE-23: ensure resolved path stays within the workflows directory
-                if (!resolvedWorkflowWritePath.startsWith(path.resolve(layoutFilePath))) {
-                    throw new Error('Path traversal attempt detected in workflow write');
-                }
-                fs.writeFileSync(resolvedWorkflowWritePath, JSON.stringify(localSortedData, null, 2), 'utf8');
+                generatedWorkflow = localSortedData;
             }
             if(popupSectionFieldIds?.length > 0){
                 // console.log('popupSectionFieldIds >>>>>>> ',popupSectionFieldIds?.length)
-                if(workFlowId==12){
-                    filename = `FireSizingPopup.json`;
-                }else{
-                    filename = `API2000Popup.json`;
-                }
-                
                 finalData = await getSectionFieldsDetails(popupSectionFieldIds, PopupData,fileDataMap,workFlowId,true);
                 finalData=finalData[0];
                 // console.log(path.join(layoutFilePath, filename))
-                fs.writeFileSync(path.join(layoutFilePath, filename), JSON.stringify(finalData, null, 2), 'utf8');
+                generatedPopup = finalData;
             }
             // Update the data in json file at layout FilePath in filename
             
         }
 
-        // Update the layout file with the new sections
+        // Publish the same generated JSON to PostgreSQL and the backend files.
+        await saveWorkflowDetails(workFlowId, generatedWorkflow, generatedPopup);
         return { status: "Success", data: WorkflowData };
     } catch (error) {
         console.error('Error updating workflow layout:', error);
+        throw error;
     }
 
 }
