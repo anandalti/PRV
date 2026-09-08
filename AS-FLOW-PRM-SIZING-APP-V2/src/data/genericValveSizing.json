@@ -1,0 +1,572 @@
+[
+  {
+    "sectionName": "BasicRequirements",
+    "gridProps": {
+      "xs": 5
+    },
+    "style": {
+      "padding": 0,
+      "boxShadow": "none"
+    },
+    "blocks": [
+      {
+        "fieldType": "FormFields",
+        "displayType": "form",
+        "fields": [
+          {
+            "fieldName": "ManufacturerORBrand",
+            "label": "Manufacturer / Brand",
+            "type": "combobox",
+            "fieldDisplayOrder": 1,
+            "mandatory": false,
+            "defaultValue": "",
+            "disabled": false,
+            "visible": true,
+            "grid": 4,
+            "dimensionName": "",
+            "infoText": "",
+            "value": "",
+            "visibility": true,
+            "sourceKey": "brands",
+            "dependsOn": null,
+            "options": [],
+            "validations": []
+          },
+          {
+            "fieldName": "Model",
+            "label": "Model",
+            "type": "combobox",
+            "fieldDisplayOrder": 2,
+            "mandatory": false,
+            "defaultValue": "",
+            "disabled": false,
+            "visible": true,
+            "grid": 4,
+            "dimensionName": "",
+            "infoText": "",
+            "value": "",
+            "visibility": true,
+            "sourceKey": "models",
+            "options": [],
+            "validations": []
+          },
+          {
+            "fieldName": "Orifice",
+            "label": "Orifice",
+            "type": "combobox",
+            "fieldDisplayOrder": 1,
+            "mandatory": false,
+            "defaultValue": "",
+            "disabled": false,
+            "visible": true,
+            "grid": 4,
+            "dimensionName": "",
+            "infoText": "",
+            "value": "",
+            "visibility": true,
+            "sourceKey": "orifice",
+            "options": [],
+            "validations": []
+          },
+          {
+            "fieldName": "KandAdataset",
+            "label": "K & A dataset",
+            "type": "combobox",
+            "fieldDisplayOrder": 1,
+            "mandatory": false,
+            "defaultValue": "NonDataSet",
+            "disabled": false,
+            "visible": true,
+            "grid": 4,
+            "dimensionName": "",
+            "infoText": "",
+            "value": "",
+            "visibility": true,
+            "options": [
+              {
+                "label": "ASME",
+                "value": "ASME"
+              },
+              {
+                "label": "API",
+                "value": "API"
+              },
+              {
+                "label": "Non Data Set",
+                "value": "NonDataSet"
+              }
+            ],
+            "validations": []
+          },
+          {
+            "fieldName": "OrificeArea",
+            "label": "Orifice Area",
+            "type": "inputUom",
+            "UomFieldName": "OrificeAreaUOM",
+            "fieldDisplayOrder": 2,
+            "mandatory": false,
+            "defaultValue": "",
+            "disabled": false,
+            "visible": true,
+            "infoText": "Orifice Area [A]",
+            "grid": 4,
+            "dimensionName": ["area"],
+            "validations": [],
+            "value": "",
+            "visibility": true,
+            "formId": "GenericValveSizing",
+            "options": [],
+            "defaultUnit": {}
+          },
+          {
+            "fieldName": "DistanceFromValve",
+            "label": "Distance From Valve",
+            "type": "inputUom",
+            "UomFieldName": "DistanceFromValveUOM",
+            "fieldDisplayOrder": 2,
+            "mandatory": false,
+            "defaultValue": "",
+            "disabled": false,
+            "visible": true,
+            "infoText": "Distance from Valve [r]",
+            "grid": 4,
+            "dimensionName": ["length"],
+            "validations": [],
+            "value": "",
+            "visibility": true,
+            "formId": "GenericValveSizing",
+            "options": [],
+            "defaultUnit": {}
+          },
+          {
+            "fieldName": "InletDiameter",
+            "label": "Inlet Diameter",
+            "type": "inputUom",
+            "UomFieldName": "InletOutletDiameterUOM",
+            "fieldDisplayOrder": 2,
+            "mandatory": false,
+            "defaultValue": "",
+            "disabled": false,
+            "visible": true,
+            "infoText": "Inlet Diameter [Di]",
+            "grid": 4,
+            "dimensionName": ["lengthforvalve"],
+            "validations": [],
+            "value": "",
+            "visibility": true,
+            "formId": "GenericValveSizing",
+            "options": [],
+            "defaultUnit": {}
+          },
+          {
+            "fieldName": "OutletDiameter",
+            "label": "Outlet Diameter",
+            "type": "inputUom",
+            "UomFieldName": "InletOutletDiameterUOM",
+            "fieldDisplayOrder": 2,
+            "mandatory": false,
+            "defaultValue": "",
+            "disabled": false,
+            "visible": true,
+            "infoText": "Outlet Diameter [Do]",
+            "grid": 4,
+            "dimensionName": ["lengthforvalve"],
+            "validations": [],
+            "value": "",
+            "visibility": true,
+            "formId": "GenericValveSizing",
+            "options": [],
+            "defaultUnit": {}
+          },
+          {
+            "fieldName": "IsDualOutletValve",
+            "label": "Is Dual Outlet Valve",
+            "type": "checkbox",
+            "fieldDisplayOrder": 2,
+            "mandatory": false,
+            "grid": 4,
+            "defaultValue": false,
+            "disabled": false,
+            "visible": true,
+            "infoText": "",
+            "dimensionName": "",
+            "validations": []
+          },
+          {
+            "fieldName": "info",
+            "label": "Configuration and associated reporting is not available for generic valves.",
+            "type": "textinfo",
+            "fieldDisplayOrder": 1,
+            "mandatory": false,
+            "defaultValue": "",
+            "disabled": true,
+            "visible": true,
+            "grid": 4,
+            "infoText": "",
+            "dimensionName": "",
+            "validations": []
+          }
+        ],
+        "itemProps": {
+          "sx": { "padding": 0, "boxShadow": "none", "marginBottom": "0px" }
+        },
+        "customStyle": {
+          "padding": "0px",
+          "marginTop": "0px"
+        }
+      }
+    ]
+  },
+  {
+    "sectionName": "SizingCoefficients",
+    "gridProps": {
+      "xs": 7,
+      "style": { "paddingLeft": "0px" }
+    },
+    "subSections": [
+      {
+        "subSectionName": "Subsection1",
+        "style": {
+          "boxShadow": "none",
+          "padding": 0
+        },
+        "fieldset": {
+          "legend": "Sizing Coefficients",
+          "border": "1px solid #ccc",
+          "borderRadius": "0px",
+          "paddingBottom": "0px"
+        },
+        "itemProps": {
+          "sx": { "boxShadow": "none", "padding": 0, "marginBottom": "" }
+        },
+        "gridContainer": {
+          "spacing": 2,
+          "children": [
+            {
+              "gridProps": {
+                "xs": 6
+              },
+              "blocks": [
+                {
+                  "fieldType": "FormFields",
+                  "displayType": "form",
+                  "fields": [
+                    {
+                      "fieldName": "K",
+                      "label": "K",
+                      "type": "radioInput",
+                      "fieldDisplayOrder": 2,
+                      "mandatory": false,
+                      "defaultValue": [
+                        {
+                          "target": {
+                            "id": "Kd",
+                            "symbol": "Calculate",
+                            "expression": "Kd/1.111",
+                            "expressionReqFields": ["Kd"],
+                            "nextRound": false
+                          },
+                          "value": ""
+                        }
+                      ],
+                      "disabled": false,
+                      "visible": true,
+                      "infoText": "",
+                      "grid": 6,
+                      "validations": [
+                        {
+                          "id": "K",
+                          "minValue": 1,
+                          "message": {
+                            "type": "error",
+                            "message": "Kgt1"
+                          }
+                        }
+                      ],
+                      "dimensionName": "",
+                      "fieldGroupType": "RADIO_GROUP",
+                      "fieldGroupName": "IsDensityOrSpVolume",
+                      "defaultSelected": "K",
+                      "regex": "NOT_ALLOW_NEGATIVE"
+                    },
+                    {
+                      "fieldName": "Kd",
+                      "label": "Kd",
+                      "type": "radioInput",
+                      "fieldDisplayOrder": 3,
+                      "mandatory": false,
+                      "defaultValue": [
+                        {
+                          "target": {
+                            "id": "K",
+                            "currentId": "Kd",
+                            "symbol": "Calculate",
+                            "expression": "K*1.111",
+                            "expressionReqFields": ["K"],
+                            "nextRound": false
+                          },
+                          "value": ""
+                        }
+                      ],
+                      "disabled": false,
+                      "visible": true,
+                      "infoText": "",
+                      "grid": 6,
+                      "validations": [
+                        {
+                          "id": "Kd",
+                          "minValue": 0,
+                          "message": {
+                            "type": "error",
+                            "message": "Spgt0"
+                          }
+                        }
+                      ],
+                      "dimensionName": "",
+                      "fieldGroupType": "RADIO_GROUP",
+                      "fieldGroupName": "IsDensityOrSpVolume",
+                      "defaultSelected": "K",
+                      "regex": "NOT_ALLOW_NEGATIVE"
+                    }
+                  ],
+                  "itemProps": {
+                    "sx": {
+                      "padding": 0,
+                      "boxShadow": "none",
+                      "marginBottom": "0px"
+                    }
+                  },
+                  "customStyle": {
+                    "padding": "0px"
+                  }
+                }
+              ]
+            },
+            {
+              "gridProps": {
+                "xs": 6
+              },
+              "blocks": [
+                {
+                  "fieldType": "FormFields",
+                  "displayType": "form",
+                  "fields": [
+                    {
+                      "fieldName": "Kw",
+                      "label": "Kw",
+                      "type": "number",
+                      "fieldDisplayOrder": 4,
+                      "mandatory": false,
+                      "defaultValue": [],
+                      "disabled": [],
+                      "grid": 4,
+                      "visible": true,
+                      "infoText": "Kb",
+                      "dimensionName": "",
+                      "validations": [],
+                      "regex": "NOT_ALLOW_NEGATIVE"
+                    },
+                    {
+                      "fieldName": "Kb",
+                      "label": "Kb",
+                      "type": "number",
+                      "fieldDisplayOrder": 4,
+                      "mandatory": false,
+                      "defaultValue": [],
+                      "disabled": [],
+                      "grid": 4,
+                      "visible": true,
+                      "infoText": "Kb",
+                      "dimensionName": "",
+                      "validations": [],
+                      "regex": "NOT_ALLOW_NEGATIVE"
+                    }
+                  ],
+                  "itemProps": {
+                    "sx": {
+                      "padding": 0,
+                      "boxShadow": "none",
+                      "marginBottom": "0px"
+                    }
+                  },
+                  "customStyle": {
+                    "padding": "0px"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "subSectionName": "Subsection2",
+        "style": {
+          "boxShadow": "none",
+          "padding": 0
+        },
+        "fieldset": {
+          "legend": "Dimensions & Weights",
+          "border": "1px solid #ccc",
+          "borderRadius": "8px",
+          "paddingBottom": "0px"
+        },
+        "itemProps": {
+          "sx": { "boxShadow": "none", "padding": 0 }
+        },
+        "gridContainer": {
+          "spacing": 2,
+          "children": [
+            {
+              "gridProps": {
+                "xs": 7
+              },
+              "blocks": [
+                {
+                  "fieldType": "FormFields",
+                  "displayType": "form",
+                  "fields": [
+                    {
+                      "fieldName": "DimA",
+                      "label": "A",
+                      "type": "inputUom",
+                      "UomFieldName": "DimUOM",
+                      "DbUomFieldName": "DimUOM",
+                      "fieldDisplayOrder": 2,
+                      "mandatory": false,
+                      "defaultValue": "",
+                      "disabled": false,
+                      "visible": true,
+                      "infoText": "A [A]",
+                      "grid": 4,
+                      "dimensionName": ["lengthforvalve"],
+                      "validations": [],
+                      "value": "",
+                      "visibility": true,
+                      "formId": "GenericValveSizing",
+                      "options": [],
+                      "defaultUnit": {}
+                    },
+                    {
+                      "fieldName": "DimB",
+                      "label": "B",
+                      "type": "inputUom",
+                      "UomFieldName": "DimUOM",
+                      "DbUomFieldName": "DimUOM",
+                      "fieldDisplayOrder": 2,
+                      "mandatory": false,
+                      "defaultValue": "",
+                      "disabled": false,
+                      "visible": true,
+                      "infoText": "B [B]",
+                      "grid": 4,
+                      "dimensionName": ["lengthforvalve"],
+                      "validations": [],
+                      "value": "",
+                      "visibility": true,
+                      "formId": "GenericValveSizing",
+                      "options": [],
+                      "defaultUnit": {}
+                    },
+                    {
+                      "fieldName": "DimC",
+                      "label": "C",
+                      "type": "inputUom",
+                      "UomFieldName": "DimUOM",
+                      "DbUomFieldName": "DimUOM",
+                      "fieldDisplayOrder": 2,
+                      "mandatory": false,
+                      "defaultValue": "",
+                      "disabled": false,
+                      "visible": true,
+                      "infoText": "C [C]",
+                      "grid": 4,
+                      "dimensionName": ["lengthforvalve"],
+                      "validations": [],
+                      "value": "",
+                      "visibility": true,
+                      "formId": "GenericValveSizing",
+                      "options": [],
+                      "defaultUnit": {}
+                    },
+                    {
+                      "fieldName": "Weight",
+                      "label": "Weight",
+                      "type": "inputUom",
+                      "UomFieldName": "WeightUOM",
+                      "fieldDisplayOrder": 2,
+                      "mandatory": false,
+                      "defaultValue": "",
+                      "disabled": false,
+                      "visible": true,
+                      "infoText": "Weight [ValueActualWeight]",
+                      "grid": 4,
+                      "dimensionName": ["mass"],
+                      "validations": [],
+                      "value": "",
+                      "visibility": true,
+                      "formId": "GenericValveSizing",
+                      "options": [],
+                      "defaultUnit": {}
+                    }
+                  ],
+                  "itemProps": {
+                    "sx": {
+                      "padding": 0,
+                      "boxShadow": "none",
+                      "marginBottom": "0px"
+                    }
+                  },
+                  "customStyle": {
+                    "padding": "0px"
+                  }
+                }
+              ]
+            },
+            {
+              "gridProps": {
+                "xs": 5
+              },
+              "blocks": [
+                {
+                  "fieldType": "FormFields",
+                  "displayType": "form",
+                  "fields": [
+                    {
+                      "fieldName": "GenericValveSmallImage",
+                      "label": "",
+                      "type": "imageView",
+                      "source_type": "base64",
+                      "src": "data:image/png;base64,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",
+                      "alt": "Generic Valve Small",
+                      "fallbackSrc": "",
+                      "style": {},
+                      "imageStyle": {},
+                      "fieldDisplayOrder": 1,
+                      "mandatory": false,
+                      "defaultValue": "",
+                      "disabled": true,
+                      "hideFromSideBar": true,
+                      "visible": true,
+                      "grid": 4,
+                      "infoText": "",
+                      "dimensionName": "",
+                      "validations": []
+                    }
+                  ],
+                  "itemProps": {
+                    "sx": {
+                      "padding": 0,
+                      "boxShadow": "none",
+                      "marginBottom": "0px"
+                    }
+                  },
+                  "customStyle": {}
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+]

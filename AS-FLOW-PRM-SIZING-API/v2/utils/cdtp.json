@@ -1,0 +1,99 @@
+
+[
+  {
+    "Id": 1,
+    "ShortName": "AG",
+    "VPValveType": "CS",
+    "ModelNumber": "ANY",
+    "Service": "G,S,SSOA",
+    "Method": "A"
+  },
+  {
+    "Id": 2,
+    "ShortName": "AG",
+    "VPValveType": "PO",
+    "ModelNumber": "727",
+    "Service": "G,S,SSOA",
+    "Method": "C"
+  },
+  {
+    "Id": 3,
+    "ShortName": "C",
+    "VPValveType": "CS",
+    "ModelNumber": "EMC,EMH",
+    "Service": "G,L,S,SSOA,2-Phase",
+    "Method": "H"
+  },
+  {
+    "Id": 4,
+    "ShortName": "C",
+    "VPValveType": "CS",
+    "ModelNumber": "ANY",
+    "Service": "G,L,2-Phase",
+    "Method": "D"
+  },
+  {
+    "Id": 5,
+    "ShortName": "C",
+    "VPValveType": "CS",
+    "ModelNumber": "ANY",
+    "Service": "S",
+    "Method": "A"
+  },
+  {
+    "Id": 6,
+    "ShortName": "C",
+    "VPValveType": "CS",
+    "ModelNumber": "ANY",
+    "Service": "SSOA",
+    "Method": "F"
+  },
+  {
+    "Id": 7,
+    "ShortName": "C",
+    "VPValveType": "BB",
+    "ModelNumber": "EMB",
+    "Service": "G,L,S,SSOA,2-Phase",
+    "Method": "I"
+  },
+  {
+    "Id": 8,
+    "ShortName": "C",
+    "VPValveType": "BB",
+    "ModelNumber": "ANY",
+    "Service": "G,L,2-Phase",
+    "Method": "E"
+  },
+  {
+    "Id": 9,
+    "ShortName": "C",
+    "VPValveType": "BB",
+    "ModelNumber": "ANY",
+    "Service": "SSOA",
+    "Method": "G"
+  },
+  {
+    "Id": 10,
+    "ShortName": "C",
+    "VPValveType": "BD",
+    "ModelNumber": "ANY",
+    "Service": "G,L,2-Phase",
+    "Method": "E"
+  },
+  {
+    "Id": 11,
+    "ShortName": "C",
+    "VPValveType": "BD",
+    "ModelNumber": "ANY",
+    "Service": "SSOA",
+    "Method": "G"
+  },
+  {
+    "Id": 12,
+    "ShortName": "C",
+    "VPValveType": "BP",
+    "ModelNumber": "ANY",
+    "Service": "G,L",
+    "Method": "E"
+  }
+]

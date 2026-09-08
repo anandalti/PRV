@@ -1,0 +1,1080 @@
+[
+  {
+    "FieldId": 2900,
+    "FieldGroupId": 478,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsDensityOrSpVolume",
+    "DefaultSelected": "MolWeight"
+  },
+  {
+    "FieldId": 2901,
+    "FieldGroupId": 479,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsDensityOrSpVolume",
+    "DefaultSelected": "MolWeight"
+  },
+  {
+    "FieldId": 2908,
+    "FieldGroupId": 480,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressurePer"
+  },
+  {
+    "FieldId": 2909,
+    "FieldGroupId": 481,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressurePer"
+  },
+  {
+    "FieldId": 2916,
+    "FieldGroupId": 482,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 2917,
+    "FieldGroupId": 483,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 47,
+    "FieldGroupId": 7,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressurePer"
+  },
+  {
+    "FieldId": 48,
+    "FieldGroupId": 8,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressurePer"
+  },
+  {
+    "FieldId": 55,
+    "FieldGroupId": 9,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 56,
+    "FieldGroupId": 10,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 78,
+    "FieldGroupId": 11,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressure"
+  },
+  {
+    "FieldId": 79,
+    "FieldGroupId": 12,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressure"
+  },
+  {
+    "FieldId": 86,
+    "FieldGroupId": 13,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 87,
+    "FieldGroupId": 14,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 89,
+    "FieldGroupId": 15,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "Fl_UnderPressure_per",
+    "DefaultSelected": "UnderPressure"
+  },
+  {
+    "FieldId": 90,
+    "FieldGroupId": 16,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "Fl_UnderPressure_per",
+    "DefaultSelected": "UnderPressure"
+  },
+  {
+    "FieldId": 101,
+    "FieldGroupId": 17,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "SizingBassis",
+    "DefaultSelected": "sev_Ed_Main"
+  },
+  {
+    "FieldId": 102,
+    "FieldGroupId": 18,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "SizingBassis",
+    "DefaultSelected": "sev_Ed_Main"
+  },
+  {
+    "FieldId": 115,
+    "FieldGroupId": 19,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsBoilingPointRadio",
+    "DefaultSelected": "BoilingPoint"
+  },
+  {
+    "FieldId": 116,
+    "FieldGroupId": 20,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsBoilingPointRadio",
+    "DefaultSelected": "BoilingPoint"
+  },
+  {
+    "FieldId": 129,
+    "FieldGroupId": 21,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "Fl_Insulated_Surface_Area_per",
+    "DefaultSelected": "InsulatedPercentOfATilt"
+  },
+  {
+    "FieldId": 130,
+    "FieldGroupId": 22,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "Fl_Insulated_Surface_Area_per",
+    "DefaultSelected": "InsulatedSurfaceArea"
+  },
+  {
+    "FieldId": 131,
+    "FieldGroupId": 23,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "Fl_Outer_Surface_Area_per",
+    "DefaultSelected": "OuterContSurAreaPer"
+  },
+  {
+    "FieldId": 132,
+    "FieldGroupId": 24,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "Fl_Outer_Surface_Area_per",
+    "DefaultSelected": "OuterContSurArea"
+  },
+  {
+    "FieldId": 134,
+    "FieldGroupId": 25,
+    "FieldGroupType": "MULTI_INPUT_UOM_GROUP",
+    "FieldGroupName": "Fl_Prod_move_pres_vacu",
+    "DefaultSelected": null
+  },
+  {
+    "FieldId": 135,
+    "FieldGroupId": 26,
+    "FieldGroupType": "MULTI_INPUT_UOM_GROUP",
+    "FieldGroupName": "Fl_Thermal_pres_vacu",
+    "DefaultSelected": null
+  },
+  {
+    "FieldId": 139,
+    "FieldGroupId": 27,
+    "FieldGroupType": "MULTI_INPUT_UOM_GROUP",
+    "FieldGroupName": "Fl_Add_Cap_press_vacc",
+    "DefaultSelected": null
+  },
+  {
+    "FieldId": 140,
+    "FieldGroupId": 28,
+    "FieldGroupType": "MULTI_INPUT_UOM_GROUP",
+    "FieldGroupName": "Fl_Req_Flow_press_vacc",
+    "DefaultSelected": null
+  },
+  {
+    "FieldId": 145,
+    "FieldGroupId": 29,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsHorizontalOrientation",
+    "DefaultSelected": "true"
+  },
+  {
+    "FieldId": 146,
+    "FieldGroupId": 30,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsHorizontalOrientation",
+    "DefaultSelected": "true"
+  },
+  {
+    "FieldId": 148,
+    "FieldGroupId": 31,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "EndsGroup",
+    "DefaultSelected": "FlatEnds"
+  },
+  {
+    "FieldId": 149,
+    "FieldGroupId": 32,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "EndsGroup",
+    "DefaultSelected": "FlatEnds"
+  },
+  {
+    "FieldId": 156,
+    "FieldGroupId": 33,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsLtOrLs",
+    "DefaultSelected": "LengthEndToEnd_lt"
+  },
+  {
+    "FieldId": 157,
+    "FieldGroupId": 34,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsLtOrLs",
+    "DefaultSelected": "LengthEndToEnd_lt"
+  },
+  {
+    "FieldId": 175,
+    "FieldGroupId": 35,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressurePer"
+  },
+  {
+    "FieldId": 176,
+    "FieldGroupId": 36,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressurePer"
+  },
+  {
+    "FieldId": 183,
+    "FieldGroupId": 37,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 184,
+    "FieldGroupId": 38,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 2940,
+    "FieldGroupId": 484,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressurePer"
+  },
+  {
+    "FieldId": 2941,
+    "FieldGroupId": 485,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressurePer"
+  },
+  {
+    "FieldId": 2948,
+    "FieldGroupId": 486,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 2949,
+    "FieldGroupId": 487,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 238,
+    "FieldGroupId": 43,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressurePer"
+  },
+  {
+    "FieldId": 239,
+    "FieldGroupId": 44,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressurePer"
+  },
+  {
+    "FieldId": 246,
+    "FieldGroupId": 45,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 247,
+    "FieldGroupId": 46,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 267,
+    "FieldGroupId": 47,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressurePer"
+  },
+  {
+    "FieldId": 268,
+    "FieldGroupId": 48,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressurePer"
+  },
+  {
+    "FieldId": 275,
+    "FieldGroupId": 49,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 276,
+    "FieldGroupId": 50,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 298,
+    "FieldGroupId": 51,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressurePer"
+  },
+  {
+    "FieldId": 299,
+    "FieldGroupId": 52,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressurePer"
+  },
+  {
+    "FieldId": 306,
+    "FieldGroupId": 53,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 307,
+    "FieldGroupId": 54,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 2973,
+    "FieldGroupId": 488,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressurePer"
+  },
+  {
+    "FieldId": 2974,
+    "FieldGroupId": 489,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressurePer"
+  },
+  {
+    "FieldId": 2981,
+    "FieldGroupId": 490,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 2982,
+    "FieldGroupId": 491,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 365,
+    "FieldGroupId": 59,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressure"
+  },
+  {
+    "FieldId": 366,
+    "FieldGroupId": 60,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressure"
+  },
+  {
+    "FieldId": 373,
+    "FieldGroupId": 61,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 374,
+    "FieldGroupId": 62,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 399,
+    "FieldGroupId": 63,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressurePer"
+  },
+  {
+    "FieldId": 400,
+    "FieldGroupId": 64,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressurePer"
+  },
+  {
+    "FieldId": 407,
+    "FieldGroupId": 65,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 408,
+    "FieldGroupId": 66,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 3005,
+    "FieldGroupId": 492,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressurePer"
+  },
+  {
+    "FieldId": 3006,
+    "FieldGroupId": 493,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressurePer"
+  },
+  {
+    "FieldId": 3013,
+    "FieldGroupId": 494,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 3014,
+    "FieldGroupId": 495,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 3041,
+    "FieldGroupId": 496,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "horizontalvertical",
+    "DefaultSelected": null
+  },
+  {
+    "FieldId": 3042,
+    "FieldGroupId": 497,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "horizontalvertical",
+    "DefaultSelected": null
+  },
+  {
+    "FieldId": 3044,
+    "FieldGroupId": 498,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "EndsGroup",
+    "DefaultSelected": null
+  },
+  {
+    "FieldId": 3045,
+    "FieldGroupId": 499,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "EndsGroup",
+    "DefaultSelected": null
+  },
+  {
+    "FieldId": 3046,
+    "FieldGroupId": 500,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "EndsGroup",
+    "DefaultSelected": null
+  },
+  {
+    "FieldId": 3052,
+    "FieldGroupId": 501,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "Length_Lt_ls_Group",
+    "DefaultSelected": "LengthEndToEnd_lt"
+  },
+  {
+    "FieldId": 3053,
+    "FieldGroupId": 502,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "Length_Lt_ls_Group",
+    "DefaultSelected": "LengthEndToEnd_lt"
+  },
+  {
+    "FieldId": 497,
+    "FieldGroupId": 78,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressurePer"
+  },
+  {
+    "FieldId": 498,
+    "FieldGroupId": 79,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressurePer"
+  },
+  {
+    "FieldId": 500,
+    "FieldGroupId": 80,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 501,
+    "FieldGroupId": 81,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 3064,
+    "FieldGroupId": 503,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsDensityOrSpVolume",
+    "DefaultSelected": "MolWeight"
+  },
+  {
+    "FieldId": 3065,
+    "FieldGroupId": 504,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsDensityOrSpVolume",
+    "DefaultSelected": "MolWeight"
+  },
+  {
+    "FieldId": 3073,
+    "FieldGroupId": 505,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressurePer"
+  },
+  {
+    "FieldId": 3074,
+    "FieldGroupId": 506,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressurePer"
+  },
+  {
+    "FieldId": 3081,
+    "FieldGroupId": 507,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 3082,
+    "FieldGroupId": 508,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 3101,
+    "FieldGroupId": 509,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "Fl_Dens_spvol_gas_liq",
+    "DefaultSelected": "DensityDensityLiquid"
+  },
+  {
+    "FieldId": 3102,
+    "FieldGroupId": 510,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "Fl_Dens_spvol_gas_liq",
+    "DefaultSelected": "DensityDensityLiquid"
+  },
+  {
+    "FieldId": 3110,
+    "FieldGroupId": 511,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressurePer"
+  },
+  {
+    "FieldId": 3111,
+    "FieldGroupId": 512,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressurePer"
+  },
+  {
+    "FieldId": 3118,
+    "FieldGroupId": 513,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 3119,
+    "FieldGroupId": 514,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 3141,
+    "FieldGroupId": 515,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "Fl_Dens_spvol_gas_liq",
+    "DefaultSelected": null
+  },
+  {
+    "FieldId": 3142,
+    "FieldGroupId": 516,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "Fl_Dens_spvol_gas_liq",
+    "DefaultSelected": null
+  },
+  {
+    "FieldId": 3152,
+    "FieldGroupId": 517,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressurePer"
+  },
+  {
+    "FieldId": 3153,
+    "FieldGroupId": 518,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressurePer"
+  },
+  {
+    "FieldId": 3160,
+    "FieldGroupId": 519,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 3161,
+    "FieldGroupId": 520,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 3176,
+    "FieldGroupId": 521,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "Fl_lqDen_SpcVol_Per",
+    "DefaultSelected": null
+  },
+  {
+    "FieldId": 3177,
+    "FieldGroupId": 522,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "Fl_lqDen_SpcVol_Per",
+    "DefaultSelected": null
+  },
+  {
+    "FieldId": 3179,
+    "FieldGroupId": 523,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "Fl_MIxDen_SpcVol_Per",
+    "DefaultSelected": null
+  },
+  {
+    "FieldId": 3180,
+    "FieldGroupId": 524,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "Fl_MIxDen_SpcVol_Per",
+    "DefaultSelected": null
+  },
+  {
+    "FieldId": 3187,
+    "FieldGroupId": 525,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressurePer"
+  },
+  {
+    "FieldId": 3188,
+    "FieldGroupId": 526,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressurePer"
+  },
+  {
+    "FieldId": 3195,
+    "FieldGroupId": 527,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 3196,
+    "FieldGroupId": 528,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 3212,
+    "FieldGroupId": 529,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsSingleORMultiCompSys",
+    "DefaultSelected": "SingleComponentSystem"
+  },
+  {
+    "FieldId": 3213,
+    "FieldGroupId": 530,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsSingleORMultiCompSys",
+    "DefaultSelected": "SingleComponentSystem"
+  },
+  {
+    "FieldId": 3216,
+    "FieldGroupId": 531,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "YesNoDetermine",
+    "DefaultSelected": "DetermineCriticalPoint"
+  },
+  {
+    "FieldId": 3217,
+    "FieldGroupId": 532,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "YesNoDetermine",
+    "DefaultSelected": "DetermineCriticalPoint"
+  },
+  {
+    "FieldId": 3218,
+    "FieldGroupId": 533,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "YesNoDetermine",
+    "DefaultSelected": "DetermineCriticalPoint"
+  },
+  {
+    "FieldId": 3225,
+    "FieldGroupId": 534,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressurePer"
+  },
+  {
+    "FieldId": 3226,
+    "FieldGroupId": 535,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressurePer"
+  },
+  {
+    "FieldId": 3233,
+    "FieldGroupId": 536,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 3234,
+    "FieldGroupId": 537,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 3274,
+    "FieldGroupId": 538,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressurePer"
+  },
+  {
+    "FieldId": 3275,
+    "FieldGroupId": 539,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressurePer"
+  },
+  {
+    "FieldId": 3282,
+    "FieldGroupId": 540,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 3283,
+    "FieldGroupId": 541,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 3301,
+    "FieldGroupId": 542,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsSingleORMultiCompSys",
+    "DefaultSelected": "SingleComponentSystem"
+  },
+  {
+    "FieldId": 3302,
+    "FieldGroupId": 543,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsSingleORMultiCompSys",
+    "DefaultSelected": "SingleComponentSystem"
+  },
+  {
+    "FieldId": 3305,
+    "FieldGroupId": 544,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "YesNoDetermine",
+    "DefaultSelected": "DetermineCriticalPoint"
+  },
+  {
+    "FieldId": 3306,
+    "FieldGroupId": 545,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "YesNoDetermine",
+    "DefaultSelected": "DetermineCriticalPoint"
+  },
+  {
+    "FieldId": 3307,
+    "FieldGroupId": 546,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "YesNoDetermine",
+    "DefaultSelected": "DetermineCriticalPoint"
+  },
+  {
+    "FieldId": 3314,
+    "FieldGroupId": 547,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressurePer"
+  },
+  {
+    "FieldId": 3315,
+    "FieldGroupId": 548,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressurePer"
+  },
+  {
+    "FieldId": 3322,
+    "FieldGroupId": 549,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 3323,
+    "FieldGroupId": 550,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 1774,
+    "FieldGroupId": 291,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressurePer"
+  },
+  {
+    "FieldId": 1775,
+    "FieldGroupId": 292,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressurePer"
+  },
+  {
+    "FieldId": 1782,
+    "FieldGroupId": 293,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 1783,
+    "FieldGroupId": 294,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 3332,
+    "FieldGroupId": 551,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "Fl_lqDen_SpcVol_Per",
+    "DefaultSelected": null
+  },
+  {
+    "FieldId": 3333,
+    "FieldGroupId": 552,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "Fl_lqDen_SpcVol_Per",
+    "DefaultSelected": null
+  },
+  {
+    "FieldId": 3340,
+    "FieldGroupId": 553,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "Fl_MIxDen_SpcVol_Per",
+    "DefaultSelected": null
+  },
+  {
+    "FieldId": 3341,
+    "FieldGroupId": 554,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "Fl_MIxDen_SpcVol_Per",
+    "DefaultSelected": null
+  },
+  {
+    "FieldId": 3351,
+    "FieldGroupId": 555,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsSingleORMultiCompSys",
+    "DefaultSelected": "SingleComponentSystem"
+  },
+  {
+    "FieldId": 3352,
+    "FieldGroupId": 556,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsSingleORMultiCompSys",
+    "DefaultSelected": "SingleComponentSystem"
+  },
+  {
+    "FieldId": 3355,
+    "FieldGroupId": 557,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "YesNoDetermine",
+    "DefaultSelected": "DetermineCriticalPoint"
+  },
+  {
+    "FieldId": 3356,
+    "FieldGroupId": 558,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "YesNoDetermine",
+    "DefaultSelected": "DetermineCriticalPoint"
+  },
+  {
+    "FieldId": 3357,
+    "FieldGroupId": 559,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "YesNoDetermine",
+    "DefaultSelected": "DetermineCriticalPoint"
+  },
+  {
+    "FieldId": 3361,
+    "FieldGroupId": 560,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsBoilingRangeLT150FYesNo",
+    "DefaultSelected": "bryesradio"
+  },
+  {
+    "FieldId": 3362,
+    "FieldGroupId": 561,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsBoilingRangeLT150FYesNo",
+    "DefaultSelected": "bryesradio"
+  },
+  {
+    "FieldId": 3367,
+    "FieldGroupId": 562,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressurePer"
+  },
+  {
+    "FieldId": 3368,
+    "FieldGroupId": 563,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressurePer"
+  },
+  {
+    "FieldId": 3375,
+    "FieldGroupId": 564,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 3376,
+    "FieldGroupId": 565,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 3394,
+    "FieldGroupId": 566,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "Fl_lqDen_SpcVol_Per",
+    "DefaultSelected": null
+  },
+  {
+    "FieldId": 3395,
+    "FieldGroupId": 567,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "Fl_lqDen_SpcVol_Per",
+    "DefaultSelected": null
+  },
+  {
+    "FieldId": 3419,
+    "FieldGroupId": 568,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressurePer"
+  },
+  {
+    "FieldId": 3420,
+    "FieldGroupId": 569,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsOverPressurePer",
+    "DefaultSelected": "OverPressurePer"
+  },
+  {
+    "FieldId": 3427,
+    "FieldGroupId": 570,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  },
+  {
+    "FieldId": 3428,
+    "FieldGroupId": 571,
+    "FieldGroupType": "RADIO_GROUP",
+    "FieldGroupName": "IsInletLossPer",
+    "DefaultSelected": "InletLoss"
+  }
+]

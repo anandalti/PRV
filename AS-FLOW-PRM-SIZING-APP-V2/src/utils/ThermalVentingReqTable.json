@@ -1,0 +1,1082 @@
+[
+    {
+        "TankVolume": 0,
+        "VThermalVacuum": 0,
+        "VThermalPressure": 0,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 60,
+        "VThermalVacuum": 60,
+        "VThermalPressure": 40,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 100,
+        "VThermalVacuum": 100,
+        "VThermalPressure": 60,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 500,
+        "VThermalVacuum": 500,
+        "VThermalPressure": 300,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 1000,
+        "VThermalVacuum": 1000,
+        "VThermalPressure": 600,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 2000,
+        "VThermalVacuum": 2000,
+        "VThermalPressure": 1200,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 3000,
+        "VThermalVacuum": 3000,
+        "VThermalPressure": 1800,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 4000,
+        "VThermalVacuum": 4000,
+        "VThermalPressure": 2400,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 5000,
+        "VThermalVacuum": 5000,
+        "VThermalPressure": 3000,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 10000,
+        "VThermalVacuum": 10000,
+        "VThermalPressure": 6000,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 15000,
+        "VThermalVacuum": 15000,
+        "VThermalPressure": 9000,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 20000,
+        "VThermalVacuum": 20000,
+        "VThermalPressure": 12000,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 25000,
+        "VThermalVacuum": 24000,
+        "VThermalPressure": 15000,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 30000,
+        "VThermalVacuum": 28000,
+        "VThermalPressure": 17000,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 35000,
+        "VThermalVacuum": 31000,
+        "VThermalPressure": 19000,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 40000,
+        "VThermalVacuum": 34000,
+        "VThermalPressure": 21000,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 45000,
+        "VThermalVacuum": 37000,
+        "VThermalPressure": 23000,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 50000,
+        "VThermalVacuum": 40000,
+        "VThermalPressure": 24000,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 60000,
+        "VThermalVacuum": 44000,
+        "VThermalPressure": 27000,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 70000,
+        "VThermalVacuum": 48000,
+        "VThermalPressure": 29000,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 80000,
+        "VThermalVacuum": 52000,
+        "VThermalPressure": 31000,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 90000,
+        "VThermalVacuum": 56000,
+        "VThermalPressure": 34000,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 100000,
+        "VThermalVacuum": 60000,
+        "VThermalPressure": 36000,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 120000,
+        "VThermalVacuum": 68000,
+        "VThermalPressure": 41000,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 140000,
+        "VThermalVacuum": 75000,
+        "VThermalPressure": 45000,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 160000,
+        "VThermalVacuum": 82000,
+        "VThermalPressure": 50000,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 180000,
+        "VThermalVacuum": 90000,
+        "VThermalPressure": 54000,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 0,
+        "VThermalVacuum": 0,
+        "VThermalPressure": 0,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 60,
+        "VThermalVacuum": 60,
+        "VThermalPressure": 60,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 100,
+        "VThermalVacuum": 100,
+        "VThermalPressure": 100,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 500,
+        "VThermalVacuum": 500,
+        "VThermalPressure": 500,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 1000,
+        "VThermalVacuum": 1000,
+        "VThermalPressure": 1000,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 2000,
+        "VThermalVacuum": 2000,
+        "VThermalPressure": 2000,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 3000,
+        "VThermalVacuum": 3000,
+        "VThermalPressure": 3000,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 4000,
+        "VThermalVacuum": 4000,
+        "VThermalPressure": 4000,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 5000,
+        "VThermalVacuum": 5000,
+        "VThermalPressure": 5000,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 10000,
+        "VThermalVacuum": 10000,
+        "VThermalPressure": 10000,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 15000,
+        "VThermalVacuum": 15000,
+        "VThermalPressure": 15000,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 20000,
+        "VThermalVacuum": 20000,
+        "VThermalPressure": 20000,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 25000,
+        "VThermalVacuum": 24000,
+        "VThermalPressure": 24000,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 30000,
+        "VThermalVacuum": 28000,
+        "VThermalPressure": 28000,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 35000,
+        "VThermalVacuum": 31000,
+        "VThermalPressure": 31000,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 40000,
+        "VThermalVacuum": 34000,
+        "VThermalPressure": 34000,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 45000,
+        "VThermalVacuum": 37000,
+        "VThermalPressure": 37000,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 50000,
+        "VThermalVacuum": 40000,
+        "VThermalPressure": 40000,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 60000,
+        "VThermalVacuum": 44000,
+        "VThermalPressure": 44000,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 70000,
+        "VThermalVacuum": 48000,
+        "VThermalPressure": 48000,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 80000,
+        "VThermalVacuum": 52000,
+        "VThermalPressure": 52000,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 90000,
+        "VThermalVacuum": 56000,
+        "VThermalPressure": 56000,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 100000,
+        "VThermalVacuum": 60000,
+        "VThermalPressure": 60000,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 120000,
+        "VThermalVacuum": 68000,
+        "VThermalPressure": 68000,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 140000,
+        "VThermalVacuum": 75000,
+        "VThermalPressure": 75000,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 160000,
+        "VThermalVacuum": 82000,
+        "VThermalPressure": 82000,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 180000,
+        "VThermalVacuum": 90000,
+        "VThermalPressure": 90000,
+        "CalculationMethod": "English",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "F",
+        "VTHERMALUOM": "SCFH",
+        "TankVolumeUOM": "BBL"
+    },
+    {
+        "TankVolume": 0,
+        "VThermalVacuum": 0,
+        "VThermalPressure": 0,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 10,
+        "VThermalVacuum": 1.69,
+        "VThermalPressure": 1.01,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 20,
+        "VThermalVacuum": 3.37,
+        "VThermalPressure": 2.02,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 100,
+        "VThermalVacuum": 16.9,
+        "VThermalPressure": 10.1,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 200,
+        "VThermalVacuum": 33.7,
+        "VThermalPressure": 20.2,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 300,
+        "VThermalVacuum": 50.6,
+        "VThermalPressure": 30.3,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 500,
+        "VThermalVacuum": 84.3,
+        "VThermalPressure": 50.6,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 700,
+        "VThermalVacuum": 118,
+        "VThermalPressure": 70.8,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 1000,
+        "VThermalVacuum": 169,
+        "VThermalPressure": 101,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 1500,
+        "VThermalVacuum": 253,
+        "VThermalPressure": 152,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 2000,
+        "VThermalVacuum": 337,
+        "VThermalPressure": 202,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 3000,
+        "VThermalVacuum": 506,
+        "VThermalPressure": 303,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 3180,
+        "VThermalVacuum": 536,
+        "VThermalPressure": 388,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 4000,
+        "VThermalVacuum": 647,
+        "VThermalPressure": 472,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 5000,
+        "VThermalVacuum": 787,
+        "VThermalPressure": 537,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 6000,
+        "VThermalVacuum": 896,
+        "VThermalPressure": 602,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 7000,
+        "VThermalVacuum": 1003,
+        "VThermalPressure": 646,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 8000,
+        "VThermalVacuum": 1077,
+        "VThermalPressure": 682,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 9000,
+        "VThermalVacuum": 1136,
+        "VThermalPressure": 726,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 10000,
+        "VThermalVacuum": 1210,
+        "VThermalPressure": 807,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 12000,
+        "VThermalVacuum": 1345,
+        "VThermalPressure": 888,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 14000,
+        "VThermalVacuum": 1480,
+        "VThermalPressure": 969,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 16000,
+        "VThermalVacuum": 1615,
+        "VThermalPressure": 1047,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 18000,
+        "VThermalVacuum": 1745,
+        "VThermalPressure": 1126,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 20000,
+        "VThermalVacuum": 1877,
+        "VThermalPressure": 1307,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 25000,
+        "VThermalVacuum": 2179,
+        "VThermalPressure": 1378,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 30000,
+        "VThermalVacuum": 2495,
+        "VThermalPressure": 1497,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "TRUE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 0,
+        "VThermalVacuum": 0,
+        "VThermalPressure": 0,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 10,
+        "VThermalVacuum": 1.69,
+        "VThermalPressure": 1.69,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 20,
+        "VThermalVacuum": 3.37,
+        "VThermalPressure": 3.37,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 100,
+        "VThermalVacuum": 16.9,
+        "VThermalPressure": 16.9,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 200,
+        "VThermalVacuum": 33.7,
+        "VThermalPressure": 33.7,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 300,
+        "VThermalVacuum": 50.6,
+        "VThermalPressure": 50.6,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 500,
+        "VThermalVacuum": 84.3,
+        "VThermalPressure": 84.3,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 700,
+        "VThermalVacuum": 118,
+        "VThermalPressure": 118,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 1000,
+        "VThermalVacuum": 169,
+        "VThermalPressure": 169,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 1500,
+        "VThermalVacuum": 253,
+        "VThermalPressure": 253,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 2000,
+        "VThermalVacuum": 337,
+        "VThermalPressure": 337,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 3000,
+        "VThermalVacuum": 506,
+        "VThermalPressure": 506,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 3180,
+        "VThermalVacuum": 536,
+        "VThermalPressure": 536,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 4000,
+        "VThermalVacuum": 647,
+        "VThermalPressure": 647,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 5000,
+        "VThermalVacuum": 787,
+        "VThermalPressure": 787,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 6000,
+        "VThermalVacuum": 896,
+        "VThermalPressure": 896,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 7000,
+        "VThermalVacuum": 1003,
+        "VThermalPressure": 1003,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 8000,
+        "VThermalVacuum": 1077,
+        "VThermalPressure": 1077,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 9000,
+        "VThermalVacuum": 1136,
+        "VThermalPressure": 1136,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 10000,
+        "VThermalVacuum": 1210,
+        "VThermalPressure": 1210,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 12000,
+        "VThermalVacuum": 1345,
+        "VThermalPressure": 1345,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 14000,
+        "VThermalVacuum": 1480,
+        "VThermalPressure": 1480,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 16000,
+        "VThermalVacuum": 1615,
+        "VThermalPressure": 1615,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 18000,
+        "VThermalVacuum": 1745,
+        "VThermalPressure": 1745,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 20000,
+        "VThermalVacuum": 1877,
+        "VThermalPressure": 1877,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 25000,
+        "VThermalVacuum": 2179,
+        "VThermalPressure": 2179,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    },
+    {
+        "TankVolume": 30000,
+        "VThermalVacuum": 2495,
+        "VThermalPressure": 2495,
+        "CalculationMethod": "Metric",
+        "IsFPGTE100F": "FALSE",
+        "FPUOM": "C",
+        "VTHERMALUOM": "Nm3/h",
+        "TankVolumeUOM": "m3"
+    }
+]

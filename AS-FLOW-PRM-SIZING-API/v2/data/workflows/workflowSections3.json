@@ -1,0 +1,1361 @@
+[
+  {
+    "workflowId": 3,
+    "sectionId": 11,
+    "sectionName": "applciationRequirements",
+    "sectionLabel": "Application Requirements",
+    "displayType": "form",
+    "displayOrder": 4,
+    "fields": [
+      {
+        "sectionId": 11,
+        "fieldId": 63,
+        "fieldName": "SizingBasis",
+        "label": "Sizing Basis",
+        "type": "input",
+        "fieldDisplayOrder": 1,
+        "isValidationRequired": false,
+        "validateActionType": null,
+        "mandatory": false,
+        "defaultValue": "",
+        "disabled": false,
+        "visible": true,
+        "hideFromSideBar": false,
+        "options": [],
+        "dimensionName": null,
+        "infoText": "Sizing Basis",
+        "grid": "6",
+        "style": null,
+        "regex": null,
+        "uomFieldName": "",
+        "defaultUOM": null
+      },
+      {
+        "sectionId": 11,
+        "fieldId": 64,
+        "fieldName": "DisplayUnitSystem",
+        "label": "Display Unit System",
+        "type": "select",
+        "fieldDisplayOrder": 3,
+        "isValidationRequired": false,
+        "validateActionType": null,
+        "mandatory": false,
+        "defaultValue": "All",
+        "disabled": false,
+        "visible": true,
+        "hideFromSideBar": false,
+        "options": [
+          {
+            "label": "All",
+            "value": "All"
+          },
+          {
+            "label": "Metric",
+            "value": "Metric"
+          },
+          {
+            "label": "US Customary",
+            "value": "English"
+          }
+        ],
+        "dimensionName": null,
+        "infoText": "",
+        "grid": "6",
+        "style": null,
+        "regex": null,
+        "uomFieldName": "",
+        "defaultUOM": null
+      },
+      {
+        "sectionId": 11,
+        "fieldId": 65,
+        "fieldName": "CalculationMethod",
+        "label": "Calculation Method",
+        "type": "select",
+        "fieldDisplayOrder": 4,
+        "isValidationRequired": true,
+        "validateActionType": "onChange",
+        "mandatory": false,
+        "defaultValue": "English",
+        "disabled": false,
+        "visible": true,
+        "hideFromSideBar": false,
+        "options": [
+          {
+            "label": "US Customary",
+            "value": "English"
+          },
+          {
+            "label": "Metric",
+            "value": "Metric"
+          }
+        ],
+        "dimensionName": null,
+        "infoText": "",
+        "grid": "6",
+        "style": null,
+        "regex": null,
+        "uomFieldName": "",
+        "defaultUOM": null,
+        "isFieldActionRequired": true,
+        "actionType": "CALCULATE_FIELD_VALUE",
+        "actionId": 1
+      },
+      {
+        "sectionId": 11,
+        "fieldId": 67,
+        "fieldName": "IsFAIncludedOnRV",
+        "label": "Include a Flame Arrester on the Relief Valve",
+        "type": "checkbox",
+        "fieldDisplayOrder": 5,
+        "isValidationRequired": true,
+        "validateActionType": "onChange",
+        "mandatory": false,
+        "defaultValue": false,
+        "disabled": false,
+        "visible": true,
+        "hideFromSideBar": false,
+        "options": [],
+        "dimensionName": null,
+        "infoText": "",
+        "grid": "6",
+        "style": null,
+        "regex": null,
+        "uomFieldName": "",
+        "defaultUOM": null
+      },
+      {
+        "sectionId": 11,
+        "fieldId": 66,
+        "fieldName": "IsSuperUser",
+        "label": "Enable Super User",
+        "type": "checkbox",
+        "fieldDisplayOrder": 7,
+        "isValidationRequired": false,
+        "validateActionType": null,
+        "mandatory": false,
+        "defaultValue": false,
+        "disabled": true,
+        "visible": true,
+        "hideFromSideBar": false,
+        "options": [],
+        "dimensionName": null,
+        "infoText": "",
+        "grid": "6",
+        "style": null,
+        "regex": null,
+        "uomFieldName": "",
+        "defaultUOM": null
+      }
+    ]
+  },
+  {
+    "workflowId": 3,
+    "sectionId": 12,
+    "sectionName": "fluidProperties",
+    "sectionLabel": "Fluid Properties",
+    "displayType": "form",
+    "displayOrder": 5,
+    "fields": [
+      {
+        "sectionId": 12,
+        "fieldId": 68,
+        "fieldName": "IsPressureOnly|IsVacuumOnly",
+        "label": "Pressure|Vacuum",
+        "type": "checkbox",
+        "fieldDisplayOrder": 1,
+        "isValidationRequired": true,
+        "validateActionType": "onChange",
+        "mandatory": [
+          {
+            "id": "IsPressureOnly",
+            "currentId": "IsPressureOnly",
+            "value": false
+          },
+          {
+            "id": "IsVacuumOnly",
+            "currentId": "IsVacuumOnly",
+            "value": false
+          }
+        ],
+        "defaultValue": [
+          {
+            "id": "IsPressureOnly",
+            "currentId": "IsPressureOnly",
+            "value": true
+          },
+          {
+            "id": "IsVacuumOnly",
+            "currentId": "IsVacuumOnly",
+            "value": false
+          }
+        ],
+        "disabled": [
+          {
+            "id": "IsPressureOnly",
+            "currentId": "IsPressureOnly",
+            "value": false
+          },
+          {
+            "id": "IsVacuumOnly",
+            "currentId": "IsVacuumOnly",
+            "value": false
+          }
+        ],
+        "visible": [
+          {
+            "id": "IsPressureOnly",
+            "currentId": "IsPressureOnly",
+            "value": true
+          },
+          {
+            "id": "IsVacuumOnly",
+            "currentId": "IsVacuumOnly",
+            "value": true
+          }
+        ],
+        "hideFromSideBar": [],
+        "options": [],
+        "dimensionName": null,
+        "infoText": "",
+        "grid": "6",
+        "style": null,
+        "regex": null,
+        "uomFieldName": "",
+        "defaultUOM": null
+      },
+      {
+        "sectionId": 12,
+        "fieldId": 69,
+        "fieldName": "FluidName|FluidNameVacuum",
+        "label": "Fluid Name",
+        "type": "combobox",
+        "fieldDisplayOrder": 2,
+        "isValidationRequired": false,
+        "validateActionType": null,
+        "mandatory": [
+          {
+            "id": "FluidName",
+            "currentId": "FluidName",
+            "value": false
+          },
+          {
+            "id": "FluidNameVacuum",
+            "currentId": "FluidNameVacuum",
+            "value": false
+          }
+        ],
+        "defaultValue": [
+          {
+            "id": "FluidName",
+            "currentId": "FluidName",
+            "value": "Air"
+          },
+          {
+            "id": "FluidNameVacuum",
+            "currentId": "FluidNameVacuum",
+            "value": "Air"
+          }
+        ],
+        "disabled": [
+          {
+            "id": "FluidName",
+            "currentId": "FluidName",
+            "value": false
+          },
+          {
+            "id": "FluidNameVacuum",
+            "currentId": "FluidNameVacuum",
+            "value": true
+          }
+        ],
+        "visible": [
+          {
+            "id": "FluidName",
+            "currentId": "FluidName",
+            "value": true
+          },
+          {
+            "id": "FluidNameVacuum",
+            "currentId": "FluidNameVacuum",
+            "value": true
+          }
+        ],
+        "hideFromSideBar": [],
+        "options": [],
+        "dimensionName": null,
+        "infoText": "",
+        "grid": "3",
+        "style": null,
+        "regex": null,
+        "uomFieldName": "",
+        "defaultUOM": null
+      },
+      {
+        "sectionId": 12,
+        "fieldId": 70,
+        "fieldName": "MolWeight|MolWeightVacuum",
+        "label": "Molecular Weight",
+        "type": "number",
+        "fieldDisplayOrder": 3,
+        "isValidationRequired": true,
+        "validateActionType": "onBlur",
+        "mandatory": [
+          {
+            "id": "MolWeight",
+            "currentId": "MolWeight",
+            "value": true
+          },
+          {
+            "id": "MolWeightVacuum",
+            "currentId": "MolWeightVacuum",
+            "value": false
+          }
+        ],
+        "defaultValue": [
+          {
+            "id": "MolWeight",
+            "currentId": "MolWeight",
+            "value": 28.97
+          },
+          {
+            "id": "MolWeightVacuum",
+            "currentId": "MolWeightVacuum",
+            "value": 28.97
+          }
+        ],
+        "disabled": [
+          {
+            "id": "MolWeight",
+            "currentId": "MolWeight",
+            "value": false
+          },
+          {
+            "id": "MolWeightVacuum",
+            "currentId": "MolWeightVacuum",
+            "value": true
+          }
+        ],
+        "visible": [
+          {
+            "id": "MolWeight",
+            "currentId": "MolWeight",
+            "value": true
+          },
+          {
+            "id": "MolWeightVacuum",
+            "currentId": "MolWeightVacuum",
+            "value": true
+          }
+        ],
+        "hideFromSideBar": [],
+        "options": [],
+        "dimensionName": null,
+        "infoText": "",
+        "grid": "4",
+        "style": null,
+        "regex": "NOT_ALLOW_NEGATIVE",
+        "uomFieldName": "",
+        "defaultUOM": null
+      },
+      {
+        "sectionId": 12,
+        "fieldId": 71,
+        "fieldName": "KCpByCv|KCpByCvVacuum",
+        "label": "k, (Cp / Cv)",
+        "type": "number",
+        "fieldDisplayOrder": 4,
+        "isValidationRequired": true,
+        "validateActionType": "onBlur",
+        "mandatory": [
+          {
+            "id": "KCpByCv",
+            "currentId": "KCpByCv",
+            "value": true
+          },
+          {
+            "id": "KCpByCvVacuum",
+            "currentId": "KCpByCvVacuum",
+            "value": false
+          }
+        ],
+        "defaultValue": [
+          {
+            "id": "KCpByCv",
+            "currentId": "KCpByCv",
+            "value": 1.4
+          },
+          {
+            "id": "KCpByCvVacuum",
+            "currentId": "KCpByCvVacuum",
+            "value": 1.4
+          }
+        ],
+        "disabled": [
+          {
+            "id": "KCpByCv",
+            "currentId": "KCpByCv",
+            "value": false
+          },
+          {
+            "id": "KCpByCvVacuum",
+            "currentId": "KCpByCvVacuum",
+            "value": true
+          }
+        ],
+        "visible": [
+          {
+            "id": "KCpByCv",
+            "currentId": "KCpByCv",
+            "value": true
+          },
+          {
+            "id": "KCpByCvVacuum",
+            "currentId": "KCpByCvVacuum",
+            "value": true
+          }
+        ],
+        "hideFromSideBar": [],
+        "options": [],
+        "dimensionName": null,
+        "infoText": "Pressure Ratio of Specific Heats (Cp/Cv)",
+        "grid": "4",
+        "style": null,
+        "regex": "NOT_ALLOW_NEGATIVE",
+        "uomFieldName": "",
+        "defaultUOM": null
+      },
+      {
+        "sectionId": 12,
+        "fieldId": 72,
+        "fieldName": "Compressibility|CompressibilityVacuum",
+        "label": "Compressibility",
+        "type": "number",
+        "fieldDisplayOrder": 5,
+        "isValidationRequired": true,
+        "validateActionType": "onBlur",
+        "mandatory": [
+          {
+            "id": "Compressibility",
+            "currentId": "Compressibility",
+            "value": true
+          },
+          {
+            "id": "CompressibilityVacuum",
+            "currentId": "CompressibilityVacuum",
+            "value": false
+          }
+        ],
+        "defaultValue": [
+          {
+            "id": "Compressibility",
+            "currentId": "Compressibility",
+            "value": 1
+          },
+          {
+            "id": "CompressibilityVacuum",
+            "currentId": "CompressibilityVacuum",
+            "value": 1
+          }
+        ],
+        "disabled": [
+          {
+            "id": "Compressibility",
+            "currentId": "Compressibility",
+            "value": false
+          },
+          {
+            "id": "CompressibilityVacuum",
+            "currentId": "CompressibilityVacuum",
+            "value": true
+          }
+        ],
+        "visible": [
+          {
+            "id": "Compressibility",
+            "currentId": "Compressibility",
+            "value": true
+          },
+          {
+            "id": "CompressibilityVacuum",
+            "currentId": "CompressibilityVacuum",
+            "value": true
+          }
+        ],
+        "hideFromSideBar": [],
+        "options": [],
+        "dimensionName": null,
+        "infoText": "Pressure Compressibility Factor",
+        "grid": "4",
+        "style": null,
+        "regex": "NOT_ALLOW_NEGATIVE",
+        "uomFieldName": "",
+        "defaultUOM": null
+      }
+    ]
+  },
+  {
+    "workflowId": 3,
+    "sectionId": 13,
+    "sectionName": "systemPressure",
+    "sectionLabel": "System Pressure",
+    "displayType": "form",
+    "displayOrder": 6,
+    "fields": [
+      {
+        "sectionId": 13,
+        "fieldId": 73,
+        "fieldName": "AtmPressure",
+        "label": "Atmospheric",
+        "type": "inputUom",
+        "fieldDisplayOrder": 1,
+        "isValidationRequired": true,
+        "validateActionType": "both",
+        "mandatory": true,
+        "defaultValue": 14.696,
+        "disabled": false,
+        "disableUOM": false,
+        "visible": true,
+        "hideFromSideBar": false,
+        "options": [],
+        "dimensionName": [
+          "abspressure"
+        ],
+        "infoText": "Atmospheric Pressure [Patm]",
+        "grid": "4",
+        "style": null,
+        "regex": "NOT_ALLOW_NEGATIVE",
+        "uomFieldName": "AtmPressureUOM",
+        "defaultUOM": {
+          "Metric": "abspressure.mmhga",
+          "English": "abspressure.psia"
+        }
+      },
+      {
+        "sectionId": 13,
+        "fieldId": 74,
+        "fieldName": "SystemMAWP",
+        "label": "System MAWP",
+        "type": "inputUom",
+        "fieldDisplayOrder": 2,
+        "isValidationRequired": true,
+        "validateActionType": "both",
+        "mandatory": false,
+        "defaultValue": "",
+        "disabled": false,
+        "disableUOM": false,
+        "visible": true,
+        "hideFromSideBar": false,
+        "options": [],
+        "dimensionName": [
+          "pressure"
+        ],
+        "infoText": "System MAWP [MAWP]",
+        "grid": "4",
+        "style": null,
+        "regex": null,
+        "uomFieldName": "PressureUOM",
+        "defaultUOM": {
+          "Metric": "pressure.barg",
+          "English": "pressure.psig"
+        }
+      },
+      {
+        "sectionId": 13,
+        "fieldId": 75,
+        "fieldName": "SystemMAWV",
+        "label": "System MAWV",
+        "type": "inputUom",
+        "fieldDisplayOrder": 3,
+        "isValidationRequired": false,
+        "validateActionType": null,
+        "mandatory": false,
+        "defaultValue": "",
+        "disabled": true,
+        "disableUOM": false,
+        "visible": false,
+        "hideFromSideBar": false,
+        "options": [],
+        "dimensionName": [
+          "pressure"
+        ],
+        "infoText": "System MAWV [MAWV]",
+        "grid": "4",
+        "style": null,
+        "regex": null,
+        "uomFieldName": "PressureUOMVacuum",
+        "defaultUOM": {
+          "Metric": "pressure.barg",
+          "English": "pressure.psig"
+        }
+      },
+      {
+        "sectionId": 13,
+        "fieldId": 76,
+        "fieldName": "OperatingPressure",
+        "label": "Operating Pressure",
+        "type": "inputUom",
+        "fieldDisplayOrder": 4,
+        "isValidationRequired": true,
+        "validateActionType": "both",
+        "mandatory": false,
+        "defaultValue": "",
+        "disabled": false,
+        "disableUOM": false,
+        "visible": true,
+        "hideFromSideBar": false,
+        "options": [],
+        "dimensionName": [
+          "pressure"
+        ],
+        "infoText": "Operating Pressure [Pn]",
+        "grid": "4",
+        "style": null,
+        "regex": null,
+        "uomFieldName": "PressureUOM",
+        "defaultUOM": {
+          "Metric": "pressure.barg",
+          "English": "pressure.psig"
+        }
+      }
+    ]
+  },
+  {
+    "workflowId": 3,
+    "sectionId": 14,
+    "sectionName": "pressurePropertiesAPI2000",
+    "sectionLabel": "Pressure Case",
+    "displayType": "form",
+    "displayOrder": 7,
+    "fields": [
+      {
+        "sectionId": 14,
+        "fieldId": 77,
+        "fieldName": "SetPressure",
+        "label": "Set Pressure",
+        "type": "inputUom",
+        "fieldDisplayOrder": 1,
+        "isValidationRequired": true,
+        "validateActionType": "both",
+        "mandatory": true,
+        "defaultValue": "",
+        "disabled": false,
+        "disableUOM": false,
+        "visible": true,
+        "hideFromSideBar": false,
+        "options": [],
+        "dimensionName": [
+          "pressure"
+        ],
+        "infoText": "Set Pressure [Pset]",
+        "grid": "4",
+        "style": null,
+        "regex": "NOT_ALLOW_NEGATIVE",
+        "uomFieldName": "PressureUOM",
+        "defaultUOM": {
+          "Metric": "pressure.barg",
+          "English": "pressure.psig"
+        }
+      },
+      {
+        "sectionId": 14,
+        "fieldId": 78,
+        "fieldName": "OverPressurePer",
+        "label": "Over Pressure %",
+        "type": "radioInput",
+        "fieldDisplayOrder": 2,
+        "isValidationRequired": true,
+        "validateActionType": "both",
+        "mandatory": true,
+        "defaultValue": 10,
+        "disabled": false,
+        "visible": true,
+        "hideFromSideBar": false,
+        "options": [],
+        "dimensionName": [
+          "%"
+        ],
+        "infoText": "",
+        "grid": "4",
+        "style": null,
+        "regex": "NOT_ALLOW_NEGATIVE",
+        "uomFieldName": "",
+        "defaultUOM": {},
+        "fieldGroupType": "RADIO_GROUP",
+        "fieldGroupName": "IsOverPressurePer",
+        "defaultSelected": "OverPressure"
+      },
+      {
+        "sectionId": 14,
+        "fieldId": 79,
+        "fieldName": "OverPressure",
+        "label": "Over Pressure",
+        "type": "radioInput",
+        "fieldDisplayOrder": 3,
+        "isValidationRequired": true,
+        "validateActionType": "both",
+        "mandatory": true,
+        "defaultValue": 0,
+        "disabled": false,
+        "disableUOM": false,
+        "visible": true,
+        "hideFromSideBar": false,
+        "options": [],
+        "dimensionName": [
+          "pressure"
+        ],
+        "infoText": "",
+        "grid": "4",
+        "style": null,
+        "regex": "NOT_ALLOW_NEGATIVE",
+        "uomFieldName": "PressureUOM",
+        "defaultUOM": {
+          "Metric": "pressure.barg",
+          "English": "pressure.psig"
+        },
+        "fieldGroupType": "RADIO_GROUP",
+        "fieldGroupName": "IsOverPressurePer",
+        "defaultSelected": "OverPressure"
+      },
+      {
+        "sectionId": 14,
+        "fieldId": 80,
+        "fieldName": "BackPressure",
+        "label": "Back Pressure",
+        "type": "label",
+        "fieldDisplayOrder": 4,
+        "isValidationRequired": false,
+        "validateActionType": null,
+        "mandatory": false,
+        "defaultValue": "",
+        "disabled": false,
+        "visible": true,
+        "hideFromSideBar": true,
+        "options": [],
+        "dimensionName": null,
+        "infoText": "",
+        "grid": "6",
+        "style": {
+          "flex": 10
+        },
+        "regex": null,
+        "uomFieldName": "",
+        "defaultUOM": null
+      },
+      {
+        "sectionId": 14,
+        "fieldId": 81,
+        "fieldName": "BuiltUp",
+        "label": "Built-Up",
+        "type": "inputUom",
+        "fieldDisplayOrder": 5,
+        "isValidationRequired": true,
+        "validateActionType": "both",
+        "mandatory": false,
+        "defaultValue": 0,
+        "disabled": false,
+        "disableUOM": false,
+        "visible": true,
+        "hideFromSideBar": false,
+        "options": [],
+        "dimensionName": [
+          "pressure"
+        ],
+        "infoText": "Build-Up [Pbu]",
+        "grid": "4",
+        "style": null,
+        "regex": "NOT_ALLOW_NEGATIVE",
+        "uomFieldName": "PressureUOM",
+        "defaultUOM": {
+          "Metric": "pressure.barg",
+          "English": "pressure.psig"
+        }
+      },
+      {
+        "sectionId": 14,
+        "fieldId": 82,
+        "fieldName": "ConstantSuperimposed",
+        "label": "Constant Superimposed",
+        "type": "inputUom",
+        "fieldDisplayOrder": 6,
+        "isValidationRequired": true,
+        "validateActionType": "both",
+        "mandatory": false,
+        "defaultValue": 0,
+        "disabled": false,
+        "disableUOM": false,
+        "visible": true,
+        "hideFromSideBar": false,
+        "options": [],
+        "dimensionName": [
+          "pressure"
+        ],
+        "infoText": "Constant Superimposed [Psic]",
+        "grid": "4",
+        "style": null,
+        "regex": "NOT_ALLOW_NEGATIVE",
+        "uomFieldName": "PressureUOM",
+        "defaultUOM": {
+          "Metric": "pressure.barg",
+          "English": "pressure.psig"
+        }
+      },
+      {
+        "sectionId": 14,
+        "fieldId": 83,
+        "fieldName": "VariableSuperimposed",
+        "label": "Variable Superimposed",
+        "type": "inputUom",
+        "fieldDisplayOrder": 7,
+        "isValidationRequired": true,
+        "validateActionType": "both",
+        "mandatory": false,
+        "defaultValue": 0,
+        "disabled": false,
+        "disableUOM": false,
+        "visible": true,
+        "hideFromSideBar": false,
+        "options": [],
+        "dimensionName": [
+          "pressure"
+        ],
+        "infoText": "Variable Superimposed [Psiv]",
+        "grid": "4",
+        "style": null,
+        "regex": "NOT_ALLOW_NEGATIVE",
+        "uomFieldName": "PressureUOM",
+        "defaultUOM": {
+          "Metric": "pressure.barg",
+          "English": "pressure.psig"
+        }
+      },
+      {
+        "sectionId": 14,
+        "fieldId": 84,
+        "fieldName": "TotalBackPressure",
+        "label": "Total Back Pressure",
+        "type": "inputUom",
+        "fieldDisplayOrder": 8,
+        "isValidationRequired": false,
+        "validateActionType": null,
+        "mandatory": false,
+        "defaultValue": 0,
+        "disabled": true,
+        "disableUOM": false,
+        "visible": true,
+        "hideFromSideBar": false,
+        "options": [],
+        "dimensionName": [
+          "pressure"
+        ],
+        "infoText": "Total Back Pressure [Pback]",
+        "grid": "4",
+        "style": null,
+        "regex": null,
+        "uomFieldName": "PressureUOM",
+        "defaultUOM": {
+          "Metric": "pressure.barg",
+          "English": "pressure.psig"
+        }
+      },
+      {
+        "sectionId": 14,
+        "fieldId": 85,
+        "fieldName": "divider",
+        "label": "",
+        "type": "divider",
+        "fieldDisplayOrder": 9,
+        "isValidationRequired": false,
+        "validateActionType": null,
+        "mandatory": false,
+        "defaultValue": "",
+        "disabled": false,
+        "visible": true,
+        "hideFromSideBar": true,
+        "options": [],
+        "dimensionName": null,
+        "infoText": "",
+        "grid": "6",
+        "style": null,
+        "regex": null,
+        "uomFieldName": "",
+        "defaultUOM": null
+      },
+      {
+        "sectionId": 14,
+        "fieldId": 86,
+        "fieldName": "InletLossPer",
+        "label": "Inlet Loss %",
+        "type": "radioInput",
+        "fieldDisplayOrder": 10,
+        "isValidationRequired": true,
+        "validateActionType": "both",
+        "mandatory": false,
+        "defaultValue": 0,
+        "disabled": false,
+        "visible": true,
+        "hideFromSideBar": false,
+        "options": [],
+        "dimensionName": [
+          "%"
+        ],
+        "infoText": "",
+        "grid": "4",
+        "style": null,
+        "regex": "NOT_ALLOW_NEGATIVE",
+        "uomFieldName": "",
+        "defaultUOM": {},
+        "fieldGroupType": "RADIO_GROUP",
+        "fieldGroupName": "IsInletLossPer",
+        "defaultSelected": "InletLoss"
+      },
+      {
+        "sectionId": 14,
+        "fieldId": 87,
+        "fieldName": "InletLoss",
+        "label": "Inlet Loss",
+        "type": "radioInput",
+        "fieldDisplayOrder": 11,
+        "isValidationRequired": true,
+        "validateActionType": "both",
+        "mandatory": false,
+        "defaultValue": 0,
+        "disabled": false,
+        "disableUOM": false,
+        "visible": true,
+        "hideFromSideBar": false,
+        "options": [],
+        "dimensionName": [
+          "pressure"
+        ],
+        "infoText": "",
+        "grid": "4",
+        "style": null,
+        "regex": "NOT_ALLOW_NEGATIVE",
+        "uomFieldName": "PressureUOM",
+        "defaultUOM": {
+          "Metric": "pressure.barg",
+          "English": "pressure.psig"
+        },
+        "fieldGroupType": "RADIO_GROUP",
+        "fieldGroupName": "IsInletLossPer",
+        "defaultSelected": "InletLoss"
+      }
+    ]
+  },
+  {
+    "workflowId": 3,
+    "sectionId": 15,
+    "sectionName": "vacuumProperties",
+    "sectionLabel": "Vacuum Case",
+    "displayType": "form",
+    "displayOrder": 8,
+    "fields": [
+      {
+        "sectionId": 15,
+        "fieldId": 88,
+        "fieldName": "SetVacuum",
+        "label": "Set Vacuum",
+        "type": "inputUom",
+        "fieldDisplayOrder": 1,
+        "isValidationRequired": true,
+        "validateActionType": "both",
+        "mandatory": false,
+        "defaultValue": "",
+        "disabled": true,
+        "disableUOM": false,
+        "visible": false,
+        "hideFromSideBar": false,
+        "options": [],
+        "dimensionName": [
+          "pressure"
+        ],
+        "infoText": "Set Vacuum [Pback]",
+        "grid": "4",
+        "style": null,
+        "regex": "NOT_ALLOW_NEGATIVE",
+        "uomFieldName": "PressureUOMVacuum",
+        "defaultUOM": {
+          "Metric": "pressure.barg",
+          "English": "pressure.psig"
+        }
+      },
+      {
+        "sectionId": 15,
+        "fieldId": 89,
+        "fieldName": "UnderPressurePer",
+        "label": "Under Pressure %",
+        "type": "radioInput",
+        "fieldDisplayOrder": 2,
+        "isValidationRequired": true,
+        "validateActionType": "both",
+        "mandatory": true,
+        "defaultValue": "",
+        "disabled": true,
+        "visible": false,
+        "hideFromSideBar": false,
+        "options": [],
+        "dimensionName": [
+          "%"
+        ],
+        "infoText": "",
+        "grid": "4",
+        "style": null,
+        "regex": "NOT_ALLOW_NEGATIVE",
+        "uomFieldName": "",
+        "defaultUOM": {},
+        "fieldGroupType": "RADIO_GROUP",
+        "fieldGroupName": "Fl_UnderPressure_per",
+        "defaultSelected": "UnderPressure"
+      },
+      {
+        "sectionId": 15,
+        "fieldId": 90,
+        "fieldName": "UnderPressure",
+        "label": "Under Pressure",
+        "type": "radioInput",
+        "fieldDisplayOrder": 3,
+        "isValidationRequired": true,
+        "validateActionType": "both",
+        "mandatory": true,
+        "defaultValue": 0,
+        "disabled": true,
+        "disableUOM": false,
+        "visible": false,
+        "hideFromSideBar": false,
+        "options": [],
+        "dimensionName": [
+          "pressure"
+        ],
+        "infoText": "",
+        "grid": "4",
+        "style": null,
+        "regex": "NOT_ALLOW_NEGATIVE",
+        "uomFieldName": "PressureUOMVacuum",
+        "defaultUOM": {
+          "Metric": "pressure.barg",
+          "English": "pressure.psig"
+        },
+        "fieldGroupType": "RADIO_GROUP",
+        "fieldGroupName": "Fl_UnderPressure_per",
+        "defaultSelected": "UnderPressure"
+      }
+    ]
+  },
+  {
+    "workflowId": 3,
+    "sectionId": 16,
+    "sectionName": "temperatureProperties",
+    "sectionLabel": "Temperature Properties",
+    "displayType": "form",
+    "displayOrder": 9,
+    "fields": [
+      {
+        "sectionId": 16,
+        "fieldId": 91,
+        "fieldName": "Relieving",
+        "label": "Relieving (for Press.)",
+        "type": "inputUom",
+        "fieldDisplayOrder": 2,
+        "isValidationRequired": true,
+        "validateActionType": "both",
+        "mandatory": true,
+        "defaultValue": "",
+        "disabled": false,
+        "disableUOM": false,
+        "visible": true,
+        "hideFromSideBar": false,
+        "options": [],
+        "dimensionName": [
+          "temperature"
+        ],
+        "infoText": "",
+        "grid": "4",
+        "style": null,
+        "regex": "ALLOW_NEGATIVE",
+        "uomFieldName": "TemperatureUOM",
+        "defaultUOM": {
+          "English": "temp.degF",
+          "Metric": "temp.degC"
+        }
+      },
+      {
+        "sectionId": 16,
+        "fieldId": 92,
+        "fieldName": "RelievingforVacuum",
+        "label": "Relieving (for Vac.)",
+        "type": "inputUom",
+        "fieldDisplayOrder": 3,
+        "isValidationRequired": true,
+        "validateActionType": "both",
+        "mandatory": false,
+        "defaultValue": "",
+        "disabled": true,
+        "disableUOM": false,
+        "visible": false,
+        "hideFromSideBar": false,
+        "options": [],
+        "dimensionName": [
+          "temperature"
+        ],
+        "infoText": "",
+        "grid": "4",
+        "style": null,
+        "regex": "ALLOW_NEGATIVE",
+        "uomFieldName": "TemperatureUOM",
+        "defaultUOM": {
+          "English": "temp.degF",
+          "Metric": "temp.degC"
+        }
+      },
+      {
+        "sectionId": 16,
+        "fieldId": 93,
+        "fieldName": "Operating",
+        "label": "Operating",
+        "type": "inputUom",
+        "fieldDisplayOrder": 4,
+        "isValidationRequired": true,
+        "validateActionType": "both",
+        "mandatory": false,
+        "defaultValue": "",
+        "disabled": false,
+        "disableUOM": false,
+        "visible": true,
+        "hideFromSideBar": false,
+        "options": [],
+        "dimensionName": [
+          "temperature"
+        ],
+        "infoText": "",
+        "grid": "4",
+        "style": null,
+        "regex": "ALLOW_NEGATIVE",
+        "uomFieldName": "TemperatureUOM",
+        "defaultUOM": {
+          "English": "temp.degF",
+          "Metric": "temp.degC"
+        }
+      },
+      {
+        "sectionId": 16,
+        "fieldId": 94,
+        "fieldName": "DesignMin",
+        "label": "Design Min.",
+        "type": "inputUom",
+        "fieldDisplayOrder": 5,
+        "isValidationRequired": true,
+        "validateActionType": "both",
+        "mandatory": false,
+        "defaultValue": "",
+        "disabled": false,
+        "disableUOM": false,
+        "visible": true,
+        "hideFromSideBar": false,
+        "options": [],
+        "dimensionName": [
+          "temperature"
+        ],
+        "infoText": "",
+        "grid": "4",
+        "style": null,
+        "regex": "ALLOW_NEGATIVE",
+        "uomFieldName": "TemperatureUOM",
+        "defaultUOM": {
+          "English": "temp.degF",
+          "Metric": "temp.degC"
+        }
+      },
+      {
+        "sectionId": 16,
+        "fieldId": 95,
+        "fieldName": "DesignMax",
+        "label": "Design Max.",
+        "type": "inputUom",
+        "fieldDisplayOrder": 6,
+        "isValidationRequired": true,
+        "validateActionType": "both",
+        "mandatory": false,
+        "defaultValue": "",
+        "disabled": false,
+        "disableUOM": false,
+        "visible": true,
+        "hideFromSideBar": false,
+        "options": [],
+        "dimensionName": [
+          "temperature"
+        ],
+        "infoText": "",
+        "grid": "4",
+        "style": null,
+        "regex": "ALLOW_NEGATIVE",
+        "uomFieldName": "TemperatureUOM",
+        "defaultUOM": {
+          "English": "temp.degF",
+          "Metric": "temp.degC"
+        }
+      }
+    ]
+  },
+  {
+    "workflowId": 3,
+    "sectionId": 17,
+    "sectionName": "flowCapacity",
+    "sectionLabel": "Flow Capacity",
+    "displayType": "form",
+    "displayOrder": 10,
+    "fields": [
+      {
+        "sectionId": 17,
+        "fieldId": 96,
+        "fieldName": "Wreq",
+        "label": "Required Pressure Flow",
+        "type": "inputUominfo",
+        "fieldDisplayOrder": 2,
+        "isValidationRequired": false,
+        "validateActionType": null,
+        "mandatory": false,
+        "defaultValue": "",
+        "disabled": false,
+        "disableUOM": false,
+        "visible": true,
+        "hideFromSideBar": false,
+        "options": [],
+        "dimensionName": [
+          "gasvolflow",
+          "gasvolflowact",
+          "massflow"
+        ],
+        "infoText": "[Wreq(p)] Required Mass Flow Rate",
+        "grid": "6",
+        "style": null,
+        "regex": "NOT_ALLOW_NEGATIVE",
+        "uomFieldName": "FlowCapacityUOM",
+        "defaultUOM": {
+          "English": "gasvolflow.MMSCFD",
+          "Metric": "gasvolflow.Nm3day"
+        }
+      },
+      {
+        "sectionId": 17,
+        "fieldId": 97,
+        "fieldName": "WreqV",
+        "label": "Required Vacuum Flow",
+        "type": "inputUominfo",
+        "fieldDisplayOrder": 3,
+        "isValidationRequired": false,
+        "validateActionType": null,
+        "mandatory": false,
+        "defaultValue": "",
+        "disabled": false,
+        "disableUOM": false,
+        "visible": false,
+        "hideFromSideBar": false,
+        "options": [],
+        "dimensionName": [
+          "gasvolflow",
+          "gasvolflowact",
+          "massflow"
+        ],
+        "infoText": "[Wreq(v)] Required Mass Flow Rate",
+        "grid": "6",
+        "style": null,
+        "regex": "NOT_ALLOW_NEGATIVE",
+        "uomFieldName": "FlowCapacityUOM",
+        "defaultUOM": {
+          "English": "gasvolflow.MMSCFD",
+          "Metric": "gasvolflow.Nm3day"
+        }
+      },
+      {
+        "sectionId": 17,
+        "fieldId": 98,
+        "fieldName": "CalculateFlowRate",
+        "label": "CALCULATE FLOW",
+        "type": "modal",
+        "fieldDisplayOrder": 4,
+        "isValidationRequired": false,
+        "validateActionType": null,
+        "mandatory": false,
+        "defaultValue": false,
+        "disabled": false,
+        "visible": false,
+        "hideFromSideBar": false,
+        "options": [],
+        "dimensionName": null,
+        "infoText": "",
+        "grid": "6",
+        "style": null,
+        "regex": "^(|[1-9][0-9]*)$",
+        "uomFieldName": "",
+        "defaultUOM": null,
+        "copyAction": {
+          "type": "modal",
+          "target": "CalculateFlowrate"
+        },
+        "validateVisibleUOMField": [
+          {
+            "Id": 426,
+            "FieldId": 98,
+            "ExpressionId": "VISIBLE0000103",
+            "TargetField": "FlowCapacityUOM",
+            "Symbol": "Calculate",
+            "FocusedField": "FlowCapacityUOM",
+            "CurrentId": "CalculateFlowRate",
+            "Expression": "FlowCapacityUOM.includes('gasvolflow')",
+            "ExpectedResultType": "",
+            "ExpressionReqFields": "FlowCapacityUOM",
+            "Uom": "",
+            "NextRound": false,
+            "Value": ""
+          }
+        ]
+      },
+      {
+        "sectionId": 17,
+        "fieldId": 99,
+        "fieldName": "info",
+        "label": "Please enter a temperature and pressure.",
+        "type": "textinfo",
+        "fieldDisplayOrder": 5,
+        "isValidationRequired": false,
+        "validateActionType": null,
+        "mandatory": false,
+        "defaultValue": "",
+        "disabled": true,
+        "visible": true,
+        "hideFromSideBar": true,
+        "options": [],
+        "dimensionName": null,
+        "infoText": "",
+        "grid": "6",
+        "style": {
+          "color": "red",
+          "fontSize": "0.75rem",
+          "fontWeight": "bold",
+          "marginLeft": "4rem"
+        },
+        "regex": null,
+        "uomFieldName": "",
+        "defaultUOM": null,
+        "validateVisibleUOMField": [
+          {
+            "Id": 436,
+            "FieldId": 99,
+            "ExpressionId": "VISIBLE0000105",
+            "TargetField": "FlowCapacityUOM",
+            "Symbol": "Calculate",
+            "FocusedField": "FlowCapacityUOM",
+            "CurrentId": "info",
+            "Expression": "(FlowCapacityUOM.includes('massflow'))?false: (AtmPressure =='' || ((IsPressureOnly && IsVacuumOnly) ? (SetVacuum=='' || UnderPressure=='' || SetPressure=='' || OverPressure=='' || Relieving=='' || RelievingforVacuum==''):(IsPressureOnly ? (SetPressure=='' || OverPressure=='' || Relieving==''):(IsVacuumOnly ?(SetVacuum=='' || UnderPressure=='' || RelievingforVacuum==''):false))))",
+            "ExpectedResultType": "",
+            "ExpressionReqFields": "FlowCapacityUOM,AtmPressure,SetPressure,OverPressure,IsPressureOnly,IsVacuumOnly,SetVacuum,UnderPressure,Relieving,RelievingforVacuum",
+            "Uom": "",
+            "NextRound": false,
+            "Value": ""
+          }
+        ]
+      }
+    ]
+  }
+]

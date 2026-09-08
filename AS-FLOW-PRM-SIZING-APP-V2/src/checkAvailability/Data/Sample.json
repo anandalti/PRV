@@ -1,0 +1,86 @@
+{
+  "TagData": {
+    "Company_GUID": "adf7c93f-728e-47ec-9fd1-49ff0b387c19",
+    "Brand": "Crosby®",
+    "Model_Number": "HSJ",
+    "Customer_Ref_No": "6666",
+    "Project_Ref_No": "4451",
+    "Line_No": "",
+    "Project_GUID": "7a33c8e3-e595-46e7-9513-4e101a51c7f4",
+    "Tag_GUID": "a77f61c6-f984-470e-9467-329b2ea2578b",
+    "ValveId": 520,
+    "Customer_Name": ".SLK",
+    "Project_Name": "Drawings Test",
+    "Quote_Number": "222",
+    "Tag_No": "30039 / CR_HSJ / HSJ",
+    "Comments": "",
+    "Location": "Stafford, Texas",
+    "PurchaseOrder_Number": "",
+    "Serial_No": "",
+    "Catalogue_Code":"123456",
+    "ERP_Code":"erp123"
+  },
+  "ProcessData": {
+    "Set_Pressure": 2000.0,
+    "Set_Pressure_Unit": "psig"
+  },
+  "ConfigData": {
+    "VMD": "A",
+    "WH": "1",
+    "TG": "1",
+    "DP": "1",
+    "MOD": "HSJ",
+    "CODE": "1",
+    "VS": "-STM",
+    "VO": "F",
+    "BD": "A",
+    "CS": "B",
+    "FF": "1",
+    "VC": "7",
+    "BT": "A",
+    "CT": "C",
+    "BN": "O",
+    "PR": "F",
+    "TR": "1",
+    "TM": "B",
+    "CC": "N",
+    "IC": "1"
+  },
+  "userData":{
+      "username":"ashrith",
+      "role":"admin"
+  },
+   "items": [
+    {
+      "level": 1,
+      "itemIdentifier": "0010",
+      "materialNumber": "10067635",
+      "description": "BAS OMNI 1/2\" 9511 MNPT PED",
+      "basicMaterial": "SST SA479-316/316L/1101-18771",
+      "isAssembly": "Yes",
+      "requiredQty": 1,
+      "uom": "EA",
+      "atpQty": 451,
+      "isMissing": false,
+      "availability": null,
+      "weeks": null,
+      "parrentmaterialNumber": null
+    },
+    {
+      "level": 2,
+      "itemIdentifier": "0010",
+      "materialNumber": "10079822",
+      "description": "BAS OMNI 1/2\" 9511 MNPT PED",
+      "basicMaterial": "SST SA479-316/316L/1101-18771",
+      "isAssembly": "Yes",
+      "requiredQty": 1,
+      "uom": "EA",
+      "atpQty": 451,
+      "isMissing": false,
+      "availability": null,
+      "weeks": null,
+      "parrentmaterialNumber": "10067635"
+    }  
+  ]
+ 
+}

@@ -1,0 +1,40 @@
+.labelHeading{
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+.paperSection{
+  padding: 1rem !important;
+}
+.paperSection2{
+  padding: 1rem !important;
+  padding-left: 0rem !important;
+}
+.radio-group-row {
+  display: flex; /* Use flexbox layout */
+  flex-direction: row !important; /* Arrange children (radio buttons) in a row */
+  justify-content: start !important; /* Align items to the start of the container */
+  align-items: center !important; /* Align items vertically in the center */
+  gap: 10px; /* Optional: Add some space between radio buttons */
+}
+
+.actionButton{
+  background-color:#00aa7e !important;
+  border-radius: 0 !important;
+  letter-spacing: .08em;
+  border: 1px solid #00aa7e !important;
+  color: #ffffff !important;
+  height: 30px;
+  margin: 0 5px;
+  min-width: 140px;
+  /* width: 9rem !important; */
+  /* width: 80% !important; */
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 550 !important;
+  font-size: 0.75rem !important;
+  margin-top: 1rem !important;
+}
+.actionButton:hover{
+  background-color:#04906a !important; 
+  border-color: #00aa7e;
+}

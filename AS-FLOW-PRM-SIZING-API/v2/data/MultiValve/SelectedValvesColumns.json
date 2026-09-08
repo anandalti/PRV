@@ -1,0 +1,10 @@
+[
+    {"name": "ValveId", "label": "Click to Remove", "type": "button" },
+    {"name": "rowId", "label":"Row Id", "type":"text"}, 
+    {"name": "ModelNumber", "label":"Model", "type":"text"}, 
+    {"name":"ValveSelectedPer", "label":"Percent of Required Flow (%)", "type":"text"},
+    {"name":"ValvePset", "label":"Set Pressure (PressureUOM)", "type": "input", "IsValidationRequired": true, "validationType": "onBlur","regex": "ALLOW_DECIMAL_NO_NEGATIVE"}, 
+    {"name":"ValvePoverP", "label":"Over Pressure % (%)", "type": "input", "IsValidationRequired": true, "validationType": "onBlur","regex": "ALLOW_DECIMAL_NO_NEGATIVE"}, 
+    {"name":"ValvePover", "label":"Over Pressure (PressureUOM)", "type": "input", "IsValidationRequired": true, "validationType": "onBlur","regex": "ALLOW_DECIMAL_NO_NEGATIVE"}, 
+    {"name":"ValveW", "label":"Rated Flow Capacity (FlowCapacityUOM)", "type": "text"}
+]

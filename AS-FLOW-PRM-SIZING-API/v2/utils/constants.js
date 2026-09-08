@@ -1,0 +1,6 @@
+module.exports = {
+    CONVERT_TOFIXED_DECIMALS: 25,
+    BIGNUMBER_DECIMALS: 34,
+    BIGNUMBER_ROUNDING_MODE: 7,
+    CALCULATE: 'Calculate',
+}

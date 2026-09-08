@@ -1,0 +1,285 @@
+{
+  "sectionName": "JSeriesRestrictedLift",
+  "sectionLabel": "Restricted Lift Configuration",
+  "displayType": "popup",
+  "displayOrder": 1,
+  "fields":[
+    {
+      "fieldName": "RestrictedLift",
+      "label": "Restricted Lift",
+      "type": "label",
+      "fieldDisplayOrder": 0,
+      "gridSection": 0,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": "FullLift",
+      "disabled": true,
+      "visible": false,
+      "dimensionName": null,
+      "infoText": "",
+      "grid": "3",
+      "style": {
+        "gridDirection": "column",
+        "gridTemplateColumns": "0.3fr 0.8fr 0.8fr 0.2fr"
+      },
+      "gridTemplateColumns": "0.3fr 0.8fr 0.8fr 0.2fr"
+    },
+    {
+      "fieldName": "FullLift",
+      "label": "Full Lift - No Restriction",
+      "type": "radio",
+      "fieldDisplayOrder": 1,
+      "gridSection": 0,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": true,
+      "disabled": false,
+      "visible": true,
+      "dimensionName": null,
+      "infoText": "",
+      "grid": "3",
+      "style": {
+        "gridDirection": "column",
+        "gridTemplateColumns": "0.3fr 0.8fr 0.8fr 0.2fr"
+      },
+      "gridTemplateColumns": "0.3fr 0.8fr 0.8fr 0.2fr",
+      "fieldGroupType": "RADIO_GROUP",
+      "fieldGroupName": "RestrictedLift",
+      "fieldGroupLabel": "Restricted Lift",
+      "defaultSelected": "FullLift"
+    },
+    {
+      "fieldName": "RestrictedLiftSpecify",
+      "label": "Restricted Lift - Specify",
+      "type": "radio",
+      "fieldDisplayOrder": 2,
+      "gridSection": 0,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": false,
+      "disabled": false,
+      "visible": true,
+      "dimensionName": null,
+      "infoText": "",
+      "grid": "3",
+      "style": {
+        "gridDirection": "column",
+        "gridTemplateColumns": "0.3fr 0.8fr 0.8fr 0.2fr"
+      },
+      "gridTemplateColumns": "0.3fr 0.8fr 0.8fr 0.2fr",
+      "fieldGroupType": "RADIO_GROUP",
+      "fieldGroupName": "RestrictedLift",
+      "fieldGroupLabel": "Restricted Lift",
+      "defaultSelected": "FullLift"
+    },
+    {
+      "fieldName": "RequiredCapacity",
+      "label": "Required Capacity",
+      "type": "inputUom",
+      "fieldDisplayOrder": 3,
+      "gridSection": 1,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": "",
+      "disabled": true,
+      "disableUOM": true,
+      "visible": true,
+      "dimensionName": [
+          "massflow",
+          "gasvolflow",
+          "gasvolflowact"
+        ],
+      "uomFieldName": "FlowCapacityUOM",
+        "defaultUOM": {
+            "Metric": "massflow.kgday",
+            "English": "massflow.lbhr"
+        }
+    },
+    {
+      "fieldName": "RatedFlowCapacity",
+      "label": "Full Lift Capacity",
+      "type": "inputUom",
+      "fieldDisplayOrder": 4,
+      "gridSection": 1,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": "",
+      "disabled": true,
+      "disableUOM": true,
+      "visible": true,
+      "dimensionName": [
+          "massflow",
+          "gasvolflow",
+          "gasvolflowact"
+        ],
+      "uomFieldName": "FlowCapacityUOM",
+        "defaultUOM": {
+            "Metric": "massflow.kgday",
+            "English": "massflow.lbhr"
+        }
+    },
+    {
+        "fieldName": "IFR",
+        "label": "Inlet Flange Rating",
+        "type": "select",
+        "fieldDisplayOrder": 5,
+        "gridSection": 1,
+        "mandatory": false,
+        "defaultValue": "0",
+        "disabled": false,
+        "visible": false,
+        "calculateFields":[
+          {
+              "target":{
+                  "id":"RestrictedLiftCalc",
+                  "symbol":"Exec_API",
+                  "api":"/calculations/restrictedlift/getLiftRestrictions",
+                  "actionType":"OnChange",
+                  "method":"GET",
+                  "functionReqFields":["ModelNumber","IFR","Orifice","RequiredCapacity","RatedFlowCapacity","DoNotExceedCapacity"],
+                  "apiResponseParams":["LiftRestriction","RestrictedLiftCapacity","RetrictedLiftErrors","LROptions"],
+                  "nextRound":false
+              },
+              "value":""
+          }
+      ],
+        "options": [
+          {
+            "label": "ANSI 150-600",
+            "value": 1
+          },
+          {
+            "label": "ANSI 900-2500",
+            "value": 2
+          },
+          {
+            "label": "PN10-PN40",
+            "value": 3
+          }
+        ],
+        "dimensionName": null,
+        "infoText": "",
+        "grid": "6",
+        "style": null,
+        "regex": null,
+        "uomFieldName": "",
+        "defaultUOM": null
+    },
+    {
+      "fieldName": "DoNotExceedCapacity",
+      "label": "Do Not Exceed Capacity",
+      "type": "inputUom",
+      "fieldDisplayOrder": 6,
+      "gridSection": 2,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": "",
+      "disabled": false,
+      "disableUOM": true,
+      "visible": true,
+      "onBlurAction":true,
+      "calculateFields":[
+          {
+              "target":{
+                  "id":"RestrictedLiftCalc",
+                  "symbol":"Exec_API",
+                  "api":"/calculations/restrictedlift/getLiftRestrictions",
+                  "actionType":"OnBlur",
+                  "method":"GET",
+                  "functionReqFields":["ModelNumber","IFR","Orifice","RequiredCapacity","RatedFlowCapacity","DoNotExceedCapacity"],
+                  "apiResponseParams":["LiftRestriction","RestrictedLiftCapacity","RetrictedLiftErrors","LROptions"],
+                  "nextRound":false
+              },
+              "value":""
+          }
+      ],
+      "dimensionName": [
+          "massflow",
+          "gasvolflow",
+          "gasvolflowact"
+        ],
+      "uomFieldName": "FlowCapacityUOM",
+        "defaultUOM": {
+            "Metric": "massflow.kgday",
+            "English": "massflow.lbhr"
+        }
+    },
+    {
+        "fieldName": "LiftRestriction",
+        "label": "Lift Restriction",
+        "type": "select",
+        "fieldDisplayOrder": 7,
+        "gridSection": 2,
+        "mandatory": false,
+        "defaultValue": "",
+        "disabled": false,
+        "visible": true,
+        "calculateFields":[
+          {
+              "target":{
+                  "id":"RLCapacityCalc",
+                  "symbol":"Exec_API",
+                  "api":"/calculations/restrictedlift/RLCapacity",
+                  "actionType":"OnChange",
+                  "method":"GET",
+                  "functionReqFields":["LiftRestriction","RatedFlowCapacity"],
+                  "apiResponseParams":["RestrictedLiftCapacity","RetrictedLiftErrors"],
+                  "nextRound":false
+              },
+              "value":""
+          }
+      ],
+        "options": [],
+        "dimensionName": null,
+        "infoText": "",
+        "grid": "6",
+        "style": null,
+        "regex": null,
+        "uomFieldName": "",
+        "defaultUOM": null
+    },
+    {
+      "fieldName": "RestrictedLiftCapacity",
+      "label": "Restricted Lift Capacity",
+      "type": "inputUom",
+      "fieldDisplayOrder": 8,
+      "gridSection": 2,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": "",
+      "disabled": true,
+      "disableUOM": true,
+      "visible": true,
+      "dimensionName": [
+          "massflow",
+          "gasvolflow",
+          "gasvolflowact"
+        ],
+      "uomFieldName": "FlowCapacityUOM",
+        "defaultUOM": {
+            "Metric": "massflow.kgday",
+            "English": "massflow.lbhr"
+        }
+    },
+    {
+      "fieldName": "RestrictedLiftErrors",
+      "label": "Errors Exist",
+      "type": "text",
+      "fieldDisplayOrder": 9,
+      "gridSection": 3,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": "",
+      "disabled": true,
+      "visible": false,
+      "options": [],
+      "dimensionName": null,
+      "infoText": "",
+      "grid": "4",
+      "style": null,
+      "regex": null,
+      "uomFieldName": "",
+      "defaultUOM": null
+    }
+  ]
+}

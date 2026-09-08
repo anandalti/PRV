@@ -1,0 +1,119 @@
+.toggleSwitch {
+    position: relative;
+    width: 100px;
+    display: inline-block;
+    vertical-align: middle;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    text-align: left;
+  }
+  .toggleSwitchCheckbox {
+    display: none !important;
+  }
+  
+  
+  .toggleSwitchLabel {
+    display: block !important;
+    overflow: hidden;
+    cursor: pointer;
+    border: 0 solid #ccc;
+    border-radius: 4px;
+    margin: 0;
+    padding: 0 !important;
+  }
+  
+  label.toggleSwitchLabel:before, label.toggleSwitchLabel:after {
+    display: none !important;
+  }
+  
+  .toggleSwitchInner {
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+  }
+  .toggleSwitchInner:before, .toggleSwitchInner:after {
+    display: block;
+    float: left;
+    width: 50%;
+    height: 25px;
+    padding: 0;
+    line-height: 27px;
+    font-size: 12px;
+    color: white;
+    font-weight: normal;
+    box-sizing: border-box;
+  }
+  .toggleSwitchInner:before {
+    content: attr(data-yes);
+    text-transform: uppercase;
+    padding-left: 10px;
+    background-color: #5cb85c;
+    color: #fff;
+  }
+  .toggleSwitchDisabled {
+    background-color: #31b0d5;
+    cursor: not-allowed;
+  }
+  .toggleSwitchDisabled:before {
+    background-color: #31b0d5;
+    cursor: not-allowed;
+  }
+  .toggleSwitchInner:after {
+    content: attr(data-no);
+    text-transform: uppercase;
+    padding-right: 22px;
+    background-color: #31b0d5;
+    color: #fff;
+    text-align: right;
+  }
+  .toggleSwitchSwitch {
+    display: block;
+    width: 15px;
+    margin: 0;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 84px;
+    border: 1px solid #3f51b5;
+    border-radius: 0px;
+    transition: all 0.3s ease-in 0s;
+  }
+  .toggleSwitchCheckbox:checked + .toggleSwitchLabel .toggleSwitchInner {
+    margin-left: 0;
+  }
+  .toggleSwitchCheckbox:checked + .toggleSwitchLabel .toggleSwitchSwitch {
+    right: 0px;
+  }
+  .toggleSwitch.smallSwitch {
+    width: 40px;
+  }
+  .toggleSwitch.smallSwitch .toggleSwitchInner:after, .toggleSwitch.smallSwitch .toggleSwitchInner:before {
+    content: "";
+    height: 20px;
+    line-height: 20px;
+  }
+  .toggleSwitch.smallSwitch .toggleSwitchSwitch {
+    width: 16px;
+    right: 20px;
+    margin: 2px;
+  }
+  @media screen and (max-width: 991px) {
+    .toggleSwitch {
+      transform: scale(0.9);
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .toggleSwitch {
+      transform: scale(0.825);
+    }
+  }
+  @media screen and (max-width: 575px) {
+    .toggleSwitch {
+      transform: scale(0.75);
+    }
+  }
+  

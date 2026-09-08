@@ -1,0 +1,322 @@
+[
+    {
+        "Awet": 0,
+        "Venting": 0,
+        "Method": "English"
+    },
+    {
+        "Awet": 20,
+        "Venting": 21100,
+        "Method": "English"
+    },
+    {
+        "Awet": 30,
+        "Venting": 31600,
+        "Method": "English"
+    },
+    {
+        "Awet": 40,
+        "Venting": 42100,
+        "Method": "English"
+    },
+    {
+        "Awet": 50,
+        "Venting": 52700,
+        "Method": "English"
+    },
+    {
+        "Awet": 60,
+        "Venting": 63200,
+        "Method": "English"
+    },
+    {
+        "Awet": 70,
+        "Venting": 73700,
+        "Method": "English"
+    },
+    {
+        "Awet": 80,
+        "Venting": 84200,
+        "Method": "English"
+    },
+    {
+        "Awet": 90,
+        "Venting": 94800,
+        "Method": "English"
+    },
+    {
+        "Awet": 100,
+        "Venting": 105000,
+        "Method": "English"
+    },
+    {
+        "Awet": 120,
+        "Venting": 126000,
+        "Method": "English"
+    },
+    {
+        "Awet": 140,
+        "Venting": 147000,
+        "Method": "English"
+    },
+    {
+        "Awet": 160,
+        "Venting": 168000,
+        "Method": "English"
+    },
+    {
+        "Awet": 180,
+        "Venting": 190000,
+        "Method": "English"
+    },
+    {
+        "Awet": 200,
+        "Venting": 211000,
+        "Method": "English"
+    },
+    {
+        "Awet": 250,
+        "Venting": 239000,
+        "Method": "English"
+    },
+    {
+        "Awet": 300,
+        "Venting": 265000,
+        "Method": "English"
+    },
+    {
+        "Awet": 350,
+        "Venting": 288000,
+        "Method": "English"
+    },
+    {
+        "Awet": 400,
+        "Venting": 312000,
+        "Method": "English"
+    },
+    {
+        "Awet": 500,
+        "Venting": 354000,
+        "Method": "English"
+    },
+    {
+        "Awet": 600,
+        "Venting": 392000,
+        "Method": "English"
+    },
+    {
+        "Awet": 700,
+        "Venting": 428000,
+        "Method": "English"
+    },
+    {
+        "Awet": 800,
+        "Venting": 462000,
+        "Method": "English"
+    },
+    {
+        "Awet": 900,
+        "Venting": 493000,
+        "Method": "English"
+    },
+    {
+        "Awet": "1,000",
+        "Venting": 524000,
+        "Method": "English"
+    },
+    {
+        "Awet": "1,200",
+        "Venting": 557000,
+        "Method": "English"
+    },
+    {
+        "Awet": "1,400",
+        "Venting": 587000,
+        "Method": "English"
+    },
+    {
+        "Awet": "1,600",
+        "Venting": 614000,
+        "Method": "English"
+    },
+    {
+        "Awet": "1,800",
+        "Venting": 639000,
+        "Method": "English"
+    },
+    {
+        "Awet": "2,000",
+        "Venting": 662000,
+        "Method": "English"
+    },
+    {
+        "Awet": "2,400",
+        "Venting": 704000,
+        "Method": "English"
+    },
+    {
+        "Awet": "2,800",
+        "Venting": 742000,
+        "Method": "English"
+    },
+    {
+        "Awet": 0,
+        "Venting": 0,
+        "Method": "Metric"
+    },
+    {
+        "Awet": 2,
+        "Venting": 608,
+        "Method": "Metric"
+    },
+    {
+        "Awet": 3,
+        "Venting": 913,
+        "Method": "Metric"
+    },
+    {
+        "Awet": 4,
+        "Venting": 1217,
+        "Method": "Metric"
+    },
+    {
+        "Awet": 5,
+        "Venting": 1521,
+        "Method": "Metric"
+    },
+    {
+        "Awet": 6,
+        "Venting": 1825,
+        "Method": "Metric"
+    },
+    {
+        "Awet": 7,
+        "Venting": 2130,
+        "Method": "Metric"
+    },
+    {
+        "Awet": 8,
+        "Venting": 2434,
+        "Method": "Metric"
+    },
+    {
+        "Awet": 9,
+        "Venting": 2738,
+        "Method": "Metric"
+    },
+    {
+        "Awet": 11,
+        "Venting": 3347,
+        "Method": "Metric"
+    },
+    {
+        "Awet": 13,
+        "Venting": 3955,
+        "Method": "Metric"
+    },
+    {
+        "Awet": 15,
+        "Venting": 4563,
+        "Method": "Metric"
+    },
+    {
+        "Awet": 17,
+        "Venting": 5172,
+        "Method": "Metric"
+    },
+    {
+        "Awet": 19,
+        "Venting": 5780,
+        "Method": "Metric"
+    },
+    {
+        "Awet": 22,
+        "Venting": 6217,
+        "Method": "Metric"
+    },
+    {
+        "Awet": 25,
+        "Venting": 6684,
+        "Method": "Metric"
+    },
+    {
+        "Awet": 30,
+        "Venting": 7411,
+        "Method": "Metric"
+    },
+    {
+        "Awet": 35,
+        "Venting": 8086,
+        "Method": "Metric"
+    },
+    {
+        "Awet": 40,
+        "Venting": 8721,
+        "Method": "Metric"
+    },
+    {
+        "Awet": 45,
+        "Venting": 9322,
+        "Method": "Metric"
+    },
+    {
+        "Awet": 50,
+        "Venting": 9895,
+        "Method": "Metric"
+    },
+    {
+        "Awet": 60,
+        "Venting": 10971,
+        "Method": "Metric"
+    },
+    {
+        "Awet": 70,
+        "Venting": 11971,
+        "Method": "Metric"
+    },
+    {
+        "Awet": 80,
+        "Venting": 12911,
+        "Method": "Metric"
+    },
+    {
+        "Awet": 90,
+        "Venting": 13801,
+        "Method": "Metric"
+    },
+    {
+        "Awet": 110,
+        "Venting": 15461,
+        "Method": "Metric"
+    },
+    {
+        "Awet": 130,
+        "Venting": 15751,
+        "Method": "Metric"
+    },
+    {
+        "Awet": 150,
+        "Venting": 16532,
+        "Method": "Metric"
+    },
+    {
+        "Awet": 175,
+        "Venting": 17416,
+        "Method": "Metric"
+    },
+    {
+        "Awet": 200,
+        "Venting": 18220,
+        "Method": "Metric"
+    },
+    {
+        "Awet": 230,
+        "Venting": 19102,
+        "Method": "Metric"
+    },
+    {
+        "Awet": 260,
+        "Venting": 19910,
+        "Method": "Metric"
+    }
+]

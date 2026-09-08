@@ -1,0 +1,1584 @@
+{
+    "SalesOrder": {
+        "MessageHeader": {
+            "MessageID": "",
+            "Sender": {
+                "ID": "",
+                "SiteCode": "",
+                "Description": "",
+                "Application": {
+                    "ID": ""
+                },
+                "ApplicationVersion": "",
+                "TransactionCode": "",
+                "IPAddress": "",
+                "SenderMessageID": "",
+                "CallingServiceName": "",
+                "ContactName": "",
+                "ContactEmail": "",
+                "ContactPhoneNumber": ""
+            },
+            "Target": {
+                "ID": "",
+                "SiteCode": "",
+                "OverrideRoutingIndicator": "",
+                "ServiceName": "",
+                "ApplicationTypeCode": "",
+                "EndPointURI": ""
+            },
+            "BusinessGroup": "",
+            "MessageName": "",
+            "BusinessObjectName": "",
+            "CreationDateTime": "",
+            "RequestMessageID": "",
+            "MessageProcessingInstruction": {
+                "EnvironmentCode": "",
+                "DefinitionID": "",
+                "InstanceID": "",
+                "Priority": "",
+                "CompressedFlag": "",
+                "CompressedMessage": ""
+            },
+            "FaultNotification": {
+                "BusinessComponentID": "",
+                "ReportingDateTime": "",
+                "CorrectiveAction": "",
+                "FaultMessage": {
+                    "Code": "",
+                    "Text": "",
+                    "Severity": "",
+                    "Stack": "",
+                    "FaultCode": "",
+                    "FaultDescription": "",
+                    "FaultSeverity": "",
+                    "FaultTrace": "",
+                    "FaultCategory": ""
+                },
+                "FaultingService": {
+                    "ID": "",
+                    "ImplementationCode": "",
+                    "InstanceID": "",
+                    "ProjectName": "",
+                    "ServiceName": "",
+                    "ActivityName": "",
+                    "CompositeName": "",
+                    "ComponentName": ""
+                }
+            },
+            "MessageBatch": {
+                "ID": "",
+                "Name": "",
+                "StatusCode": "",
+                "ResponseMessage": "",
+                "BatchParameter": {
+                    "Name": "",
+                    "DataTypeCode": "",
+                    "Value": ""
+                }
+            },
+            "MessageTracking": {
+                "SequenceNumber": "",
+                "ExecutionUnitID": "",
+                "ExecutionUnitName": "",
+                "ImplementationCode": "",
+                "ActivityDateTime": "",
+                "IntermediateMessageHop": {
+                    "SenderResourceTypeCode": "",
+                    "SenderResourceID": "",
+                    "SenderMessageID": "",
+                    "IntermediateMessageHop": ""
+                }
+            },
+            "CompanyCode": "",
+            "OrganisationCode": "",
+            "Action": "",
+            "UserID": "",
+            "UserArea": {
+                "KeyName": "",
+                "Value": ""
+            }
+        },
+        "DataArea": {
+            "Identification": {
+                "ID": "",
+                "AlternateID": [
+                    {
+                        "ID": "",
+                        "ContextID": ""
+                    }
+                ],
+                "OriginatingSystem": "",
+                "OrderNbr": "",
+                "OrgID": "",
+                "complimentary_id": "",
+                "id_type": ""
+            },
+            "SalesOrderHeader": [
+                {
+                    "OrderHeader": {
+                        "AckAddEmails": "",
+                        "SendAckTo": "",
+                        "RequestedDeliveryDate": "",
+                        "AckDeliveryMethod": "",
+                        "AckLanguage": "",
+                        "OrderAdminName": "",
+                        "InternalProjectNumber": "",
+                        "BookedFlag": "",
+                        "XMLVersion": "",
+                        "TransactionType": "",
+                        "AgentID": "",
+                        "PenaltyStartDate": "",
+                        "PenaltyPercent": 0,
+                        "PenaltyMaximum": 0,
+                        "TechContact": "",
+                        "PickPackLeadTime": 0,
+                        "IMONumber": "",
+                        "PODate": "",
+                        "IntermedShipToAddr": "",
+                        "RepContact": "",
+                        "ActionType": "",
+                        "SalesRepAgentLBP": 0,
+                        "QuoteGID": "",
+                        "QuoteRevGID": "",
+                        "OrderGID": "",
+                        "OriginatingSystem": "",
+                        "DestinationSystem": "",
+                        "EmailAddress": "",
+                        "ResponsibilityName": "",
+                        "Division": "",
+                        "HeaderId": "",
+                        "ConversionType": "",
+                        "ConversionDate": "",
+                        "ConversionRate": 0,
+                        "LOCExpires": "",
+                        "LOCShipDate": "",
+                        "IssuingBank": "",
+                        "ReimbursementBank": "",
+                        "WareHouse": "",
+                        "TrackingNumber": "",
+                        "OrderSource": "",
+                        "OrderSourceRef": "",
+                        "ServiceCloudRef": "",
+                        "CountryCode": "",
+                        "CurrencyCode": "",
+                        "PricingRegion": "",
+                        "PaymentTerms": "",
+                        "STCProc": "",
+                        "AgreementWith": "",
+                        "ShippingProfile": {
+                            "ShipToAddr": "",
+                            "ShipCode": "",
+                            "ShipAttention1": "",
+                            "ShipAttention2": "",
+                            "OrganizationName": "",
+                            "Address": {
+                                "LineOne": "",
+                                "LineTwo": "",
+                                "LineThree": "",
+                                "LineFour": "",
+                                "CityName": "",
+                                "StateName": "",
+                                "County": "",
+                                "CountryName": "",
+                                "CountryDesc": "",
+                                "PostalCode": "",
+                                "PhoneNumber": "",
+                                "FaxNumber": "",
+                                "EmailAddress": "",
+                                "ContactName": "",
+                                "CountryCode": "",
+                                "AddressInfo": {
+                                    "ABNbr": "",
+                                    "SearchType": "",
+                                    "ParentNbr": ""
+                                }
+                            }
+                        },
+                        "BillingProfile": {
+                            "BillToAddr": "",
+                            "BillAttention1": "",
+                            "BillAttention2": "",
+                            "OrganizationName": "",
+                            "Address": {
+                                "LineOne": "",
+                                "LineTwo": "",
+                                "LineThree": "",
+                                "LineFour": "",
+                                "CityName": "",
+                                "StateName": "",
+                                "County": "",
+                                "CountryName": "",
+                                "CountryDesc": "",
+                                "PostalCode": "",
+                                "PhoneNumber": "",
+                                "FaxNumber": "",
+                                "EmailAddress": "",
+                                "ContactName": "",
+                                "Country": "",
+                                "CountryCode": "",
+                                "AddressInfo": {
+                                    "ABNbr": "",
+                                    "SearchType": "",
+                                    "ParentNbr": ""
+                                }
+                            }
+                        },
+                        "UltimateDestination": "",
+                        "CustomerPONbr": "",
+                        "POReceiptDate": "",
+                        "ReasonCode": "",
+                        "RequestDate": "",
+                        "PromisedShipDate": "",
+                        "QuoteStartDate": "",
+                        "CustomerContact": "",
+                        "ContactPhone": "",
+                        "ContactFax": "",
+                        "ContactEMail": "",
+                        "ProjectNbr": "",
+                        "ProjectSub": "",
+                        "OrgId": "",
+                        "OpportunityId": "",
+                        "OrderNbr": "",
+                        "OrderQualifier": "",
+                        "OrderType": "",
+                        "AssIntSalesPer": "",
+                        "OrderPriority": "",
+                        "OrderBookedDateTime": "",
+                        "AcknowledgedDate": "",
+                        "InvoiceDate": "",
+                        "EBSOU": "",
+                        "CrmOrderRef": "",
+                        "AssocOrderManager": "",
+                        "LastModifiedBy": "",
+                        "BookedBy": "",
+                        "ShippingTerms": "",
+                        "CreationDate": "",
+                        "PromiseDate": "",
+                        "OrderTypeID": "",
+                        "AssociatedAccount": "",
+                        "ReceivedDate": "",
+                        "CustomerRequestDate": "",
+                        "SicCode": "",
+                        "OrderDate": "",
+                        "OrderStartDate": "",
+                        "BranchPlant": "",
+                        "HoldCode": "",
+                        "TaxRateArea": "",
+                        "TaxExplCode": "",
+                        "TaxCertificate": "",
+                        "TaxExemption": "",
+                        "ResourceId": "",
+                        "PreparedBy": "",
+                        "PreparedByName": "",
+                        "SentDate": "",
+                        "ModifiedDate": "",
+                        "Validity": "",
+                        "LineId": "",
+                        "Total": "",
+                        "ChangeStatus": "",
+                        "CreatedBy": "",
+                        "LastUpdateDate": "",
+                        "LastUpdatedBy": "",
+                        "LastUpdateLogin": "",
+                        "OrderStatus": "",
+                        "ErrorMsg": "",
+                        "OrganizationId": "",
+                        "VersionNumber": "",
+                        "SalesPerson": "",
+                        "CustomerEmail": "",
+                        "AgreementNbr": "",
+                        "Subscriptionkey": "",
+                        "OrderTier": "",
+                        "SalesChannel": "",
+                        "SoldToContactName": "",
+                        "AckEmailIds": "",
+                        "ProformaEmailIds": "",
+                        "PrimBusinessUnitCategory": "",
+                        "DistBusinessUnitCategory": ""
+                    },
+                    "Hold": [
+                        {
+                            "Hold": {
+                                "LogHold": "",
+                                "HoldCode": "",
+                                "HoldUndate": "",
+                                "HoldComment": "",
+                                "ReleaseFlag": ""
+                            }
+                        }
+                    ],
+                    "CIHConfInfo": {
+                        "CIHConfID": "",
+                        "CIHConfRef": "",
+                        "CIHConfDesc": ""
+                    },
+                    "OrderExportInfo": {
+                        "ShipMethod": "",
+                        "PreCarrier": "",
+                        "PreCarrierFrtPayTerms": "",
+                        "IntermedShipToID": "",
+                        "Deconsolidation": "",
+                        "Consolidation": "",
+                        "MainCarrier": "",
+                        "MainCarrierFrtPayTerms": "",
+                        "ThirdPartyFrtBilling": "",
+                        "PackInstructions": "",
+                        "ShipInstructions": "",
+                        "CarrierAcctNbr": "",
+                        "INCOTerms": "",
+                        "FOBPoint": "",
+                        "ShipmentPriority": "",
+                        "PriorityRefNbr": "",
+                        "DomesticForwarder": "",
+                        "NuclearSafetyCode": "",
+                        "EndUse": "",
+                        "ExporterOfRecord": "",
+                        "ExportLicenseNbr": "",
+                        "LOCNbr": "",
+                        "EndCustomerNbr": "",
+                        "IncotermDescription": "",
+                        "CarrierName": "",
+                        "CarrierType": "",
+                        "CarrierAgreementNumber": "",
+                        "InspectionRequired": "",
+                        "ExplainendUse": "",
+                        "AntibScreen": "",
+                        "EndUserNotes": "",
+                        "ConsigneeNotes": ""
+                    },
+                    "OrderNotes": [
+                        {
+                            "NoteSeqNbr": "",
+                            "NoteName": "",
+                            "NoteTitle": "",
+                            "NoteDescription": "",
+                            "NoteType": "",
+                            "NoteText": ""
+                        }
+                    ],
+                    "CreditCardInfo": {
+                        "CreditCardInfo": "",
+                        "CreditCardType": "",
+                        "CardNbr": "",
+                        "ExpiryDate": "",
+                        "HolderName": "",
+                        "PhoneNbr": "",
+                        "MbrReference": "",
+                        "Authorization": "",
+                        "ChrgDesc": "",
+                        "AmExID": "",
+                        "CustomerReceipt": "",
+                        "ReceiptAddr1": "",
+                        "ReceiptAddr2": "",
+                        "ReceiptAddr3": "",
+                        "ReceiptAddr4": ""
+                    },
+                    "OrderCommissionInfo": [
+                        {
+                            "RepID": "",
+                            "Type": "",
+                            "Percent": "",
+                            "NetOrPay": ""
+                        }
+                    ],
+                    "OrderSalesCredit": [
+                        {
+                            "LineNbr": "",
+                            "SalesPerson": "",
+                            "Percent": "",
+                            "Type": ""
+                        }
+                    ],
+                    "DocumentsInfo": [
+                        {
+                            "Document": "",
+                            "Qty": "",
+                            "Method": "",
+                            "eMail": "",
+                            "SendTo": "",
+                            "Attention": "",
+                            "FaxEmailNote": ""
+                        }
+                    ],
+                    "AdditionalHdrInfo": {
+                        "DisplayFactor": "",
+                        "CurrencyCode": "",
+                        "ExchangeRate": "",
+                        "Lang": "",
+                        "PaymentTerms": "",
+                        "Language": "",
+                        "SIC": "",
+                        "EngAndConst": "",
+                        "ModeOfTransportCode": "",
+                        "ExportDocOrigin": "",
+                        "BusSegment": "",
+                        "AdminCode": "",
+                        "KOB1": "",
+                        "KOB2": "",
+                        "KOB3": "",
+                        "EntryDate": "",
+                        "EntryBy": "",
+                        "RevisionNbr": "",
+                        "RevisionDate": "",
+                        "CancelDate": "",
+                        "OriginalOrdNbr": "",
+                        "OriginalOrdType": "",
+                        "RepID": "",
+                        "InsideSales": "",
+                        "RepOrderID": "",
+                        "EDI1": "",
+                        "EDI2": "",
+                        "EDI3": "",
+                        "EDI4": "",
+                        "PreparerOfDocuments": "",
+                        "BillToAgent": "",
+                        "CheckPoint": "",
+                        "EndUseDetails": "",
+                        "WebOrderRequest": "",
+                        "Subtotal": "",
+                        "OwnType": "",
+                        "AuthorizationCode": "",
+                        "SIRET": "",
+                        "GateCode": "",
+                        "TermCode": "",
+                        "FrtReasonCode": "",
+                        "NamedPlace": "",
+                        "FLEXATTRIBUTE": {
+                            "DffContext": "",
+                            "DffAttribute1": "",
+                            "DffAttribute2": "",
+                            "DffAttribute3": "",
+                            "DffAttribute4": "",
+                            "DffAttribute5": "",
+                            "DffAttribute6": "",
+                            "DffAttribute7": "",
+                            "DffAttribute8": "",
+                            "DffAttribute9": "",
+                            "DffAttribute10": "",
+                            "DffAttribute11": "",
+                            "DffAttribute12": "",
+                            "DffAttribute13": "",
+                            "DffAttribute14": "",
+                            "DffAttribute15": "",
+                            "DffAttribute16": "",
+                            "DffAttribute17": "",
+                            "DffAttribute18": "",
+                            "DffAttribute19": "",
+                            "DffAttribute20": ""
+                        }
+                    },
+                    "PriceListReference": {
+                        "PriceListIdentification": {
+                            "ID": ""
+                        }
+                    },
+                    "CustomerPartyReference": {
+                        "OrganizationName": "",
+                        "LocationReference": {
+                            "Name": "",
+                            "Address": {
+                                "LineOne": "",
+                                "LineTwo": "",
+                                "LineThree": "",
+                                "LineFour": "",
+                                "CityName": "",
+                                "StateName": "",
+                                "CountryName": "",
+                                "CountryDesc": "",
+                                "PostalCode": "",
+                                "PhoneNumber": "",
+                                "FaxNumber": "",
+                                "EmailAddress": "",
+                                "ContactName": "",
+                                "County": "",
+                                "CountryCode": "",
+                                "AddressInfo": {
+                                    "ABNbr": "",
+                                    "SearchType": "",
+                                    "ParentNbr": ""
+                                }
+                            },
+                            "PersonName": {
+                                "FullName": "",
+                                "PersonName": ""
+                            }
+                        },
+                        "Contact": {
+                            "PersonName": {
+                                "FullName": "",
+                                "PersonName": ""
+                            },
+                            "ContactFaxCommunication": {
+                                "FaxCommunication": {
+                                    "CompleteNumber": ""
+                                }
+                            },
+                            "ContactPhoneCommunication": {
+                                "PhoneCommunication": {
+                                    "CompleteNumber": ""
+                                }
+                            },
+                            "ContactEmailCommunication": {
+                                "EmailCommunication": {
+                                    "URI": ""
+                                }
+                            }
+                        },
+                        "CustomerType": "",
+                        "ParteyIdentification": {
+                            "ID": ""
+                        }
+                    },
+                    "SupplierPartyReference": {
+                        "OrganizationName": "",
+                        "LocationReference": {
+                            "Address": {
+                                "LineOne": "",
+                                "LineTwo": "",
+                                "LineThree": "",
+                                "LineFour": "",
+                                "CityName": "",
+                                "StateName": "",
+                                "CountryName": "",
+                                "CountryDesc": "",
+                                "PostalCode": "",
+                                "PhoneNumber": "",
+                                "FaxNumber": "",
+                                "EmailAddress": "",
+                                "ContactName": "",
+                                "County": "",
+                                "CountryCode": "",
+                                "AddressInfo": {
+                                    "ABNbr": "",
+                                    "SearchType": "",
+                                    "ParentNbr": ""
+                                }
+                            },
+                            "Name": "",
+                            "PersonName": {
+                                "FullName": "",
+                                "PersonName": ""
+                            }
+                        },
+                        "Contact": {
+                            "PersonName": {
+                                "FullName": "",
+                                "PersonName": ""
+                            },
+                            "ContactFaxCommunication": {
+                                "FaxCommunication": {
+                                    "CompleteNumber": ""
+                                }
+                            },
+                            "ContactPhoneCommunication": {
+                                "PhoneCommunication": {
+                                    "CompleteNumber": ""
+                                }
+                            },
+                            "ContactEmailCommunication": {
+                                "EmailCommunication": {
+                                    "URI": ""
+                                }
+                            }
+                        },
+                        "CustomerType": "",
+                        "ParteyIdentification": {
+                            "ID": ""
+                        }
+                    },
+                    "SalesOrderScheduleTax": {
+                        "Tax": {
+                            "Amount": "",
+                            "Identification": {
+                                "ID": {},
+                                "AlternateID": [
+                                    {
+                                        "ID": "",
+                                        "ContextID": ""
+                                    }
+                                ]
+                            },
+                            "TaxHandling": "",
+                            "TaxExemption": {
+                                "Status": {
+                                    "code": "",
+                                    "CertificateNumber": "",
+                                    "ReasonCode": ""
+                                }
+                            },
+                            "Code": ""
+                        }
+                    },
+                    "PaymentTerm": {
+                        "TypeCode": ""
+                    },
+                    "SalesOrderPaymentInstrument": {
+                        "PaymentInstrument": {
+                            "Check": {
+                                "Number": ""
+                            }
+                        }
+                    },
+                    "ItemReference": {
+                        "ItemIdentification": [
+                            {
+                                "ID": "",
+                                "Description": "",
+                                "EndUseOfItem": ""
+                            }
+                        ],
+                        "SpecificationGroup": [
+                            {
+                                "Specification": [
+                                    {
+                                        "DataTypeCode": "",
+                                        "Name": "",
+                                        "Value": "",
+                                        "ValueText": "",
+                                        "ValueNumeric": "",
+                                        "ValueDate": "",
+                                        "ValueDateTime": "",
+                                        "ValueQuantity": "",
+                                        "ValueAmount": "",
+                                        "ValueCode": ""
+                                    }
+                                ],
+                                "Name": "",
+                                "Type": ""
+                            }
+                        ]
+                    },
+                    "EndUserPartyReference": {
+                        "OrganizationName": "",
+                        "PartyIdentification": {
+                            "ID": ""
+                        },
+                        "LocationReference": {
+                            "Address": {
+                                "LineOne": "",
+                                "LineTwo": "",
+                                "LineThree": "",
+                                "LineFour": "",
+                                "CityName": "",
+                                "StateName": "",
+                                "CountryName": "",
+                                "CountryDesc": "",
+                                "PostalCode": "",
+                                "PhoneNumber": "",
+                                "FaxNumber": "",
+                                "EmailAddress": "",
+                                "ContactName": "",
+                                "County": "",
+                                "AddressInfo": {
+                                    "ABNbr": "",
+                                    "SearchType": "",
+                                    "ParentNbr": ""
+                                },
+                                "CountryCode": ""
+                            },
+                            "Name": "",
+                            "PersonName": {
+                                "FullName": "",
+                                "PersonName": ""
+                            }
+                        },
+                        "Contact": {
+                            "PersonName": {
+                                "FullName": "",
+                                "PersonName": ""
+                            },
+                            "ContactFaxCommunication": {
+                                "FaxCommunication": {
+                                    "CompleteNumber": ""
+                                }
+                            },
+                            "ContactPhoneCommunication": {
+                                "PhoneCommunication": {
+                                    "CompleteNumber": ""
+                                }
+                            },
+                            "ContactEmailCommunication": {
+                                "EmailCommunication": {
+                                    "URI": ""
+                                }
+                            }
+                        },
+                        "CustomerType": ""
+                    },
+                    "ContractReference": {
+                        "Identification": {
+                            "ID": "",
+                            "AlternateID": [
+                                {
+                                    "ID": "",
+                                    "ContextID": ""
+                                }
+                            ]
+                        }
+                    },
+                    "ShipmentInstruction": "",
+                    "QuoteToOrder": {
+                        "ProposalName": "",
+                        "LocalProposalID": "",
+                        "Revison": "",
+                        "QuoteNumber": "",
+                        "QuoteVersion": ""
+                    },
+                    "HdrFlexDatas": [
+                        {
+                            "FlexName": "",
+                            "FlexValue": ""
+                        }
+                    ],
+                    "ProjectProfile": [
+                        {
+                            "SourceKey": "",
+                            "Name": "",
+                            "Value": "",
+                            "Label": "",
+                            "LabelValue": "",
+                            "TimeStamp": ""
+                        }
+                    ],
+                    "FLEXATTRIBUTE": {
+                        "DffContext": "",
+                        "DffAttribute1": "",
+                        "DffAttribute2": "",
+                        "DffAttribute3": "",
+                        "DffAttribute4": "",
+                        "DffAttribute5": "",
+                        "DffAttribute6": "",
+                        "DffAttribute7": "",
+                        "DffAttribute8": "",
+                        "DffAttribute9": "",
+                        "DffAttribute10": "",
+                        "DffAttribute11": "",
+                        "DffAttribute12": "",
+                        "DffAttribute13": "",
+                        "DffAttribute14": "",
+                        "DffAttribute15": "",
+                        "DffAttribute16": "",
+                        "DffAttribute17": "",
+                        "DffAttribute18": "",
+                        "DffAttribute19": "",
+                        "DffAttribute20": ""
+                    }
+                }
+            ],
+            "SalesOrderLine": [
+                {
+                    "OrderLine": {
+                        "GroupNumber": "",
+                        "CustomerUom": "",
+                        "PoLineQty": "",
+                        "LineID": "",
+                        "ShipmentNumber": "",
+                        "GrnNumber": "",
+                        "LineNbr": "",
+                        "IntermedShipToID": "",
+                        "ActionType": "",
+                        "SystemLineNumber": "",
+                        "ParentLineNbr": "",
+                        "QuoteRefLineNbr": "",
+                        "Qty": "",
+                        "ReturnReason": "",
+                        "SubInventory": "",
+                        "UOM": "",
+                        "QtyCancelled": "",
+                        "SerialNbr": "",
+                        "Description": "",
+                        "AssembleTo": "",
+                        "QtyPicked": "",
+                        "QtyOnHold": "",
+                        "QtyReturned": "",
+                        "QtyReceived": "",
+                        "InvoiceAmount": "",
+                        "ItemType": "",
+                        "ProductID": "",
+                        "SubStartDate": "",
+                        "SubEndDate": "",
+                        "DurationContract": "",
+                        "SoftwareContactEmail": "",
+                        "TrialCredits": "",
+                        "SoftwareItem": "",
+                        "SoftwareType": "",
+                        "Hcl": {
+                            "CartLineNum": "",
+                            "ManualDiscountComponent": ""
+                        },
+                        "ExtendDesc": "",
+                        "ModelString": "",
+                        "BaseModel": "",
+                        "ModelName": "",
+                        "SubModelString": [
+                            {
+                                "SubModelNumber": "",
+                                "ModelName1": "",
+                                "ModelString1": "",
+                                "ModelName3": "",
+                                "ModelString3": "",
+                                "ModelName2": "",
+                                "ModelString2": ""
+                            }
+                        ],
+                        "ConfigHeaderId": "",
+                        "ConfigRevNbr": "",
+                        "CustomerReference": "",
+                        "UserItemDescription": "",
+                        "OverrideAtpDateCode": "",
+                        "ShippingProfile": {
+                            "ShipToAddr": "",
+                            "ShipAttention1": "",
+                            "ShipAttention2": "",
+                            "Address": {
+                                "LineOne": "",
+                                "LineTwo": "",
+                                "LineThree": "",
+                                "LineFour": "",
+                                "CityName": "",
+                                "StateName": "",
+                                "CountryName": "",
+                                "CountryDesc": "",
+                                "PostalCode": "",
+                                "PhoneNumber": "",
+                                "FaxNumber": "",
+                                "EmailAddress": "",
+                                "ContactName": "",
+                                "County": "",
+                                "AddressInfo": {
+                                    "ABNbr": "",
+                                    "SearchType": "",
+                                    "ParentNbr": ""
+                                },
+                                "CountryCode": ""
+                            },
+                            "OrganizationName": "",
+                            "ShipCode": ""
+                        },
+                        "FulfillmentModeCode": "",
+                        "ReasonCode": "",
+                        "SizingReferenceId": "",
+                        "PaRefId": "",
+                        "ProductDesc2": "",
+                        "AgreementNbr": "",
+                        "PriceEffectiveDate": "",
+                        "CustAgreementNbr": "",
+                        "ListPrice": "",
+                        "DiscountPrcnt": "",
+                        "AdjustDiscountReasonCode": "",
+                        "MarkupMultiplier": "",
+                        "UnitPrice": "",
+                        "ExtendedPrice": "",
+                        "LocalListPrice": "",
+                        "LocalUnitPrice": "",
+                        "LocalExtendedPrice": "",
+                        "GrossCommissionPrcnt": "",
+                        "UnitCost": "",
+                        "ExtendedCost": "",
+                        "PriceRollUp": "",
+                        "RepItemNbr": "",
+                        "RepLineNbr": "",
+                        "CustLineNbr": "",
+                        "ValidConfig": "",
+                        "ShipSet": "",
+                        "LogHold": "",
+                        "RequestDate": "",
+                        "EstimateShipDate": "",
+                        "ActualShipDate": "",
+                        "InvoiceNbr": "",
+                        "PromisedShipDate": "",
+                        "RescheduledShipDate": "",
+                        "CancelDate": "",
+                        "ShipPartial": "",
+                        "SequenceDesc": "",
+                        "SmartPartNbr": "",
+                        "TimeStamp": "",
+                        "RequestedDeliveryDate": "",
+                        "ScheduledArrivalDate": "",
+                        "OrgPromiseDate": "",
+                        "SCStartDate": "",
+                        "SCExpirationDate": "",
+                        "SCDurationMonths": "",
+                        "SCRegistrationDate": "",
+                        "SCRenewalDate": "",
+                        "SCType": "",
+                        "SCChangeFlag": "",
+                        "LineType": ""
+                    },
+                    "LineNotes": [
+                        {
+                            "Division": "",
+                            "LineNbr": "",
+                            "NotesEqNbr": "",
+                            "NoteName": "",
+                            "NoteTitle": "",
+                            "NoteType": "",
+                            "NoteDescription": "",
+                            "NoteSeqNbr": "",
+                            "NoteText": ""
+                        }
+                    ],
+                    "Hold": [
+                        {
+                            "LogHold": "",
+                            "HoldCode": "",
+                            "HoldUndate": "",
+                            "HoldComment": "",
+                            "ReleaseFlag": ""
+                        }
+                    ],
+                    "LineAdjustment": [
+                        {
+                            "ListLineId": "",
+                            "Operation": "",
+                            "ChangeReasonCode": "",
+                            "AdjustmentAmt": ""
+                        }
+                    ],
+                    "AdditionalLineInfo": {
+                        "OrderNbr": "",
+                        "OrderQualifier": "",
+                        "OrderType": "",
+                        "OrderDate": "",
+                        "LineNbr": "",
+                        "FulfillmentSet": 0,
+                        "POReceiptDate": "",
+                        "ShipToAddr": "",
+                        "ShipMethod": "",
+                        "PreCarrier": "",
+                        "PreCarrierFrtPayTerms": "",
+                        "MainCarrier": "",
+                        "MainCarrierFrtPayTerms": "",
+                        "ThirdPartyFrtBilling": "",
+                        "PackInstructions": "",
+                        "ShipInstructions": "",
+                        "PriorityRefNbr": "",
+                        "CarrierAcctNbr": "",
+                        "INCOTerms": "",
+                        "FOBPoint": "",
+                        "ExporterPPI": "",
+                        "CalculatePriceFlag": "",
+                        "TestForSuspicion": "",
+                        "SICCode": "",
+                        "CustLineNbr": "",
+                        "BranchPlant": "",
+                        "TaxRateArea": "",
+                        "TaxExplCode": "",
+                        "Warranty": "",
+                        "BuyResaleInfo": "",
+                        "ProductLine": "",
+                        "ProductGroup": "",
+                        "EDI1": "",
+                        "EDI2": "",
+                        "EDI3": "",
+                        "EDI4": "",
+                        "Application": "",
+                        "Division": "",
+                        "Time": "",
+                        "ActionType": "",
+                        "EntryDate": "",
+                        "OriginatingSystem": "",
+                        "EntryBy": "",
+                        "RepExtendedAmt": "",
+                        "RepPrice": "",
+                        "ShipAttention1": "",
+                        "ShipAttention2": "",
+                        "ShipmentPriority": "",
+                        "SystemID": "",
+                        "CommerceNumberString": "",
+                        "CommerceOrigin": "",
+                        "SpecialPriceID": "",
+                        "ConstructValid": "",
+                        "PriceValid": "",
+                        "DrawingRev": "",
+                        "CertificateCode": "",
+                        "AdminCode": "",
+                        "CustomerNumber": "",
+                        "CustomerName": "",
+                        "CustomerItemCode": "",
+                        "CustomerItemDescription": "",
+                        "CustomerAcknowledgeNumber": "",
+                        "CustomerAcknowledgeLineNumber": "",
+                        "OtherPPIID": "",
+                        "ReasonForSuspicion": "",
+                        "PreferredItemManfSite": "",
+                        "SourceTypeCode": ""
+                    },
+                    "DtlFlexData": [
+                        {
+                            "FlexName": "",
+                            "FlexValue": "",
+                            "LineNbr": ""
+                        }
+                    ],
+                    "SalesOrderSchedule": {
+                        "RequestedShipDateTime": "",
+                        "ShipFromPartyReference": {
+                            "LocationReference": "",
+                            "PartyIdentification": {
+                                "ID": ""
+                            }
+                        },
+                        "PriceListReference": {
+                            "PriceListIdentification": {
+                                "ID": ""
+                            }
+                        },
+                        "SalesOrderCharge": {
+                            "charge": {
+                                "FreightAmount": "",
+                                "TotalShippingCharge": "",
+                                "PackagingAmount": "",
+                                "Amount": "",
+                                "DiscountPercent": {
+                                    "DiscountPercentage": ""
+                                }
+                            }
+                        }
+                    },
+                    "LineExportNotes": {
+                        "ExportLicenseNbr": "",
+                        "LicenseDecision": "",
+                        "CustomsValue": "",
+                        "CountryOfOrigin": "",
+                        "ECCN": "",
+                        "SubECCN": "",
+                        "HTSN": "",
+                        "HSDesc": "",
+                        "HSUOM": "",
+                        "HazMat": ""
+                    },
+                    "LineCommissionInfo": [
+                        {
+                            "RepID": "",
+                            "LineNbr": "",
+                            "PaymentAuth": "",
+                            "Type": "",
+                            "Percent": "",
+                            "NetOrPay": "",
+                            "Amount": ""
+                        }
+                    ],
+                    "LineSalesCredit": [
+                        {
+                            "LineNbr": "",
+                            "SalesPerson": "",
+                            "Percent": "",
+                            "Type": "",
+                            "Group": ""
+                        }
+                    ],
+                    "URDInfo": {
+                        "ComponentItemPricing": [
+                            {
+                                "ComponentNbr": "",
+                                "BaseAdderIndicator": "",
+                                "SequenceNbr": "",
+                                "PriceName": "",
+                                "Price": "",
+                                "BaseDisc": "",
+                                "AdjMultipliers": "",
+                                "IndustryFactor": "",
+                                "MarketFactor": "",
+                                "CompetitiveDisc": "",
+                                "DegStd": "",
+                                "ListNet": "",
+                                "CommissionAmt": "",
+                                "CommissionPrcnt": "",
+                                "CompFlexData": [
+                                    {
+                                        "FlexName": "",
+                                        "FlexValue": ""
+                                    }
+                                ]
+                            }
+                        ],
+                        "CompEMModule": {
+                            "EMModule": ""
+                        },
+                        "ItemSpecialSrvc": [
+                            {
+                                "CustAddressNbr": "",
+                                "ServiceQty": "",
+                                "SpecialSrvc": ""
+                            }
+                        ],
+                        "Unit": [
+                            {
+                                "Tag": {
+                                    "LineNbr": "",
+                                    "UnitID": "",
+                                    "SoftTag": "",
+                                    "MfgNotes": "",
+                                    "UnitStatus": "",
+                                    "TagText": [
+                                        {
+                                            "LineNbr": "",
+                                            "UnitID": "",
+                                            "TagType": "",
+                                            "AttachTag": "",
+                                            "TagOpt": "",
+                                            "TagText1": "",
+                                            "TagText2": "",
+                                            "TagText3": "",
+                                            "TagText4": "",
+                                            "TagText5": ""
+                                        }
+                                    ],
+                                    "NetWorkId": "",
+                                    "JoinKey": [
+                                        {
+                                            "JoinKey1": "",
+                                            "JoinKey2": "",
+                                            "JoinKey3": "",
+                                            "JoinKey4": ""
+                                        }
+                                    ],
+                                    "WiredTag": [
+                                        {
+                                            "WiredTag1": "",
+                                            "WiredTag2": "",
+                                            "WiredTag3": "",
+                                            "WiredTag4": "",
+                                            "WiredTag5": ""
+                                        }
+                                    ],
+                                    "TagFlow": {
+                                        "UnitId": "",
+                                        "TAG1": "",
+                                        "TAG2": "",
+                                        "TAG3": "",
+                                        "TAG4": "",
+                                        "TAG5": "",
+                                        "TAG6": "",
+                                        "TAG7": "",
+                                        "TAG8": "",
+                                        "TAG9": "",
+                                        "TAG10": "",
+                                        "TAG11": "",
+                                        "TAG12": "",
+                                        "TAG13": "",
+                                        "TAG14": "",
+                                        "TAG15": "",
+                                        "TAG16": "",
+                                        "TAG17": "",
+                                        "TAG18": "",
+                                        "TAG19": "",
+                                        "TAG20": "",
+                                        "TAG21": "",
+                                        "TAG22": "",
+                                        "TAG23": "",
+                                        "TAG24": "",
+                                        "TAG25": "",
+                                        "TAG26": "",
+                                        "TAG27": "",
+                                        "TAG28": "",
+                                        "TAG29": "",
+                                        "TAG30": "",
+                                        "TAG31": "",
+                                        "TAG32": "",
+                                        "TAG33": "",
+                                        "TAG34": "",
+                                        "TAG35": "",
+                                        "TAG36": "",
+                                        "TAG37": "",
+                                        "TAG38": "",
+                                        "TAG39": "",
+                                        "TAG40": "",
+                                        "TAG41": "",
+                                        "TAG42": "",
+                                        "TAG43": "",
+                                        "TAG44": "",
+                                        "TAG45": "",
+                                        "TAG46": "",
+                                        "TAG47": "",
+                                        "TAG48": "",
+                                        "TAG49": "",
+                                        "TAG50": "",
+                                        "TUBE_NAME_TAG_01_LINE_1": "",
+                                        "TUBE_NAME_TAG_02_LINE_11": "",
+                                        "TUBE_NAME_TAG_03_LINE_1": "",
+                                        "TUBE_NAME_TAG_04_LINE_1": "",
+                                        "TUBE_NAME_TAG_05_LINE_1": "",
+                                        "XMTR_NAME_TAG_01_LINE_1": "",
+                                        "XMTR_NAME_TAG_02_LINE_1": "",
+                                        "XMTR_NAME_TAG_03_LINE_1": "",
+                                        "XMTR_NAME_TAG_04_LINE_11": "",
+                                        "XMTR_NAME_TAG_05_LINE_1": "",
+                                        "MFGNOTES": ""
+                                    }
+                                },
+                                "Calibration": [
+                                    {
+                                        "LineNbr": "",
+                                        "UnitID": "",
+                                        "MEASUREMENT_TYPE1": "",
+                                        "MeasurementType": "",
+                                        "MMEASUREMENT_TYPE2": "",
+                                        "MEASUREMENT_TYPE3": "",
+                                        "MEASUREMENT_TYPE4": "",
+                                        "LRV1": "",
+                                        "LRV2": "",
+                                        "LRV3": "",
+                                        "LRV4": "",
+                                        "URV1": "",
+                                        "URV2": "",
+                                        "URV3": "",
+                                        "URV4": "",
+                                        "UOM1": "",
+                                        "UOM2": "",
+                                        "UOM3": "",
+                                        "UOM4": "",
+                                        "DESG1": "",
+                                        "DESG2": "",
+                                        "DESG3": "",
+                                        "DESG4": "",
+                                        "ASSOC1": "",
+                                        "ASSOC2": "",
+                                        "ASSOC3": "",
+                                        "ASSOC4": "",
+                                        "TBD1": "",
+                                        "TBD2": "",
+                                        "TBD3": "",
+                                        "TBD4": "",
+                                        "SQR1": "",
+                                        "SQR2": "",
+                                        "SQR3": "",
+                                        "SQR4": "",
+                                        "NP1": "",
+                                        "NP2": "",
+                                        "NP3": "",
+                                        "CalibrationType": "",
+                                        "DesiredFlowRate": 0,
+                                        "CalibrationUnits": "",
+                                        "SPLUnits": "",
+                                        "TotalizerText": "",
+                                        "SPLBaseFlowUnits": "",
+                                        "DensityValue": "",
+                                        "SPLBaseTimeUnits": "",
+                                        "Conversion": 0,
+                                        "CalibrationInputType": "",
+                                        "FP1": 0,
+                                        "FP2": 0,
+                                        "FP3": 0,
+                                        "FP4": 0,
+                                        "NP4": "",
+                                        "PNTS1": 0,
+                                        "PNTS2": 0,
+                                        "PNTS3": 0,
+                                        "PNTS4": 0,
+                                        "CalibrationNbr": "",
+                                        "ApplicationType": "",
+                                        "ChannelALRV": {},
+                                        "ChannelAURV": "",
+                                        "ChannelBLRV": "",
+                                        "ChannelBURV": "",
+                                        "ChannelCLRV": "",
+                                        "ChannelCURV": "",
+                                        "ChannelDLRV": "",
+                                        "ChannelDURV": "",
+                                        "MinAmbTemp": 0,
+                                        "MaxAmbTemp": 0,
+                                        "AmbUnits": "",
+                                        "MinPrssTemp": 0,
+                                        "MaxPrssTemp": 0,
+                                        "PrssFldUnits": "",
+                                        "FlowUnits": "",
+                                        "VarDampng": 0,
+                                        "LineSizeUnit": "",
+                                        "FluidState": "",
+                                        "MinFlowRate": "",
+                                        "MaxFlowRate": 0,
+                                        "FlowUnitsPA": "",
+                                        "OprtingDnsty": 0,
+                                        "OprtingPress": 0,
+                                        "OperatingPressUnit": "",
+                                        "OprtingTemp": 0,
+                                        "OperatingTempUnit": "",
+                                        "SpecificGravity": 0,
+                                        "DefOpt": "",
+                                        "PrcssTempUnit": "",
+                                        "EleTempUnit": "",
+                                        "NPLineSize": "",
+                                        "PipeUnit": "",
+                                        "SchdSelct": "",
+                                        "FlwDampng": 0,
+                                        "TempDampngL": 0,
+                                        "Fluid": "",
+                                        "CustomFluid": "",
+                                        "OprComr": 0,
+                                        "OprVis": 0,
+                                        "OprVisUnt": "",
+                                        "DenRto": 0,
+                                        "MolWeght": 0,
+                                        "VapPrss": 0,
+                                        "BseDen": 0,
+                                        "BseDenUnt": "",
+                                        "BsePrss": 0,
+                                        "BsePrssUnt": "",
+                                        "BseTemp": "",
+                                        "BseTmpUnt": "",
+                                        "MassUnits": "",
+                                        "VolUnits": "",
+                                        "FlowValUnits": "",
+                                        "PrimaryVar": "",
+                                        "SeconVar": "",
+                                        "TeritaryVar": "",
+                                        "QuaterVar": "",
+                                        "MassLRV": 0,
+                                        "MassURV": 0,
+                                        "VolLRV": 0,
+                                        "VolURV": 0,
+                                        "FlowLRV": 0,
+                                        "FlowURV": 0,
+                                        "BaseCompressibility": 0,
+                                        "VaporPressureUnits": 0,
+                                        "DensityUnits": 0,
+                                        "JoinKey": "",
+                                        "NetworkID": 0,
+                                        "CDS": "",
+                                        "CDSDefaultType": "",
+                                        "CalFrom": "",
+                                        "CalTo": "",
+                                        "CalUOM": "",
+                                        "Desq": "",
+                                        "FSI": "",
+                                        "Assoc": "",
+                                        "TBD": "",
+                                        "SQR": "",
+                                        "NP": "",
+                                        "CalStatus": ""
+                                    }
+                                ],
+                                "CDSInfo": {
+                                    "LineNbr": "",
+                                    "UnitID": "",
+                                    "Date": "",
+                                    "Meter": "",
+                                    "Descriptor": "",
+                                    "OutputDamping": "",
+                                    "Message": "",
+                                    "Alarm": "",
+                                    "Security": "",
+                                    "MagAnalog": "",
+                                    "SignalSelection": "",
+                                    "Burst": "",
+                                    "MultiDrop": "",
+                                    "EncodedField1": "",
+                                    "EncodedField2": "",
+                                    "EncodedField3": "",
+                                    "EncodedField4": "",
+                                    "EncodedField5": "",
+                                    "EncodedField6": "",
+                                    "EncodedField7": "",
+                                    "EncodedField8": "",
+                                    "EncodedField9": "",
+                                    "EncodedField10": ""
+                                },
+                                "UnitFlexData": [
+                                    {
+                                        "UnitFlexData": "",
+                                        "LineNbr": "",
+                                        "UnitID": "",
+                                        "FlexName": "",
+                                        "FlexValue": ""
+                                    }
+                                ],
+                                "EndUserPartyReference": {
+                                    "OrganizationName": "",
+                                    "LocationReference": {
+                                        "Address": {
+                                            "LineOne": "",
+                                            "LineTwo": "",
+                                            "LineThree": "",
+                                            "LineFour": "",
+                                            "CityName": "",
+                                            "StateName": "",
+                                            "CountryName": "",
+                                            "CountryDesc": "",
+                                            "PostalCode": "",
+                                            "PhoneNumber": "",
+                                            "FaxNumber": "",
+                                            "EmailAddress": "",
+                                            "ContactName": "",
+                                            "County": "",
+                                            "AddressInfo": {
+                                                "ABNbr": "",
+                                                "SearchType": "",
+                                                "ParentNbr": ""
+                                            },
+                                            "CountryCode": ""
+                                        },
+                                        "Name": "",
+                                        "PersonName": {
+                                            "FullName": "",
+                                            "PersonName": ""
+                                        }
+                                    },
+                                    "Contact": {
+                                        "PersonName": {
+                                            "FullName": "",
+                                            "PersonName": ""
+                                        },
+                                        "ContactFaxCommunication": {
+                                            "FaxCommunication": {
+                                                "CompleteNumber": ""
+                                            }
+                                        },
+                                        "ContactPhoneCommunication": {
+                                            "PhoneCommunication": {
+                                                "CompleteNumber": ""
+                                            }
+                                        },
+                                        "ContactEmailCommunication": {
+                                            "EmailCommunication": {
+                                                "URI": ""
+                                            }
+                                        }
+                                    },
+                                    "CustomerType": "",
+                                    "PartyIdentification": {
+                                        "ID": ""
+                                    }
+                                },
+                                "RequestedShipDateTime": "",
+                                "PricingDateTime": "",
+                                "ShipFromPartyReference": {
+                                    "OrganizationName": "",
+                                    "LocationReference": {
+                                        "Address": {
+                                            "LineOne": "",
+                                            "LineTwo": "",
+                                            "LineThree": "",
+                                            "LineFour": "",
+                                            "CityName": "",
+                                            "StateName": "",
+                                            "CountryName": "",
+                                            "CountryDesc": "",
+                                            "PostalCode": "",
+                                            "PhoneNumber": "",
+                                            "FaxNumber": "",
+                                            "EmailAddress": "",
+                                            "ContactName": "",
+                                            "County": "",
+                                            "AddressInfo": {
+                                                "ABNbr": "",
+                                                "SearchType": "",
+                                                "ParentNbr": ""
+                                            },
+                                            "CountryCode": ""
+                                        },
+                                        "Name": "",
+                                        "PersonName": {
+                                            "FullName": "",
+                                            "PersonName": ""
+                                        }
+                                    },
+                                    "Contact": {
+                                        "PersonName": {
+                                            "FullName": "",
+                                            "PersonName": ""
+                                        },
+                                        "ContactFaxCommunication": {
+                                            "FaxCommunication": {
+                                                "CompleteNumber": ""
+                                            }
+                                        },
+                                        "ContactPhoneCommunication": {
+                                            "PhoneCommunication": {
+                                                "CompleteNumber": ""
+                                            }
+                                        },
+                                        "ContactEmailCommunication": {
+                                            "EmailCommunication": {
+                                                "URI": ""
+                                            }
+                                        }
+                                    }
+                                },
+                                "TotalAmount": "",
+                                "SalesOrderScheduleCharge": {
+                                    "Charge": {
+                                        "FreightAmount": "",
+                                        "PackagingAmount": "",
+                                        "DiscountPercent": {
+                                            "DiscountPercentage": ""
+                                        },
+                                        "Amount": ""
+                                    }
+                                },
+                                "SalesOrderScheduleTax": {
+                                    "Tax": {
+                                        "Amount": "",
+                                        "Identification": {
+                                            "ID": {},
+                                            "AlternateID": [
+                                                {
+                                                    "ID": "",
+                                                    "ContextID": ""
+                                                }
+                                            ]
+                                        },
+                                        "TaxHandling": "",
+                                        "TaxExemption": {
+                                            "Status": {
+                                                "code": "",
+                                                "CertificateNumber": "",
+                                                "ReasonCode": ""
+                                            }
+                                        },
+                                        "Code": ""
+                                    }
+                                },
+                                "PriceListReference": {
+                                    "PriceListIdentification": {
+                                        "ID": ""
+                                    }
+                                },
+                                "SalesOrderShipment": {
+                                    "ShippedQuantity": "",
+                                    "TrackingNumber": ""
+                                },
+                                "FreightTermCode": "",
+                                "ShipmentInstruction": "",
+                                "PackingInstruction": ""
+                            }
+                        ],
+                        "ItemReference": {
+                            "ItemIdentification": [
+                                {
+                                    "ID": "",
+                                    "Description": "",
+                                    "EndUseOfItem": ""
+                                }
+                            ],
+                            "SpecificationGroup": [
+                                {
+                                    "Specification": [
+                                        {
+                                            "DataTypeCode": "",
+                                            "Name": "",
+                                            "Value": "",
+                                            "ValueText": "",
+                                            "ValueNumeric": "",
+                                            "ValueDate": "",
+                                            "ValueDateTime": "",
+                                            "ValueQuantity": "",
+                                            "ValueAmount": "",
+                                            "ValueCode": ""
+                                        }
+                                    ],
+                                    "Name": "",
+                                    "Type": ""
+                                }
+                            ]
+                        },
+                        "Status": {
+                            "Code": ""
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

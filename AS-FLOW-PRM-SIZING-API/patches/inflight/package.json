@@ -1,0 +1,7 @@
+{
+  "name": "inflight",
+  "version": "1.0.7",
+  "description": "Patched inflight — fixes CWE-772 memory leak by ensuring GLOBALSTATE cleanup",
+  "main": "inflight.js",
+  "license": "ISC"
+}

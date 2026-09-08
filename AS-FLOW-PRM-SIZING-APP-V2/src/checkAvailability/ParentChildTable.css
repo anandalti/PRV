@@ -1,0 +1,361 @@
+.container {
+  max-width: 100%;
+  margin: auto;
+  padding: 8px;
+  /* font-family: Arial, sans-serif; */
+  overflow-x: auto;
+}
+
+.title {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.filters input,
+.filters select,
+.filters button {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.filters button {
+  background: #eee;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.filters button:hover {
+  background: #ddd;
+}
+
+/* Table */
+.table {
+  /* width: 80%; */
+  border-collapse: collapse;
+  background: white;
+  font-size: 8px;
+}
+
+.table th {
+  background: #333;
+  color: white;
+  padding: 8px;
+  text-align: left;
+  font-weight: 500;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Column widths */
+.col-expand {
+  width: 40px;
+  text-align: center;
+}
+
+.col-material {
+  width: 12%;
+  min-width: 100px;
+}
+
+.col-description {
+  width: 20%;
+  min-width: 150px;
+}
+
+.col-basic {
+  width: 12%;
+  min-width: 100px;
+}
+
+.col-assembly {
+  width: 10%;
+  min-width: 80px;
+}
+
+.col-qty {
+  width: 8%;
+  min-width: 70px;
+}
+
+.col-uom {
+  width: 8%;
+  min-width: 70px;
+}
+
+.col-atp {
+  width: 10%;
+  min-width: 80px;
+}
+
+.col-second {
+  width: 10%;
+  min-width: 80px;
+}
+
+.col-availability {
+  width: 10%;
+  min-width: 90px;
+}
+
+.col-weeks {
+  width: 8%;
+  min-width: 70px;
+}
+
+/* Parent row styling */
+.parent-row {
+  cursor: pointer;
+  background: #f9f9f9;
+  font-weight: 500;
+}
+
+.parent-row:hover {
+  background: #efefef;
+}
+
+.parent-row.expanded {
+  background: #f0f8ff;
+}
+
+/* Child row styling */
+.child-row {
+  background: #fafafa;
+}
+
+.child-row:hover {
+  background: #f0f0f0;
+}
+
+.child-row.has-child {
+  cursor: pointer;
+}
+
+.child-row.child-row-level-2 {
+  background: #f4f7fb;
+}
+
+.child-row.child-row-level-3 {
+  background: #eef3f9;
+}
+
+.child-indent {
+  display: inline-block;
+}
+
+.child-row .toggle-icon {
+  cursor: pointer;
+}
+
+/* Level Header styling */
+.level-header-row {
+  background: #e8e8e8;
+  cursor: pointer;
+  font-weight: 600;
+  border-left: 4px solid #333;
+}
+
+.level-header-row:hover {
+  background: #dcdcdc;
+}
+
+.level-header-text {
+  color: #333;
+  padding: 10px 12px !important;
+}
+
+/* Toggle icon */
+.toggle-icon {
+  display: inline-block;
+  width: 20px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .table th,
+  .table td {
+    padding: 10px 8px;
+    font-size: 13px;
+  }
+
+  .col-description {
+    width: 18%;
+    min-width: 120px;
+  }
+
+  .col-basic {
+    width: 10%;
+    min-width: 90px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .filters {
+    gap: 8px;
+  }
+
+  .filters input,
+  .filters select,
+  .filters button {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .table {
+    font-size: 12px;
+  }
+
+  .table th,
+  .table td {
+    padding: 8px 6px;
+  }
+
+  .level-header-row {
+    border-left: 3px solid #333;
+  }
+
+  .col-expand {
+    width: 32px;
+  }
+
+  .col-material {
+    width: 14%;
+    min-width: 90px;
+  }
+
+  .col-description {
+    width: 22%;
+    min-width: 100px;
+  }
+
+  .col-basic {
+    width: 12%;
+    min-width: 80px;
+  }
+
+  .col-assembly {
+    width: 9%;
+    min-width: 70px;
+  }
+
+  .col-qty {
+    width: 7%;
+    min-width: 60px;
+  }
+
+  .col-uom {
+    width: 7%;
+    min-width: 60px;
+  }
+
+  .col-atp {
+    width: 9%;
+    min-width: 70px;
+  }
+
+  .col-second {
+    width: 9%;
+    min-width: 70px;
+  }
+
+  .col-availability {
+    width: 9%;
+    min-width: 75px;
+  }
+
+  .col-weeks {
+    width: 7%;
+    min-width: 60px;
+  }
+
+  .child-indent {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .filters {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .filters input,
+  .filters select,
+  .filters button {
+    width: 100%;
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .table {
+    font-size: 11px;
+  }
+
+  .table th,
+  .table td {
+    padding: 6px 4px;
+  }
+
+  .level-header-row {
+    border-left: 2px solid #333;
+  }
+
+  .col-expand {
+    width: 28px;
+  }
+
+  .col-material {
+    width: 15%;
+    min-width: 75px;
+  }
+
+  .col-description {
+    width: 25%;
+    min-width: 80px;
+  }
+
+  .col-basic {
+    width: 13%;
+    min-width: 70px;
+  }
+
+  .child-indent {
+    margin-left: 15px;
+  }
+}

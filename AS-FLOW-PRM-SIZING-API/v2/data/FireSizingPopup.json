@@ -1,0 +1,2733 @@
+{
+    "sectionName": "API521FireSizingTankData",
+    "sectionLabel": "API 521 Fire Sizing Tank Data",
+    "displayType": "popup",
+    "displayOrder": 1,
+    "fields": [
+        {
+            "fieldName": "FireSizingMethod",
+            "label": "Firing Sizing Method",
+            "type": "combobox",
+            "fieldDisplayOrder": 1,
+            "gridSection": 1,
+            "popupFields":true,
+            "hideFromSideBar":[
+                {
+                    "target":{
+                        "id":"EnterTankData",
+                        "symbol":"Calculate",
+                        "currentId":"FireSizingMethod",
+                        "focusedField":"EnterTankData",
+                        "expression":"EnterTankData != true",
+                        "expressionReqFields":["EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "calculateFields":[
+                
+                {
+                    "target":{
+                        "id":"SurfaceArea",
+                        "symbol":"Exec_API",
+                        "method":"POST",
+                        "url":"/calculations/popup/firesize/surfacearea",
+                        "actionType":"OnBlur",
+                        "functionName": "CalculateAreaMethods",
+                        "currentFields":["EnterTankData","CalculateTankData","CalculationMethod","FireSizingMethod","TankShape","horizontalvertical","EndsGroup","Elevation_H","LiquidDepth_f","Diameter_d","LengthEndToEnd_ltip","LengthSeamToSeam_Ls","LengthEndToEnd_lt","Height_h","Diameter_d_UOM","Elevation_H_UOM","LiquidDepth_f_UOM","Height_h_UOM","LengthEndToEnd_lt_UOM","SurfaceAreaUOM","AreaUOM","EnvironmentalFactor","LatentHeatOfVapor","LatentHeatOfVaporUOM","IsPromptFFEADExists","AddCapacityForPressure","RequiredPressureFlowUOM","AddCapacityForPressureUOM","WettedArea","SetPressure","OverPressure","InletLoss","AtmPressure","Relieving","MolWeight","SpGravity","PressureUOM","TemperatureUOM","AtmPressureUOM","FlowCapacityUOM"],
+                        
+                        "nextRound":false
+                    },
+                    "value":""
+                }
+            ],
+            "mandatory": false,
+            "defaultValue": "Wetted",
+            "disabled": false,
+            "visible": [
+                {
+                    "target":{
+                        "id":"EnterTankData",
+                        "symbol":"Calculate",
+                        "currentId":"FireSizingMethod",
+                        "focusedField":"EnterTankData",
+                        "expression":"EnterTankData == true",
+                        "expressionReqFields":["EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "grid": 4,
+            "dimensionName": "",
+            "infoText": "",
+            "options": [
+                {
+                    "label": "Wetted",
+                    "value": "Wetted"
+                },
+                {
+                    "label": "Unwetted",
+                    "value": "Unwetted"
+                }
+            ],
+            "validations": []
+        },
+        {
+            "fieldName": "IsPromptFFEADExists",
+            "label": "Prompt Fire-Fighting Efforts and Adequate Drainage Exists",
+            "type": "checkbox",
+            "fieldDisplayOrder":2,
+            "gridSection": 1,
+            "popupFields":true,
+            "hideFromSideBar":[
+                {
+                    "target":{
+                        "id":"FireSizingMethod",
+                        "symbol":"Calculate",
+                        "currentId":"IsPromptFFEADExists",
+                        "focusedField":"FireSizingMethod",
+                        "expression":"(EnterTankData != true)?true:(FireSizingMethod == 'Unwetted')",
+                        "expressionReqFields":["FireSizingMethod", "EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "calculateFields":[
+                {
+                    "target":{
+                        "id":"SurfaceArea",
+                        "symbol":"Exec_API",
+                        "method":"POST",
+                        "url":"/calculations/popup/firesize/surfacearea",
+                        "actionType":"OnBlur",
+                        "functionName": "CalculateAreaMethods",
+                        "currentFields":["EnterTankData","CalculateTankData","CalculationMethod","FireSizingMethod","TankShape","horizontalvertical","EndsGroup","Elevation_H","LiquidDepth_f","Diameter_d","LengthEndToEnd_ltip","LengthSeamToSeam_Ls","LengthEndToEnd_lt","Height_h","Diameter_d_UOM","Elevation_H_UOM","LiquidDepth_f_UOM","Height_h_UOM","LengthEndToEnd_lt_UOM","SurfaceAreaUOM","AreaUOM","EnvironmentalFactor","LatentHeatOfVapor","LatentHeatOfVaporUOM","IsPromptFFEADExists","AddCapacityForPressure","RequiredPressureFlowUOM","AddCapacityForPressureUOM","WettedArea","SetPressure","OverPressure","InletLoss","AtmPressure","Relieving","MolWeight","SpGravity","PressureUOM","TemperatureUOM","AtmPressureUOM","FlowCapacityUOM"],
+                        
+                        "nextRound":false
+                    },
+                    "value":""
+                }
+            ],
+            "mandatory":false,
+            "grid": 4,
+            "defaultValue": "",
+            "disabled": false,
+            "visible": [
+                {
+                    "target":{
+                        "id":"FireSizingMethod",
+                        "symbol":"Calculate",
+                        "currentId":"IsPromptFFEADExists",
+                        "focusedField":"FireSizingMethod",
+                        "expression":"FireSizingMethod == 'Wetted' && EnterTankData == true",
+                        "expressionReqFields":["FireSizingMethod", "EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "infoText": "",
+            "dimensionName":"",
+            "validations": []
+        },
+        {
+            "fieldName": "IsFireSizingFactorCalculated",
+            "label": "Calculate Fire Sizing Factor",
+            "type": "checkbox",
+            "fieldDisplayOrder":3,
+            "gridSection": 1,
+            "popupFields":true,
+            "hideFromSideBar":true,
+            "mandatory":false,
+            "grid": 4,
+            "defaultValue": "",
+            "disabled": false,
+            "visible": [
+                {
+                    "target":{
+                        "id":"FireSizingMethod",
+                        "symbol":"Calculate",
+                        "currentId":"IsFireSizingFactorCalculated",
+                        "focusedField":"FireSizingMethod",
+                        "expression":"FireSizingMethod == 'Unwetted' && EnterTankData == true",
+                        "expressionReqFields":["FireSizingMethod", "EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "infoText": "",
+            "dimensionName":"",
+            "validations": []
+        },
+        {
+            "fieldName": "LatentHeatOfVapor",
+            "label": "Latent Heat of Vaporization",
+            "type": "inputUom",
+            "UomFieldName": "LatentHeatOfVaporUOM",
+            "DbUomFieldName": "LatentHeatOfVaporUOM",
+            "gridSection": 1,
+            "popupFields":true,
+            "onBlurAction":true,
+            "calculateFields":[
+                {
+                    "target":{
+                        "id":"SurfaceArea",
+                        "symbol":"Exec_API",
+                        "method":"POST",
+                        "url":"/calculations/popup/firesize/surfacearea",
+                        "actionType":"OnBlur",
+                        "functionName": "CalculateAreaMethods",
+                        "currentFields":["EnterTankData","CalculateTankData","CalculationMethod","FireSizingMethod","TankShape","horizontalvertical","EndsGroup","Elevation_H","LiquidDepth_f","Diameter_d","LengthEndToEnd_ltip","LengthSeamToSeam_Ls","LengthEndToEnd_lt","Height_h","Diameter_d_UOM","Elevation_H_UOM","LiquidDepth_f_UOM","Height_h_UOM","LengthEndToEnd_lt_UOM","SurfaceAreaUOM","AreaUOM","EnvironmentalFactor","LatentHeatOfVapor","LatentHeatOfVaporUOM","IsPromptFFEADExists","AddCapacityForPressure","RequiredPressureFlowUOM","AddCapacityForPressureUOM","WettedArea","SetPressure","OverPressure","InletLoss","AtmPressure","Relieving","MolWeight","SpGravity","PressureUOM","TemperatureUOM","AtmPressureUOM","FlowCapacityUOM"],
+                        
+                        "nextRound":false
+                    },
+                    "value":""
+                }
+            ],
+            "hideFromSideBar":true,
+            "fieldDisplayOrder":4,
+            "mandatory":false,
+            "defaultValue": "",
+            "disabled": false,
+            "visible": [
+                {
+                    "target":{
+                        "id":"FireSizingMethod",
+                        "symbol":"Calculate",
+                        "focusedField":"FireSizingMethod",
+                        "currentId":"LatentHeatOfVapor",
+                        "expression":"FireSizingMethod == 'Wetted' && EnterTankData == true",
+                        "expressionReqFields":["FireSizingMethod", "EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "grid": 4,
+            "infoText": "Latent Heat of Vaporization[Hvap]",
+            "dimensionName":["latentheat"],
+            "options":[                
+            ],
+            "validations": [
+                {
+                    "target":{
+                        "id":"LatentHeatOfVapor",
+                        "symbol":"Calculate",
+                        "focusedField":"LatentHeatOfVapor",
+                        "currentId":"LatentHeatOfVapor",
+                        "expression":"LatentHeatOfVapor!='' && FireSizingMethod=='Wetted' && LatentHeatOfVapor<=0",
+                        "expressionReqFields":["FireSizingMethod","LatentHeatOfVapor"],
+                        "value":true
+                    },
+                    "message":{"type":"error","message":"LHeatVaporgt0"}
+                },
+                {
+                    "target":{
+                        "id":"FireSizingMethod",
+                        "symbol":"Calculate",
+                        "focusedField":"FireSizingMethod",
+                        "currentId":"LatentHeatOfVapor",
+                        "expression":"LatentHeatOfVapor!='' && FireSizingMethod=='Wetted' && LatentHeatOfVapor<=0",
+                        "expressionReqFields":["FireSizingMethod","LatentHeatOfVapor"],
+                        "value":true
+                    },
+                    "message":{"type":"error","message":"LHeatVaporgt0"}
+                }
+            ],
+            "defaultUnit": {},
+            "regex": "NOT_ALLOW_NEGATIVE"
+        },
+        {
+            "fieldName": "EnvironmentalFactor",
+            "label": "Environmental Factor",
+            "type": "number",            
+            "fieldDisplayOrder":5,
+            "gridSection": 1,
+            "popupFields":true,
+            "onBlurAction":true,
+            "calculateFields":[
+                {
+                    "target":{
+                        "id":"SurfaceArea",
+                        "symbol":"Exec_API",
+                        "method":"POST",
+                        "url":"/calculations/popup/firesize/surfacearea",
+                        "actionType":"OnBlur",
+                        "functionName": "CalculateAreaMethods",
+                        "currentFields":["EnterTankData","CalculateTankData","CalculationMethod","FireSizingMethod","TankShape","horizontalvertical","EndsGroup","Elevation_H","LiquidDepth_f","Diameter_d","LengthEndToEnd_ltip","LengthSeamToSeam_Ls","LengthEndToEnd_lt","Height_h","Diameter_d_UOM","Elevation_H_UOM","LiquidDepth_f_UOM","Height_h_UOM","LengthEndToEnd_lt_UOM","SurfaceAreaUOM","AreaUOM","EnvironmentalFactor","LatentHeatOfVapor","LatentHeatOfVaporUOM","IsPromptFFEADExists","AddCapacityForPressure","RequiredPressureFlowUOM","AddCapacityForPressureUOM","WettedArea","SetPressure","OverPressure","InletLoss","AtmPressure","Relieving","MolWeight","SpGravity","PressureUOM","TemperatureUOM","AtmPressureUOM","FlowCapacityUOM"],
+                        
+                        "nextRound":false
+                    },
+                    "value":""
+                }
+            ],
+            "hideFromSideBar":true,
+            "mandatory":false,
+            "defaultValue": "1.0",
+            "disabled": false,
+            "visible": [
+                {
+                    "target":{
+                        "id":"EnterTankData",
+                        "symbol":"Calculate",
+                        "currentId":"EnvironmentalFactor",
+                        "focusedField":"EnterTankData",
+                        "expression":"EnterTankData == true",
+                        "expressionReqFields":["EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "grid": 4,
+            "dimensionName":"",
+            "infoText": "Environmental Factor",
+            "validations": [
+                {
+                    "target":{
+                        "id":"EnterTankData",
+                        "symbol":"Calculate",
+                        "currentId": "EnvironmentalFactor",
+                        "focusedField":"EnterTankData",
+                        "expression":"EnterTankData==true && (EnvironmentalFactor<0 || EnvironmentalFactor>1)",
+                        "expressionReqFields":["EnterTankData","EnvironmentalFactor"],
+                        "value":true
+                    },
+                    "message":{"type":"error","message":"EnvironmentalFactorgt0to1"}
+                },
+                {
+                    "target":{
+                        "id":"EnvironmentalFactor",
+                        "symbol":"Calculate",
+                        "currentId": "EnvironmentalFactor",
+                        "focusedField":"EnvironmentalFactor",
+                        "expression":"EnterTankData==true && (EnvironmentalFactor<0 || EnvironmentalFactor>1)",
+                        "expressionReqFields":["EnterTankData","EnvironmentalFactor"],
+                        "value":true
+                    },
+                    "message":{"type":"error","message":"EnvironmentalFactorgt0to1"}
+                }
+            ],
+            "regex": "NOT_ALLOW_NEGATIVE"
+        },
+        {
+            "fieldName": "FireSizingFactor",
+            "label": "Fire Sizing Factor",
+            "type": "number",
+            "fieldDisplayOrder":6,
+            "gridSection": 1,
+            "popupFields":true,
+            "hideFromSideBar":true,
+            "mandatory":false,
+            "defaultValue": "0.045",
+            "disabled": false,
+            "visible": [
+                {
+                    "target":{
+                        "id":"FireSizingMethod",
+                        "symbol":"Calculate",
+                        "currentId":"FireSizingFactor",
+                        "focusedField":"FireSizingMethod",
+                        "expression":"EnterTankData==true && FireSizingMethod == 'Unwetted' && !IsFireSizingFactorCalculated",
+                        "expressionReqFields":["FireSizingMethod", "IsFireSizingFactorCalculated","EnterTankData" ],
+                        "nextRound":false
+                    },
+                    "value":true
+                },
+                {
+                    "target":{
+                        "id":"IsFireSizingFactorCalculated",
+                        "symbol":"Calculate",
+                        "currentId":"FireSizingFactor",
+                        "focusedField":"IsFireSizingFactorCalculated",
+                        "expression":"EnterTankData==true && FireSizingMethod == 'Unwetted' && !IsFireSizingFactorCalculated",
+                        "expressionReqFields":["FireSizingMethod", "IsFireSizingFactorCalculated","EnterTankData" ],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "grid": 4,
+            "dimensionName":"",
+            "infoText": "Fire Sizing Factor (API 521 Unwetted Vessel)",
+            "validations": [
+                {
+                    "target":{
+                        "id":"FireSizingFactor",
+                        "symbol":"Calculate",
+                        "currentId": "FireSizingFactor",
+                        "focusedField":"FireSizingFactor",
+                        "expression":"FireSizingFactor<=0",
+                        "expressionReqFields":["FireSizingFactor"],
+                        "value":true
+                    },
+                    "message":{"type":"error","message":"FireSizingFactorlt0"}
+                }
+            ],
+            "regex": "NOT_ALLOW_NEGATIVE"
+        },
+        {
+            "fieldName": "WallTemp",
+            "label": "Wall Temp.",
+            "type": "inputUom",
+            "UomFieldName": "TemperatureUOM",
+            "DbUomFieldName": "WallTempUOM",
+            "fieldDisplayOrder":7,
+            "gridSection": 1,
+            "popupFields":true,
+            "hideFromSideBar":true,
+            "mandatory":false,
+            "mirrorId": "",
+            "defaultValue": "",
+            "calculateFields":[
+                {
+                    "target":{
+                        "id":"Tup",
+                        "symbol":"Exec_API",
+                        "method":"POST",
+                        "url":"/calculations/tup",
+                        "actionType":"OnBlur",
+                        "functionName": "CalculateTup",
+                        "functionReqFields":["CalculationMethod","IsFireSizingFactorCalculated","FireSizingMethod","SetPressure","OperatingPressure","OperatingPressurePopup","Operating","OperatingPopup","AtmPressure","OverPressure","OverPressurePer","InletLoss","InletLossPer","TemperatureUOM","PressureUOM","AtmPressureUOM"],
+                        
+                        "nextRound":false
+                    },
+                    "value":""
+                }
+            ],
+            "disabled": false,
+            "visible": [
+                {
+                    "target":{
+                        "id":"FireSizingMethod",
+                        "symbol":"Calculate",
+                        "currentId":"WallTemp",
+                        "focusedField":"FireSizingMethod",
+                        "expression":"FireSizingMethod == 'Unwetted' && IsFireSizingFactorCalculated == true && EnterTankData == true",
+                        "expressionReqFields":["FireSizingMethod", "IsFireSizingFactorCalculated","EnterTankData" ],
+                        "nextRound":false,
+                        "value":false
+                    },
+                    "value":false
+                },
+                {
+                    "target":{
+                        "id":"IsFireSizingFactorCalculated",
+                        "symbol":"Calculate",
+                        "currentId":"WallTemp",
+                        "focusedField":"IsFireSizingFactorCalculated",
+                        "expression":"FireSizingMethod == 'Unwetted' && IsFireSizingFactorCalculated == true && EnterTankData == true",
+                        "expressionReqFields":["FireSizingMethod", "IsFireSizingFactorCalculated","EnterTankData" ],
+                        "nextRound":false,
+                        "value":false
+                    },
+                    "value":false
+                }
+            ],
+            "grid": 4,
+            "infoText": "Wall Temp. [Tw]",
+            "dimensionName":["temperature"],
+            "options":[                
+            ],
+            "validations":  [
+                {
+                    "target":{
+                        "id":"FireSizingMethod",
+                        "currentId": "WallTemp",
+                        "focusedField":"FireSizingMethod",
+                        "symbol":"Calculate",
+                        "expression":"FireSizingMethod == 'Unwetted' && WallTemp != '' && Relieving!='' && IsFireSizingFactorCalculated && WallTemp<Relieving",
+                        "expressionReqFields":["Relieving", "WallTemp","FireSizingMethod","IsFireSizingFactorCalculated"],
+                        "value":true
+                    },
+                    "message":{"type":"error","message":"TwLtT"}
+                },
+                {
+                    "target":{
+                        "id":"Relieving",
+                        "currentId": "WallTemp",
+                        "focusedField":"Relieving",
+                        "symbol":"Calculate",
+                        "expression":"FireSizingMethod == 'Unwetted' && WallTemp != '' && Relieving!='' && IsFireSizingFactorCalculated && WallTemp<Relieving",
+                        "expressionReqFields":["Relieving", "WallTemp","FireSizingMethod","IsFireSizingFactorCalculated"],
+                        "value":true
+                    },
+                    "message":{"type":"error","message":"TwLtT"}
+                },
+                {
+                    "target":{
+                        "id":"IsFireSizingFactorCalculated",
+                        "currentId": "WallTemp",
+                        "focusedField":"IsFireSizingFactorCalculated",
+                        "symbol":"Calculate",
+                        "expression":"FireSizingMethod == 'Unwetted' && WallTemp != '' && Relieving!='' && IsFireSizingFactorCalculated && WallTemp<Relieving",
+                        "expressionReqFields":["Relieving", "WallTemp","FireSizingMethod","IsFireSizingFactorCalculated"],
+                        "value":true
+                    },
+                    "message":{"type":"error","message":"TwLtT"}
+                },
+                {
+                    "target":{
+                        "id":"WallTemp",
+                        "currentId": "WallTemp",
+                        "focusedField":"WallTemp",
+                        "symbol":"Calculate",
+                        "expression":"FireSizingMethod == 'Unwetted' && WallTemp != '' && Relieving!='' && IsFireSizingFactorCalculated && WallTemp<Relieving",
+                        "expressionReqFields":["Relieving", "WallTemp","FireSizingMethod","IsFireSizingFactorCalculated"],
+                        "value":true
+                    },
+                    "message":{"type":"error","message":"TwLtT"}
+                }
+            ],
+            "regex": "ALLOW_NEGATIVE",
+            "defaultUnit": {}
+        },
+        {
+            "fieldName": "OperatingPopup",
+            "label": "Operating",
+            "type": "inputUom",
+            "UomFieldName": "TemperatureUOM",
+            "DbUomFieldName": "TemperatureUOM",
+            "fieldDisplayOrder":8,
+            "gridSection": 1,
+            "popupFields":true,
+            "hideFromSideBar":true,
+            "mandatory":false,
+            
+            "defaultValue": [
+                {
+                    "target":{
+                        "id":"EnterTankData",
+                        "symbol":"Calculate",
+                        "currentId":"OperatingPopup",
+                        "focusedField":"EnterTankData",
+                        "expression":"(EnterTankData==true && FireSizingMethod == 'Unwetted' && Operating != '')?Operating:''",
+                        "expressionReqFields":["EnterTankData","FireSizingMethod","Operating"],
+                        "nextRound":false
+                    },
+                    "value":""
+                },
+                {
+                    "target":{
+                        "id":"FireSizingMethod",
+                        "symbol":"Calculate",
+                        "currentId":"OperatingPopup",
+                        "focusedField":"FireSizingMethod",
+                        "expression":"(EnterTankData==true && FireSizingMethod == 'Unwetted' && Operating != '')?Operating:''",
+                        "expressionReqFields":["EnterTankData","FireSizingMethod","Operating"],
+                        "nextRound":false
+                    },
+                    "value":""
+                },
+                {
+                    "target":{
+                        "id":"Operating",
+                        "symbol":"Calculate",
+                        "currentId":"OperatingPopup",
+                        "focusedField":"Operating",
+                        "expression":"(EnterTankData==true && FireSizingMethod == 'Unwetted' && Operating != '')?Operating:''",
+                        "expressionReqFields":["EnterTankData","FireSizingMethod","Operating"],
+                        "nextRound":false
+                    },
+                    "value":""
+                }
+            ],
+            "calculateFields":[
+                {
+                    "target":{
+                        "id":"Tup",
+                        "symbol":"Exec_API",
+                        "method":"POST",
+                        "url":"/calculations/tup",
+                        "actionType":"OnBlur",
+                        "functionName": "CalculateTup",
+                        "functionReqFields":["CalculationMethod","IsFireSizingFactorCalculated","FireSizingMethod","SetPressure","OperatingPressure","OperatingPressurePopup","Operating","OperatingPopup","AtmPressure","OverPressure","OverPressurePer","InletLoss","InletLossPer","TemperatureUOM","PressureUOM","AtmPressureUOM"],
+                        
+                        "nextRound":false
+                    },
+                    "value":""
+                }
+            ],
+            "disabled": false,
+            "visible": [
+                {
+                    "target":{
+                        "id":"FireSizingMethod",
+                        "symbol":"Calculate",
+                        "currentId":"OperatingPopup",
+                        "focusedField":"FireSizingMethod",
+                        "expression":"EnterTankData==true && FireSizingMethod == 'Unwetted'",
+                        "expressionReqFields":["EnterTankData","FireSizingMethod"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "grid": 4,
+            "infoText": "Operating [Tn]",
+            "dimensionName":["temperature"],
+            "options":[],
+            "validations": [
+                {
+                    "target":{
+                        "id":"VesselWall",
+                        "currentId": "OperatingPopup",
+                        "focusedField":"VesselWall",
+                        "symbol":"Calculate",
+                        "expression":"FireSizingMethod == 'Unwetted'  && VesselWall != '' && Relieving!='' && IsFireSizingFactorCalculated && VesselWall<Relieving",
+                        "expressionReqFields":["Relieving", "VesselWall","FireSizingMethod","IsFireSizingFactorCalculated"],
+                        "value":true
+                    },
+                    "message":{"type":"error","message":"TwLtT"}
+                }
+            ],
+            "regex": "ALLOW_NEGATIVE",
+            "defaultUnit": {}
+        },
+        {
+            "fieldName": "OperatingPressurePopup",
+            "label": "Operating Pressure",
+            "type": "inputUom",
+            "UomFieldName": "PressureUOM",
+            "DbUomFieldName": "PressureUOM",
+            "fieldDisplayOrder":9,
+            "gridSection": 1,
+            "popupFields":true,
+            "hideFromSideBar":[
+                {
+                    "target":{
+                        "id":"FireSizingMethod",
+                        "symbol":"Calculate",
+                        "currentId":"OperatingPressurePopup",
+                        "focusedField":"FireSizingMethod",
+                        "expression":"(EnterTankData!=true)?true:((FireSizingMethod != 'Unwetted')?true:false)",
+                        "expressionReqFields":["EnterTankData","FireSizingMethod"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "mandatory":false,
+            
+            "defaultValue": "",
+            "calculateFields":[
+                {
+                    "target":{
+                        "id":"Tup",
+                        "symbol":"Exec_API",
+                        "method":"POST",
+                        "url":"/calculations/tup",
+                        "actionType":"OnBlur",
+                        "functionName": "CalculateTup",
+                        "functionReqFields":["CalculationMethod","IsFireSizingFactorCalculated","FireSizingMethod","SetPressure","OperatingPressure","OperatingPressurePopup","Operating","OperatingPopup","AtmPressure","OverPressure","OverPressurePer","InletLoss","InletLossPer","TemperatureUOM","PressureUOM","AtmPressureUOM"],
+                        
+                        "nextRound":false
+                    },
+                    "value":""
+                }
+            ],
+            "disabled": false,
+            "visible": [
+                {
+                    "target":{
+                        "id":"FireSizingMethod",
+                        "symbol":"Calculate",
+                        "currentId":"OperatingPressurePopup",
+                        "focusedField":"FireSizingMethod",
+                        "expression":"EnterTankData==true && FireSizingMethod == 'Unwetted'",
+                        "expressionReqFields":["EnterTankData","FireSizingMethod"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "infoText": "Operating Pressure [Pn]",
+            "grid": 4,
+            "dimensionName":["pressure"],
+            "validations": [
+                {
+                    "target":{
+                        "id":"VesselWall",
+                        "currentId": "OperatingPressurePopup",
+                        "focusedField":"VesselWall",
+                        "symbol":"Calculate",
+                        "expression":"FireSizingMethod == 'Unwetted'  && VesselWall != '' && Relieving!='' && IsFireSizingFactorCalculated && VesselWall<Relieving",
+                        "expressionReqFields":["Relieving", "VesselWall","FireSizingMethod","IsFireSizingFactorCalculated"],
+                        "value":true
+                    },
+                    "message":{"type":"error","message":"TwLtT"}
+                }
+            ],
+            "options":[],
+            "regex": "NOT_ALLOW_NEGATIVE",
+            "defaultUnit": { "label": "psia", "value": "psia" }
+        },
+        
+        {
+            "fieldName": "SurfaceArea",
+            "label": "Surface Area",
+            "type": "inputUom",
+            "UomFieldName": "AreaUOM",
+            "DbUomFieldName": "SurfaceAreaUOM",
+            "fieldDisplayOrder":10,
+            "gridSection": 2,
+            "popupFields":true,
+            "hideFromSideBar":[
+                {
+                    "target":{
+                        "id":"FireSizingMethod",
+                        "symbol":"Calculate",
+                        "currentId":"SurfaceArea",
+                        "focusedField":"FireSizingMethod",
+                        "expression":"(EnterTankData != true)?true:((FireSizingMethod != 'Unwetted')?true:false)",
+                        "expressionReqFields":["FireSizingMethod", "EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "mandatory":false,
+            "defaultValue": {"value":"0.000"},
+            "disabled":  [
+                {
+                    "target":{
+                        "id":"CalculateTankData",
+                        "currentId":"SurfaceArea",
+                        "focusedField":"CalculateTankData",
+                        "symbol":"Calculate",
+                        "expression":"EnterTankData && (CalculateTankData?true:false)",
+                        "expressionReqFields":["EnterTankData","CalculateTankData"],
+                        "nextRound":false
+                    },
+                    "value":false
+                }
+            ],
+            "disableUOM": false,
+            "visible": [
+                {
+                    "target":{
+                        "id":"FireSizingMethod",
+                        "symbol":"Calculate",
+                        "currentId":"SurfaceArea",
+                        "focusedField":"FireSizingMethod",
+                        "expression":"FireSizingMethod == 'Unwetted' && EnterTankData == true",
+                        "expressionReqFields":["FireSizingMethod", "EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "infoText": "Surface Area [A']",
+            "grid": 4,
+            "dimensionName":["area"],
+            "validations": "",
+            "options":[],
+            "defaultUnit": { "label": "ft²", "value": "ft²" },
+            "regex": "NOT_ALLOW_NEGATIVE"
+        },
+        {
+            "fieldName": "WettedArea",
+            "label": "Wetted Area",
+            "type": "inputUom",
+            "UomFieldName": "AreaUOM",
+            "DbUomFieldName": "WettedAreaUOM",
+            "fieldDisplayOrder":11,
+            "gridSection": 2,
+            "popupFields":true,
+            "hideFromSideBar":[
+                {
+                    "target":{
+                        "id":"FireSizingMethod",
+                        "symbol":"Calculate",
+                        "currentId":"WettedArea",
+                        "focusedField":"FireSizingMethod",
+                        "expression":"(EnterTankData != true)?true:((FireSizingMethod == 'Unwetted')?true:false)",
+                        "expressionReqFields":["FireSizingMethod", "EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "mandatory":false,
+            "calculateFields":[
+                {
+                    "target":{
+                        "id":"SurfaceArea",
+                        "symbol":"Exec_API",
+                        "method":"POST",
+                        "url":"/calculations/popup/firesize/surfacearea",
+                        "actionType":"OnBlur",
+                        "functionName": "CalculateAreaMethods",
+                        "currentFields":["EnterTankData","CalculateTankData","CalculationMethod","FireSizingMethod","TankShape","horizontalvertical","EndsGroup","Elevation_H","LiquidDepth_f","Diameter_d","LengthEndToEnd_ltip","LengthSeamToSeam_Ls","LengthEndToEnd_lt","Height_h","Diameter_d_UOM","Elevation_H_UOM","LiquidDepth_f_UOM","Height_h_UOM","LengthEndToEnd_lt_UOM","SurfaceAreaUOM","AreaUOM","EnvironmentalFactor","LatentHeatOfVapor","LatentHeatOfVaporUOM","IsPromptFFEADExists","AddCapacityForPressure","RequiredPressureFlowUOM","AddCapacityForPressureUOM","WettedArea","SetPressure","OverPressure","InletLoss","AtmPressure","Relieving","MolWeight","SpGravity","PressureUOM","TemperatureUOM","AtmPressureUOM","FlowCapacityUOM"],
+                        
+                        "nextRound":false
+                    },
+                    "value":""
+                }
+            ],
+            "defaultValue": "",
+            "disabled":  [
+                {
+                    "target":{
+                        "id":"CalculateTankData",
+                        "currentId":"WettedArea",
+                        "focusedField":"CalculateTankData",
+                        "symbol":"Calculate",
+                        "expression":"EnterTankData && (CalculateTankData?true:false)",
+                        "expressionReqFields":["EnterTankData","CalculateTankData"],
+                        "nextRound":false
+                    },
+                    "value":false
+                }
+            ],
+            "disableUOM": false,
+            "visible": [
+                {
+                    "target":{
+                        "id":"FireSizingMethod",
+                        "symbol":"Calculate",
+                        "currentId":"WettedArea",
+                        "focusedField":"FireSizingMethod",
+                        "expression":"FireSizingMethod == 'Wetted' && EnterTankData == true",
+                        "expressionReqFields":["FireSizingMethod", "EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "infoText": "Wetted Area [Awet]",
+            "grid": 4,
+            "dimensionName":["area"],
+            "validations": [],
+            "options":[],
+            "defaultUnit": { "label": "ft²", "value": "ft²" },
+            "regex": "NOT_ALLOW_NEGATIVE"
+        },
+        {
+            "fieldName": "AddCapacityForPressure",
+            "label": "Additional Capacity",
+            "type": "inputUom",
+            "UomFieldName": "FlowCapacityUOM",
+            "DbUomFieldName": "AddCapacityForPressureUOM",
+            "fieldDisplayOrder":12,
+            "gridSection": 2,
+            "popupFields":true,
+            "onBlurAction":true,
+            "calculateFields":[
+                {
+                    "target":{
+                        "id":"SurfaceArea",
+                        "symbol":"Exec_API",
+                        "method":"POST",
+                        "url":"/calculations/popup/firesize/surfacearea",
+                        "actionType":"OnBlur",
+                        "functionName": "CalculateAreaMethods",
+                        "currentFields":["EnterTankData","CalculateTankData","CalculationMethod","FireSizingMethod","TankShape","horizontalvertical","EndsGroup","Elevation_H","LiquidDepth_f","Diameter_d","LengthEndToEnd_ltip","LengthSeamToSeam_Ls","LengthEndToEnd_lt","Height_h","Diameter_d_UOM","Elevation_H_UOM","LiquidDepth_f_UOM","Height_h_UOM","LengthEndToEnd_lt_UOM","SurfaceAreaUOM","AreaUOM","EnvironmentalFactor","LatentHeatOfVapor","LatentHeatOfVaporUOM","IsPromptFFEADExists","AddCapacityForPressure","RequiredPressureFlowUOM","AddCapacityForPressureUOM","WettedArea","SetPressure","OverPressure","InletLoss","AtmPressure","Relieving","MolWeight","SpGravity","PressureUOM","TemperatureUOM","AtmPressureUOM","FlowCapacityUOM"],
+                        
+                        "nextRound":false
+                    },
+                    "value":""
+                }
+            ],
+            "hideFromSideBar":[
+                {
+                    "target":{
+                        "id":"EnterTankData",
+                        "symbol":"Calculate",
+                        "currentId":"AddCapacityForPressure",
+                        "focusedField":"EnterTankData",
+                        "expression":"(FireSizingMethod == 'Unwetted' && EnterTankData != true) || (FireSizingMethod != 'Unwetted' && EnterTankData != true)",
+                        "expressionReqFields":["EnterTankData", "FireSizingMethod"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "mandatory":false,
+            "defaultValue": "0.0",
+            "disableUOM": false,
+            "disabled": false,
+            "visible":[
+                {
+                    "target":{
+                        "id":"EnterTankData",
+                        "symbol":"Calculate",
+                        "currentId":"AddCapacityForPressure",
+                        "focusedField":"EnterTankData",
+                        "expression":"(FireSizingMethod == 'Wetted' && EnterTankData == true)|| (FireSizingMethod == 'Unwetted' && EnterTankData == true)",
+                        "expressionReqFields":["EnterTankData", "FireSizingMethod"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "infoText": "Additional Capacity (for Pressure) [WreqAdd]",
+            "grid": 4,
+            "dimensionName":["massflow"],
+            "validations": "",
+            "options":[],
+            "defaultUnit": { "label": "lb/hr", "value": "lb/hr" },
+            "regex": "NOT_ALLOW_NEGATIVE"
+        },
+        {
+            "fieldName": "RequiredPressureFlow",
+            "label": "Required Pressure Flow",
+            "type": "inputUom",
+            "UomFieldName": "FlowCapacityUOM",
+            "DbUomFieldName": "RequiredPressureFlowUOM",
+            "fieldDisplayOrder":13,
+            "gridSection": 2,
+            "popupFields":true,
+            "hideFromSideBar":[
+                {
+                    "target":{
+                        "id":"FireSizingMethod",
+                        "symbol":"Calculate",
+                        "currentId":"RequiredPressureFlow",
+                        "focusedField":"FireSizingMethod",
+                        "expression":"(EnterTankData != true)?true:((FireSizingMethod == 'Unwetted')?true:false)",
+                        "expressionReqFields":["EnterTankData", "FireSizingMethod"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "mandatory":false,
+            "mirrorId":"Wreq",
+            "defaultValue": "",
+            "disableUOM": false,
+            "disabled": true,
+            "visible": [
+                {
+                    "target":{
+                        "id":"FireSizingMethod",
+                        "symbol":"Calculate",
+                        "currentId":"RequiredPressureFlow",
+                        "focusedField":"FireSizingMethod",
+                        "expression":"FireSizingMethod == 'Wetted' && EnterTankData == true",
+                        "expressionReqFields":["EnterTankData", "FireSizingMethod"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "infoText": "Required Pressure Flow Rate [Wreq]",
+            "grid": 4,
+            "dimensionName":["massflow"],
+            "validations": [],
+            "options":[],
+            "defaultUnit": { "label": "lb/hr", "value": "lb/hr" },
+            "regex": "NOT_ALLOW_NEGATIVE"
+        },
+        {
+            "fieldName": "NOTE",
+            "label": "NOTE: In order to continue Required Flow Capacity calculations, please fill out all required fields and return to the main worksheet by closing the dialog. Required Flow Capacity will be calculated for each candidate valve.",
+            "type": "icon",
+            "fieldDisplayOrder":14,
+            "gridSection": 2,
+            "popupFields":true,
+            "hideFromSideBar":true,
+            "iconType": "warning",
+            "mandatory":false,
+            "defaultValue": "",
+            "disabled": false,
+            "visible": [
+                {
+                    "target":{
+                        "id":"FireSizingMethod",
+                        "symbol":"Calculate",
+                        "currentId":"NOTE",
+                        "focusedField":"FireSizingMethod",
+                        "expression":"FireSizingMethod == 'Unwetted' && EnterTankData == true",
+                        "expressionReqFields":["FireSizingMethod", "EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                },
+                {
+                    "target":{
+                        "id":"EnterTankData",
+                        "symbol":"Calculate",
+                        "currentId":"NOTE",
+                        "focusedField":"EnterTankData",
+                        "expression":"FireSizingMethod == 'Unwetted' && EnterTankData == true",
+                        "expressionReqFields":["FireSizingMethod", "EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "grid": 6,
+            "infoText": "",
+            "dimensionName":"",
+            "validations": []
+        },
+        {
+            "fieldName": "CalculateTankData",
+            "label": {"trueValue":"Enter Tank Data","falseValue":"Calculate Tank Data"},
+            "type": "modal",
+            "fieldDisplayOrder":15,
+            "gridSection": 2,
+            "popupFields":true,
+            "hideFromSideBar": true,
+            "mandatory":false,
+            "defaultValue": false,
+            "disabled": false,
+            "visible": [
+                {
+                    "target":{
+                        "id":"EnterTankData",
+                        "symbol":"Calculate",
+                        "currentId":"CalculateTankData",
+                        "focusedField":"EnterTankData",
+                        "expression":"EnterTankData == true",
+                        "expressionReqFields":["EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "grid": "6",
+            "dimensionName":"",
+            "infoText": "",
+            "validations": [],
+            "action":{
+                "type":"modal",
+                "target":"CalculateTankData"
+            }
+        },
+        {
+            "fieldName": "TankShape",
+            "label": "Tank Shape",
+            "type": "combobox",
+            "fieldDisplayOrder": 16,
+            "gridSection": 3,
+            "popupFields":true,
+            "hideFromSideBar":[
+                {
+                    "target":{
+                        "id":"CalculateTankData",
+                        "symbol":"Calculate",
+                        "currentId":"TankShape",
+                        "focusedField":"CalculateTankData",
+                        "expression":"(EnterTankData != true)?true:((CalculateTankData != true)?true:false)",
+                        "expressionReqFields":["CalculateTankData", "EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "mandatory": false,
+            "defaultValue": {
+                "label": "Spherical",
+                "value": "Spherical"
+            },
+            "calculateFields":[
+                {
+                    "target":{
+                        "id":"SurfaceArea",
+                        "symbol":"Exec_API",
+                        "method":"POST",
+                        "url":"/calculations/popup/firesize/surfacearea",
+                        "actionType":"OnBlur",
+                        "functionName": "CalculateAreaMethods",
+                        "currentFields":["EnterTankData","CalculateTankData","CalculationMethod","FireSizingMethod","TankShape","horizontalvertical","EndsGroup","Elevation_H","LiquidDepth_f","Diameter_d","LengthEndToEnd_ltip","LengthSeamToSeam_Ls","LengthEndToEnd_lt","Height_h","Diameter_d_UOM","Elevation_H_UOM","LiquidDepth_f_UOM","Height_h_UOM","LengthEndToEnd_lt_UOM","SurfaceAreaUOM","AreaUOM","EnvironmentalFactor","LatentHeatOfVapor","LatentHeatOfVaporUOM","IsPromptFFEADExists","AddCapacityForPressure","RequiredPressureFlowUOM","AddCapacityForPressureUOM","WettedArea","SetPressure","OverPressure","InletLoss","AtmPressure","Relieving","MolWeight","SpGravity","PressureUOM","TemperatureUOM","AtmPressureUOM","FlowCapacityUOM"],
+                        
+                        "nextRound":false
+                    },
+                    "value":""
+                }
+            ],
+            "disabled": false,
+            "visible": [
+                {
+                    "target":{
+                        "id":"CalculateTankData",
+                        "symbol":"Calculate",
+                        "currentId":"TankShape",
+                        "focusedField":"CalculateTankData",
+                        "expression":"CalculateTankData == true && EnterTankData == true",
+                        "expressionReqFields":["CalculateTankData", "EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "grid": 4,
+            "dimensionName": "",
+            "infoText": "",
+            "options": [
+                {
+                    "label": "Cylindrical",
+                    "value": "Cylindrical"
+                },
+                {
+                    "label": "Spherical",
+                    "value": "Spherical"
+                }
+            ],
+            "validations": []
+        },
+        {
+            "fieldName": "horizontalvertical",
+            "label": "Orientation",
+            "type": "label",
+            "style":{"flex":12},
+            "fieldDisplayOrder":17,
+            "gridSection": 3,
+            "popupFields":true,
+            "mandatory":false,
+            "defaultValue": "IsHorizontalOrientation",
+            "disabled": false,
+            "hideFromSideBar":true,
+            "visible": [
+                {
+                    "target":{
+                        "id":"CalculateTankData",
+                        "symbol":"Calculate",
+                        "currentId":"horizontalvertical",
+                        "focusedField":"CalculateTankData",
+                        "expression":"CalculateTankData == true && TankShape == 'Cylindrical' && EnterTankData == true",
+                        "expressionReqFields":["CalculateTankData", "TankShape" , "EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                },
+                {
+                    "target":{
+                        "id":"TankShape",
+                        "symbol":"Calculate",
+                        "currentId":"horizontalvertical",
+                        "focusedField":"TankShape",
+                        "expression":"CalculateTankData == true && TankShape == 'Cylindrical' && EnterTankData == true",
+                        "expressionReqFields":["CalculateTankData", "TankShape" , "EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "calculateFields":[
+                {
+                    "target":{
+                        "id":"SurfaceArea",
+                        "symbol":"Exec_API",
+                        "method":"POST",
+                        "url":"/calculations/popup/firesize/surfacearea",
+                        "actionType":"OnBlur",
+                        "functionName": "CalculateAreaMethods",
+                        "currentFields":["EnterTankData","CalculateTankData","CalculationMethod","FireSizingMethod","TankShape","horizontalvertical","EndsGroup","Elevation_H","LiquidDepth_f","Diameter_d","LengthEndToEnd_ltip","LengthSeamToSeam_Ls","LengthEndToEnd_lt","Height_h","Diameter_d_UOM","Elevation_H_UOM","LiquidDepth_f_UOM","Height_h_UOM","LengthEndToEnd_lt_UOM","SurfaceAreaUOM","AreaUOM","EnvironmentalFactor","LatentHeatOfVapor","LatentHeatOfVaporUOM","IsPromptFFEADExists","AddCapacityForPressure","RequiredPressureFlowUOM","AddCapacityForPressureUOM","WettedArea","SetPressure","OverPressure","InletLoss","AtmPressure","Relieving","MolWeight","SpGravity","PressureUOM","TemperatureUOM","AtmPressureUOM","FlowCapacityUOM"],
+                        
+                        "nextRound":false
+                    },
+                    "value":""
+                }
+            ],
+            "grid": 6,
+            "infoText": "",
+            "dimensionName":"",
+            "validations": []
+        },
+        {
+            "fieldName": "IsHorizontalOrientation",
+            "label": "Horizontal",
+            "type": "radio",
+            "UomFieldName": "",
+            "fieldDisplayOrder": 18,
+            "gridSection": 3,
+            "popupFields":true,
+            "hideFromSideBar":[
+                {
+                    "target":{
+                        "id":"CalculateTankData",
+                        "symbol":"Calculate",
+                        "currentId":"IsHorizontalOrientation",
+                        "focusedField":"CalculateTankData",
+                        "expression":"(EnterTankData != true)?true:((CalculateTankData != true)?true:((TankShape != 'Cylindrical')?true:false))",
+                        "expressionReqFields":["CalculateTankData", "TankShape" , "EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "mandatory": false,
+            "defaultValue": true,
+            "disabled": false,
+            "visible": [
+                {
+                    "target":{
+                        "id":"CalculateTankData",
+                        "symbol":"Calculate",
+                        "currentId":"IsHorizontalOrientation",
+                        "focusedField":"CalculateTankData",
+                        "expression":"CalculateTankData == true && TankShape == 'Cylindrical' && EnterTankData == true",
+                        "expressionReqFields":["CalculateTankData", "TankShape" , "EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                },
+                {
+                    "target":{
+                        "id":"TankShape",
+                        "symbol":"Calculate",
+                        "currentId":"IsHorizontalOrientation",
+                        "focusedField":"TankShape",
+                        "expression":"CalculateTankData == true && TankShape == 'Cylindrical' && EnterTankData == true",
+                        "expressionReqFields":["CalculateTankData", "TankShape" , "EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "infoText": "",
+            "grid": 6,
+            "style":{"gridDirection": "column","gridTemplateColumns": "0.3fr 0.9fr 1.25fr 1.35fr"},
+            "dimensionName": "",
+            "fieldGroupType": "RADIO_GROUP",
+            "fieldGroupName": "horizontalvertical",
+            "fieldGroupLabel": "Orientation",
+            "validations": []
+        },
+        {
+            "fieldName": "Vertical",
+            "label": "Vertical",
+            "type": "radio",
+            "UomFieldName": "",
+            "fieldDisplayOrder": 19,
+            "gridSection": 3,
+            "popupFields":true,
+            "hideFromSideBar":[
+                {
+                    "target":{
+                        "id":"CalculateTankData",
+                        "symbol":"Calculate",
+                        "currentId":"Vertical",
+                        "focusedField":"CalculateTankData",
+                        "expression":"(EnterTankData != true)?true:((CalculateTankData != true)?true:((TankShape != 'Cylindrical')?true:false))",
+                        "expressionReqFields":["CalculateTankData", "TankShape", "EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "mandatory": false,
+            "defaultValue": false,
+            "disabled": false,
+            "visible": [
+                {
+                    "target":{
+                        "id":"CalculateTankData",
+                        "symbol":"Calculate",
+                        "currentId":"Vertical",
+                        "focusedField":"CalculateTankData",
+                        "expression":"CalculateTankData == true && TankShape == 'Cylindrical' && EnterTankData == true",
+                        "expressionReqFields":["CalculateTankData", "TankShape", "EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                },
+                {
+                    "target":{
+                        "id":"TankShape",
+                        "symbol":"Calculate",
+                        "currentId":"Vertical",
+                        "focusedField":"TankShape",
+                        "expression":"CalculateTankData == true && TankShape == 'Cylindrical' && EnterTankData == true",
+                        "expressionReqFields":["CalculateTankData", "TankShape", "EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "infoText": "",
+            "grid": 6,
+            "style":{"gridDirection": "column","gridTemplateColumns": "0.3fr 0.9fr 1.25fr 1.35fr"},
+            "dimensionName": "",
+            "fieldGroupType": "RADIO_GROUP",
+            "fieldGroupName": "horizontalvertical",
+            "fieldGroupLabel": "Orientation",
+            "validations": []
+        },
+        {
+            "fieldName": "EndsGroup",
+            "label": "Ends",
+            "type": "label",
+            "style":{"flex":11},
+            "fieldDisplayOrder":20,
+            "gridSection": 3,
+            "popupFields":true,
+            "mandatory":false,
+            "defaultValue": "FlatEnds",
+            "disabled": false,
+            "hideFromSideBar":true,
+            "visible": [
+                {
+                    "target":{
+                        "id":"CalculateTankData",
+                        "symbol":"Calculate",
+                        "currentId":"EndsGroup",
+                        "focusedField":"CalculateTankData",
+                        "expression":"CalculateTankData == true && TankShape == 'Cylindrical' && EnterTankData == true",
+                        "expressionReqFields":["CalculateTankData", "TankShape", "EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                },
+                {
+                    "target":{
+                        "id":"TankShape",
+                        "symbol":"Calculate",
+                        "currentId":"EndsGroup",
+                        "focusedField":"TankShape",
+                        "expression":"CalculateTankData == true && TankShape == 'Cylindrical' && EnterTankData == true",
+                        "expressionReqFields":["CalculateTankData", "TankShape", "EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "calculateFields":[
+                {
+                    "target":{
+                        "id":"SurfaceArea",
+                        "symbol":"Exec_API",
+                        "method":"POST",
+                        "url":"/calculations/popup/firesize/surfacearea",
+                        "actionType":"OnBlur",
+                        "functionName": "CalculateAreaMethods",
+                        "currentFields":["EnterTankData","CalculateTankData","CalculationMethod","FireSizingMethod","TankShape","horizontalvertical","EndsGroup","Elevation_H","LiquidDepth_f","Diameter_d","LengthEndToEnd_ltip","LengthSeamToSeam_Ls","LengthEndToEnd_lt","Height_h","Diameter_d_UOM","Elevation_H_UOM","LiquidDepth_f_UOM","Height_h_UOM","LengthEndToEnd_lt_UOM","SurfaceAreaUOM","AreaUOM","EnvironmentalFactor","LatentHeatOfVapor","LatentHeatOfVaporUOM","IsPromptFFEADExists","AddCapacityForPressure","RequiredPressureFlowUOM","AddCapacityForPressureUOM","WettedArea","SetPressure","OverPressure","InletLoss","AtmPressure","Relieving","MolWeight","SpGravity","PressureUOM","TemperatureUOM","AtmPressureUOM","FlowCapacityUOM"],
+                        
+                        "nextRound":false
+                    },
+                    "value":""
+                }
+            ],
+            "grid": 6,
+            "infoText": "",
+            "dimensionName":"",
+            "validations": []
+        },
+        {
+            "fieldName": "FlatEnds",
+            "label": "Flat Ends",
+            "type": "radio",
+            "UomFieldName": "",
+            "fieldDisplayOrder": 21,
+            "gridSection": 3,
+            "popupFields":true,
+            "hideFromSideBar":[
+                {
+                    "target":{
+                        "id":"CalculateTankData",
+                        "symbol":"Calculate",
+                        "currentId":"FlatEnds",
+                        "focusedField":"CalculateTankData",
+                        "expression":"(EnterTankData != true)?true:((CalculateTankData != true)?true:((TankShape != 'Cylindrical')?true:false))",
+                        "expressionReqFields":["CalculateTankData", "TankShape", "EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "mandatory":false,
+            "defaultValue": true,
+            "disabled": false,
+            "visible": [
+                {
+                    "target":{
+                        "id":"CalculateTankData",
+                        "symbol":"Calculate",
+                        "currentId":"FlatEnds",
+                        "focusedField":"CalculateTankData",
+                        "expression":"CalculateTankData == true && TankShape == 'Cylindrical' && EnterTankData == true",
+                        "expressionReqFields":["CalculateTankData", "TankShape", "EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                },
+                {
+                    "target":{
+                        "id":"TankShape",
+                        "symbol":"Calculate",
+                        "currentId":"FlatEnds",
+                        "focusedField":"TankShape",
+                        "expression":"CalculateTankData == true && TankShape == 'Cylindrical' && EnterTankData == true",
+                        "expressionReqFields":["CalculateTankData", "TankShape", "EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "infoText": "",
+            "grid": 6,
+            "style":{"gridDirection": "column","gridTemplateColumns": "0.3fr 0.9fr 1.25fr 1.35fr"},
+            "dimensionName": "",
+            "fieldGroupType": "RADIO_GROUP",
+            "fieldGroupName": "EndsGroup",
+            "fieldGroupLabel": "Ends",
+            "validations": []
+        },
+        {
+            "fieldName": "EllipticalEnds",
+            "label": "2:1 Elliptical Ends",
+            "type": "radio",
+            "UomFieldName": "",
+            "fieldDisplayOrder": 22,
+            "gridSection": 3,
+            "popupFields":true,
+            "hideFromSideBar":[
+                {
+                    "target":{
+                        "id":"CalculateTankData",
+                        "symbol":"Calculate",
+                        "currentId":"EllipticalEnds",
+                        "focusedField":"CalculateTankData",
+                        "expression":"(EnterTankData != true)?true:((CalculateTankData != true)?true:((TankShape != 'Cylindrical')?true:false))",
+                        "expressionReqFields":["CalculateTankData", "TankShape", "EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "mandatory": false,
+            "defaultValue": false,
+            "disabled": false,
+            "visible": [
+                {
+                    "target":{
+                        "id":"CalculateTankData",
+                        "symbol":"Calculate",
+                        "currentId":"EllipticalEnds",
+                        "focusedField":"CalculateTankData",
+                        "expression":"CalculateTankData == true && TankShape == 'Cylindrical' && EnterTankData == true",
+                        "expressionReqFields":["CalculateTankData", "TankShape", "EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                },
+                {
+                    "target":{
+                        "id":"TankShape",
+                        "symbol":"Calculate",
+                        "currentId":"EllipticalEnds",
+                        "focusedField":"TankShape",
+                        "expression":"CalculateTankData == true && TankShape == 'Cylindrical' && EnterTankData == true",
+                        "expressionReqFields":["CalculateTankData", "TankShape", "EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "infoText": "",
+            "grid": 6,
+            "style":{"gridDirection": "column","gridTemplateColumns": "0.3fr 0.9fr 1.25fr 1.35fr"},
+            "dimensionName": "",
+            "fieldGroupType": "RADIO_GROUP",
+            "fieldGroupName": "EndsGroup",
+            "fieldGroupLabel": "Ends",
+            "validations": []
+        },
+        {
+            "fieldName": "HemisphericalEnds",
+            "label": "Hemispherical Ends",
+            "type": "radio",
+            "UomFieldName": "",
+            "fieldDisplayOrder": 23,
+            "gridSection": 3,
+            "popupFields":true,
+            "hideFromSideBar":[
+                {
+                    "target":{
+                        "id":"CalculateTankData",
+                        "symbol":"Calculate",
+                        "currentId":"HemisphericalEnds",
+                        "focusedField":"CalculateTankData",
+                        "expression":"(EnterTankData != true)?true:((CalculateTankData != true)?true:((TankShape != 'Cylindrical')?true:false))",
+                        "expressionReqFields":["CalculateTankData", "TankShape", "EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "mandatory": false,
+            "defaultValue": false,
+            "disabled": false,
+            "visible": [
+                {
+                    "target":{
+                        "id":"CalculateTankData",
+                        "symbol":"Calculate",
+                        "currentId":"HemisphericalEnds",
+                        "focusedField":"CalculateTankData",
+                        "expression":"CalculateTankData == true && TankShape == 'Cylindrical' && EnterTankData == true",
+                        "expressionReqFields":["CalculateTankData", "TankShape", "EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                },
+                {
+                    "target":{
+                        "id":"TankShape",
+                        "symbol":"Calculate",
+                        "currentId":"HemisphericalEnds",
+                        "focusedField":"TankShape",
+                        "expression":"CalculateTankData == true && TankShape == 'Cylindrical' && EnterTankData == true",
+                        "expressionReqFields":["CalculateTankData", "TankShape", "EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "infoText": "",
+            "grid": 6,
+            "style":{"gridDirection": "column","gridTemplateColumns": "0.3fr 0.9fr 1.25fr 1.35fr"},
+            "dimensionName": "",
+            "fieldGroupType": "RADIO_GROUP",
+            "fieldGroupName": "EndsGroup",
+            "fieldGroupLabel": "Ends",
+            "validations": []
+        },
+        {
+            "fieldName": "Diameter_d",
+            "label": "Diameter(d)",
+            "type": "inputUom",
+            "UomFieldName": "LengthUOM",
+            "DbUomFieldName": "Diameter_d_UOM",
+            "fieldDisplayOrder":24,
+            "gridSection": 3,
+            "popupFields":true,
+            "hideFromSideBar":[
+                {
+                    "target":{
+                        "id":"CalculateTankData",
+                        "symbol":"Calculate",
+                        "currentId":"Diameter_d",
+                        "focusedField":"CalculateTankData",
+                        "expression":"(EnterTankData != true)?true:((CalculateTankData != true)?true:((TankShape != 'Cylindrical' && TankShape != 'Spherical')?true:false))",
+                        "expressionReqFields":["CalculateTankData", "TankShape", "EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "mandatory":false,
+            "defaultValue": "",
+            "calculateFields":[
+                {
+                    "target":{
+                        "id":"SurfaceArea",
+                        "symbol":"Exec_API",
+                        "method":"POST",
+                        "url":"/calculations/popup/firesize/surfacearea",
+                        "actionType":"OnBlur",
+                        "functionName": "CalculateAreaMethods",
+                        "currentFields":["EnterTankData","CalculateTankData","CalculationMethod","FireSizingMethod","TankShape","horizontalvertical","EndsGroup","Elevation_H","LiquidDepth_f","Diameter_d","LengthEndToEnd_ltip","LengthSeamToSeam_Ls","LengthEndToEnd_lt","Height_h","Diameter_d_UOM","Elevation_H_UOM","LiquidDepth_f_UOM","Height_h_UOM","LengthEndToEnd_lt_UOM","SurfaceAreaUOM","AreaUOM","EnvironmentalFactor","LatentHeatOfVapor","LatentHeatOfVaporUOM","IsPromptFFEADExists","AddCapacityForPressure","RequiredPressureFlowUOM","AddCapacityForPressureUOM","WettedArea","SetPressure","OverPressure","InletLoss","AtmPressure","Relieving","MolWeight","SpGravity","PressureUOM","TemperatureUOM","AtmPressureUOM","FlowCapacityUOM"],
+                        
+                        "nextRound":false
+                    },
+                    "value":""
+                }
+            ],
+            "disabled": false,
+            "onBlurAction":true,
+            "visible":  [
+                {
+                    "target":{
+                        "id":"CalculateTankData",
+                        "symbol":"Calculate",
+                        "currentId":"Diameter_d",
+                        "focusedField":"CalculateTankData",
+                        "expression":"CalculateTankData == true && (TankShape == 'Cylindrical' || TankShape == 'Spherical') && EnterTankData == true",
+                        "expressionReqFields":["CalculateTankData", "TankShape", "EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "grid": 4,
+            "infoText": "Diameter[d]",
+            "dimensionName":["length"],
+            "options":[                
+            ],
+            "validations": [
+                {
+                    "target":{
+                        "id":"Diameter_d",
+                        "symbol":"Calculate",
+                        "currentId":"Diameter_d",
+                        "focusedField":"Diameter_d",
+                        "expression":"Diameter_d<=0",
+                        "expressionReqFields":["Diameter_d"],
+                        "value":true
+                    },
+                    "message":{"type":"error","message":"Diametergt0"}
+                },
+                {
+                    "target":{
+                        "id":"LiquidDepth_f",
+                        "currentId":"Diameter_d",
+                        "focusedField":"LiquidDepth_f",
+                        "symbol":"Calculate",
+                        "expression":"(FireSizingMethod == 'Wetted' && LiquidDepth_f!='' && Diameter_d!='') ? ((LiquidDepth_f>Diameter_d) ? ((TankShape=='Spherical')?true:(TankShape=='Cylindrical' && horizontalvertical!='Vertical')):false):false",
+                        "expressionReqFields":["FireSizingMethod","TankShape","horizontalvertical","LiquidDepth_f","Diameter_d"],
+                        "value":true
+                    },
+                    "message":{"type":"error","message":"liquidDepthgteDiameter"}
+                },
+                {
+                    "target":{
+                        "id":"LengthEndToEnd_lt",
+                        "currentId":"Diameter_d",
+                        "focusedField":"LengthEndToEnd_lt",
+                        "symbol":"Calculate",
+                        "expression":"(CalculateTankData == true && FireSizingMethod == 'Wetted' && EnterTankData == true && TankShape=='Cylindrical' && EndsGroup=='EllipticalEnds' && LengthEndToEnd_lt!='' && Diameter_d!='') ? (LengthEndToEnd_lt<Diameter_d/2) : false",
+                        "expressionReqFields":["CalculateTankData","FireSizingMethod","EnterTankData","TankShape","EndsGroup","LengthEndToEnd_lt","Diameter_d"],
+                        "value":true
+                    },
+                    "message":{"type":"error","message":"LEtoEltehalfDiameter"}
+                },
+                {
+                    "target":{
+                        "id":"EndsGroup",
+                        "currentId":"Diameter_d",
+                        "focusedField":"EndsGroup",
+                        "symbol":"Calculate",
+                        "expression":"(CalculateTankData == true && FireSizingMethod == 'Wetted' && EnterTankData == true && TankShape=='Cylindrical' && EndsGroup=='EllipticalEnds' && LengthEndToEnd_lt!='' && Diameter_d!='')? (LengthEndToEnd_lt < Diameter_d/2) :false",
+                        "expressionReqFields":["CalculateTankData","FireSizingMethod","EnterTankData","TankShape","EndsGroup","LengthEndToEnd_lt","Diameter_d"],
+                        "value":true
+                    },
+                    "message":{"type":"error","message":"LEtoEltehalfDiameter"}
+                },
+                {
+                    "target":{
+                        "id":"EndsGroup",
+                        "currentId":"Diameter_d",
+                        "focusedField":"EndsGroup",
+                        "symbol":"Calculate",
+                        "expression":"(CalculateTankData == true && FireSizingMethod == 'Wetted' && EnterTankData == true && TankShape=='Cylindrical' && EndsGroup=='HemisphericalEnds' && LengthEndToEnd_lt!='' && Diameter_d!='')? (LengthEndToEnd_lt < Diameter_d) :false",
+                        "expressionReqFields":["CalculateTankData","FireSizingMethod","EnterTankData","TankShape","EndsGroup","LengthEndToEnd_lt","Diameter_d"],
+                        "value":true
+                    },
+                    "message":{"type":"error","message":"EtoELenltDiam"}
+                }
+            ],
+            "defaultUnit": {},
+            "regex": "NOT_ALLOW_NEGATIVE"
+        },
+        {
+            "fieldName": "Elevation_H",
+            "label": "Elevation (H)",
+            "type": "inputUom",
+            "UomFieldName": "LengthUOM",
+            "DbUomFieldName": "Elevation_H_UOM",
+            "fieldDisplayOrder":25,
+            "gridSection": 3,
+            "popupFields":true,
+            "onBlurAction":true,
+            "hideFromSideBar":[
+                {
+                    "target":{
+                        "id":"CalculateTankData",
+                        "symbol":"Calculate",
+                        "currentId":"Elevation_H",
+                        "focusedField":"CalculateTankData",
+                        "expression":"(EnterTankData != true)?true:((CalculateTankData != true)?true:((FireSizingMethod == 'Unwetted')?true:false))",
+                        "expressionReqFields":["CalculateTankData", "FireSizingMethod", "EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "calculateFields":[
+                {
+                    "target":{
+                        "id":"SurfaceArea",
+                        "symbol":"Exec_API",
+                        "method":"POST",
+                        "url":"/calculations/popup/firesize/surfacearea",
+                        "actionType":"OnBlur",
+                        "functionName": "CalculateAreaMethods",
+                        "currentFields":["EnterTankData","CalculateTankData","CalculationMethod","FireSizingMethod","TankShape","horizontalvertical","EndsGroup","Elevation_H","LiquidDepth_f","Diameter_d","LengthEndToEnd_ltip","LengthSeamToSeam_Ls","LengthEndToEnd_lt","Height_h","Diameter_d_UOM","Elevation_H_UOM","LiquidDepth_f_UOM","Height_h_UOM","LengthEndToEnd_lt_UOM","SurfaceAreaUOM","AreaUOM","EnvironmentalFactor","LatentHeatOfVapor","LatentHeatOfVaporUOM","IsPromptFFEADExists","AddCapacityForPressure","RequiredPressureFlowUOM","AddCapacityForPressureUOM","WettedArea","SetPressure","OverPressure","InletLoss","AtmPressure","Relieving","MolWeight","SpGravity","PressureUOM","TemperatureUOM","AtmPressureUOM","FlowCapacityUOM"],
+                        
+                        "nextRound":false
+                    },
+                    "value":""
+                }
+            ],
+            "mandatory":false,
+            "defaultValue": "",
+            "disabled": false,
+            "visible": [
+                {
+                    "target":{
+                        "id":"CalculateTankData",
+                        "symbol":"Calculate",
+                        "currentId":"Elevation_H",
+                        "focusedField":"CalculateTankData",
+                        "expression":"CalculateTankData == true && FireSizingMethod == 'Wetted' && EnterTankData == true",
+                        "expressionReqFields":["CalculateTankData", "FireSizingMethod", "EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                },
+                {
+                    "target":{
+                        "id":"FireSizingMethod",
+                        "symbol":"Calculate",
+                        "currentId":"Elevation_H",
+                        "focusedField":"FireSizingMethod",
+                        "expression":"CalculateTankData == true && FireSizingMethod == 'Wetted' && EnterTankData == true",
+                        "expressionReqFields":["CalculateTankData", "FireSizingMethod", "EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "grid": 4,
+            "infoText": "Elevation [h]",
+            "dimensionName":["length"],
+            "options":[                
+            ],
+            "validations": [],
+            "defaultUnit": {},
+            "regex": "NOT_ALLOW_NEGATIVE"
+        },
+        {
+            "fieldName": "BottomPlatPer",
+            "label": "% Bottom Plate (Y)",
+            "type": "inputUom",
+            "UomFieldName": "LengthUOM",
+            "fieldDisplayOrder":26,
+            "gridSection": 3,
+            "popupFields":true,
+            "hideFromSideBar":[
+                {
+                    "target":{
+                        "id":"CalculateTankData",
+                        "symbol":"Calculate",
+                        "currentId":"BottomPlatPer",
+                        "focusedField":"CalculateTankData",
+                        "expression":"(EnterTankData != true)?true:((CalculateTankData != true)?true:((FireSizingMethod == 'Unwetted') ?true: ((BottomPlatPer!=200)?true: ((horizontalvertical!='Vertical') ?true: ((EndsGroup!='FlatEnds')?true:false)))))",
+                        "expressionReqFields":["CalculateTankData", "FireSizingMethod", "EnterTankData","BottomPlatPer","horizontalvertical","EndsGroup"],
+                        "nextRound":false
+                    },
+                    "value":true
+                },
+                {
+                    "target":{
+                        "id":"EndsGroup",
+                        "symbol":"Calculate",
+                        "currentId":"BottomPlatPer",
+                        "focusedField":"EndsGroup",
+                        "expression":"(EnterTankData != true)?true:((CalculateTankData != true)?true:((FireSizingMethod == 'Unwetted') ?true: ((BottomPlatPer!=200)?true: ((horizontalvertical!='Vertical') ?true: ((EndsGroup!='FlatEnds')?true:false)))))",
+                        "expressionReqFields":["CalculateTankData", "FireSizingMethod", "EnterTankData","BottomPlatPer","horizontalvertical","EndsGroup"],
+                        "nextRound":false
+                    },
+                    "value":true
+                },
+                {
+                    "target":{
+                        "id":"FireSizingMethod",
+                        "symbol":"Calculate",
+                        "currentId":"BottomPlatPer",
+                        "focusedField":"FireSizingMethod",
+                        "expression":"(EnterTankData != true)?true:((CalculateTankData != true)?true:((FireSizingMethod == 'Unwetted') ?true: ((BottomPlatPer!=200)?true: ((horizontalvertical!='Vertical') ?true: ((EndsGroup!='FlatEnds')?true:false)))))",
+                        "expressionReqFields":["CalculateTankData", "FireSizingMethod", "EnterTankData","BottomPlatPer","horizontalvertical","EndsGroup"],
+                        "nextRound":false
+                    },
+                    "value":true
+                },
+                {
+                    "target":{
+                        "id":"BottomPlatPer",
+                        "symbol":"Calculate",
+                        "currentId":"BottomPlatPer",
+                        "focusedField":"BottomPlatPer",
+                        "expression":"(EnterTankData != true)?true:((CalculateTankData != true)?true:((FireSizingMethod == 'Unwetted') ?true: ((BottomPlatPer!=200)?true: ((horizontalvertical!='Vertical') ?true: ((EndsGroup!='FlatEnds')?true:false)))))",
+                        "expressionReqFields":["CalculateTankData", "FireSizingMethod", "EnterTankData","BottomPlatPer","horizontalvertical","EndsGroup"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "calculateFields":[
+                {
+                    "target":{
+                        "id":"SurfaceArea",
+                        "symbol":"Exec_API",
+                        "method":"POST",
+                        "url":"/calculations/popup/firesize/surfacearea",
+                        "actionType":"OnBlur",
+                        "functionName": "CalculateAreaMethods",
+                        "currentFields":["EnterTankData","CalculateTankData","CalculationMethod","FireSizingMethod","TankShape","horizontalvertical","EndsGroup","Elevation_H","LiquidDepth_f","Diameter_d","LengthEndToEnd_ltip","LengthSeamToSeam_Ls","LengthEndToEnd_lt","Height_h","Diameter_d_UOM","Elevation_H_UOM","LiquidDepth_f_UOM","Height_h_UOM","LengthEndToEnd_lt_UOM","SurfaceAreaUOM","AreaUOM","EnvironmentalFactor","LatentHeatOfVapor","LatentHeatOfVaporUOM","IsPromptFFEADExists","AddCapacityForPressure","RequiredPressureFlowUOM","AddCapacityForPressureUOM","WettedArea","SetPressure","OverPressure","InletLoss","AtmPressure","Relieving","MolWeight","SpGravity","PressureUOM","TemperatureUOM","AtmPressureUOM","FlowCapacityUOM"],
+                        
+                        "nextRound":false
+                    },
+                    "value":""
+                }
+            ],
+            "mandatory":false,
+            "defaultValue": "",
+            "disabled": true,
+            "visible": [
+                {
+                    "target":{
+                        "id":"CalculateTankData",
+                        "symbol":"Calculate",
+                        "currentId":"BottomPlatPer",
+                        "focusedField":"CalculateTankData",
+                        "expression":"CalculateTankData == true && FireSizingMethod == 'Wetted' && EnterTankData == true && BottomPlatPer==200 && horizontalvertical=='Vertical' && EndsGroup=='FlatEnds'",
+                        "expressionReqFields":["CalculateTankData", "FireSizingMethod", "EnterTankData","BottomPlatPer","horizontalvertical","EndsGroup"],
+                        "nextRound":false
+                    },
+                    "value":true
+                },
+                {
+                    "target":{
+                        "id":"EndsGroup",
+                        "symbol":"Calculate",
+                        "currentId":"BottomPlatPer",
+                        "focusedField":"EndsGroup",
+                        "expression":"CalculateTankData == true && FireSizingMethod == 'Wetted' && EnterTankData == true && BottomPlatPer==200 && horizontalvertical=='Vertical' && EndsGroup=='FlatEnds'",
+                        "expressionReqFields":["CalculateTankData", "FireSizingMethod", "EnterTankData","BottomPlatPer","horizontalvertical","EndsGroup"],
+                        "nextRound":false
+                    },
+                    "value":true
+                },
+                {
+                    "target":{
+                        "id":"horizontalvertical",
+                        "symbol":"Calculate",
+                        "currentId":"BottomPlatPer",
+                        "focusedField":"horizontalvertical",
+                        "expression":"CalculateTankData == true && FireSizingMethod == 'Wetted' && EnterTankData == true && BottomPlatPer==200 && horizontalvertical=='Vertical' && EndsGroup=='FlatEnds'",
+                        "expressionReqFields":["CalculateTankData", "FireSizingMethod", "EnterTankData","BottomPlatPer","horizontalvertical","EndsGroup"],
+                        "nextRound":false
+                    },
+                    "value":true
+                },
+                {
+                    "target":{
+                        "id":"BottomPlatPer",
+                        "symbol":"Calculate",
+                        "currentId":"BottomPlatPer",
+                        "focusedField":"BottomPlatPer",
+                        "expression":"CalculateTankData == true && FireSizingMethod == 'Wetted' && EnterTankData == true && BottomPlatPer==200 && horizontalvertical=='Vertical' && EndsGroup=='FlatEnds'",
+                        "expressionReqFields":["CalculateTankData", "FireSizingMethod", "EnterTankData","BottomPlatPer","horizontalvertical","EndsGroup"],
+                        "nextRound":false
+                    },
+                    "value":true
+                },
+                {
+                    "target":{
+                        "id":"FireSizingMethod",
+                        "symbol":"Calculate",
+                        "currentId":"BottomPlatPer",
+                        "focusedField":"FireSizingMethod",
+                        "expression":"CalculateTankData == true && FireSizingMethod == 'Wetted' && EnterTankData == true && BottomPlatPer==200 && horizontalvertical=='Vertical' && EndsGroup=='FlatEnds'",
+                        "expressionReqFields":["CalculateTankData", "FireSizingMethod", "EnterTankData","BottomPlatPer","horizontalvertical","EndsGroup"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "grid": 4,
+            "infoText": "% Bottom Plat [Y]",
+            "dimensionName":["%"],
+            "options":[],
+            "validations": [],
+            "defaultUnit": {},
+            "regex": "NOT_ALLOW_NEGATIVE"
+        },
+        {
+            "fieldName": "LiquidDepth_f",
+            "label": "Liquid Depth (f)",
+            "type": "inputUom",
+            "UomFieldName": "LengthUOM",
+            "DbUomFieldName": "LiquidDepth_f_UOM",
+            "fieldDisplayOrder":27,
+            "gridSection": 3,
+            "popupFields":true,
+            "onBlurAction":true,
+            "hideFromSideBar":[
+                {
+                    "target":{
+                        "id":"CalculateTankData",
+                        "symbol":"Calculate",
+                        "currentId":"LiquidDepth_f",
+                        "focusedField":"CalculateTankData",
+                        "expression":"(EnterTankData != true)?true:((CalculateTankData != true)?true:((FireSizingMethod == 'Unwetted')?true:false))",
+                        "expressionReqFields":["CalculateTankData", "FireSizingMethod", "EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "calculateFields":[
+                {
+                    "target":{
+                        "id":"SurfaceArea",
+                        "symbol":"Exec_API",
+                        "method":"POST",
+                        "url":"/calculations/popup/firesize/surfacearea",
+                        "actionType":"OnBlur",
+                        "functionName": "CalculateAreaMethods",
+                        "currentFields":["EnterTankData","CalculateTankData","CalculationMethod","FireSizingMethod","TankShape","horizontalvertical","EndsGroup","Elevation_H","LiquidDepth_f","Diameter_d","LengthEndToEnd_ltip","LengthSeamToSeam_Ls","LengthEndToEnd_lt","Height_h","Diameter_d_UOM","Elevation_H_UOM","LiquidDepth_f_UOM","Height_h_UOM","LengthEndToEnd_lt_UOM","SurfaceAreaUOM","AreaUOM","EnvironmentalFactor","LatentHeatOfVapor","LatentHeatOfVaporUOM","IsPromptFFEADExists","AddCapacityForPressure","RequiredPressureFlowUOM","AddCapacityForPressureUOM","WettedArea","SetPressure","OverPressure","InletLoss","AtmPressure","Relieving","MolWeight","SpGravity","PressureUOM","TemperatureUOM","AtmPressureUOM","FlowCapacityUOM"],
+                        
+                        "nextRound":false
+                    },
+                    "value":""
+                }
+            ],
+            "mandatory":false,
+            "defaultValue": "",
+            "disabled": false,
+            "visible": [
+                {
+                    "target":{
+                        "id":"CalculateTankData",
+                        "symbol":"Calculate",
+                        "currentId":"LiquidDepth_f",
+                        "focusedField":"CalculateTankData",
+                        "expression":"CalculateTankData == true && FireSizingMethod == 'Wetted' && EnterTankData == true",
+                        "expressionReqFields":["CalculateTankData", "FireSizingMethod", "EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                },
+                {
+                    "target":{
+                        "id":"FireSizingMethod",
+                        "symbol":"Calculate",
+                        "currentId":"LiquidDepth_f",
+                        "focusedField":"FireSizingMethod",
+                        "expression":"CalculateTankData == true && FireSizingMethod == 'Wetted' && EnterTankData == true",
+                        "expressionReqFields":["CalculateTankData", "FireSizingMethod", "EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "grid": 4,
+            "infoText": "Liquid Depth [f]",
+            "dimensionName":["length"],
+            "options":[                
+            ],
+            "validations": [
+                {
+                    "target":{
+                        "id":"LiquidDepth_f",
+                        "symbol":"Calculate",
+                        "currentId":"LiquidDepth_f",
+                        "focusedField":"LiquidDepth_f",
+                        "expression":"FireSizingMethod=='Wetted' && TankShape=='Cylindrical' && LiquidDepth_f<=0",
+                        "expressionReqFields":["FireSizingMethod","LiquidDepth_f","TankShape"],
+                        "value":true
+                    },
+                    "message":{"type":"error","message":"LiquidDepthgt0"}
+                },
+                {
+                    "target":{
+                        "id":"Diameter_d",
+                        "currentId":"LiquidDepth_f",
+                        "focusedField":"Diameter_d",
+                        "symbol":"Calculate",
+                        "expression":"(FireSizingMethod == 'Wetted' && LiquidDepth_f!='' && Diameter_d!='')? ((LiquidDepth_f>Diameter_d)? ((TankShape=='Spherical')?true:(TankShape=='Cylindrical' && horizontalvertical!='Vertical')):false) :false",
+                        "expressionReqFields":["FireSizingMethod","TankShape","horizontalvertical","LiquidDepth_f","Diameter_d"],
+                        "value":true
+                    },
+                    "message":{"type":"error","message":"liquidDepthgteDiameter"}
+                },
+                {
+                    "target":{
+                        "id":"horizontalvertical",
+                        "currentId":"LiquidDepth_f",
+                        "focusedField":"horizontalvertical",
+                        "symbol":"Calculate",
+                        "expression":"(FireSizingMethod == 'Wetted' && LiquidDepth_f!='' && Diameter_d!='')? ((LiquidDepth_f>Diameter_d)? ((TankShape=='Spherical')?true:(TankShape=='Cylindrical' && horizontalvertical!='Vertical')):false) :false",
+                        "expressionReqFields":["FireSizingMethod","TankShape","horizontalvertical","LiquidDepth_f","Diameter_d"],
+                        "value":true
+                    },
+                    "message":{"type":"error","message":"liquidDepthgteDiameter"}
+                },
+                {
+                    "target":{
+                        "id":"LengthEndToEnd_lt",
+                        "currentId":"LiquidDepth_f",
+                        "focusedField":"LengthEndToEnd_lt",
+                        "symbol":"Calculate",
+                        "expression":"(CalculateTankData == true && FireSizingMethod == 'Wetted' && EnterTankData == true && TankShape=='Cylindrical' && horizontalvertical!='Horizontal' && EndsGroup=='EllipticalEnds' && LiquidDepth_f!='' && LengthEndToEnd_lt!='')? (LiquidDepth_f>LengthEndToEnd_lt) :false",
+                        "expressionReqFields":["CalculateTankData","FireSizingMethod","EnterTankData","TankShape","horizontalvertical","EndsGroup","LiquidDepth_f","LengthEndToEnd_lt","Diameter_d"],
+                        "value":true
+                    },
+                    "message":{"type":"error","message":"LDepthgtLEtoELength"}
+                },
+                {
+                    "target":{
+                        "id":"Height_h",
+                        "currentId":"LiquidDepth_f",
+                        "focusedField":"Height_h",
+                        "symbol":"Calculate",
+                        "expression":"(CalculateTankData == true && FireSizingMethod == 'Wetted' && EnterTankData == true && TankShape=='Cylindrical' && horizontalvertical!='Horizontal' && EndsGroup=='FlatEnds' && LiquidDepth_f!='' && Height_h!='')? (LiquidDepth_f>Height_h) :false",
+                        "expressionReqFields":["CalculateTankData","FireSizingMethod","EnterTankData","TankShape","horizontalvertical","EndsGroup","LiquidDepth_f","Height_h"],
+                        "value":true
+                    },
+                    "message":{"type":"error","message":"liquidDepthgteDiameter"}
+                }
+            ],
+            "defaultUnit": {},
+            "regex": "NOT_ALLOW_NEGATIVE"
+        },
+        {
+            "fieldName": "LengthEndToEnd_ltip",
+            "label": "Length (End-to-End)(Lt)",
+            "type": "inputUom",
+            "UomFieldName": "LengthUOM",
+            "DbUomFieldName":  "LengthEndToEnd_lt_UOM",
+            "fieldDisplayOrder":28,
+            "gridSection": 3,
+            "popupFields":true,
+            "hideFromSideBar":[
+                {
+                    "target":{
+                        "id":"TankShape",
+                        "symbol":"Calculate",
+                        "currentId":"LengthEndToEnd_ltip",
+                        "focusedField":"TankShape",
+                        "expression":"(EnterTankData != true)?true:((CalculateTankData!=true)?true:((TankShape != 'Cylindrical')?true:((horizontalvertical != 'IsHorizontalOrientation')?true:((EndsGroup != 'FlatEnds')?true:false))))",
+                        "expressionReqFields":["TankShape","horizontalvertical","EndsGroup", "EnterTankData","CalculateTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "calculateFields":[
+                {
+                    "target":{
+                        "id":"SurfaceArea",
+                        "symbol":"Exec_API",
+                        "method":"POST",
+                        "url":"/calculations/popup/firesize/surfacearea",
+                        "actionType":"OnBlur",
+                        "functionName": "CalculateAreaMethods",
+                        "currentFields":["EnterTankData","CalculateTankData","CalculationMethod","FireSizingMethod","TankShape","horizontalvertical","EndsGroup","Elevation_H","LiquidDepth_f","Diameter_d","LengthEndToEnd_ltip","LengthSeamToSeam_Ls","LengthEndToEnd_lt","Height_h","Diameter_d_UOM","Elevation_H_UOM","LiquidDepth_f_UOM","Height_h_UOM","LengthEndToEnd_lt_UOM","SurfaceAreaUOM","AreaUOM","EnvironmentalFactor","LatentHeatOfVapor","LatentHeatOfVaporUOM","IsPromptFFEADExists","AddCapacityForPressure","RequiredPressureFlowUOM","AddCapacityForPressureUOM","WettedArea","SetPressure","OverPressure","InletLoss","AtmPressure","Relieving","MolWeight","SpGravity","PressureUOM","TemperatureUOM","AtmPressureUOM","FlowCapacityUOM"],
+                        
+                        "nextRound":false
+                    },
+                    "value":""
+                }
+            ],
+            "mandatory":false,
+            "defaultValue": "",
+            "disabled": false,
+            "onBlurAction":true,
+            "visible": [
+                {
+                    "target":{
+                        "id":"CalculateTankData",
+                        "symbol":"Calculate",
+                        "currentId":"LengthEndToEnd_ltip",
+                        "focusedField":"CalculateTankData",
+                        "expression":"EnterTankData == true && CalculateTankData==true && TankShape == 'Cylindrical' && horizontalvertical == 'IsHorizontalOrientation' &&  EndsGroup == 'FlatEnds'",
+                        "expressionReqFields":["TankShape","horizontalvertical","EndsGroup", "EnterTankData","CalculateTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                },
+                {
+                    "target":{
+                        "id":"TankShape",
+                        "symbol":"Calculate",
+                        "currentId":"LengthEndToEnd_ltip",
+                        "focusedField":"TankShape",
+                        "expression":"EnterTankData == true && CalculateTankData==true && TankShape == 'Cylindrical' && horizontalvertical == 'IsHorizontalOrientation' &&  EndsGroup == 'FlatEnds'",
+                        "expressionReqFields":["TankShape","horizontalvertical","EndsGroup", "EnterTankData","CalculateTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                },
+                {
+                    "target":{
+                        "id":"horizontalvertical",
+                        "symbol":"Calculate",
+                        "currentId":"LengthEndToEnd_ltip",
+                        "focusedField":"horizontalvertical",
+                        "expression":"EnterTankData == true && CalculateTankData==true && TankShape == 'Cylindrical' && horizontalvertical == 'IsHorizontalOrientation' &&  EndsGroup == 'FlatEnds'",
+                        "expressionReqFields":["TankShape","horizontalvertical","EndsGroup", "EnterTankData","CalculateTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                },
+                {
+                    "target":{
+                        "id":"EndsGroup",
+                        "symbol":"Calculate",
+                        "currentId":"LengthEndToEnd_ltip",
+                        "focusedField":"EndsGroup",
+                        "expression":"EnterTankData == true && CalculateTankData==true && TankShape == 'Cylindrical' && horizontalvertical == 'IsHorizontalOrientation' &&  EndsGroup == 'FlatEnds'",
+                        "expressionReqFields":["TankShape","horizontalvertical","EndsGroup", "EnterTankData","CalculateTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "grid": 4,
+            "infoText": "Length (End-to-End) [Lt]",
+            "dimensionName":["length"],
+            "options":[                
+            ],
+            "validations": [
+                {
+                    "target":{
+                        "id":"LengthEndToEnd_ltip",
+                        "symbol":"Calculate",
+                        "currentId":"LengthEndToEnd_ltip",
+                        "focusedField":"LengthEndToEnd_ltip",
+                        "expression":"EnterTankData == true && CalculateTankData==true && TankShape == 'Cylindrical' && horizontalvertical == 'IsHorizontalOrientation' &&  EndsGroup == 'FlatEnds' && LengthEndToEnd_ltip<=0",
+                        "expressionReqFields":["EnterTankData","CalculateTankData","TankShape","horizontalvertical","EndsGroup","LengthEndToEnd_ltip"],
+                        "value":true
+                    },
+                    "message":{"type":"error","message":"EtoELengt0"}
+                }
+            ],
+            "defaultUnit": {},
+            "regex": "NOT_ALLOW_NEGATIVE"
+        },
+        {
+            "fieldName": "LengthEndToEnd_lt",
+            "label": "Length (End-to-End) (Lt)",
+            "type": "radioInput",
+            "UomFieldName": "LengthUOM",
+            "DbUomFieldName":  "LengthEndToEnd_lt_UOM",
+            "fieldDisplayOrder": 29,
+            "gridSection": 3,
+            "popupFields":true,
+            "onBlurAction":true,
+            "hideFromSideBar":[
+                {
+                    "target":{
+                        "id":"TankShape",
+                        "symbol":"Calculate",
+                        "currentId":"LengthEndToEnd_lt",
+                        "focusedField":"TankShape",
+                        "expression":"(EnterTankData != true)?true:((CalculateTankData!=true)?true:((TankShape != 'Cylindrical')?true:((EndsGroup == 'EllipticalEnds' || EndsGroup == 'HemisphericalEnds')?false:true)))",
+                        "expressionReqFields":["TankShape","EndsGroup", "EnterTankData", "CalculateTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "mandatory": [
+                {
+                    "target":{
+                        "id":"TankShape",
+                        "symbol":"Calculate",
+                        "currentId": "LengthEndToEnd_lt",
+                        "focusedField":"TankShape",
+                        "expression":"EnterTankData == true && CalculateTankData==true && TankShape == 'Cylindrical'  &&( EndsGroup == 'EllipticalEnds' || EndsGroup == 'HemisphericalEnds') && LengthSeamToSeam_Ls==''",
+                        "expressionReqFields":["TankShape","EndsGroup", "EnterTankData", "CalculateTankData","LengthSeamToSeam_Ls"],
+                        "nextRound":false
+                    },
+                    "value":true
+                },
+                {
+                    "target":{
+                        "id":"EndsGroup",
+                        "symbol":"Calculate",
+                        "currentId": "LengthEndToEnd_lt",
+                        "focusedField":"EndsGroup",
+                        "expression":"EnterTankData == true && CalculateTankData==true && TankShape == 'Cylindrical'  &&( EndsGroup == 'EllipticalEnds' || EndsGroup == 'HemisphericalEnds') && LengthSeamToSeam_Ls==''",
+                        "expressionReqFields":["TankShape","EndsGroup", "EnterTankData", "CalculateTankData","LengthSeamToSeam_Ls"],
+                        "nextRound":false
+                    },
+                    "value":true
+                },
+                
+                {
+                    "target":{
+                        "id":"LengthSeamToSeam_Ls",
+                        "symbol":"Calculate",
+                        "currentId": "LengthEndToEnd_lt",
+                        "focusedField":"LengthSeamToSeam_Ls",
+                        "expression":"EnterTankData == true && CalculateTankData==true && TankShape == 'Cylindrical'  &&( EndsGroup == 'EllipticalEnds' || EndsGroup == 'HemisphericalEnds') && LengthSeamToSeam_Ls==''",
+                        "expressionReqFields":["TankShape","EndsGroup", "EnterTankData", "CalculateTankData","LengthSeamToSeam_Ls"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "defaultValue": [
+                {
+                    "target":{
+                        "id":"LengthSeamToSeam_Ls",
+                        "currentId": "LengthEndToEnd_lt",
+                        "focusedField":"LengthSeamToSeam_Ls",
+                        "symbol":"Calculate",
+                        "uom": "length.ft",
+                        "expression":"(EndsGroup=='FlatEnds' || LengthSeamToSeam_Ls=='')?'':((EndsGroup=='HemisphericalEnds')?(LengthSeamToSeam_Ls+Diameter_d):((EndsGroup=='EllipticalEnds')?(LengthSeamToSeam_Ls+(Diameter_d/2)):''))",
+                        "expressionReqFields":["EndsGroup","LengthSeamToSeam_Ls","Diameter_d","Diameter_d_UOM","LengthSeamToSeam_Ls_UOM","LengthEndToEnd_lt_UOM"],
+                        "nextRound":false
+                    },
+                    "value":""
+                },
+                {
+                    "target":{
+                        "id":"LengthEndToEnd_ltip",
+                        "currentId": "LengthEndToEnd_lt",
+                        "focusedField":"LengthEndToEnd_ltip",
+                        "symbol":"Calculate",
+                        "uom": "length.ft",
+                        "expression":"(EndsGroup=='FlatEnds')?LengthEndToEnd_ltip:0",
+                        "expressionReqFields":["EndsGroup","LengthEndToEnd_ltip"],
+                        "nextRound":false
+                    },
+                    "value":""
+                }
+                
+            ],
+            "calculateFields":[
+                {
+                    "target":{
+                        "id":"SurfaceArea",
+                        "symbol":"Exec_API",
+                        "method":"POST",
+                        "url":"/calculations/popup/firesize/surfacearea",
+                        "actionType":"OnBlur",
+                        "functionName": "CalculateAreaMethods",
+                        "currentFields":["EnterTankData","CalculateTankData","CalculationMethod","FireSizingMethod","TankShape","horizontalvertical","EndsGroup","Elevation_H","LiquidDepth_f","Diameter_d","LengthEndToEnd_ltip","LengthSeamToSeam_Ls","LengthEndToEnd_lt","Height_h","Diameter_d_UOM","Elevation_H_UOM","LiquidDepth_f_UOM","Height_h_UOM","LengthEndToEnd_lt_UOM","SurfaceAreaUOM","AreaUOM","EnvironmentalFactor","LatentHeatOfVapor","LatentHeatOfVaporUOM","IsPromptFFEADExists","AddCapacityForPressure","RequiredPressureFlowUOM","AddCapacityForPressureUOM","WettedArea","SetPressure","OverPressure","InletLoss","AtmPressure","Relieving","MolWeight","SpGravity","PressureUOM","TemperatureUOM","AtmPressureUOM","FlowCapacityUOM"],
+                        
+                        "nextRound":false
+                    },
+                    "value":""
+                }
+            ],
+            "disabled": false,
+            "visible": [
+                {
+                    "target":{
+                        "id":"CalculateTankData",
+                        "symbol":"Calculate",
+                        "currentId":"LengthEndToEnd_lt",
+                        "focusedField":"CalculateTankData",
+                        "expression":"EnterTankData == true && CalculateTankData==true && TankShape == 'Cylindrical'  &&( EndsGroup == 'EllipticalEnds' || EndsGroup == 'HemisphericalEnds')",
+                        "expressionReqFields":["TankShape","EndsGroup", "EnterTankData", "CalculateTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                },
+                {
+                    "target":{
+                        "id":"TankShape",
+                        "symbol":"Calculate",
+                        "currentId":"LengthEndToEnd_lt",
+                        "focusedField":"TankShape",
+                        "expression":"EnterTankData == true && CalculateTankData==true && TankShape == 'Cylindrical'  &&( EndsGroup == 'EllipticalEnds' || EndsGroup == 'HemisphericalEnds')",
+                        "expressionReqFields":["TankShape","EndsGroup", "EnterTankData", "CalculateTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                },
+                {
+                    "target":{
+                        "id":"EndsGroup",
+                        "symbol":"Calculate",
+                        "currentId":"LengthEndToEnd_lt",
+                        "focusedField":"EndsGroup",
+                        "expression":"EnterTankData == true && CalculateTankData==true && TankShape == 'Cylindrical'  &&( EndsGroup == 'EllipticalEnds' || EndsGroup == 'HemisphericalEnds')",
+                        "expressionReqFields":["TankShape","EndsGroup", "EnterTankData", "CalculateTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "infoText": "",
+            "grid": 4,
+            "gridDirection": "column",
+            "dimensionName": ["length"],
+            "fieldGroupType": "RADIO_GROUP",
+            "fieldGroupName": "Length_Lt_ls_Group",
+            "defaultSelected":"LengthEndToEnd_lt",
+            "validations": [
+                {
+                    "target":{
+                        "id":"LengthEndToEnd_lt",
+                        "symbol":"Calculate",
+                        "currentId":"LengthEndToEnd_lt",
+                        "focusedField":"LengthEndToEnd_lt",
+                        "expression":"EnterTankData == true && CalculateTankData==true && TankShape == 'Cylindrical'  &&( EndsGroup == 'EllipticalEnds' || EndsGroup == 'HemisphericalEnds') && LengthEndToEnd_lt<=0",
+                        "expressionReqFields":["EnterTankData","CalculateTankData","TankShape","EndsGroup","LengthEndToEnd_lt"],
+                        "value":true
+                    },
+                    "message":{"type":"error","message":"EtoELengt0"}
+                },
+                {
+                    "target":{
+                        "id":"Diameter_d",
+                        "currentId":"LengthEndToEnd_lt",
+                        "focusedField":"Diameter_d",
+                        "symbol":"Calculate",
+                        "expression":"(CalculateTankData == true && FireSizingMethod == 'Wetted' && EnterTankData == true && TankShape=='Cylindrical' && EndsGroup=='EllipticalEnds' && LengthEndToEnd_lt!='' && Diameter_d!='')? (LengthEndToEnd_lt<Diameter_d/2) :false",
+                        "expressionReqFields":["CalculateTankData","FireSizingMethod","EnterTankData","TankShape","EndsGroup","LengthEndToEnd_lt","Diameter_d"],
+                        "value":true
+                    },
+                    "message":{"type":"error","message":"LEtoEltehalfDiameter"}
+                },
+                
+                {
+                    "target":{
+                        "id":"LiquidDepth_f",
+                        "currentId":"LengthEndToEnd_lt",
+                        "focusedField":"LiquidDepth_f",
+                        "symbol":"Calculate",
+                        "expression":"(CalculateTankData == true && FireSizingMethod == 'Wetted' && EnterTankData == true && TankShape=='Cylindrical' && horizontalvertical!='Horizontal' && EndsGroup=='EllipticalEnds' && LiquidDepth_f!='' && LengthEndToEnd_lt!='')? (LiquidDepth_f>LengthEndToEnd_lt) :false",
+                        "expressionReqFields":["CalculateTankData","FireSizingMethod","EnterTankData","TankShape","horizontalvertical","EndsGroup","LiquidDepth_f","LengthEndToEnd_lt","Diameter_d"],
+                        "value":true
+                    },
+                    "message":{"type":"error","message":"LDepthgtLEtoELength"}
+                },
+                {
+                    "target":{
+                        "id":"LengthSeamToSeam_Ls",
+                        "currentId":"LengthEndToEnd_lt",
+                        "focusedField":"LengthSeamToSeam_Ls",
+                        "symbol":"Calculate",
+                        "expression":"(CalculateTankData == true && FireSizingMethod == 'Wetted' && EnterTankData == true && TankShape=='Cylindrical' && horizontalvertical!='Horizontal' && EndsGroup=='HemisphericalEnds' && LengthSeamToSeam_Ls!='' && LengthSeamToSeam_Ls!=undefined)? (LengthSeamToSeam_Ls<0) :false",
+                        "expressionReqFields":["CalculateTankData","FireSizingMethod","EnterTankData","TankShape","horizontalvertical","EndsGroup","LengthSeamToSeam_Ls"],
+                        "value":true
+                    },
+                    "message":{"type":"error","message":"ElipticalStoSLCheck"}
+                }
+            ],
+            "regex": "NOT_ALLOW_NEGATIVE"
+        },
+        {
+            "fieldName": "LengthSeamToSeam_Ls",
+            "label": "Length (Seam-to-Seam) (Ls)",
+            "type": "radioInput",
+            "UomFieldName": "LengthUOM",
+            "DbUomFieldName":  "LengthSeamToSeam_Ls_UOM",
+            "fieldDisplayOrder": 30,
+            "gridSection": 3,
+            "popupFields":true,
+            "onBlurAction":true,
+            "hideFromSideBar":[
+                {
+                    "target":{
+                        "id":"TankShape",
+                        "symbol":"Calculate",
+                        "currentId":"LengthSeamToSeam_Ls",
+                        "focusedField":"TankShape",
+                        "expression":"(EnterTankData != true)?true:((CalculateTankData!=true)?true:((TankShape != 'Cylindrical')?true:((EndsGroup == 'EllipticalEnds' || EndsGroup == 'HemisphericalEnds')?false:true)))",
+                        "expressionReqFields":["TankShape","EndsGroup", "EnterTankData", "CalculateTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "mandatory": [
+                {
+                    "target":{
+                        "id":"TankShape",
+                        "symbol":"Calculate",
+                        "currentId": "LengthSeamToSeam_Ls",
+                        "focusedField":"TankShape",
+                        "expression":"EnterTankData == true && CalculateTankData==true && TankShape == 'Cylindrical'  &&( EndsGroup == 'EllipticalEnds' || EndsGroup == 'HemisphericalEnds') && LengthEndToEnd_lt==''",
+                        "expressionReqFields":["TankShape","EndsGroup", "EnterTankData", "CalculateTankData","LengthEndToEnd_lt"],
+                        "nextRound":false
+                    },
+                    "value":true
+                },
+                {
+                    "target":{
+                        "id":"EndsGroup",
+                        "symbol":"Calculate",
+                        "currentId": "LengthSeamToSeam_Ls",
+                        "focusedField":"EndsGroup",
+                        "expression":"EnterTankData == true && CalculateTankData==true && TankShape == 'Cylindrical'  &&( EndsGroup == 'EllipticalEnds' || EndsGroup == 'HemisphericalEnds') && LengthEndToEnd_lt==''",
+                        "expressionReqFields":["TankShape","EndsGroup", "EnterTankData", "CalculateTankData","LengthEndToEnd_lt"],
+                        "nextRound":false
+                    },
+                    "value":true
+                },
+                {
+                    "target":{
+                        "id":"LengthEndToEnd_lt",
+                        "symbol":"Calculate",
+                        "currentId": "LengthSeamToSeam_Ls",
+                        "focusedField":"LengthEndToEnd_lt",
+                        "expression":"EnterTankData == true && CalculateTankData==true && TankShape == 'Cylindrical'  &&( EndsGroup == 'EllipticalEnds' || EndsGroup == 'HemisphericalEnds') && LengthEndToEnd_lt==''",
+                        "expressionReqFields":["TankShape","EndsGroup", "EnterTankData", "CalculateTankData","LengthEndToEnd_lt"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "defaultValue": [
+                {
+                    "target":{
+                        "id":"Diameter_d",
+                        "currentId": "LengthSeamToSeam_Ls",
+                        "focusedField":"Diameter_d",
+                        "symbol":"Calculate",
+                        "uom": "length.ft",
+                        "expression":"(EndsGroup=='FlatEnds' || LengthEndToEnd_lt=='')?'':(((EndsGroup=='HemisphericalEnds')?(LengthEndToEnd_lt-Diameter_d):((EndsGroup=='EllipticalEnds')?(LengthEndToEnd_lt-(Diameter_d/2)):'')))",
+                        "expressionReqFields":["EndsGroup","Diameter_d","LengthEndToEnd_lt","Diameter_d_UOM","LengthSeamToSeam_Ls_UOM","LengthEndToEnd_lt_UOM"],
+                        "nextRound":false
+                    },
+                    "value":""
+                },
+                {
+                    "target":{
+                        "id":"LengthEndToEnd_lt",
+                        "currentId": "LengthSeamToSeam_Ls",
+                        "focusedField":"LengthEndToEnd_lt",
+                        "symbol":"Calculate",
+                        "uom": "length.ft",
+                        "expression":"(EndsGroup=='FlatEnds' || LengthEndToEnd_lt=='')?'':((EndsGroup=='HemisphericalEnds')?(LengthEndToEnd_lt-Diameter_d):((EndsGroup=='EllipticalEnds')?(LengthEndToEnd_lt-(Diameter_d/2)):''))",
+                        "expressionReqFields":["EndsGroup","Diameter_d","LengthEndToEnd_lt","Diameter_d_UOM","LengthSeamToSeam_Ls_UOM","LengthEndToEnd_lt_UOM"],
+                        "nextRound":false
+                    },
+                    "value":""
+                },
+                {
+                    "target":{
+                        "id":"EndsGroup",
+                        "currentId": "LengthSeamToSeam_Ls",
+                        "focusedField":"EndsGroup",
+                        "symbol":"Calculate",
+                        "uom": "length.ft",
+                        "expression":"((LengthSeamToSeam_Ls =='' || LengthSeamToSeam_Ls==0) && LengthEndToEnd_lt=='')?'':((EndsGroup=='HemisphericalEnds')?(LengthEndToEnd_lt-Diameter_d): ((EndsGroup=='EllipticalEnds')?(LengthEndToEnd_lt-(Diameter_d/2)):''))",
+                        "expressionReqFields":["Length_Lt_ls_Group","EndsGroup","Diameter_d","LengthEndToEnd_lt","LengthSeamToSeam_Ls","Diameter_d_UOM","LengthSeamToSeam_Ls_UOM","LengthEndToEnd_lt_UOM"],
+                        "nextRound":false
+                    },
+                    "value":""
+                }
+            ],
+            "calculateFields":[
+                {
+                    "target":{
+                        "id":"SurfaceArea",
+                        "symbol":"Exec_API",
+                        "method":"POST",
+                        "url":"/calculations/popup/firesize/surfacearea",
+                        "actionType":"OnBlur",
+                        "functionName": "CalculateAreaMethods",
+                        "currentFields":["EnterTankData","CalculateTankData","CalculationMethod","FireSizingMethod","TankShape","horizontalvertical","EndsGroup","Elevation_H","LiquidDepth_f","Diameter_d","LengthEndToEnd_ltip","LengthSeamToSeam_Ls","LengthEndToEnd_lt","Height_h","Diameter_d_UOM","Elevation_H_UOM","LiquidDepth_f_UOM","Height_h_UOM","LengthEndToEnd_lt_UOM","SurfaceAreaUOM","AreaUOM","EnvironmentalFactor","LatentHeatOfVapor","LatentHeatOfVaporUOM","IsPromptFFEADExists","AddCapacityForPressure","RequiredPressureFlowUOM","AddCapacityForPressureUOM","WettedArea","SetPressure","OverPressure","InletLoss","AtmPressure","Relieving","MolWeight","SpGravity","PressureUOM","TemperatureUOM","AtmPressureUOM","FlowCapacityUOM"],
+                        
+                        "nextRound":false
+                    },
+                    "value":""
+                }
+            ],
+            "disabled": false,
+            "visible": [
+                {
+                    "target":{
+                        "id":"TankShape",
+                        "symbol":"Calculate",
+                        "currentId":"LengthSeamToSeam_Ls",
+                        "focusedField":"TankShape",
+                        "expression":"TankShape == 'Cylindrical'  && ( EndsGroup == 'EllipticalEnds' || EndsGroup == 'HemisphericalEnds') && EnterTankData == true && CalculateTankData==true",
+                        "expressionReqFields":["TankShape","EndsGroup", "EnterTankData", "CalculateTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                },
+                {
+                    "target":{
+                        "id":"EndsGroup",
+                        "symbol":"Calculate",
+                        "currentId":"LengthSeamToSeam_Ls",
+                        "focusedField":"EndsGroup",
+                        "expression":"TankShape == 'Cylindrical'  && ( EndsGroup == 'EllipticalEnds' || EndsGroup == 'HemisphericalEnds') && EnterTankData == true && CalculateTankData==true",
+                        "expressionReqFields":["TankShape","EndsGroup", "EnterTankData", "CalculateTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                },
+                {
+                    "target":{
+                        "id":"CalculateTankData",
+                        "symbol":"Calculate",
+                        "currentId":"LengthSeamToSeam_Ls",
+                        "focusedField":"CalculateTankData",
+                        "expression":"TankShape == 'Cylindrical'  && ( EndsGroup == 'EllipticalEnds' || EndsGroup == 'HemisphericalEnds') && EnterTankData == true && CalculateTankData==true",
+                        "expressionReqFields":["TankShape","EndsGroup", "EnterTankData", "CalculateTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "infoText": "",
+            "grid": 4,
+            "gridDirection": "column",
+            "dimensionName": ["length"],
+            "fieldGroupType": "RADIO_GROUP",
+            "fieldGroupName": "Length_Lt_ls_Group",
+            "defaultSelected":"LengthEndToEnd_lt",
+            "validations": [
+                {
+                    "target":{
+                        "id":"LengthEndToEnd_lt",
+                        "currentId":"LengthSeamToSeam_Ls",
+                        "focusedField":"LengthEndToEnd_lt",
+                        "symbol":"Calculate",
+                        "expression":"(CalculateTankData == true && FireSizingMethod == 'Wetted' && EnterTankData == true && TankShape=='Cylindrical' && horizontalvertical!='Horizontal' && EndsGroup=='EllipticalEnds' && LengthEndToEnd_lt!='' && Diameter_d!='')? (LengthEndToEnd_lt-(Diameter_d/2) <0) :false",
+                        "expressionReqFields":["CalculateTankData","FireSizingMethod","EnterTankData","TankShape","horizontalvertical","EndsGroup","LengthEndToEnd_lt","Diameter_d"],
+                        "value":true
+                    },
+                    "message":{"type":"error","message":"LEtoEltehalfDiameter"}
+                },
+                {
+                    "target":{
+                        "id":"Diameter_d",
+                        "currentId":"LengthSeamToSeam_Ls",
+                        "focusedField":"Diameter_d",
+                        "symbol":"Calculate",
+                        "expression":"(CalculateTankData == true && FireSizingMethod == 'Wetted' && EnterTankData == true && TankShape=='Cylindrical' && horizontalvertical!='Horizontal' && EndsGroup=='EllipticalEnds' && LengthEndToEnd_lt!='' && Diameter_d!='')? (LengthEndToEnd_lt-(Diameter_d/2) <0) :false",
+                        "expressionReqFields":["CalculateTankData","FireSizingMethod","EnterTankData","TankShape","horizontalvertical","EndsGroup","LengthEndToEnd_lt","Diameter_d"],
+                        "value":true
+                    },
+                    "message":{"type":"error","message":"LEtoEltehalfDiameter"}
+                },
+                {
+                    "target":{
+                        "id":"Diameter_d",
+                        "currentId":"LengthSeamToSeam_Ls",
+                        "focusedField":"Diameter_d",
+                        "symbol":"Calculate",
+                        "expression":"(CalculateTankData == true && FireSizingMethod == 'Wetted' && EnterTankData == true && TankShape=='Cylindrical'  && EndsGroup=='HemisphericalEnds' && LengthSeamToSeam_Ls!='' && Diameter_d!='')? (((LengthSeamToSeam_Ls>=0 || (LengthEndToEnd_lt-Diameter_d)>=0))?false:true) :false",
+                        "expressionReqFields":["CalculateTankData","FireSizingMethod","EnterTankData","TankShape","horizontalvertical","EndsGroup","LengthEndToEnd_lt","Diameter_d","LengthSeamToSeam_Ls"],
+                        "value":true
+                    },
+                    "message":{"type":"error","message":"ElipticalStoSLCheck"}
+                },
+                {
+                    "target":{
+                        "id":"LengthEndToEnd_lt",
+                        "currentId":"LengthSeamToSeam_Ls",
+                        "focusedField":"LengthEndToEnd_lt",
+                        "symbol":"Calculate",
+                        "expression":"(CalculateTankData == true && FireSizingMethod == 'Wetted' && EnterTankData == true && TankShape=='Cylindrical'  && EndsGroup=='HemisphericalEnds' && LengthSeamToSeam_Ls!='' && Diameter_d!='')? (((LengthSeamToSeam_Ls>=0 || (LengthEndToEnd_lt-Diameter_d)>=0))?false:true) :false",
+                        "expressionReqFields":["CalculateTankData","FireSizingMethod","EnterTankData","TankShape","horizontalvertical","EndsGroup","LengthEndToEnd_lt","Diameter_d","LengthSeamToSeam_Ls"],
+                        "value":true
+                    },
+                    "message":{"type":"error","message":"ElipticalStoSLCheck"}
+                },
+                {
+                    "target":{
+                        "id":"EndsGroup",
+                        "currentId":"LengthSeamToSeam_Ls",
+                        "focusedField":"EndsGroup",
+                        "symbol":"Calculate",
+                        "expression":"(CalculateTankData == true && FireSizingMethod == 'Wetted' && EnterTankData == true && TankShape=='Cylindrical'  && EndsGroup=='HemisphericalEnds' && LengthSeamToSeam_Ls!='' && Diameter_d!='')? (((LengthSeamToSeam_Ls>=0 || (LengthEndToEnd_lt-Diameter_d)>=0))?false:true) :false",
+                        "expressionReqFields":["CalculateTankData","FireSizingMethod","EnterTankData","TankShape","horizontalvertical","EndsGroup","LengthEndToEnd_lt","Diameter_d","LengthSeamToSeam_Ls"],
+                        "value":true
+                    },
+                    "message":{"type":"error","message":"ElipticalStoSLCheck"}
+                }
+            ],
+            "regex": "NOT_ALLOW_NEGATIVE"
+        },
+        {
+            "fieldName": "Height_h",
+            "label": "Height(h)",
+            "type": "inputUom",
+            "UomFieldName": "LengthUOM",
+            "DbUomFieldName": "Height_h_UOM",
+            "fieldDisplayOrder":31,
+            "gridSection": 3,
+            "popupFields":true,
+            "onBlurAction":true,
+            "hideFromSideBar":[
+                {
+                    "target":{
+                        "id":"TankShape",
+                        "symbol":"Calculate",
+                        "currentId":"Height_h",
+                        "focusedField":"TankShape",
+                        "expression":"(EnterTankData != true)?true:((TankShape != 'Cylindrical')?true:((horizontalvertical !=  'Vertical')?true:((EndsGroup != 'FlatEnds')?true:false)))",
+                        "expressionReqFields":["TankShape","horizontalvertical","EndsGroup", "EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+
+            "mandatory":false,
+            "defaultValue": "",
+            "calculateFields":[
+                {
+                    "target":{
+                        "id":"SurfaceArea",
+                        "symbol":"Exec_API",
+                        "method":"POST",
+                        "url":"/calculations/popup/firesize/surfacearea",
+                        "actionType":"OnBlur",
+                        "functionName": "CalculateAreaMethods",
+                        "currentFields":["EnterTankData","CalculateTankData","CalculationMethod","FireSizingMethod","TankShape","horizontalvertical","EndsGroup","Elevation_H","LiquidDepth_f","Diameter_d","LengthEndToEnd_ltip","LengthSeamToSeam_Ls","LengthEndToEnd_lt","Height_h","Diameter_d_UOM","Elevation_H_UOM","LiquidDepth_f_UOM","Height_h_UOM","LengthEndToEnd_lt_UOM","SurfaceAreaUOM","AreaUOM","EnvironmentalFactor","LatentHeatOfVapor","LatentHeatOfVaporUOM","IsPromptFFEADExists","AddCapacityForPressure","RequiredPressureFlowUOM","AddCapacityForPressureUOM","WettedArea","SetPressure","OverPressure","InletLoss","AtmPressure","Relieving","MolWeight","SpGravity","PressureUOM","TemperatureUOM","AtmPressureUOM","FlowCapacityUOM"],
+                        
+                        "nextRound":false
+                    },
+                    "value":""
+                }
+            ],
+            "disabled": false,
+            "visible": [
+                {
+                    "target":{
+                        "id":"TankShape",
+                        "symbol":"Calculate",
+                        "currentId":"Height_h",
+                        "focusedField":"TankShape",
+                        "expression":"TankShape == 'Cylindrical'  && horizontalvertical ==  'Vertical' && EndsGroup == 'FlatEnds' && EnterTankData == true",
+                        "expressionReqFields":["TankShape","horizontalvertical","EndsGroup", "EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                },
+                {
+                    "target":{
+                        "id":"horizontalvertical",
+                        "symbol":"Calculate",
+                        "currentId":"Height_h",
+                        "focusedField":"horizontalvertical",
+                        "expression":"TankShape == 'Cylindrical'  && horizontalvertical ==  'Vertical' && EndsGroup == 'FlatEnds' && EnterTankData == true",
+                        "expressionReqFields":["TankShape","horizontalvertical","EndsGroup", "EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                },
+                {
+                    "target":{
+                        "id":"EndsGroup",
+                        "symbol":"Calculate",
+                        "currentId":"Height_h",
+                        "focusedField":"EndsGroup",
+                        "expression":"TankShape == 'Cylindrical'  && horizontalvertical ==  'Vertical' && EndsGroup == 'FlatEnds' && EnterTankData == true",
+                        "expressionReqFields":["TankShape","horizontalvertical","EndsGroup", "EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "grid": 4,
+            "infoText": "Height[h]",
+            "dimensionName":["length"],
+            "options":[                
+            ],
+            "validations": [
+                {
+                    "target":{
+                        "id":"Height_h",
+                        "symbol":"Calculate",
+                        "currentId":"Height_h",
+                        "focusedField":"Height_h",
+                        "expression":"FireSizingMethod=='Unwetted' && TankShape=='Cylindrical' && horizontalvertical=='Vertical' && EndsGroup=='FlatEnds' && Height_h<=0",
+                        "expressionReqFields":["FireSizingMethod","TankShape","Height_h","EndsGroup","horizontalvertical"],
+                        "value":true
+                    },
+                    "message":{"type":"error","message":"Heightgt0"}
+                },
+                {
+                    "target":{
+                        "id":"LiquidDepth_f",
+                        "currentId":"Height_h",
+                        "focusedField":"LiquidDepth_f",
+                        "symbol":"Calculate",
+                        "expression":"(CalculateTankData == true && FireSizingMethod == 'Wetted' && EnterTankData == true && TankShape=='Cylindrical' && horizontalvertical!='Horizontal' && EndsGroup=='FlatEnds' && LiquidDepth_f!='' && Height_h!='')? (LiquidDepth_f>Height_h) :false",
+                        "expressionReqFields":["CalculateTankData","FireSizingMethod","EnterTankData","TankShape","horizontalvertical","EndsGroup","LiquidDepth_f","Height_h"],
+                        "value":true
+                    },
+                    "message":{"type":"error","message":"liquidDepthgteDiameter"}
+                }
+            ],
+            "defaultUnit": {},
+            "regex": "NOT_ALLOW_NEGATIVE"
+        },
+        {
+            "fieldName": "TankImagesName",
+            "label": "Images",
+            "type": "image",
+            "UomFieldName": "",
+            "fieldDisplayOrder":32,
+            "gridSection": 4,
+            "popupFields":true,
+            "mandatory":false,
+            "defaultValue": [
+                {
+                    "target":{
+                        "id":"TankShape",
+                        "symbol":"Calculate",
+                        "currentId": "TankImagesName",
+                        "focusedField":"TankShape",
+                        "expression":"(TankShape == 'Spherical' && FireSizingMethod == 'Unwetted')? 'TankSpherical' : ((TankShape == 'Spherical' &&  FireSizingMethod == 'Wetted') ? 'SpericalTank' : ((TankShape == 'Cylindrical' &&  FireSizingMethod == 'Wetted' && horizontalvertical == 'IsHorizontalOrientation' &&  EndsGroup == 'FlatEnds')? 'CylindricalWetted' : ((TankShape == 'Cylindrical' &&  FireSizingMethod == 'Wetted' && horizontalvertical == 'IsHorizontalOrientation' &&  EndsGroup == 'EllipticalEnds')? 'CylindricalHorizontalEliptical' : ((TankShape == 'Cylindrical' &&  FireSizingMethod == 'Wetted' && horizontalvertical == 'IsHorizontalOrientation' &&  EndsGroup == 'HemisphericalEnds')? 'CylindricalHorizontalHemispherical' : ((TankShape == 'Cylindrical' &&  FireSizingMethod == 'Unwetted' && horizontalvertical == 'IsHorizontalOrientation' &&  EndsGroup == 'FlatEnds')? 'TankHorizontalCylinderFlat' : ((TankShape == 'Cylindrical' &&  FireSizingMethod == 'Unwetted' && horizontalvertical == 'IsHorizontalOrientation' &&  EndsGroup == 'EllipticalEnds')? 'UnwettedHorizontalElipticalEnds' :(( TankShape == 'Cylindrical' &&  FireSizingMethod == 'Unwetted' && horizontalvertical == 'IsHorizontalOrientation' &&  EndsGroup == 'HemisphericalEnds')? 'TankHorizontalCylinderHemi' : ((TankShape == 'Cylindrical' &&  FireSizingMethod == 'Wetted' && horizontalvertical == 'Vertical' &&  EndsGroup == 'FlatEnds')? 'VerticalFlatEnds': ((TankShape == 'Cylindrical' &&  FireSizingMethod == 'Wetted' && horizontalvertical == 'Vertical' &&  EndsGroup == 'EllipticalEnds')? 'VerticalElliptical': ((TankShape == 'Cylindrical' &&  FireSizingMethod == 'Wetted' && horizontalvertical == 'Vertical' &&  EndsGroup == 'HemisphericalEnds')? 'VerticalHemispherical'  : ((TankShape == 'Cylindrical' &&  FireSizingMethod == 'Unwetted' && horizontalvertical == 'Vertical' &&  EndsGroup == 'FlatEnds')? 'TankVerticalCylinderFlat' : ((TankShape == 'Cylindrical' &&  FireSizingMethod == 'Unwetted' && horizontalvertical == 'Vertical' &&  EndsGroup == 'EllipticalEnds')? 'UnwettedVerticalElliptical': ((TankShape == 'Cylindrical' &&  FireSizingMethod == 'Unwetted' && horizontalvertical == 'Vertical' &&  EndsGroup == 'HemisphericalEnds')? 'TankVerticalCylinderHemi': 'TankSpherical'))))))))))))))",
+                        "expressionReqFields":["EndsGroup", "TankShape", "horizontalvertical", "FireSizingMethod"],
+                        "nextRound":false
+                    },
+                    "value":"TankSpherical"
+                },
+                {
+                    "target":{
+                        "id":"FireSizingMethod",
+                        "symbol":"Calculate",
+                        "currentId": "TankImagesName",
+                        "focusedField":"FireSizingMethod",
+                        "expression":"(TankShape == 'Spherical' && FireSizingMethod == 'Unwetted')? 'TankSpherical' : ((TankShape == 'Spherical' &&  FireSizingMethod == 'Wetted') ? 'SpericalTank' : ((TankShape == 'Cylindrical' &&  FireSizingMethod == 'Wetted' && horizontalvertical == 'IsHorizontalOrientation' &&  EndsGroup == 'FlatEnds')? 'CylindricalWetted' : ((TankShape == 'Cylindrical' &&  FireSizingMethod == 'Wetted' && horizontalvertical == 'IsHorizontalOrientation' &&  EndsGroup == 'EllipticalEnds')? 'CylindricalHorizontalEliptical' : ((TankShape == 'Cylindrical' &&  FireSizingMethod == 'Wetted' && horizontalvertical == 'IsHorizontalOrientation' &&  EndsGroup == 'HemisphericalEnds')? 'CylindricalHorizontalHemispherical' : ((TankShape == 'Cylindrical' &&  FireSizingMethod == 'Unwetted' && horizontalvertical == 'IsHorizontalOrientation' &&  EndsGroup == 'FlatEnds')? 'TankHorizontalCylinderFlat' : ((TankShape == 'Cylindrical' &&  FireSizingMethod == 'Unwetted' && horizontalvertical == 'IsHorizontalOrientation' &&  EndsGroup == 'EllipticalEnds')? 'UnwettedHorizontalElipticalEnds' :(( TankShape == 'Cylindrical' &&  FireSizingMethod == 'Unwetted' && horizontalvertical == 'IsHorizontalOrientation' &&  EndsGroup == 'HemisphericalEnds')? 'TankHorizontalCylinderHemi' : ((TankShape == 'Cylindrical' &&  FireSizingMethod == 'Wetted' && horizontalvertical == 'Vertical' &&  EndsGroup == 'FlatEnds')? 'VerticalFlatEnds': ((TankShape == 'Cylindrical' &&  FireSizingMethod == 'Wetted' && horizontalvertical == 'Vertical' &&  EndsGroup == 'EllipticalEnds')? 'VerticalElliptical': ((TankShape == 'Cylindrical' &&  FireSizingMethod == 'Wetted' && horizontalvertical == 'Vertical' &&  EndsGroup == 'HemisphericalEnds')? 'VerticalHemispherical'  : ((TankShape == 'Cylindrical' &&  FireSizingMethod == 'Unwetted' && horizontalvertical == 'Vertical' &&  EndsGroup == 'FlatEnds')? 'TankVerticalCylinderFlat' : ((TankShape == 'Cylindrical' &&  FireSizingMethod == 'Unwetted' && horizontalvertical == 'Vertical' &&  EndsGroup == 'EllipticalEnds')? 'UnwettedVerticalElliptical': ((TankShape == 'Cylindrical' &&  FireSizingMethod == 'Unwetted' && horizontalvertical == 'Vertical' &&  EndsGroup == 'HemisphericalEnds')? 'TankVerticalCylinderHemi': 'TankSpherical'))))))))))))))",
+                        "expressionReqFields":["EndsGroup", "TankShape", "horizontalvertical", "FireSizingMethod"],
+                        "nextRound":false
+                    },
+                    "value":"TankSpherical"
+                },
+                {
+                    "target":{
+                        "id":"EndsGroup",
+                        "symbol":"Calculate",
+                        "currentId": "TankImagesName",
+                        "focusedField":"EndsGroup",
+                        "expression":"(TankShape == 'Spherical' && FireSizingMethod == 'Unwetted')? 'TankSpherical' : ((TankShape == 'Spherical' &&  FireSizingMethod == 'Wetted') ? 'SpericalTank' : ((TankShape == 'Cylindrical' &&  FireSizingMethod == 'Wetted' && horizontalvertical == 'IsHorizontalOrientation' &&  EndsGroup == 'FlatEnds')? 'CylindricalWetted' : ((TankShape == 'Cylindrical' &&  FireSizingMethod == 'Wetted' && horizontalvertical == 'IsHorizontalOrientation' &&  EndsGroup == 'EllipticalEnds')? 'CylindricalHorizontalEliptical' : ((TankShape == 'Cylindrical' &&  FireSizingMethod == 'Wetted' && horizontalvertical == 'IsHorizontalOrientation' &&  EndsGroup == 'HemisphericalEnds')? 'CylindricalHorizontalHemispherical' : ((TankShape == 'Cylindrical' &&  FireSizingMethod == 'Unwetted' && horizontalvertical == 'IsHorizontalOrientation' &&  EndsGroup == 'FlatEnds')? 'TankHorizontalCylinderFlat' : ((TankShape == 'Cylindrical' &&  FireSizingMethod == 'Unwetted' && horizontalvertical == 'IsHorizontalOrientation' &&  EndsGroup == 'EllipticalEnds')? 'UnwettedHorizontalElipticalEnds' :(( TankShape == 'Cylindrical' &&  FireSizingMethod == 'Unwetted' && horizontalvertical == 'IsHorizontalOrientation' &&  EndsGroup == 'HemisphericalEnds')? 'TankHorizontalCylinderHemi' : ((TankShape == 'Cylindrical' &&  FireSizingMethod == 'Wetted' && horizontalvertical == 'Vertical' &&  EndsGroup == 'FlatEnds')? 'VerticalFlatEnds': ((TankShape == 'Cylindrical' &&  FireSizingMethod == 'Wetted' && horizontalvertical == 'Vertical' &&  EndsGroup == 'EllipticalEnds')? 'VerticalElliptical': ((TankShape == 'Cylindrical' &&  FireSizingMethod == 'Wetted' && horizontalvertical == 'Vertical' &&  EndsGroup == 'HemisphericalEnds')? 'VerticalHemispherical'  : ((TankShape == 'Cylindrical' &&  FireSizingMethod == 'Unwetted' && horizontalvertical == 'Vertical' &&  EndsGroup == 'FlatEnds')? 'TankVerticalCylinderFlat' : ((TankShape == 'Cylindrical' &&  FireSizingMethod == 'Unwetted' && horizontalvertical == 'Vertical' &&  EndsGroup == 'EllipticalEnds')? 'UnwettedVerticalElliptical': ((TankShape == 'Cylindrical' &&  FireSizingMethod == 'Unwetted' && horizontalvertical == 'Vertical' &&  EndsGroup == 'HemisphericalEnds')? 'TankVerticalCylinderHemi': 'TankSpherical'))))))))))))))",
+                        "expressionReqFields":["EndsGroup", "TankShape", "horizontalvertical", "FireSizingMethod"],
+                        "nextRound":false
+                    },
+                    "value":"TankSpherical"
+                },
+                {
+                    "target":{
+                        "id":"horizontalvertical",
+                        "symbol":"Calculate",
+                        "currentId": "TankImagesName",
+                        "focusedField":"horizontalvertical",
+                        "expression":"(TankShape == 'Spherical' && FireSizingMethod == 'Unwetted')? 'TankSpherical' : ((TankShape == 'Spherical' &&  FireSizingMethod == 'Wetted') ? 'SpericalTank' : ((TankShape == 'Cylindrical' &&  FireSizingMethod == 'Wetted' && horizontalvertical == 'IsHorizontalOrientation' &&  EndsGroup == 'FlatEnds')? 'CylindricalWetted' : ((TankShape == 'Cylindrical' &&  FireSizingMethod == 'Wetted' && horizontalvertical == 'IsHorizontalOrientation' &&  EndsGroup == 'EllipticalEnds')? 'CylindricalHorizontalEliptical' : ((TankShape == 'Cylindrical' &&  FireSizingMethod == 'Wetted' && horizontalvertical == 'IsHorizontalOrientation' &&  EndsGroup == 'HemisphericalEnds')? 'CylindricalHorizontalHemispherical' : ((TankShape == 'Cylindrical' &&  FireSizingMethod == 'Unwetted' && horizontalvertical == 'IsHorizontalOrientation' &&  EndsGroup == 'FlatEnds')? 'TankHorizontalCylinderFlat' : ((TankShape == 'Cylindrical' &&  FireSizingMethod == 'Unwetted' && horizontalvertical == 'IsHorizontalOrientation' &&  EndsGroup == 'EllipticalEnds')? 'UnwettedHorizontalElipticalEnds' :(( TankShape == 'Cylindrical' &&  FireSizingMethod == 'Unwetted' && horizontalvertical == 'IsHorizontalOrientation' &&  EndsGroup == 'HemisphericalEnds')? 'TankHorizontalCylinderHemi' : ((TankShape == 'Cylindrical' &&  FireSizingMethod == 'Wetted' && horizontalvertical == 'Vertical' &&  EndsGroup == 'FlatEnds')? 'VerticalFlatEnds': ((TankShape == 'Cylindrical' &&  FireSizingMethod == 'Wetted' && horizontalvertical == 'Vertical' &&  EndsGroup == 'EllipticalEnds')? 'VerticalElliptical': ((TankShape == 'Cylindrical' &&  FireSizingMethod == 'Wetted' && horizontalvertical == 'Vertical' &&  EndsGroup == 'HemisphericalEnds')? 'VerticalHemispherical'  : ((TankShape == 'Cylindrical' &&  FireSizingMethod == 'Unwetted' && horizontalvertical == 'Vertical' &&  EndsGroup == 'FlatEnds')? 'TankVerticalCylinderFlat' : ((TankShape == 'Cylindrical' &&  FireSizingMethod == 'Unwetted' && horizontalvertical == 'Vertical' &&  EndsGroup == 'EllipticalEnds')? 'UnwettedVerticalElliptical': ((TankShape == 'Cylindrical' &&  FireSizingMethod == 'Unwetted' && horizontalvertical == 'Vertical' &&  EndsGroup == 'HemisphericalEnds')? 'TankVerticalCylinderHemi': 'TankSpherical'))))))))))))))",
+                        "expressionReqFields":["EndsGroup", "TankShape", "horizontalvertical", "FireSizingMethod"],
+                        "nextRound":false
+                    },
+                    "value":"TankSpherical"
+                }
+            ],
+            "disabled": false,
+            "hideFromSideBar":true,
+            "visible": [
+                {
+                    "target":{
+                        "id":"CalculateTankData",
+                        "symbol":"Calculate",
+                        "currentId":"TankImagesName",
+                        "focusedField":"CalculateTankData",
+                        "expression":"CalculateTankData== true && EnterTankData == true",
+                        "expressionReqFields":["CalculateTankData", "EnterTankData"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }
+            ],
+            "infoText": "Tank Image",
+            "grid": 4,
+            "dimensionName":"",
+            "validations": []
+        }
+
+    ]
+}

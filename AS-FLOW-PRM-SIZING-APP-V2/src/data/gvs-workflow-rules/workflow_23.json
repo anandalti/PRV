@@ -1,0 +1,74 @@
+{
+  "ManufacturerORBrand": {
+    "visible": true
+  },
+  "Model": {
+    "visible": true
+  },
+  "Orifice": {
+    "visible": true
+  },
+  "KandAdataset": {
+    "visible": false
+  },
+  "OrificeArea": {
+    "visible": true
+  },
+  "DistanceFromValve": {
+    "visible": true
+  },
+  "InletDiameter": {
+    "visible": true
+  },
+  "OutletDiameter": {
+    "visible": true
+  },
+  "IsDualOutletValve": {
+    "visible": true
+  },
+  "Info": {
+    "visible": true
+  },
+  "SizingCoefficients": {
+    "visible": true
+  },
+  "K": {
+    "visible": true
+  },
+  "Kd": {
+    "visible": true
+  },
+  "Kw": {
+    "visible": false
+  },
+  "Kb": {
+    "visible": false
+  },
+  "DimensionsAndWeights": {
+    "visible": true
+  },
+  "DimA": {
+    "visible": true
+  },
+  "DimB": {
+    "visible": true
+  },
+  "DimC": {
+    "visible": true
+  },
+  "Weight": {
+    "visible": true
+  },
+  "GenericValveSmallImage": {
+    "visible": true
+  },
+  "TagNotes": {
+    "visible": true
+  },
+  "Notes": {
+    "visible": true
+  },
+  "RuptureDiscKcFd": {
+    "visible": true
+  }
+}

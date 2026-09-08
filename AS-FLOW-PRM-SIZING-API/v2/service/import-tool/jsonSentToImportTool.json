@@ -1,0 +1,5423 @@
+[
+  {
+    "TagId": 1,
+    "TagGuid": "323c24ca-c85e-4a59-8dc7-c2f874001921",
+    "TagName": "PRV0001",
+    "TagNumbers": "PRV0001",
+    "TagNotes": "",
+    "ProjectGuid": "bd8cb5e8-2a7e-4afe-8b75-3afaefaedc06",
+    "ProjectName": "My Project",
+    "CompanyGuid": "9f19872d-32cf-411b-a412-c91566120832",
+    "CompanyName": "My Company",
+    "Quantity": "1",
+    "CRMProjectID": "1234",
+    "SizingData": [
+      {
+        "Key": "Service",
+        "Symbol": "",
+        "Name": "Valve Service",
+        "Description": "Valve Service",
+        "Value": "Gas"
+      },
+      {
+        "Key": "ProductType",
+        "Symbol": "",
+        "Name": "Product Type",
+        "Description": "The current product type we are sizing for",
+        "Value": "ReliefValve"
+      },
+      {
+        "Key": "Code",
+        "Symbol": "",
+        "Name": "Code",
+        "Description": "Code",
+        "Value": "API2000"
+      },
+      {
+        "Key": "PressureFluidName",
+        "Symbol": "",
+        "Name": "Fluid Name",
+        "Description": "Name of Pressure Fluid",
+        "Value": "Air"
+      },
+      {
+        "Key": "VacuumFluidName",
+        "Symbol": "",
+        "Name": "Fluid Name",
+        "Description": "Name of Vacuum Fluid",
+        "Value": null
+      },
+      {
+        "Key": "Domain",
+        "Symbol": "",
+        "Name": "Domain",
+        "Description": "Domain",
+        "Value": "Pressure"
+      },
+      {
+        "Key": "FlowRateMethod",
+        "Symbol": "",
+        "Name": "Flow Rate Method",
+        "Description": "Flow Rate Method",
+        "Value": "GasVolume"
+      },
+      {
+        "Key": "Vreq(p)",
+        "Symbol": "Vreq",
+        "Name": "Required Pressure Flow",
+        "Description": "Required Gas/Vapor Volumetric Flow Rate",
+        "Value": "10000 flowrate.SCFH"
+      },
+      {
+        "Key": "calcPover",
+        "Symbol": "",
+        "Name": "Calculate Pover",
+        "Description": "Calculate Pover",
+        "Value": false
+      },
+      {
+        "Key": "Patm",
+        "Symbol": "Patm",
+        "Name": "Atm. Pressure",
+        "Description": "Atmospheric Pressure",
+        "Value": "14.696 absolutepressure.psia"
+      },
+      {
+        "Key": "Pset",
+        "Symbol": "Pset",
+        "Name": "Set Pressure",
+        "Description": "Pressure Setting",
+        "Value": "1 pressure.psig"
+      },
+      {
+        "Key": "Pover",
+        "Symbol": "Pover",
+        "Name": "Over Pressure",
+        "Description": "Pressure in Excess of Pset",
+        "Value": "1 pressure.psig"
+      },
+      {
+        "Key": "X(p)",
+        "Symbol": "X",
+        "Name": "Over Pressure Ratio",
+        "Description": "Over Pressure Ratio",
+        "Value": 1.0
+      },
+      {
+        "Key": "P1(p)",
+        "Symbol": "P1",
+        "Name": "Relieving Pressure",
+        "Description": "Absolute Inlet Pressure (Relieving or Flowing Pressure)",
+        "Value": "16.696 absolutepressure.psia"
+      },
+      {
+        "Key": "P2(p)",
+        "Symbol": "P2",
+        "Name": "Outlet Pressure",
+        "Description": "Absolute Outlet Pressure",
+        "Value": "14.696 absolutepressure.psia"
+      },
+      {
+        "Key": "k",
+        "Symbol": "k",
+        "Name": "k, (Cp / Cv)",
+        "Description": "Pressure Ratio of Specific Heats (Cp / Cv)",
+        "Value": 1.4
+      },
+      {
+        "Key": "M",
+        "Symbol": "M",
+        "Name": "Molecular Weight",
+        "Description": "Pressure Molecular Weight",
+        "Value": 28.97000
+      },
+      {
+        "Key": "T",
+        "Symbol": "T",
+        "Name": "Relieving",
+        "Description": "Pressure Relieving Temperature",
+        "Value": "120 temp.degF"
+      },
+      {
+        "Key": "Z",
+        "Symbol": "Z",
+        "Name": "Compressibility",
+        "Description": "Pressure Compressability Factor",
+        "Value": 1.0
+      },
+      {
+        "Key": "Ploss",
+        "Symbol": "Ploss",
+        "Name": "Inlet Loss",
+        "Description": "Inlet Line Loss",
+        "Value": "0 pressure.psig"
+      },
+      {
+        "Key": "Pbu",
+        "Symbol": "Pbu",
+        "Name": "Built-Up",
+        "Description": "Built-Up Back Pressure",
+        "Value": "0 pressure.psig"
+      },
+      {
+        "Key": "Psic",
+        "Symbol": "Psic",
+        "Name": "Constant Superimposed",
+        "Description": "Constant Superimposed Back Pressure",
+        "Value": "0 pressure.psig"
+      },
+      {
+        "Key": "Psiv",
+        "Symbol": "Psiv",
+        "Name": "Variable Superimposed",
+        "Description": "Variable Superimposed Back Pressure",
+        "Value": "0 pressure.psig"
+      },
+      {
+        "Key": "Pback",
+        "Symbol": "Pback",
+        "Name": "Total Back Pressure",
+        "Description": "Total Back Pressure",
+        "Value": "0 pressure.psig"
+      },
+      {
+        "Key": "Tn",
+        "Symbol": "Tn",
+        "Name": "Operating",
+        "Description": "Normal Operating Temperature",
+        "Value": "60 temp.degF"
+      },
+      {
+        "Key": "Tdesign",
+        "Symbol": "TdesignMax",
+        "Name": "Max. Design",
+        "Description": "Maximum Design Temperature",
+        "Value": "150 temp.degF"
+      },
+      {
+        "Key": "MAWP",
+        "Symbol": "MAWP",
+        "Name": "System MAWP",
+        "Description": "Maximum Allowable Working Pressure",
+        "Value": "1 pressure.psig"
+      },
+      {
+        "Key": "VlFlowrateMethod",
+        "Symbol": "",
+        "Name": "Vl Flow Rate Method",
+        "Description": "Vl Flow Rate Method",
+        "Value": "LiquidVolume"
+      },
+      {
+        "Key": "calcVover",
+        "Symbol": "",
+        "Name": "Calculate Vover",
+        "Description": "Calculate Vover",
+        "Value": false
+      },
+      {
+        "Key": "calcPloss",
+        "Symbol": "",
+        "Name": "Calculate Ploss",
+        "Description": "Calculate Ploss",
+        "Value": false
+      },
+      {
+        "Key": "CalculationMethod",
+        "Symbol": "",
+        "Name": "Calculation Method",
+        "Description": "Calculation Method",
+        "Value": "English"
+      },
+      {
+        "Key": "percentPset",
+        "Symbol": "% Pset",
+        "Name": "Over Pressure %",
+        "Description": "Over Pressure as Percentage of Set Pressure",
+        "Value": "1 percentage.decimal"
+      },
+      {
+        "Key": "Vover",
+        "Symbol": "Vover",
+        "Name": "Under Pressure",
+        "Description": "Vacuum in Excess of Vset",
+        "Value": " pressure.atm"
+      },
+      {
+        "Key": "Vset",
+        "Symbol": "Vset",
+        "Name": "Set Vacuum",
+        "Description": "Vacuum Setting",
+        "Value": " pressure.atm"
+      },
+      {
+        "Key": "percentVset",
+        "Symbol": "% Vset",
+        "Name": "Under Pressure %",
+        "Description": "Under Pressure as Percentage of Set Pressure",
+        "Value": " percentage.%"
+      },
+      {
+        "Key": "pcntPloss",
+        "Symbol": "% Ploss",
+        "Name": "Inlet Loss %",
+        "Description": "Inlet Line Loss in percent of Set Pressure",
+        "Value": "0 percentage.decimal"
+      },
+      {
+        "Key": "PbackType",
+        "Symbol": "",
+        "Name": "PbackType",
+        "Description": "Back Pressure Correction Factor Type",
+        "Value": "None"
+      },
+      {
+        "Key": "EnforceAPI20005thEdition",
+        "Symbol": "",
+        "Name": "API 2000 5th Edition Application",
+        "Description": "API 2000 5th Edition Application",
+        "Value": false
+      },
+      {
+        "Key": "VreqAdd(p)",
+        "Symbol": "VreqAdd",
+        "Name": "Additional Capacity (for Pressure)",
+        "Description": "Additional Capacity (for Pressure)",
+        "Value": "0.0 flowrate.Nm3s"
+      },
+      {
+        "Key": "VreqAdd(v)",
+        "Symbol": "VreqAdd",
+        "Name": "Additional Capacity (for Vacuum)",
+        "Description": "Additional Capacity (for Vacuum)",
+        "Value": "0.0 flowrate.Nm3s"
+      },
+      {
+        "Key": "T(v)",
+        "Symbol": "T",
+        "Name": "Relieving",
+        "Description": "Vacuum Relieving Temperature",
+        "Value": " temp.degC"
+      },
+      {
+        "Key": "MultivalveSizing",
+        "Symbol": "",
+        "Name": "Multivalve Sizing",
+        "Description": "Multivalve Sizing",
+        "Value": false
+      },
+      {
+        "Key": "TdesignMin",
+        "Symbol": "TdesignMin",
+        "Name": "Min. Design",
+        "Description": "Minimum Design Temperature",
+        "Value": " temp.degC"
+      },
+      {
+        "Key": "SizingBasis",
+        "Symbol": "",
+        "Name": "Sizing Basis",
+        "Description": "Sizing Basis",
+        "Value": null
+      },
+      {
+        "Key": "Pn",
+        "Symbol": "Pn",
+        "Name": "Operating Pressure",
+        "Description": "Normal Operating Pressure",
+        "Value": " pressure.atm"
+      },
+      {
+        "Key": "C",
+        "Symbol": "C",
+        "Name": "Gas Constant",
+        "Description": "Gas Coefficient",
+        "Value": 356.06035731618040
+      },
+      {
+        "Key": "PR",
+        "Symbol": "PR",
+        "Name": "Press. Ratio",
+        "Description": "Absolute Pressure Ratio",
+        "Value": 0.8802108289410637278390033541
+      },
+      {
+        "Key": "TPR",
+        "Symbol": "TPR",
+        "Name": "Theoretical Pressure Ratio",
+        "Description": "Theoretical Pressure Ratio for Critical Flow",
+        "Value": 0.528281787717174
+      },
+      {
+        "Key": "Fs",
+        "Symbol": "Fs",
+        "Name": "Fs",
+        "Description": "Subsonic Flow Factor",
+        "Value": 0.323137850473847
+      },
+      {
+        "Key": "Brand",
+        "Symbol": "",
+        "Name": "Brand",
+        "Description": "Brand",
+        "Value": null
+      },
+      {
+        "Key": "ValveType",
+        "Symbol": "",
+        "Name": "Valve Type",
+        "Description": "Valve Type",
+        "Value": null
+      },
+      {
+        "Key": "Kmax",
+        "Symbol": "Kmax",
+        "Name": "Kmax",
+        "Description": "Flow Coefficient @ Full Capacity / Full Open",
+        "Value": null
+      },
+      {
+        "Key": "AsmeApiDataSet",
+        "Symbol": "",
+        "Name": "Data Set",
+        "Description": "Data Set",
+        "Value": "ASME"
+      },
+      {
+        "Key": "Tp",
+        "Symbol": "Tp",
+        "Name": "Transition to Full Open",
+        "Description": "Transition Point to Full Capacity / Full Open",
+        "Value": null
+      },
+      {
+        "Key": "E",
+        "Symbol": "E",
+        "Name": "Shape Factor",
+        "Description": "Shape Factor",
+        "Value": null
+      },
+      {
+        "Key": "Kd",
+        "Symbol": "Kd",
+        "Name": "Kd",
+        "Description": "Actual Flow Coefficient",
+        "Value": null
+      },
+      {
+        "Key": "ModelNumber",
+        "Symbol": "",
+        "Name": "Model Number",
+        "Description": "Model Number",
+        "Value": null
+      },
+      {
+        "Key": "FlowRateCapacity",
+        "Symbol": "FlowRateCapacity",
+        "Name": "The Capacity of Flowrate",
+        "Description": "The Capacity of Flowrate",
+        "Value": "Max"
+      },
+      {
+        "Key": "Vvalve(p)",
+        "Symbol": "V",
+        "Name": "Pressure Flow Capacity",
+        "Description": "Pressure Max. Gas/Vapor Volumetric Flow",
+        "Value": " flowrate.MMSCFD"
+      },
+      {
+        "Key": "DeltaP",
+        "Symbol": "ΔP",
+        "Name": "Delta Pressure (for Press.)",
+        "Description": "Differential Pressure for pressure case",
+        "Value": "137.8951458633517256002922400 pressure.mbarg"
+      },
+      {
+        "Key": "Relief+FA",
+        "Symbol": "",
+        "Name": "Include a Flame Arrester on the Relief Valve",
+        "Description": "Include a Flame Arrester on the Relief Valve",
+        "Value": false
+      },
+      {
+        "Key": "PR'",
+        "Symbol": "PR'",
+        "Name": "Adj. Press. Ratio",
+        "Description": "Adjusted Absolute Pressure Ratio",
+        "Value": 0.8802108289410637278390033541
+      },
+      {
+        "Key": "Kb",
+        "Symbol": "Kb",
+        "Name": "Kb",
+        "Description": "Gas/Vapor Back Pressure Correction Factor",
+        "Value": 0.6670394926536927878128211641
+      }
+    ],
+    "SpecialReqData": null,
+    "SelectedValves": [
+      {
+        "ValveId": 276,
+        "DisplayName": "93, 2\"",
+        "WorkflowKey": "AG P/V",
+        "Quantity": 1,
+        "ModelId": 28,
+        "Brand": "Anderson Greenwood",
+        "Name": "93",
+        "CatalogString": "930203FA",
+        "ValveData": [
+          {
+            "Key": "Service",
+            "Symbol": "",
+            "Name": "Valve Service",
+            "Description": "Valve Service",
+            "Value": "Gas"
+          },
+          {
+            "Key": "ProductType",
+            "Symbol": "",
+            "Name": "Product Type",
+            "Description": "The current product type we are sizing for",
+            "Value": "ReliefValve"
+          },
+          {
+            "Key": "Code",
+            "Symbol": "",
+            "Name": "Code",
+            "Description": "Code",
+            "Value": "API2000"
+          },
+          {
+            "Key": "PressureFluidName",
+            "Symbol": "",
+            "Name": "Fluid Name",
+            "Description": "Name of Pressure Fluid",
+            "Value": "Air"
+          },
+          {
+            "Key": "VacuumFluidName",
+            "Symbol": "",
+            "Name": "Fluid Name",
+            "Description": "Name of Vacuum Fluid",
+            "Value": null
+          },
+          {
+            "Key": "Domain",
+            "Symbol": "",
+            "Name": "Domain",
+            "Description": "Domain",
+            "Value": "Pressure"
+          },
+          {
+            "Key": "FlowRateMethod",
+            "Symbol": "",
+            "Name": "Flow Rate Method",
+            "Description": "Flow Rate Method",
+            "Value": "GasVolume"
+          },
+          {
+            "Key": "Vreq(p)",
+            "Symbol": "Vreq",
+            "Name": "Required Pressure Flow",
+            "Description": "Required Gas/Vapor Volumetric Flow Rate",
+            "Value": "10000 flowrate.SCFH"
+          },
+          {
+            "Key": "calcPover",
+            "Symbol": "",
+            "Name": "Calculate Pover",
+            "Description": "Calculate Pover",
+            "Value": false
+          },
+          {
+            "Key": "Patm",
+            "Symbol": "Patm",
+            "Name": "Atm. Pressure",
+            "Description": "Atmospheric Pressure",
+            "Value": "14.696 absolutepressure.psia"
+          },
+          {
+            "Key": "Pset",
+            "Symbol": "Pset",
+            "Name": "Set Pressure",
+            "Description": "Pressure Setting",
+            "Value": "1 pressure.psig"
+          },
+          {
+            "Key": "Pover",
+            "Symbol": "Pover",
+            "Name": "Over Pressure",
+            "Description": "Pressure in Excess of Pset",
+            "Value": "1 pressure.psig"
+          },
+          {
+            "Key": "X(p)",
+            "Symbol": "X",
+            "Name": "Over Pressure Ratio",
+            "Description": "Over Pressure Ratio",
+            "Value": 0.8802108289410637278390033541
+          },
+          {
+            "Key": "P1(p)",
+            "Symbol": "P1",
+            "Name": "Relieving Pressure",
+            "Description": "Absolute Inlet Pressure (Relieving or Flowing Pressure)",
+            "Value": "16.696 absolutepressure.psia"
+          },
+          {
+            "Key": "P2(p)",
+            "Symbol": "P2",
+            "Name": "Outlet Pressure",
+            "Description": "Absolute Outlet Pressure",
+            "Value": "14.696 absolutepressure.psia"
+          },
+          {
+            "Key": "k",
+            "Symbol": "k",
+            "Name": "k, (Cp / Cv)",
+            "Description": "Pressure Ratio of Specific Heats (Cp / Cv)",
+            "Value": 1.4
+          },
+          {
+            "Key": "M",
+            "Symbol": "M",
+            "Name": "Molecular Weight",
+            "Description": "Pressure Molecular Weight",
+            "Value": 28.97000
+          },
+          {
+            "Key": "T",
+            "Symbol": "T",
+            "Name": "Relieving",
+            "Description": "Pressure Relieving Temperature",
+            "Value": "120 temp.degF"
+          },
+          {
+            "Key": "Z",
+            "Symbol": "Z",
+            "Name": "Compressibility",
+            "Description": "Pressure Compressability Factor",
+            "Value": 1.0
+          },
+          {
+            "Key": "Ploss",
+            "Symbol": "Ploss",
+            "Name": "Inlet Loss",
+            "Description": "Inlet Line Loss",
+            "Value": "0 pressure.psig"
+          },
+          {
+            "Key": "Pbu",
+            "Symbol": "Pbu",
+            "Name": "Built-Up",
+            "Description": "Built-Up Back Pressure",
+            "Value": "0 pressure.psig"
+          },
+          {
+            "Key": "Psic",
+            "Symbol": "Psic",
+            "Name": "Constant Superimposed",
+            "Description": "Constant Superimposed Back Pressure",
+            "Value": "0 pressure.psig"
+          },
+          {
+            "Key": "Psiv",
+            "Symbol": "Psiv",
+            "Name": "Variable Superimposed",
+            "Description": "Variable Superimposed Back Pressure",
+            "Value": "0 pressure.psig"
+          },
+          {
+            "Key": "Pback",
+            "Symbol": "Pback",
+            "Name": "Total Back Pressure",
+            "Description": "Total Back Pressure",
+            "Value": "0 pressure.psig"
+          },
+          {
+            "Key": "Tn",
+            "Symbol": "Tn",
+            "Name": "Operating",
+            "Description": "Normal Operating Temperature",
+            "Value": "60 temp.degF"
+          },
+          {
+            "Key": "Tdesign",
+            "Symbol": "TdesignMax",
+            "Name": "Max. Design",
+            "Description": "Maximum Design Temperature",
+            "Value": "150 temp.degF"
+          },
+          {
+            "Key": "MAWP",
+            "Symbol": "MAWP",
+            "Name": "System MAWP",
+            "Description": "Maximum Allowable Working Pressure",
+            "Value": "1 pressure.psig"
+          },
+          {
+            "Key": "VlFlowrateMethod",
+            "Symbol": "",
+            "Name": "Vl Flow Rate Method",
+            "Description": "Vl Flow Rate Method",
+            "Value": "LiquidVolume"
+          },
+          {
+            "Key": "calcVover",
+            "Symbol": "",
+            "Name": "Calculate Vover",
+            "Description": "Calculate Vover",
+            "Value": false
+          },
+          {
+            "Key": "calcPloss",
+            "Symbol": "",
+            "Name": "Calculate Ploss",
+            "Description": "Calculate Ploss",
+            "Value": false
+          },
+          {
+            "Key": "CalculationMethod",
+            "Symbol": "",
+            "Name": "Calculation Method",
+            "Description": "Calculation Method",
+            "Value": "English"
+          },
+          {
+            "Key": "percentPset",
+            "Symbol": "% Pset",
+            "Name": "Over Pressure %",
+            "Description": "Over Pressure as Percentage of Set Pressure",
+            "Value": "1 percentage.decimal"
+          },
+          {
+            "Key": "Vover",
+            "Symbol": "Vover",
+            "Name": "Under Pressure",
+            "Description": "Vacuum in Excess of Vset",
+            "Value": " pressure.atm"
+          },
+          {
+            "Key": "Vset",
+            "Symbol": "Vset",
+            "Name": "Set Vacuum",
+            "Description": "Vacuum Setting",
+            "Value": " pressure.atm"
+          },
+          {
+            "Key": "percentVset",
+            "Symbol": "% Vset",
+            "Name": "Under Pressure %",
+            "Description": "Under Pressure as Percentage of Set Pressure",
+            "Value": " percentage.%"
+          },
+          {
+            "Key": "pcntPloss",
+            "Symbol": "% Ploss",
+            "Name": "Inlet Loss %",
+            "Description": "Inlet Line Loss in percent of Set Pressure",
+            "Value": "0 percentage.decimal"
+          },
+          {
+            "Key": "PbackType",
+            "Symbol": "",
+            "Name": "PbackType",
+            "Description": "Back Pressure Correction Factor Type",
+            "Value": "None"
+          },
+          {
+            "Key": "EnforceAPI20005thEdition",
+            "Symbol": "",
+            "Name": "API 2000 5th Edition Application",
+            "Description": "API 2000 5th Edition Application",
+            "Value": false
+          },
+          {
+            "Key": "VreqAdd(p)",
+            "Symbol": "VreqAdd",
+            "Name": "Additional Capacity (for Pressure)",
+            "Description": "Additional Capacity (for Pressure)",
+            "Value": "0.0 flowrate.Nm3s"
+          },
+          {
+            "Key": "VreqAdd(v)",
+            "Symbol": "VreqAdd",
+            "Name": "Additional Capacity (for Vacuum)",
+            "Description": "Additional Capacity (for Vacuum)",
+            "Value": "0.0 flowrate.Nm3s"
+          },
+          {
+            "Key": "T(v)",
+            "Symbol": "T",
+            "Name": "Relieving",
+            "Description": "Vacuum Relieving Temperature",
+            "Value": " temp.degC"
+          },
+          {
+            "Key": "MultivalveSizing",
+            "Symbol": "",
+            "Name": "Multivalve Sizing",
+            "Description": "Multivalve Sizing",
+            "Value": false
+          },
+          {
+            "Key": "TdesignMin",
+            "Symbol": "TdesignMin",
+            "Name": "Min. Design",
+            "Description": "Minimum Design Temperature",
+            "Value": " temp.degC"
+          },
+          {
+            "Key": "SizingBasis",
+            "Symbol": "",
+            "Name": "Sizing Basis",
+            "Description": "Sizing Basis",
+            "Value": null
+          },
+          {
+            "Key": "Pn",
+            "Symbol": "Pn",
+            "Name": "Operating Pressure",
+            "Description": "Normal Operating Pressure",
+            "Value": " pressure.atm"
+          },
+          {
+            "Key": "C",
+            "Symbol": "C",
+            "Name": "Gas Constant",
+            "Description": "Gas Coefficient",
+            "Value": 356.06035731618040
+          },
+          {
+            "Key": "PR",
+            "Symbol": "PR",
+            "Name": "Press. Ratio",
+            "Description": "Absolute Pressure Ratio",
+            "Value": 0.8802108289410637278390033541
+          },
+          {
+            "Key": "TPR",
+            "Symbol": "TPR",
+            "Name": "Theoretical Pressure Ratio",
+            "Description": "Theoretical Pressure Ratio for Critical Flow",
+            "Value": 0.528281787717174
+          },
+          {
+            "Key": "Fs",
+            "Symbol": "Fs",
+            "Name": "Fs",
+            "Description": "Subsonic Flow Factor",
+            "Value": 0.323137850473847
+          },
+          {
+            "Key": "Brand",
+            "Symbol": "",
+            "Name": "Brand",
+            "Description": "Brand",
+            "Value": "Anderson Greenwood"
+          },
+          {
+            "Key": "ValveType",
+            "Symbol": "",
+            "Name": "Valve Type",
+            "Description": "Valve Type",
+            "Value": "LP"
+          },
+          {
+            "Key": "Kmax",
+            "Symbol": "Kmax",
+            "Name": "Kmax",
+            "Description": "Flow Coefficient @ Full Capacity / Full Open",
+            "Value": 0.939
+          },
+          {
+            "Key": "AsmeApiDataSet",
+            "Symbol": "",
+            "Name": "Data Set",
+            "Description": "Data Set",
+            "Value": "ASME"
+          },
+          {
+            "Key": "Tp",
+            "Symbol": "Tp",
+            "Name": "Transition to Full Open",
+            "Description": "Transition Point to Full Capacity / Full Open",
+            "Value": 0.7
+          },
+          {
+            "Key": "E",
+            "Symbol": "E",
+            "Name": "Shape Factor",
+            "Description": "Shape Factor",
+            "Value": -0.265
+          },
+          {
+            "Key": "Kd",
+            "Symbol": "Kd",
+            "Name": "Kd",
+            "Description": "Actual Flow Coefficient",
+            "Value": 0.724073348861884
+          },
+          {
+            "Key": "ModelNumber",
+            "Symbol": "",
+            "Name": "Model Number",
+            "Description": "Model Number",
+            "Value": "93"
+          },
+          {
+            "Key": "FlowRateCapacity",
+            "Symbol": "FlowRateCapacity",
+            "Name": "The Capacity of Flowrate",
+            "Description": "The Capacity of Flowrate",
+            "Value": "Max"
+          },
+          {
+            "Key": "Vvalve(p)",
+            "Symbol": "V",
+            "Name": "Pressure Flow Capacity",
+            "Description": "Pressure Max. Gas/Vapor Volumetric Flow",
+            "Value": "19239.360018074455805004008596 flowrate.SCFH"
+          },
+          {
+            "Key": "DeltaP",
+            "Symbol": "ΔP",
+            "Name": "Delta Pressure (for Press.)",
+            "Description": "Differential Pressure for pressure case",
+            "Value": "137.8951458633517256002922400 pressure.mbarg"
+          },
+          {
+            "Key": "Relief+FA",
+            "Symbol": "",
+            "Name": "Include a Flame Arrester on the Relief Valve",
+            "Description": "Include a Flame Arrester on the Relief Valve",
+            "Value": false
+          },
+          {
+            "Key": "PR'",
+            "Symbol": "PR'",
+            "Name": "Adj. Press. Ratio",
+            "Description": "Adjusted Absolute Pressure Ratio",
+            "Value": 0.8802108289410637278390033541
+          },
+          {
+            "Key": "Kb",
+            "Symbol": "Kb",
+            "Name": "Kb",
+            "Description": "Gas/Vapor Back Pressure Correction Factor",
+            "Value": 0.6670394926536927878128211641
+          },
+          {
+            "Key": "A",
+            "Symbol": "A",
+            "Name": "Orifice Area",
+            "Description": "Selected Orifice Area for a Valve",
+            "Value": "2.29 area.in2"
+          },
+          {
+            "Key": "AASME",
+            "Symbol": "AASME",
+            "Name": "Orifice Area (ASME Dataset)",
+            "Description": "Selected Orifice Area for a Valve",
+            "Value": "2.29 area.in2"
+          },
+          {
+            "Key": "Kapi",
+            "Symbol": "K (API)",
+            "Name": "K (API)",
+            "Description": "Derated Flow Coefficient",
+            "Value": 0.97500
+          },
+          {
+            "Key": "NominalSize",
+            "Symbol": "Nominal Size",
+            "Name": "Nominal Size",
+            "Description": "Nominal Size",
+            "Value": "2 length.in"
+          },
+          {
+            "Key": "K",
+            "Symbol": "K",
+            "Name": "K",
+            "Description": "Derated Flow Coefficient",
+            "Value": 0.6516660139756956
+          },
+          {
+            "Key": "Kx",
+            "Symbol": "Kx",
+            "Name": "Kx",
+            "Description": "Flow Coefficient used for Flow Capacity Calculations",
+            "Value": 0.724073348861884
+          },
+          {
+            "Key": "KxValue",
+            "Symbol": "",
+            "Name": "Kx Value",
+            "Description": "The Kx variable pressure value",
+            "Value": "Kd"
+          },
+          {
+            "Key": "MaxVvalve(p)",
+            "Symbol": "Max V",
+            "Name": "Max Pressure Flow Capacity",
+            "Description": "Max Pressure Gas/Vapor Volumetric Flow",
+            "Value": "19239.360018074455805004008596 flowrate.SCFH"
+          },
+          {
+            "Key": "Asel",
+            "Symbol": "Asel",
+            "Name": "Selected Orifice Area",
+            "Description": "Total Selected Orifice Area of Valve(s)",
+            "Value": "2.29 area.in2"
+          },
+          {
+            "Key": "Vsel",
+            "Symbol": "Vsel",
+            "Name": "Total Flow Capacity",
+            "Description": "Total maximum gas/vapor volumetric flow rate of selected valve(s)",
+            "Value": "19239.360018074455805004008596 flowrate.SCFH"
+          },
+          {
+            "Key": "Areq",
+            "Symbol": "Areq",
+            "Name": "Required Orifice Area (for Pressure)",
+            "Description": "Required Orifice Area (for Pressure)",
+            "Value": "1.1902682822342608349060891099 area.in2"
+          },
+          {
+            "Key": "ValveInternals",
+            "Symbol": "",
+            "Name": "ValveInternals",
+            "Description": "ValveInternals",
+            "Value": "NoneSelected"
+          },
+          {
+            "Key": "IsDualDiaphragm",
+            "Symbol": "IsDualDiaphragm",
+            "Name": "IsDualDiaphragm",
+            "Description": "IsDualDiaphragm",
+            "Value": false
+          },
+          {
+            "Key": "IsDualOutlet",
+            "Symbol": "",
+            "Name": "Is Dual Outlet Valve",
+            "Description": "Is Dual Outlet Valve",
+            "Value": false
+          },
+          {
+            "Key": "r",
+            "Symbol": "r",
+            "Name": "Distance from Valve",
+            "Description": "Distance from the Point of Discharge",
+            "Value": "100 length.ft"
+          },
+          {
+            "Key": "Wvalve(p)",
+            "Symbol": "W",
+            "Name": "Flow Capacity",
+            "Description": "Max. Mass Flow Rate",
+            "Value": "0.1850581761314003530180555408 massflowrate.kgs"
+          },
+          {
+            "Key": "L100",
+            "Symbol": "L100",
+            "Name": "Noise @ 100-ft",
+            "Description": "Noise Level @ 100-ft from Discharge",
+            "Value": "59.772243367967518950 sound.db"
+          },
+          {
+            "Key": "Lp",
+            "Symbol": "Lp",
+            "Name": "Noise Level",
+            "Description": "Noise Level @ Distance Other Than 100-ft from Discharge",
+            "Value": "59.772243367967518950 sound.db"
+          },
+          {
+            "Key": "NameplateCriteria",
+            "Symbol": "",
+            "Name": "Nameplate Criteria",
+            "Description": "Nameplate Capacity Criteria",
+            "Value": "Air @ 60°F, 14.7 psia"
+          },
+          {
+            "Key": "Wnpg(p)",
+            "Symbol": "Wnpg",
+            "Name": "Press. Nameplate Capacity",
+            "Description": "Nameplate Capacity for Gas/Vapor Service",
+            "Value": "251 flowrate.SCFM"
+          },
+          {
+            "Key": "ValveDimensionA",
+            "Symbol": "A",
+            "Name": "A",
+            "Description": "Valve Dimension A",
+            "Value": "3.75 length.in"
+          },
+          {
+            "Key": "ValveDimensionB",
+            "Symbol": "B",
+            "Name": "B",
+            "Description": "Valve Dimension B",
+            "Value": "5 length.in"
+          },
+          {
+            "Key": "ValveDimensionC",
+            "Symbol": "C",
+            "Name": "C",
+            "Description": "Valve Dimension C",
+            "Value": "19.3 length.in"
+          },
+          {
+            "Key": "ValveWeight",
+            "Symbol": "ValveWeight",
+            "Name": "Weight",
+            "Description": "Valve Weight",
+            "Value": "27 mass.lbm"
+          },
+          {
+            "Key": "Do",
+            "Symbol": "Do",
+            "Name": "Outlet Diameter",
+            "Description": "Valve Outlet Inside Diameter (STD Schedule Pipe)",
+            "Value": "3.068 length.in"
+          },
+          {
+            "Key": "ValveActualWeight",
+            "Symbol": "ValveActualWeight",
+            "Name": "Weight",
+            "Description": "Valve Weight",
+            "Value": "27 mass.lbm"
+          }
+        ],
+        "PricingData": null,
+        "CustomizedData": null,
+        "ConfigData": [
+          {
+            "SectionName": "VMD",
+            "CombinedName": "VMD:A",
+            "OptionName": "A"
+          },
+          {
+            "SectionName": "PA",
+            "CombinedName": "PA:N",
+            "OptionName": "N"
+          },
+          {
+            "SectionName": "DS",
+            "CombinedName": "DS:0",
+            "OptionName": "0"
+          },
+          {
+            "SectionName": "CT",
+            "CombinedName": "CT:0",
+            "OptionName": "0"
+          },
+          {
+            "SectionName": "VAL5",
+            "CombinedName": "VAL5:0",
+            "OptionName": "0"
+          },
+          {
+            "SectionName": "VAL4",
+            "CombinedName": "VAL4:0",
+            "OptionName": "0"
+          },
+          {
+            "SectionName": "VAL3",
+            "CombinedName": "VAL3:0",
+            "OptionName": "0"
+          },
+          {
+            "SectionName": "VAL2",
+            "CombinedName": "VAL2:0",
+            "OptionName": "0"
+          },
+          {
+            "SectionName": "VAL1",
+            "CombinedName": "VAL1:0",
+            "OptionName": "0"
+          },
+          {
+            "SectionName": "PS",
+            "CombinedName": "PS:G",
+            "OptionName": "G"
+          },
+          {
+            "SectionName": "CBO",
+            "CombinedName": "CBO:N",
+            "OptionName": "N"
+          },
+          {
+            "SectionName": "ST",
+            "CombinedName": "ST:S",
+            "OptionName": "S"
+          },
+          {
+            "SectionName": "MOD",
+            "CombinedName": "MOD:93",
+            "OptionName": "93"
+          },
+          {
+            "SectionName": "CODE",
+            "CombinedName": "CODE:N",
+            "OptionName": "N"
+          },
+          {
+            "SectionName": "SER",
+            "CombinedName": "SER:A",
+            "OptionName": "A"
+          },
+          {
+            "SectionName": "PPT",
+            "CombinedName": "PPT:B",
+            "OptionName": "B"
+          },
+          {
+            "SectionName": "BM",
+            "CombinedName": "BM:A",
+            "OptionName": "A"
+          },
+          {
+            "SectionName": "IO",
+            "CombinedName": "IO:2",
+            "OptionName": "2"
+          },
+          {
+            "SectionName": "FF",
+            "CombinedName": "FF:4",
+            "OptionName": "4"
+          },
+          {
+            "SectionName": "ITM",
+            "CombinedName": "ITM:A",
+            "OptionName": "A"
+          },
+          {
+            "SectionName": "ITA",
+            "CombinedName": "ITA:1",
+            "OptionName": "1"
+          },
+          {
+            "SectionName": "NM",
+            "CombinedName": "NM:S",
+            "OptionName": "S"
+          },
+          {
+            "SectionName": "CM",
+            "CombinedName": "CM:S",
+            "OptionName": "S"
+          },
+          {
+            "SectionName": "MD",
+            "CombinedName": "MD:V",
+            "OptionName": "V"
+          },
+          {
+            "SectionName": "MS",
+            "CombinedName": "MS:VF",
+            "OptionName": "VF"
+          },
+          {
+            "SectionName": "PBM",
+            "CombinedName": "PBM:S",
+            "OptionName": "S"
+          },
+          {
+            "SectionName": "PSG",
+            "CombinedName": "PSG:3",
+            "OptionName": "3"
+          },
+          {
+            "SectionName": "PD",
+            "CombinedName": "PD:V",
+            "OptionName": "V"
+          },
+          {
+            "SectionName": "ACC",
+            "CombinedName": "ACC:N0",
+            "OptionName": "N0"
+          },
+          {
+            "SectionName": "NU",
+            "CombinedName": "NU:1",
+            "OptionName": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "TagId": 47,
+    "TagGuid": "473a970a-ce6a-4104-b2d3-5595bbb57f70",
+    "TagName": "PRV0002-Multi",
+    "TagNumbers": "PRV0002-Multi",
+    "TagNotes": "",
+    "ProjectGuid": "bd8cb5e8-2a7e-4afe-8b75-3afaefaedc06",
+    "ProjectName": "My Project",
+    "CompanyGuid": "9f19872d-32cf-411b-a412-c91566120832",
+    "CompanyName": "My Company",
+    "Quantity": "1",
+    "CRMProjectID": "1234",
+    "SizingData": [
+      {
+        "Key": "CalculationMethod",
+        "Symbol": "",
+        "Name": "Calculation Method",
+        "Description": "Calculation Method",
+        "Value": "English"
+      },
+      {
+        "Key": "ProductType",
+        "Symbol": "",
+        "Name": "Product Type",
+        "Description": "The current product type we are sizing for",
+        "Value": "ReliefValve"
+      },
+      {
+        "Key": "Service",
+        "Symbol": "",
+        "Name": "Valve Service",
+        "Description": "Valve Service",
+        "Value": "Gas"
+      },
+      {
+        "Key": "FlowRateMethod",
+        "Symbol": "",
+        "Name": "Flow Rate Method",
+        "Description": "Flow Rate Method",
+        "Value": "GasVolume"
+      },
+      {
+        "Key": "SizingBasis",
+        "Symbol": "",
+        "Name": "Sizing Basis",
+        "Description": "Sizing Basis",
+        "Value": "Blocked Discharge"
+      },
+      {
+        "Key": "Code",
+        "Symbol": "",
+        "Name": "Code",
+        "Description": "Code",
+        "Value": "SectionVIII"
+      },
+      {
+        "Key": "calcPover",
+        "Symbol": "",
+        "Name": "Calculate Pover",
+        "Description": "Calculate Pover",
+        "Value": true
+      },
+      {
+        "Key": "percentPset",
+        "Symbol": "% Pset",
+        "Name": "Over Pressure %",
+        "Description": "Over Pressure as Percentage of Set Pressure",
+        "Value": "0.16 percentage.decimal"
+      },
+      {
+        "Key": "PressureFluidName",
+        "Symbol": "",
+        "Name": "Fluid Name",
+        "Description": "Name of Pressure Fluid",
+        "Value": "Acetylene"
+      },
+      {
+        "Key": "M",
+        "Symbol": "M",
+        "Name": "Molecular Weight",
+        "Description": "Pressure Molecular Weight",
+        "Value": 26.040000000000000000000000001
+      },
+      {
+        "Key": "k",
+        "Symbol": "k",
+        "Name": "k, (Cp / Cv)",
+        "Description": "Pressure Ratio of Specific Heats (Cp / Cv)",
+        "Value": 1.26000
+      },
+      {
+        "Key": "Z",
+        "Symbol": "Z",
+        "Name": "Compressibility",
+        "Description": "Pressure Compressability Factor",
+        "Value": 1.00000
+      },
+      {
+        "Key": "Spgvt",
+        "Symbol": "Spgvt",
+        "Name": "Sp. Gravity",
+        "Description": "Pressure Sp. Gravity",
+        "Value": 0.8988608905764584052468070418
+      },
+      {
+        "Key": "VacuumFluidName",
+        "Symbol": "",
+        "Name": "Fluid Name",
+        "Description": "Name of Vacuum Fluid",
+        "Value": ""
+      },
+      {
+        "Key": "Mv",
+        "Symbol": "M",
+        "Name": "Molecular Weight",
+        "Description": "Vacuum Molecular Weight",
+        "Value": null
+      },
+      {
+        "Key": "kv",
+        "Symbol": "k",
+        "Name": "k, (Cp / Cv)",
+        "Description": "Vacuum Ratio of Specific Heats (Cp / Cv)",
+        "Value": null
+      },
+      {
+        "Key": "Zv",
+        "Symbol": "Z",
+        "Name": "Compressibility",
+        "Description": "Vacuum Compressability Factor",
+        "Value": null
+      },
+      {
+        "Key": "SuperUserBackPressureModel",
+        "Symbol": "",
+        "Name": "Super User Back Pressure Model",
+        "Description": "Super User Back Pressure Model",
+        "Value": "BP"
+      },
+      {
+        "Key": "EnforceSectionVIIIRules",
+        "Symbol": "",
+        "Name": "ASME Section VIII/XIII (UV) Application",
+        "Description": "ASME Section VIII/XIII (UV) Application",
+        "Value": true
+      },
+      {
+        "Key": "MAWP",
+        "Symbol": "MAWP",
+        "Name": "System MAWP",
+        "Description": "Maximum Allowable Working Pressure",
+        "Value": " pressure.atm"
+      },
+      {
+        "Key": "Pn",
+        "Symbol": "Pn",
+        "Name": "Operating Pressure",
+        "Description": "Normal Operating Pressure",
+        "Value": " pressure.atm"
+      },
+      {
+        "Key": "isNonSTPUnitSelected",
+        "Symbol": "",
+        "Name": "isNonSTPUnitSelected",
+        "Description": "is Non-STP gas unit selected",
+        "Value": false
+      },
+      {
+        "Key": "Vreq(p)",
+        "Symbol": "Vreq",
+        "Name": "Required Pressure Flow",
+        "Description": "Required Gas/Vapor Volumetric Flow Rate",
+        "Value": "10000 flowrate.SCFM"
+      },
+      {
+        "Key": "Tn",
+        "Symbol": "Tn",
+        "Name": "Operating",
+        "Description": "Normal Operating Temperature",
+        "Value": " temp.degC"
+      },
+      {
+        "Key": "Tns",
+        "Symbol": "Tns",
+        "Name": "Normal System",
+        "Description": "Normal System",
+        "Value": " temp.degC"
+      },
+      {
+        "Key": "TdesignMin",
+        "Symbol": "TdesignMin",
+        "Name": "Min. Design",
+        "Description": "Minimum Design Temperature",
+        "Value": " temp.degC"
+      },
+      {
+        "Key": "Tdesign",
+        "Symbol": "TdesignMax",
+        "Name": "Max. Design",
+        "Description": "Maximum Design Temperature",
+        "Value": " temp.degC"
+      },
+      {
+        "Key": "SuperUserBackPressure",
+        "Symbol": "Super User Back pressure",
+        "Name": "Kb",
+        "Description": "Super User Back Pressure",
+        "Value": 1.0
+      },
+      {
+        "Key": "HasSuperUserModeBackPressure",
+        "Symbol": "",
+        "Name": "Has Super User Back Pressure",
+        "Description": "Has Super User Mode Back Pressure",
+        "Value": false
+      },
+      {
+        "Key": "calcPloss",
+        "Symbol": "",
+        "Name": "Calculate Ploss",
+        "Description": "Calculate Ploss",
+        "Value": false
+      },
+      {
+        "Key": "HasRuptureDisc",
+        "Symbol": "",
+        "Name": "Has Rupture Disc?",
+        "Description": "Has Rupture Disc?",
+        "Value": false
+      },
+      {
+        "Key": "VlFlowrateMethod",
+        "Symbol": "",
+        "Name": "Vl Flow Rate Method",
+        "Description": "Vl Flow Rate Method",
+        "Value": "LiquidVolume"
+      },
+      {
+        "Key": "Pset",
+        "Symbol": "Pset",
+        "Name": "Set Pressure",
+        "Description": "Pressure Setting",
+        "Value": "100 pressure.psig"
+      },
+      {
+        "Key": "Pover",
+        "Symbol": "Pover",
+        "Name": "Over Pressure",
+        "Description": "Pressure in Excess of Pset",
+        "Value": "16.00 pressure.psig"
+      },
+      {
+        "Key": "Ploss",
+        "Symbol": "Ploss",
+        "Name": "Inlet Loss",
+        "Description": "Inlet Line Loss",
+        "Value": "0 pressure.psig"
+      },
+      {
+        "Key": "pcntPloss",
+        "Symbol": "% Ploss",
+        "Name": "Inlet Loss %",
+        "Description": "Inlet Line Loss in percent of Set Pressure",
+        "Value": "0 percentage.decimal"
+      },
+      {
+        "Key": "Kc",
+        "Symbol": "Kc",
+        "Name": "Kc",
+        "Description": "Rupture Disc Combination Correction Factor",
+        "Value": 1.0
+      },
+      {
+        "Key": "Pbu",
+        "Symbol": "Pbu",
+        "Name": "Built-Up",
+        "Description": "Built-Up Back Pressure",
+        "Value": "0 pressure.psig"
+      },
+      {
+        "Key": "Psic",
+        "Symbol": "Psic",
+        "Name": "Constant Superimposed",
+        "Description": "Constant Superimposed Back Pressure",
+        "Value": "0 pressure.psig"
+      },
+      {
+        "Key": "Psiv",
+        "Symbol": "Psiv",
+        "Name": "Variable Superimposed",
+        "Description": "Variable Superimposed Back Pressure",
+        "Value": "0 pressure.psig"
+      },
+      {
+        "Key": "Pback",
+        "Symbol": "Pback",
+        "Name": "Total Back Pressure",
+        "Description": "Total Back Pressure",
+        "Value": "0 pressure.psig"
+      },
+      {
+        "Key": "PbackType",
+        "Symbol": "",
+        "Name": "PbackType",
+        "Description": "Back Pressure Correction Factor Type",
+        "Value": "None"
+      },
+      {
+        "Key": "Patm",
+        "Symbol": "Patm",
+        "Name": "Atm. Pressure",
+        "Description": "Atmospheric Pressure",
+        "Value": "14.696 absolutepressure.psia"
+      },
+      {
+        "Key": "P1(p)",
+        "Symbol": "P1",
+        "Name": "Relieving Pressure",
+        "Description": "Absolute Inlet Pressure (Relieving or Flowing Pressure)",
+        "Value": "130.696 absolutepressure.psia"
+      },
+      {
+        "Key": "P2(p)",
+        "Symbol": "P2",
+        "Name": "Outlet Pressure",
+        "Description": "Absolute Outlet Pressure",
+        "Value": "14.696 absolutepressure.psia"
+      },
+      {
+        "Key": "C",
+        "Symbol": "C",
+        "Name": "Gas Constant",
+        "Description": "Gas Coefficient",
+        "Value": 343.163852617207440
+      },
+      {
+        "Key": "PR",
+        "Symbol": "PR",
+        "Name": "Press. Ratio",
+        "Description": "Absolute Pressure Ratio",
+        "Value": 0.1124441451918956968843728959
+      },
+      {
+        "Key": "TPR",
+        "Symbol": "TPR",
+        "Name": "Theoretical Pressure Ratio",
+        "Description": "Theoretical Pressure Ratio for Critical Flow",
+        "Value": 0.553061843548458
+      },
+      {
+        "Key": "Fs",
+        "Symbol": "Fs",
+        "Name": "Fs",
+        "Description": "Subsonic Flow Factor",
+        "Value": 0.234103420936693
+      },
+      {
+        "Key": "Kb",
+        "Symbol": "Kb",
+        "Name": "Kb",
+        "Description": "Gas/Vapor Back Pressure Correction Factor",
+        "Value": 1.0
+      },
+      {
+        "Key": "AsmeApiDataSet",
+        "Symbol": "",
+        "Name": "Data Set",
+        "Description": "Data Set",
+        "Value": "ASME"
+      },
+      {
+        "Key": "ModelNumber",
+        "Symbol": "",
+        "Name": "Model Number",
+        "Description": "Model Number",
+        "Value": null
+      },
+      {
+        "Key": "Kd",
+        "Symbol": "Kd",
+        "Name": "Kd",
+        "Description": "Actual Flow Coefficient",
+        "Value": null
+      },
+      {
+        "Key": "T",
+        "Symbol": "T",
+        "Name": "Relieving",
+        "Description": "Pressure Relieving Temperature",
+        "Value": "20 temp.degF"
+      },
+      {
+        "Key": "Vvalve(p)",
+        "Symbol": "V",
+        "Name": "Pressure Flow Capacity",
+        "Description": "Pressure Max. Gas/Vapor Volumetric Flow",
+        "Value": " flowrate.MMSCFD"
+      },
+      {
+        "Key": "Kmax",
+        "Symbol": "Kmax",
+        "Name": "Kmax",
+        "Description": "Flow Coefficient @ Full Capacity / Full Open",
+        "Value": null
+      },
+      {
+        "Key": "Ppset",
+        "Symbol": "Pp-set",
+        "Name": "Pseudo-Set Pressure",
+        "Description": "Pseudo-Set Pressure",
+        "Value": "105.45454545454545454545454545 pressure.psig"
+      },
+      {
+        "Key": "Mwsp",
+        "Symbol": "M",
+        "Name": "Molecular Weight",
+        "Description": "Pressure Molecular Weight",
+        "Value": 26.04000
+      },
+      {
+        "Key": "PR'",
+        "Symbol": "PR'",
+        "Name": "Adj. Press. Ratio",
+        "Description": "Adjusted Absolute Pressure Ratio",
+        "Value": 0.1124441451918956968843728959
+      },
+      {
+        "Key": "FlowRateCapacity",
+        "Symbol": "FlowRateCapacity",
+        "Name": "The Capacity of Flowrate",
+        "Description": "The Capacity of Flowrate",
+        "Value": "Rated"
+      },
+      {
+        "Key": "MultivalveSizing",
+        "Symbol": "",
+        "Name": "Multivalve Sizing",
+        "Description": "Multivalve Sizing",
+        "Value": true
+      },
+      {
+        "Key": "Areq",
+        "Symbol": "Areq",
+        "Name": "Required Orifice Area (for Pressure)",
+        "Description": "Required Orifice Area (for Pressure)",
+        "Value": "4.6022986849177788428891338727 area.in2"
+      },
+      {
+        "Key": "TotalVvalve(p)",
+        "Symbol": "V",
+        "Name": "Total Actual Pressure Valve Flow",
+        "Description": "Total Valve Pressure Flow",
+        "Value": "11547.369713009811431618346007 flowrate.SCFM"
+      },
+      {
+        "Key": "TotalA",
+        "Symbol": "A",
+        "Name": "Total Selected Area",
+        "Description": "",
+        "Value": "4.783 area.in2"
+      },
+      {
+        "Key": "TotalAreq",
+        "Symbol": "Areq",
+        "Name": "Total Required Area",
+        "Description": "",
+        "Value": "4.6022986849177788428891338727 area.in2"
+      },
+      {
+        "Key": "TotalRatedVvalve(p)",
+        "Symbol": "Vp",
+        "Name": "Total Rated Pressure Valve Flow",
+        "Description": "",
+        "Value": "10392.632741708830288456511407 flowrate.SCFM"
+      }
+    ],
+    "SpecialReqData": null,
+    "SelectedValves": [
+      {
+        "ValveId": 297,
+        "DisplayName": "95, 2\"",
+        "WorkflowKey": "AG P/V VIII",
+        "Quantity": 1,
+        "ModelId": 31,
+        "Brand": "Anderson Greenwood",
+        "Name": "95",
+        "CatalogString": "950203RS",
+        "ValveData": [
+          {
+            "Key": "CalculationMethod",
+            "Symbol": "",
+            "Name": "Calculation Method",
+            "Description": "Calculation Method",
+            "Value": "English"
+          },
+          {
+            "Key": "ProductType",
+            "Symbol": "",
+            "Name": "Product Type",
+            "Description": "The current product type we are sizing for",
+            "Value": "ReliefValve"
+          },
+          {
+            "Key": "Service",
+            "Symbol": "",
+            "Name": "Valve Service",
+            "Description": "Valve Service",
+            "Value": "Gas"
+          },
+          {
+            "Key": "FlowRateMethod",
+            "Symbol": "",
+            "Name": "Flow Rate Method",
+            "Description": "Flow Rate Method",
+            "Value": "GasVolume"
+          },
+          {
+            "Key": "SizingBasis",
+            "Symbol": "",
+            "Name": "Sizing Basis",
+            "Description": "Sizing Basis",
+            "Value": "Blocked Discharge"
+          },
+          {
+            "Key": "Code",
+            "Symbol": "",
+            "Name": "Code",
+            "Description": "Code",
+            "Value": "SectionVIII"
+          },
+          {
+            "Key": "calcPover",
+            "Symbol": "",
+            "Name": "Calculate Pover",
+            "Description": "Calculate Pover",
+            "Value": true
+          },
+          {
+            "Key": "percentPset",
+            "Symbol": "% Pset",
+            "Name": "Over Pressure %",
+            "Description": "Over Pressure as Percentage of Set Pressure",
+            "Value": "0.16 percentage.decimal"
+          },
+          {
+            "Key": "PressureFluidName",
+            "Symbol": "",
+            "Name": "Fluid Name",
+            "Description": "Name of Pressure Fluid",
+            "Value": "Acetylene"
+          },
+          {
+            "Key": "M",
+            "Symbol": "M",
+            "Name": "Molecular Weight",
+            "Description": "Pressure Molecular Weight",
+            "Value": 26.040000000000000000000000001
+          },
+          {
+            "Key": "k",
+            "Symbol": "k",
+            "Name": "k, (Cp / Cv)",
+            "Description": "Pressure Ratio of Specific Heats (Cp / Cv)",
+            "Value": 1.26000
+          },
+          {
+            "Key": "Z",
+            "Symbol": "Z",
+            "Name": "Compressibility",
+            "Description": "Pressure Compressability Factor",
+            "Value": 1.00000
+          },
+          {
+            "Key": "Spgvt",
+            "Symbol": "Spgvt",
+            "Name": "Sp. Gravity",
+            "Description": "Pressure Sp. Gravity",
+            "Value": 0.8988608905764584052468070418
+          },
+          {
+            "Key": "VacuumFluidName",
+            "Symbol": "",
+            "Name": "Fluid Name",
+            "Description": "Name of Vacuum Fluid",
+            "Value": ""
+          },
+          {
+            "Key": "Mv",
+            "Symbol": "M",
+            "Name": "Molecular Weight",
+            "Description": "Vacuum Molecular Weight",
+            "Value": null
+          },
+          {
+            "Key": "kv",
+            "Symbol": "k",
+            "Name": "k, (Cp / Cv)",
+            "Description": "Vacuum Ratio of Specific Heats (Cp / Cv)",
+            "Value": null
+          },
+          {
+            "Key": "Zv",
+            "Symbol": "Z",
+            "Name": "Compressibility",
+            "Description": "Vacuum Compressability Factor",
+            "Value": null
+          },
+          {
+            "Key": "SuperUserBackPressureModel",
+            "Symbol": "",
+            "Name": "Super User Back Pressure Model",
+            "Description": "Super User Back Pressure Model",
+            "Value": "BP"
+          },
+          {
+            "Key": "EnforceSectionVIIIRules",
+            "Symbol": "",
+            "Name": "ASME Section VIII/XIII (UV) Application",
+            "Description": "ASME Section VIII/XIII (UV) Application",
+            "Value": true
+          },
+          {
+            "Key": "MAWP",
+            "Symbol": "MAWP",
+            "Name": "System MAWP",
+            "Description": "Maximum Allowable Working Pressure",
+            "Value": " pressure.atm"
+          },
+          {
+            "Key": "Pn",
+            "Symbol": "Pn",
+            "Name": "Operating Pressure",
+            "Description": "Normal Operating Pressure",
+            "Value": " pressure.atm"
+          },
+          {
+            "Key": "isNonSTPUnitSelected",
+            "Symbol": "",
+            "Name": "isNonSTPUnitSelected",
+            "Description": "is Non-STP gas unit selected",
+            "Value": false
+          },
+          {
+            "Key": "Vreq(p)",
+            "Symbol": "Vreq",
+            "Name": "Required Pressure Flow",
+            "Description": "Required Gas/Vapor Volumetric Flow Rate",
+            "Value": "10000 flowrate.SCFM"
+          },
+          {
+            "Key": "Tn",
+            "Symbol": "Tn",
+            "Name": "Operating",
+            "Description": "Normal Operating Temperature",
+            "Value": " temp.degC"
+          },
+          {
+            "Key": "Tns",
+            "Symbol": "Tns",
+            "Name": "Normal System",
+            "Description": "Normal System",
+            "Value": " temp.degC"
+          },
+          {
+            "Key": "TdesignMin",
+            "Symbol": "TdesignMin",
+            "Name": "Min. Design",
+            "Description": "Minimum Design Temperature",
+            "Value": " temp.degC"
+          },
+          {
+            "Key": "Tdesign",
+            "Symbol": "TdesignMax",
+            "Name": "Max. Design",
+            "Description": "Maximum Design Temperature",
+            "Value": " temp.degC"
+          },
+          {
+            "Key": "SuperUserBackPressure",
+            "Symbol": "Super User Back pressure",
+            "Name": "Kb",
+            "Description": "Super User Back Pressure",
+            "Value": 1.0
+          },
+          {
+            "Key": "HasSuperUserModeBackPressure",
+            "Symbol": "",
+            "Name": "Has Super User Back Pressure",
+            "Description": "Has Super User Mode Back Pressure",
+            "Value": false
+          },
+          {
+            "Key": "calcPloss",
+            "Symbol": "",
+            "Name": "Calculate Ploss",
+            "Description": "Calculate Ploss",
+            "Value": false
+          },
+          {
+            "Key": "HasRuptureDisc",
+            "Symbol": "",
+            "Name": "Has Rupture Disc?",
+            "Description": "Has Rupture Disc?",
+            "Value": false
+          },
+          {
+            "Key": "VlFlowrateMethod",
+            "Symbol": "",
+            "Name": "Vl Flow Rate Method",
+            "Description": "Vl Flow Rate Method",
+            "Value": "LiquidVolume"
+          },
+          {
+            "Key": "Pset",
+            "Symbol": "Pset",
+            "Name": "Set Pressure",
+            "Description": "Pressure Setting",
+            "Value": "100 pressure.psig"
+          },
+          {
+            "Key": "Pover",
+            "Symbol": "Pover",
+            "Name": "Over Pressure",
+            "Description": "Pressure in Excess of Pset",
+            "Value": "16.00 pressure.psig"
+          },
+          {
+            "Key": "Ploss",
+            "Symbol": "Ploss",
+            "Name": "Inlet Loss",
+            "Description": "Inlet Line Loss",
+            "Value": "0 pressure.psig"
+          },
+          {
+            "Key": "pcntPloss",
+            "Symbol": "% Ploss",
+            "Name": "Inlet Loss %",
+            "Description": "Inlet Line Loss in percent of Set Pressure",
+            "Value": "0 percentage.decimal"
+          },
+          {
+            "Key": "Kc",
+            "Symbol": "Kc",
+            "Name": "Kc",
+            "Description": "Rupture Disc Combination Correction Factor",
+            "Value": 1.0
+          },
+          {
+            "Key": "Pbu",
+            "Symbol": "Pbu",
+            "Name": "Built-Up",
+            "Description": "Built-Up Back Pressure",
+            "Value": "0 pressure.psig"
+          },
+          {
+            "Key": "Psic",
+            "Symbol": "Psic",
+            "Name": "Constant Superimposed",
+            "Description": "Constant Superimposed Back Pressure",
+            "Value": "0 pressure.psig"
+          },
+          {
+            "Key": "Psiv",
+            "Symbol": "Psiv",
+            "Name": "Variable Superimposed",
+            "Description": "Variable Superimposed Back Pressure",
+            "Value": "0 pressure.psig"
+          },
+          {
+            "Key": "Pback",
+            "Symbol": "Pback",
+            "Name": "Total Back Pressure",
+            "Description": "Total Back Pressure",
+            "Value": "0 pressure.psig"
+          },
+          {
+            "Key": "PbackType",
+            "Symbol": "",
+            "Name": "PbackType",
+            "Description": "Back Pressure Correction Factor Type",
+            "Value": "None"
+          },
+          {
+            "Key": "Patm",
+            "Symbol": "Patm",
+            "Name": "Atm. Pressure",
+            "Description": "Atmospheric Pressure",
+            "Value": "14.696 absolutepressure.psia"
+          },
+          {
+            "Key": "P1(p)",
+            "Symbol": "P1",
+            "Name": "Relieving Pressure",
+            "Description": "Absolute Inlet Pressure (Relieving or Flowing Pressure)",
+            "Value": "130.696 absolutepressure.psia"
+          },
+          {
+            "Key": "P2(p)",
+            "Symbol": "P2",
+            "Name": "Outlet Pressure",
+            "Description": "Absolute Outlet Pressure",
+            "Value": "14.696 absolutepressure.psia"
+          },
+          {
+            "Key": "C",
+            "Symbol": "C",
+            "Name": "Gas Constant",
+            "Description": "Gas Coefficient",
+            "Value": 343.163852617207440
+          },
+          {
+            "Key": "PR",
+            "Symbol": "PR",
+            "Name": "Press. Ratio",
+            "Description": "Absolute Pressure Ratio",
+            "Value": 0.1124441451918956968843728959
+          },
+          {
+            "Key": "TPR",
+            "Symbol": "TPR",
+            "Name": "Theoretical Pressure Ratio",
+            "Description": "Theoretical Pressure Ratio for Critical Flow",
+            "Value": 0.553061843548458
+          },
+          {
+            "Key": "Fs",
+            "Symbol": "Fs",
+            "Name": "Fs",
+            "Description": "Subsonic Flow Factor",
+            "Value": 0.234103420936693
+          },
+          {
+            "Key": "Kb",
+            "Symbol": "Kb",
+            "Name": "Kb",
+            "Description": "Gas/Vapor Back Pressure Correction Factor",
+            "Value": 1.0
+          },
+          {
+            "Key": "AsmeApiDataSet",
+            "Symbol": "",
+            "Name": "Data Set",
+            "Description": "Data Set",
+            "Value": "ASME"
+          },
+          {
+            "Key": "ModelNumber",
+            "Symbol": "",
+            "Name": "Model Number",
+            "Description": "Model Number",
+            "Value": "95"
+          },
+          {
+            "Key": "Kd",
+            "Symbol": "Kd",
+            "Name": "Kd",
+            "Description": "Actual Flow Coefficient",
+            "Value": 0.947
+          },
+          {
+            "Key": "T",
+            "Symbol": "T",
+            "Name": "Relieving",
+            "Description": "Pressure Relieving Temperature",
+            "Value": "20 temp.degF"
+          },
+          {
+            "Key": "Vvalve(p)",
+            "Symbol": "V",
+            "Name": "Pressure Flow Capacity",
+            "Description": "Pressure Max. Gas/Vapor Volumetric Flow",
+            "Value": "6333.5798384275438532601458182 flowrate.SCFM"
+          },
+          {
+            "Key": "Kmax",
+            "Symbol": "Kmax",
+            "Name": "Kmax",
+            "Description": "Flow Coefficient @ Full Capacity / Full Open",
+            "Value": 0.947
+          },
+          {
+            "Key": "Ppset",
+            "Symbol": "Pp-set",
+            "Name": "Pseudo-Set Pressure",
+            "Description": "Pseudo-Set Pressure",
+            "Value": "105.45454545454545454545454545 pressure.psig"
+          },
+          {
+            "Key": "Mwsp",
+            "Symbol": "M",
+            "Name": "Molecular Weight",
+            "Description": "Pressure Molecular Weight",
+            "Value": 26.04000
+          },
+          {
+            "Key": "PR'",
+            "Symbol": "PR'",
+            "Name": "Adj. Press. Ratio",
+            "Description": "Adjusted Absolute Pressure Ratio",
+            "Value": 0.1124441451918956968843728959
+          },
+          {
+            "Key": "FlowRateCapacity",
+            "Symbol": "FlowRateCapacity",
+            "Name": "The Capacity of Flowrate",
+            "Description": "The Capacity of Flowrate",
+            "Value": "Rated"
+          },
+          {
+            "Key": "MultivalveSizing",
+            "Symbol": "",
+            "Name": "Multivalve Sizing",
+            "Description": "Multivalve Sizing",
+            "Value": true
+          },
+          {
+            "Key": "A",
+            "Symbol": "A",
+            "Name": "Orifice Area",
+            "Description": "Selected Orifice Area for a Valve",
+            "Value": "2.93 area.in2"
+          },
+          {
+            "Key": "AASME",
+            "Symbol": "AASME",
+            "Name": "Orifice Area (ASME Dataset)",
+            "Description": "Selected Orifice Area for a Valve",
+            "Value": "2.93 area.in2"
+          },
+          {
+            "Key": "E",
+            "Symbol": "E",
+            "Name": "Shape Factor",
+            "Description": "Shape Factor",
+            "Value": -0.285
+          },
+          {
+            "Key": "Kapi",
+            "Symbol": "K (API)",
+            "Name": "K (API)",
+            "Description": "Derated Flow Coefficient",
+            "Value": 0.97500
+          },
+          {
+            "Key": "Tp",
+            "Symbol": "Tp",
+            "Name": "Transition to Full Open",
+            "Description": "Transition Point to Full Capacity / Full Open",
+            "Value": 0.678
+          },
+          {
+            "Key": "ValveType",
+            "Symbol": "",
+            "Name": "Valve Type",
+            "Description": "Valve Type",
+            "Value": "LP"
+          },
+          {
+            "Key": "NominalSize",
+            "Symbol": "Nominal Size",
+            "Name": "Nominal Size",
+            "Description": "Nominal Size",
+            "Value": "2 length.in"
+          },
+          {
+            "Key": "Brand",
+            "Symbol": "",
+            "Name": "Brand",
+            "Description": "Brand",
+            "Value": "Anderson Greenwood"
+          },
+          {
+            "Key": "K",
+            "Symbol": "K",
+            "Name": "K",
+            "Description": "Derated Flow Coefficient",
+            "Value": 0.8523
+          },
+          {
+            "Key": "Kx",
+            "Symbol": "Kx",
+            "Name": "Kx",
+            "Description": "Flow Coefficient used for Flow Capacity Calculations",
+            "Value": 0.8523
+          },
+          {
+            "Key": "KxValue",
+            "Symbol": "",
+            "Name": "Kx Value",
+            "Description": "The Kx variable pressure value",
+            "Value": "K"
+          },
+          {
+            "Key": "CDTP",
+            "Symbol": "CDTP",
+            "Name": "CDTP",
+            "Description": "Cold Differential Test Pressure",
+            "Value": "100 pressure.psig"
+          },
+          {
+            "Key": "RatedVvalve(p)",
+            "Symbol": "Rated V",
+            "Name": "Rated Pressure Flow Capacity",
+            "Description": "Rated Pressure Max. Gas/Vapor Volumetric Flow",
+            "Value": "6333.5798384275438532601458182 flowrate.SCFM"
+          },
+          {
+            "Key": "Asel",
+            "Symbol": "Asel",
+            "Name": "Selected Orifice Area",
+            "Description": "Total Selected Orifice Area of Valve(s)",
+            "Value": "2.93 area.in2"
+          },
+          {
+            "Key": "Vsel",
+            "Symbol": "Vsel",
+            "Name": "Total Flow Capacity",
+            "Description": "Total maximum gas/vapor volumetric flow rate of selected valve(s)",
+            "Value": "6333.5798384275438532601458182 flowrate.SCFM"
+          },
+          {
+            "Key": "Areq",
+            "Symbol": "Areq",
+            "Name": "Required Orifice Area (for Pressure)",
+            "Description": "Required Orifice Area (for Pressure)",
+            "Value": "4.6261357316803628652028896444 area.in2"
+          },
+          {
+            "Key": "ValveName",
+            "Symbol": "",
+            "Name": "Valve Tag",
+            "Description": "Valve Name",
+            "Value": "Item-001"
+          },
+          {
+            "Key": "TotalVvalve(p)",
+            "Symbol": "V",
+            "Name": "Total Actual Pressure Valve Flow",
+            "Description": "Total Valve Pressure Flow",
+            "Value": "11547.369713009811431618346007 flowrate.SCFM"
+          },
+          {
+            "Key": "TotalA",
+            "Symbol": "A",
+            "Name": "Total Selected Area",
+            "Description": "",
+            "Value": "4.783 area.in2"
+          },
+          {
+            "Key": "TotalAreq",
+            "Symbol": "Areq",
+            "Name": "Total Required Area",
+            "Description": "",
+            "Value": "4.6022986849177788428891338727 area.in2"
+          },
+          {
+            "Key": "TotalRatedVvalve(p)",
+            "Symbol": "Vp",
+            "Name": "Total Rated Pressure Valve Flow",
+            "Description": "",
+            "Value": "10392.632741708830288456511407 flowrate.SCFM"
+          },
+          {
+            "Key": "ValveInternals",
+            "Symbol": "",
+            "Name": "ValveInternals",
+            "Description": "ValveInternals",
+            "Value": "NoneSelected"
+          },
+          {
+            "Key": "IsDualDiaphragm",
+            "Symbol": "IsDualDiaphragm",
+            "Name": "IsDualDiaphragm",
+            "Description": "IsDualDiaphragm",
+            "Value": false
+          },
+          {
+            "Key": "IsDualOutlet",
+            "Symbol": "",
+            "Name": "Is Dual Outlet Valve",
+            "Description": "Is Dual Outlet Valve",
+            "Value": false
+          },
+          {
+            "Key": "NameplateCriteria",
+            "Symbol": "",
+            "Name": "Nameplate Criteria",
+            "Description": "Nameplate Capacity Criteria",
+            "Value": "Air @ 60°F, 14.7 psia"
+          },
+          {
+            "Key": "Wnpg(p)",
+            "Symbol": "Wnpg",
+            "Name": "Press. Nameplate Capacity",
+            "Description": "Nameplate Capacity for Gas/Vapor Service",
+            "Value": "5708 flowrate.SCFM"
+          },
+          {
+            "Key": "r",
+            "Symbol": "r",
+            "Name": "Distance from Valve",
+            "Description": "Distance from the Point of Discharge",
+            "Value": "100 length.ft"
+          },
+          {
+            "Key": "Wvalve(p)",
+            "Symbol": "W",
+            "Name": "Flow Capacity",
+            "Description": "Max. Mass Flow Rate",
+            "Value": "3.2855693664104426292966930996 massflowrate.kgs"
+          },
+          {
+            "Key": "L100",
+            "Symbol": "L100",
+            "Name": "Noise @ 100-ft",
+            "Description": "Noise Level @ 100-ft from Discharge",
+            "Value": "110.4023535304446715 sound.db"
+          },
+          {
+            "Key": "Lp",
+            "Symbol": "Lp",
+            "Name": "Noise Level",
+            "Description": "Noise Level @ Distance Other Than 100-ft from Discharge",
+            "Value": "110.4023535304446715 sound.db"
+          },
+          {
+            "Key": "Fr",
+            "Symbol": "Fr",
+            "Name": "Reaction Force",
+            "Description": "Reactive Thrust Force (Reaction Force)",
+            "Value": "358.56929736763605939883929340 force.lbf"
+          },
+          {
+            "Key": "ValveDimensionA",
+            "Symbol": "A",
+            "Name": "A",
+            "Description": "Valve Dimension A",
+            "Value": "3.75 length.in"
+          },
+          {
+            "Key": "ValveDimensionB",
+            "Symbol": "B",
+            "Name": "B",
+            "Description": "Valve Dimension B",
+            "Value": "5 length.in"
+          },
+          {
+            "Key": "ValveDimensionC",
+            "Symbol": "C",
+            "Name": "C",
+            "Description": "Valve Dimension C",
+            "Value": "18.3 length.in"
+          },
+          {
+            "Key": "ValveWeight",
+            "Symbol": "ValveWeight",
+            "Name": "Weight",
+            "Description": "Valve Weight",
+            "Value": "80 mass.lbm"
+          },
+          {
+            "Key": "Do",
+            "Symbol": "Do",
+            "Name": "Outlet Diameter",
+            "Description": "Valve Outlet Inside Diameter (STD Schedule Pipe)",
+            "Value": "3.068 length.in"
+          },
+          {
+            "Key": "ValveActualWeight",
+            "Symbol": "ValveActualWeight",
+            "Name": "Weight",
+            "Description": "Valve Weight",
+            "Value": "80 mass.lbm"
+          },
+          {
+            "Key": "Kz",
+            "Symbol": "Kz",
+            "Name": "Kz",
+            "Description": "Flow Coefficient used for Reaction Force Calculations",
+            "Value": 0.947
+          },
+          {
+            "Key": "Po",
+            "Symbol": "Po",
+            "Name": "Outlet Static Pressure",
+            "Description": "Outlet Static Pressure",
+            "Value": "14.161023395134745922228325227 pressure.psig"
+          },
+          {
+            "Key": "Ao",
+            "Symbol": "Ao",
+            "Name": "Outlet Area",
+            "Description": "Valve Outlet Area (STD Schedule Pipe)",
+            "Value": "7.39265760235073587724 area.in2"
+          }
+        ],
+        "PricingData": null,
+        "CustomizedData": null,
+        "ConfigData": [
+          {
+            "SectionName": "VMD",
+            "CombinedName": "VMD:A",
+            "OptionName": "A"
+          },
+          {
+            "SectionName": "PAC",
+            "CombinedName": "PAC:N",
+            "OptionName": "N"
+          },
+          {
+            "SectionName": "PAB",
+            "CombinedName": "PAB:N",
+            "OptionName": "N"
+          },
+          {
+            "SectionName": "PAA",
+            "CombinedName": "PAA:N",
+            "OptionName": "N"
+          },
+          {
+            "SectionName": "AS",
+            "CombinedName": "AS:N",
+            "OptionName": "N"
+          },
+          {
+            "SectionName": "PPA",
+            "CombinedName": "PPA:N",
+            "OptionName": "N"
+          },
+          {
+            "SectionName": "DS",
+            "CombinedName": "DS:0",
+            "OptionName": "0"
+          },
+          {
+            "SectionName": "CT",
+            "CombinedName": "CT:0",
+            "OptionName": "0"
+          },
+          {
+            "SectionName": "VAL5",
+            "CombinedName": "VAL5:0",
+            "OptionName": "0"
+          },
+          {
+            "SectionName": "VAL4",
+            "CombinedName": "VAL4:0",
+            "OptionName": "0"
+          },
+          {
+            "SectionName": "VAL3",
+            "CombinedName": "VAL3:0",
+            "OptionName": "0"
+          },
+          {
+            "SectionName": "VAL2",
+            "CombinedName": "VAL2:0",
+            "OptionName": "0"
+          },
+          {
+            "SectionName": "VAL1",
+            "CombinedName": "VAL1:0",
+            "OptionName": "0"
+          },
+          {
+            "SectionName": "ST",
+            "CombinedName": "ST:S",
+            "OptionName": "S"
+          },
+          {
+            "SectionName": "MOD",
+            "CombinedName": "MOD:95",
+            "OptionName": "95"
+          },
+          {
+            "SectionName": "CODE",
+            "CombinedName": "CODE:8",
+            "OptionName": "8"
+          },
+          {
+            "SectionName": "SER",
+            "CombinedName": "SER:A",
+            "OptionName": "A"
+          },
+          {
+            "SectionName": "BM",
+            "CombinedName": "BM:S",
+            "OptionName": "S"
+          },
+          {
+            "SectionName": "IO",
+            "CombinedName": "IO:A",
+            "OptionName": "A"
+          },
+          {
+            "SectionName": "FF",
+            "CombinedName": "FF:2",
+            "OptionName": "2"
+          },
+          {
+            "SectionName": "BTM",
+            "CombinedName": "BTM:S",
+            "OptionName": "S"
+          },
+          {
+            "SectionName": "BO",
+            "CombinedName": "BO:V",
+            "OptionName": "V"
+          },
+          {
+            "SectionName": "BSG",
+            "CombinedName": "BSG:T",
+            "OptionName": "T"
+          },
+          {
+            "SectionName": "PBM",
+            "CombinedName": "PBM:S",
+            "OptionName": "S"
+          },
+          {
+            "SectionName": "PSG",
+            "CombinedName": "PSG:K",
+            "OptionName": "K"
+          },
+          {
+            "SectionName": "PO",
+            "CombinedName": "PO:K",
+            "OptionName": "K"
+          },
+          {
+            "SectionName": "PD",
+            "CombinedName": "PD:H",
+            "OptionName": "H"
+          },
+          {
+            "SectionName": "CBO",
+            "CombinedName": "CBO:N",
+            "OptionName": "N"
+          },
+          {
+            "SectionName": "ACC",
+            "CombinedName": "ACC:N0",
+            "OptionName": "N0"
+          },
+          {
+            "SectionName": "NU",
+            "CombinedName": "NU:0",
+            "OptionName": "0"
+          }
+        ]
+      },
+      {
+        "ValveId": 673,
+        "DisplayName": "463, ",
+        "WorkflowKey": "A PO G VIII",
+        "Quantity": 1,
+        "ModelId": 77,
+        "Brand": "Anderson Greenwood",
+        "Name": "463",
+        "CatalogString": "46305-152/L1",
+        "ValveData": [
+          {
+            "Key": "CalculationMethod",
+            "Symbol": "",
+            "Name": "Calculation Method",
+            "Description": "Calculation Method",
+            "Value": "English"
+          },
+          {
+            "Key": "ProductType",
+            "Symbol": "",
+            "Name": "Product Type",
+            "Description": "The current product type we are sizing for",
+            "Value": "ReliefValve"
+          },
+          {
+            "Key": "Service",
+            "Symbol": "",
+            "Name": "Valve Service",
+            "Description": "Valve Service",
+            "Value": "Gas"
+          },
+          {
+            "Key": "FlowRateMethod",
+            "Symbol": "",
+            "Name": "Flow Rate Method",
+            "Description": "Flow Rate Method",
+            "Value": "GasVolume"
+          },
+          {
+            "Key": "SizingBasis",
+            "Symbol": "",
+            "Name": "Sizing Basis",
+            "Description": "Sizing Basis",
+            "Value": "Blocked Discharge"
+          },
+          {
+            "Key": "Code",
+            "Symbol": "",
+            "Name": "Code",
+            "Description": "Code",
+            "Value": "SectionVIII"
+          },
+          {
+            "Key": "calcPover",
+            "Symbol": "",
+            "Name": "Calculate Pover",
+            "Description": "Calculate Pover",
+            "Value": true
+          },
+          {
+            "Key": "percentPset",
+            "Symbol": "% Pset",
+            "Name": "Over Pressure %",
+            "Description": "Over Pressure as Percentage of Set Pressure",
+            "Value": "0.16 percentage.decimal"
+          },
+          {
+            "Key": "PressureFluidName",
+            "Symbol": "",
+            "Name": "Fluid Name",
+            "Description": "Name of Pressure Fluid",
+            "Value": "Acetylene"
+          },
+          {
+            "Key": "M",
+            "Symbol": "M",
+            "Name": "Molecular Weight",
+            "Description": "Pressure Molecular Weight",
+            "Value": 26.040000000000000000000000001
+          },
+          {
+            "Key": "k",
+            "Symbol": "k",
+            "Name": "k, (Cp / Cv)",
+            "Description": "Pressure Ratio of Specific Heats (Cp / Cv)",
+            "Value": 1.26000
+          },
+          {
+            "Key": "Z",
+            "Symbol": "Z",
+            "Name": "Compressibility",
+            "Description": "Pressure Compressability Factor",
+            "Value": 1.00000
+          },
+          {
+            "Key": "Spgvt",
+            "Symbol": "Spgvt",
+            "Name": "Sp. Gravity",
+            "Description": "Pressure Sp. Gravity",
+            "Value": 0.8988608905764584052468070418
+          },
+          {
+            "Key": "VacuumFluidName",
+            "Symbol": "",
+            "Name": "Fluid Name",
+            "Description": "Name of Vacuum Fluid",
+            "Value": ""
+          },
+          {
+            "Key": "Mv",
+            "Symbol": "M",
+            "Name": "Molecular Weight",
+            "Description": "Vacuum Molecular Weight",
+            "Value": null
+          },
+          {
+            "Key": "kv",
+            "Symbol": "k",
+            "Name": "k, (Cp / Cv)",
+            "Description": "Vacuum Ratio of Specific Heats (Cp / Cv)",
+            "Value": null
+          },
+          {
+            "Key": "Zv",
+            "Symbol": "Z",
+            "Name": "Compressibility",
+            "Description": "Vacuum Compressability Factor",
+            "Value": null
+          },
+          {
+            "Key": "SuperUserBackPressureModel",
+            "Symbol": "",
+            "Name": "Super User Back Pressure Model",
+            "Description": "Super User Back Pressure Model",
+            "Value": "BP"
+          },
+          {
+            "Key": "EnforceSectionVIIIRules",
+            "Symbol": "",
+            "Name": "ASME Section VIII/XIII (UV) Application",
+            "Description": "ASME Section VIII/XIII (UV) Application",
+            "Value": true
+          },
+          {
+            "Key": "MAWP",
+            "Symbol": "MAWP",
+            "Name": "System MAWP",
+            "Description": "Maximum Allowable Working Pressure",
+            "Value": "100 pressure.psig"
+          },
+          {
+            "Key": "Pn",
+            "Symbol": "Pn",
+            "Name": "Operating Pressure",
+            "Description": "Normal Operating Pressure",
+            "Value": " pressure.atm"
+          },
+          {
+            "Key": "isNonSTPUnitSelected",
+            "Symbol": "",
+            "Name": "isNonSTPUnitSelected",
+            "Description": "is Non-STP gas unit selected",
+            "Value": false
+          },
+          {
+            "Key": "Vreq(p)",
+            "Symbol": "Vreq",
+            "Name": "Required Pressure Flow",
+            "Description": "Required Gas/Vapor Volumetric Flow Rate",
+            "Value": "10000 flowrate.SCFM"
+          },
+          {
+            "Key": "Tn",
+            "Symbol": "Tn",
+            "Name": "Operating",
+            "Description": "Normal Operating Temperature",
+            "Value": " temp.degC"
+          },
+          {
+            "Key": "Tns",
+            "Symbol": "Tns",
+            "Name": "Normal System",
+            "Description": "Normal System",
+            "Value": " temp.degC"
+          },
+          {
+            "Key": "TdesignMin",
+            "Symbol": "TdesignMin",
+            "Name": "Min. Design",
+            "Description": "Minimum Design Temperature",
+            "Value": " temp.degC"
+          },
+          {
+            "Key": "Tdesign",
+            "Symbol": "TdesignMax",
+            "Name": "Max. Design",
+            "Description": "Maximum Design Temperature",
+            "Value": " temp.degC"
+          },
+          {
+            "Key": "SuperUserBackPressure",
+            "Symbol": "Super User Back pressure",
+            "Name": "Kb",
+            "Description": "Super User Back Pressure",
+            "Value": 1.0
+          },
+          {
+            "Key": "HasSuperUserModeBackPressure",
+            "Symbol": "",
+            "Name": "Has Super User Back Pressure",
+            "Description": "Has Super User Mode Back Pressure",
+            "Value": false
+          },
+          {
+            "Key": "calcPloss",
+            "Symbol": "",
+            "Name": "Calculate Ploss",
+            "Description": "Calculate Ploss",
+            "Value": false
+          },
+          {
+            "Key": "HasRuptureDisc",
+            "Symbol": "",
+            "Name": "Has Rupture Disc?",
+            "Description": "Has Rupture Disc?",
+            "Value": false
+          },
+          {
+            "Key": "VlFlowrateMethod",
+            "Symbol": "",
+            "Name": "Vl Flow Rate Method",
+            "Description": "Vl Flow Rate Method",
+            "Value": "LiquidVolume"
+          },
+          {
+            "Key": "Pset",
+            "Symbol": "Pset",
+            "Name": "Set Pressure",
+            "Description": "Pressure Setting",
+            "Value": "100 pressure.psig"
+          },
+          {
+            "Key": "Pover",
+            "Symbol": "Pover",
+            "Name": "Over Pressure",
+            "Description": "Pressure in Excess of Pset",
+            "Value": "16.00 pressure.psig"
+          },
+          {
+            "Key": "Ploss",
+            "Symbol": "Ploss",
+            "Name": "Inlet Loss",
+            "Description": "Inlet Line Loss",
+            "Value": "0 pressure.psig"
+          },
+          {
+            "Key": "pcntPloss",
+            "Symbol": "% Ploss",
+            "Name": "Inlet Loss %",
+            "Description": "Inlet Line Loss in percent of Set Pressure",
+            "Value": "0 percentage.decimal"
+          },
+          {
+            "Key": "Kc",
+            "Symbol": "Kc",
+            "Name": "Kc",
+            "Description": "Rupture Disc Combination Correction Factor",
+            "Value": 1.0
+          },
+          {
+            "Key": "Pbu",
+            "Symbol": "Pbu",
+            "Name": "Built-Up",
+            "Description": "Built-Up Back Pressure",
+            "Value": "0 pressure.psig"
+          },
+          {
+            "Key": "Psic",
+            "Symbol": "Psic",
+            "Name": "Constant Superimposed",
+            "Description": "Constant Superimposed Back Pressure",
+            "Value": "0 pressure.psig"
+          },
+          {
+            "Key": "Psiv",
+            "Symbol": "Psiv",
+            "Name": "Variable Superimposed",
+            "Description": "Variable Superimposed Back Pressure",
+            "Value": "0 pressure.psig"
+          },
+          {
+            "Key": "Pback",
+            "Symbol": "Pback",
+            "Name": "Total Back Pressure",
+            "Description": "Total Back Pressure",
+            "Value": "0 pressure.psig"
+          },
+          {
+            "Key": "PbackType",
+            "Symbol": "",
+            "Name": "PbackType",
+            "Description": "Back Pressure Correction Factor Type",
+            "Value": "None"
+          },
+          {
+            "Key": "Patm",
+            "Symbol": "Patm",
+            "Name": "Atm. Pressure",
+            "Description": "Atmospheric Pressure",
+            "Value": "14.696 absolutepressure.psia"
+          },
+          {
+            "Key": "P1(p)",
+            "Symbol": "P1",
+            "Name": "Relieving Pressure",
+            "Description": "Absolute Inlet Pressure (Relieving or Flowing Pressure)",
+            "Value": "130.696 absolutepressure.psia"
+          },
+          {
+            "Key": "P2(p)",
+            "Symbol": "P2",
+            "Name": "Outlet Pressure",
+            "Description": "Absolute Outlet Pressure",
+            "Value": "14.696 absolutepressure.psia"
+          },
+          {
+            "Key": "C",
+            "Symbol": "C",
+            "Name": "Gas Constant",
+            "Description": "Gas Coefficient",
+            "Value": 343.163852617207440
+          },
+          {
+            "Key": "PR",
+            "Symbol": "PR",
+            "Name": "Press. Ratio",
+            "Description": "Absolute Pressure Ratio",
+            "Value": 0.1124441451918956968843728959
+          },
+          {
+            "Key": "TPR",
+            "Symbol": "TPR",
+            "Name": "Theoretical Pressure Ratio",
+            "Description": "Theoretical Pressure Ratio for Critical Flow",
+            "Value": 0.553061843548458
+          },
+          {
+            "Key": "Fs",
+            "Symbol": "Fs",
+            "Name": "Fs",
+            "Description": "Subsonic Flow Factor",
+            "Value": 0.234103420936693
+          },
+          {
+            "Key": "Kb",
+            "Symbol": "Kb",
+            "Name": "Kb",
+            "Description": "Gas/Vapor Back Pressure Correction Factor",
+            "Value": 1.0
+          },
+          {
+            "Key": "AsmeApiDataSet",
+            "Symbol": "",
+            "Name": "Data Set",
+            "Description": "Data Set",
+            "Value": "ASME"
+          },
+          {
+            "Key": "ModelNumber",
+            "Symbol": "",
+            "Name": "Model Number",
+            "Description": "Model Number",
+            "Value": "463"
+          },
+          {
+            "Key": "Kd",
+            "Symbol": "Kd",
+            "Name": "Kd",
+            "Description": "Actual Flow Coefficient",
+            "Value": 0.956
+          },
+          {
+            "Key": "T",
+            "Symbol": "T",
+            "Name": "Relieving",
+            "Description": "Pressure Relieving Temperature",
+            "Value": "20 temp.degF"
+          },
+          {
+            "Key": "Vvalve(p)",
+            "Symbol": "V",
+            "Name": "Pressure Flow Capacity",
+            "Description": "Pressure Max. Gas/Vapor Volumetric Flow",
+            "Value": "3264.5335472906901830750537194 flowrate.SCFM"
+          },
+          {
+            "Key": "Kmax",
+            "Symbol": "Kmax",
+            "Name": "Kmax",
+            "Description": "Flow Coefficient @ Full Capacity / Full Open",
+            "Value": 0.956
+          },
+          {
+            "Key": "Ppset",
+            "Symbol": "Pp-set",
+            "Name": "Pseudo-Set Pressure",
+            "Description": "Pseudo-Set Pressure",
+            "Value": "105.45454545454545454545454545 pressure.psig"
+          },
+          {
+            "Key": "Mwsp",
+            "Symbol": "M",
+            "Name": "Molecular Weight",
+            "Description": "Pressure Molecular Weight",
+            "Value": 26.04000
+          },
+          {
+            "Key": "PR'",
+            "Symbol": "PR'",
+            "Name": "Adj. Press. Ratio",
+            "Description": "Adjusted Absolute Pressure Ratio",
+            "Value": 0.1124441451918956968843728959
+          },
+          {
+            "Key": "FlowRateCapacity",
+            "Symbol": "FlowRateCapacity",
+            "Name": "The Capacity of Flowrate",
+            "Description": "The Capacity of Flowrate",
+            "Value": "Rated"
+          },
+          {
+            "Key": "MultivalveSizing",
+            "Symbol": "",
+            "Name": "Multivalve Sizing",
+            "Description": "Multivalve Sizing",
+            "Value": true
+          },
+          {
+            "Key": "A",
+            "Symbol": "A",
+            "Name": "Orifice Area",
+            "Description": "Selected Orifice Area for a Valve",
+            "Value": "1.496 area.in2"
+          },
+          {
+            "Key": "AASME",
+            "Symbol": "AASME",
+            "Name": "Orifice Area (ASME Dataset)",
+            "Description": "Selected Orifice Area for a Valve",
+            "Value": "1.496 area.in2"
+          },
+          {
+            "Key": "Kapi",
+            "Symbol": "K (API)",
+            "Name": "K (API)",
+            "Description": "Derated Flow Coefficient",
+            "Value": 0.97500
+          },
+          {
+            "Key": "Orifice",
+            "Symbol": "",
+            "Name": "Orifice",
+            "Description": "Orifice",
+            "Value": "FB, 1.5x2"
+          },
+          {
+            "Key": "K",
+            "Symbol": "K",
+            "Name": "K",
+            "Description": "Derated Flow Coefficient",
+            "Value": 0.8604
+          },
+          {
+            "Key": "Kx",
+            "Symbol": "Kx",
+            "Name": "Kx",
+            "Description": "Flow Coefficient used for Flow Capacity Calculations",
+            "Value": 0.8604
+          },
+          {
+            "Key": "KxValue",
+            "Symbol": "",
+            "Name": "Kx Value",
+            "Description": "The Kx variable pressure value",
+            "Value": "K"
+          },
+          {
+            "Key": "CDTP",
+            "Symbol": "CDTP",
+            "Name": "CDTP",
+            "Description": "Cold Differential Test Pressure",
+            "Value": "100 pressure.psig"
+          },
+          {
+            "Key": "RatedVvalve(p)",
+            "Symbol": "Rated V",
+            "Name": "Rated Pressure Flow Capacity",
+            "Description": "Rated Pressure Max. Gas/Vapor Volumetric Flow",
+            "Value": "3264.5335472906901830750537194 flowrate.SCFM"
+          },
+          {
+            "Key": "Asel",
+            "Symbol": "Asel",
+            "Name": "Selected Orifice Area",
+            "Description": "Total Selected Orifice Area of Valve(s)",
+            "Value": "1.496 area.in2"
+          },
+          {
+            "Key": "Vsel",
+            "Symbol": "Vsel",
+            "Name": "Total Flow Capacity",
+            "Description": "Total maximum gas/vapor volumetric flow rate of selected valve(s)",
+            "Value": "3264.5335472906901830750537194 flowrate.SCFM"
+          },
+          {
+            "Key": "Areq",
+            "Symbol": "Areq",
+            "Name": "Required Orifice Area (for Pressure)",
+            "Description": "Required Orifice Area (for Pressure)",
+            "Value": "4.5825842446666355997354984241 area.in2"
+          },
+          {
+            "Key": "ValveName",
+            "Symbol": "",
+            "Name": "Valve Tag",
+            "Description": "Valve Name",
+            "Value": "Item-002"
+          },
+          {
+            "Key": "TotalVvalve(p)",
+            "Symbol": "V",
+            "Name": "Total Actual Pressure Valve Flow",
+            "Description": "Total Valve Pressure Flow",
+            "Value": "11547.369713009811431618346007 flowrate.SCFM"
+          },
+          {
+            "Key": "TotalA",
+            "Symbol": "A",
+            "Name": "Total Selected Area",
+            "Description": "",
+            "Value": "4.783 area.in2"
+          },
+          {
+            "Key": "TotalAreq",
+            "Symbol": "Areq",
+            "Name": "Total Required Area",
+            "Description": "",
+            "Value": "4.6022986849177788428891338727 area.in2"
+          },
+          {
+            "Key": "TotalRatedVvalve(p)",
+            "Symbol": "Vp",
+            "Name": "Total Rated Pressure Valve Flow",
+            "Description": "",
+            "Value": "10392.632741708830288456511407 flowrate.SCFM"
+          },
+          {
+            "Key": "ValveInternals",
+            "Symbol": "",
+            "Name": "ValveInternals",
+            "Description": "ValveInternals",
+            "Value": "NoneSelected"
+          },
+          {
+            "Key": "IsDualDiaphragm",
+            "Symbol": "IsDualDiaphragm",
+            "Name": "IsDualDiaphragm",
+            "Description": "IsDualDiaphragm",
+            "Value": false
+          },
+          {
+            "Key": "IsDualOutlet",
+            "Symbol": "",
+            "Name": "Is Dual Outlet Valve",
+            "Description": "Is Dual Outlet Valve",
+            "Value": false
+          },
+          {
+            "Key": "Do",
+            "Symbol": "Do",
+            "Name": "Outlet Diameter",
+            "Description": "Valve Outlet Inside Diameter (STD Schedule Pipe)",
+            "Value": "2.06 length.in"
+          },
+          {
+            "Key": "r",
+            "Symbol": "r",
+            "Name": "Distance from Valve",
+            "Description": "Distance from the Point of Discharge",
+            "Value": "100 length.ft"
+          },
+          {
+            "Key": "Wvalve(p)",
+            "Symbol": "W",
+            "Name": "Flow Capacity",
+            "Description": "Max. Mass Flow Rate",
+            "Value": "1.6934895733880013398867007184 massflowrate.kgs"
+          },
+          {
+            "Key": "L100",
+            "Symbol": "L100",
+            "Name": "Noise @ 100-ft",
+            "Description": "Noise Level @ 100-ft from Discharge",
+            "Value": "107.5240723949162715 sound.db"
+          },
+          {
+            "Key": "Lp",
+            "Symbol": "Lp",
+            "Name": "Noise Level",
+            "Description": "Noise Level @ Distance Other Than 100-ft from Discharge",
+            "Value": "107.5240723949162715 sound.db"
+          },
+          {
+            "Key": "NameplateCriteria",
+            "Symbol": "",
+            "Name": "Nameplate Criteria",
+            "Description": "Nameplate Capacity Criteria",
+            "Value": "Air @ 60°F, 14.7 psia"
+          },
+          {
+            "Key": "Wnpg(p)",
+            "Symbol": "Wnpg",
+            "Name": "Press. Nameplate Capacity",
+            "Description": "Nameplate Capacity for Gas/Vapor Service",
+            "Value": "2942 flowrate.SCFM"
+          },
+          {
+            "Key": "Fr",
+            "Symbol": "Fr",
+            "Name": "Reaction Force",
+            "Description": "Reactive Thrust Force (Reaction Force)",
+            "Value": "191.83566289394178368937896878 force.lbf"
+          },
+          {
+            "Key": "ValveDimensionA",
+            "Symbol": "A",
+            "Name": "A",
+            "Description": "Valve Dimension A",
+            "Value": "3.62 length.in"
+          },
+          {
+            "Key": "ValveDimensionB",
+            "Symbol": "B",
+            "Name": "B",
+            "Description": "Valve Dimension B",
+            "Value": "4.5 length.in"
+          },
+          {
+            "Key": "ValveDimensionC",
+            "Symbol": "C",
+            "Name": "C",
+            "Description": "Valve Dimension C",
+            "Value": "19.63 length.in"
+          },
+          {
+            "Key": "ValveWeight",
+            "Symbol": "ValveWeight",
+            "Name": "Weight",
+            "Description": "Valve Weight",
+            "Value": "44 mass.lbm"
+          },
+          {
+            "Key": "ValveActualWeight",
+            "Symbol": "ValveActualWeight",
+            "Name": "Weight",
+            "Description": "Valve Weight",
+            "Value": "44 mass.lbm"
+          },
+          {
+            "Key": "Kz",
+            "Symbol": "Kz",
+            "Name": "Kz",
+            "Description": "Flow Coefficient used for Reaction Force Calculations",
+            "Value": 0.956
+          },
+          {
+            "Key": "Po",
+            "Symbol": "Po",
+            "Name": "Outlet Static Pressure",
+            "Description": "Outlet Static Pressure",
+            "Value": "18.295319663340877907502211461 pressure.psig"
+          },
+          {
+            "Key": "Ao",
+            "Symbol": "Ao",
+            "Name": "Outlet Area",
+            "Description": "Valve Outlet Area (STD Schedule Pipe)",
+            "Value": "3.332915646193408211 area.in2"
+          }
+        ],
+        "PricingData": null,
+        "CustomizedData": null,
+        "ConfigData": [
+          {
+            "SectionName": "VMD",
+            "CombinedName": "VMD:A",
+            "OptionName": "A"
+          },
+          {
+            "SectionName": "PGA",
+            "CombinedName": "PGA:MG",
+            "OptionName": "MG"
+          },
+          {
+            "SectionName": "ACC6",
+            "CombinedName": "ACC6:XI",
+            "OptionName": "XI"
+          },
+          {
+            "SectionName": "ACC2",
+            "CombinedName": "ACC2:XG",
+            "OptionName": "XG"
+          },
+          {
+            "SectionName": "ACC3",
+            "CombinedName": "ACC3:XH",
+            "OptionName": "XH"
+          },
+          {
+            "SectionName": "ACC10",
+            "CombinedName": "ACC10:XJ",
+            "OptionName": "XJ"
+          },
+          {
+            "SectionName": "ACC1",
+            "CombinedName": "ACC1:XH",
+            "OptionName": "XH"
+          },
+          {
+            "SectionName": "ACC8",
+            "CombinedName": "ACC8:XA",
+            "OptionName": "XA"
+          },
+          {
+            "SectionName": "ACC4",
+            "CombinedName": "ACC4:XC",
+            "OptionName": "XC"
+          },
+          {
+            "SectionName": "CC",
+            "CombinedName": "CC:1",
+            "OptionName": "1"
+          },
+          {
+            "SectionName": "ACC5",
+            "CombinedName": "ACC5:XD",
+            "OptionName": "XD"
+          },
+          {
+            "SectionName": "ACC9",
+            "CombinedName": "ACC9:XF",
+            "OptionName": "XF"
+          },
+          {
+            "SectionName": "PE",
+            "CombinedName": "PE:MA",
+            "OptionName": "MA"
+          },
+          {
+            "SectionName": "PSP",
+            "CombinedName": "PSP:KD",
+            "OptionName": "KD"
+          },
+          {
+            "SectionName": "SPR",
+            "CombinedName": "SPR:LW",
+            "OptionName": "LW"
+          },
+          {
+            "SectionName": "MOD",
+            "CombinedName": "MOD:4",
+            "OptionName": "4"
+          },
+          {
+            "SectionName": "CODE",
+            "CombinedName": "CODE:8",
+            "OptionName": "8"
+          },
+          {
+            "SectionName": "MVL",
+            "CombinedName": "MVL:AC",
+            "OptionName": "AC"
+          },
+          {
+            "SectionName": "MVPT",
+            "CombinedName": "MVPT:AE",
+            "OptionName": "AE"
+          },
+          {
+            "SectionName": "SERV",
+            "CombinedName": "SERV:KT",
+            "OptionName": "KT"
+          },
+          {
+            "SectionName": "CC2787",
+            "CombinedName": "CC2787:2",
+            "OptionName": "2"
+          },
+          {
+            "SectionName": "OR",
+            "CombinedName": "OR:DA",
+            "OptionName": "DA"
+          },
+          {
+            "SectionName": "MAT",
+            "CombinedName": "MAT:AI",
+            "OptionName": "AI"
+          },
+          {
+            "SectionName": "VS",
+            "CombinedName": "VS:AW",
+            "OptionName": "AW"
+          },
+          {
+            "SectionName": "IC",
+            "CombinedName": "IC:CF",
+            "OptionName": "CF"
+          },
+          {
+            "SectionName": "ICFS",
+            "CombinedName": "ICFS:BZ",
+            "OptionName": "BZ"
+          },
+          {
+            "SectionName": "OC",
+            "CombinedName": "OC:BK",
+            "OptionName": "BK"
+          },
+          {
+            "SectionName": "MVBT",
+            "CombinedName": "MVBT:AP",
+            "OptionName": "AP"
+          },
+          {
+            "SectionName": "N",
+            "CombinedName": "N:AM",
+            "OptionName": "AM"
+          },
+          {
+            "SectionName": "MVS",
+            "CombinedName": "MVS:DJ",
+            "OptionName": "DJ"
+          },
+          {
+            "SectionName": "MVSG",
+            "CombinedName": "MVSG:DJ",
+            "OptionName": "DJ"
+          },
+          {
+            "SectionName": "PSG",
+            "CombinedName": "PSG:DJ",
+            "OptionName": "DJ"
+          },
+          {
+            "SectionName": "FT",
+            "CombinedName": "FT:FG",
+            "OptionName": "FG"
+          },
+          {
+            "SectionName": "ACC7",
+            "CombinedName": "ACC7:XE",
+            "OptionName": "XE"
+          },
+          {
+            "SectionName": "NU",
+            "CombinedName": "NU:2",
+            "OptionName": "2"
+          },
+          {
+            "SectionName": "BLK",
+            "CombinedName": "BLK:BLN",
+            "OptionName": "BLN"
+          },
+          {
+            "SectionName": "PRV2SET",
+            "CombinedName": "PRV2SET:G",
+            "OptionName": "G"
+          }
+        ]
+      },
+      {
+        "ValveId": 641,
+        "DisplayName": "243, ",
+        "WorkflowKey": "A PO G VIII",
+        "Quantity": 1,
+        "ModelId": 73,
+        "Brand": "Anderson Greenwood",
+        "Name": "243",
+        "CatalogString": "24305F12/S1",
+        "ValveData": [
+          {
+            "Key": "CalculationMethod",
+            "Symbol": "",
+            "Name": "Calculation Method",
+            "Description": "Calculation Method",
+            "Value": "English"
+          },
+          {
+            "Key": "ProductType",
+            "Symbol": "",
+            "Name": "Product Type",
+            "Description": "The current product type we are sizing for",
+            "Value": "ReliefValve"
+          },
+          {
+            "Key": "Service",
+            "Symbol": "",
+            "Name": "Valve Service",
+            "Description": "Valve Service",
+            "Value": "Gas"
+          },
+          {
+            "Key": "FlowRateMethod",
+            "Symbol": "",
+            "Name": "Flow Rate Method",
+            "Description": "Flow Rate Method",
+            "Value": "GasVolume"
+          },
+          {
+            "Key": "SizingBasis",
+            "Symbol": "",
+            "Name": "Sizing Basis",
+            "Description": "Sizing Basis",
+            "Value": "Blocked Discharge"
+          },
+          {
+            "Key": "Code",
+            "Symbol": "",
+            "Name": "Code",
+            "Description": "Code",
+            "Value": "SectionVIII"
+          },
+          {
+            "Key": "calcPover",
+            "Symbol": "",
+            "Name": "Calculate Pover",
+            "Description": "Calculate Pover",
+            "Value": true
+          },
+          {
+            "Key": "percentPset",
+            "Symbol": "% Pset",
+            "Name": "Over Pressure %",
+            "Description": "Over Pressure as Percentage of Set Pressure",
+            "Value": "0.16 percentage.decimal"
+          },
+          {
+            "Key": "PressureFluidName",
+            "Symbol": "",
+            "Name": "Fluid Name",
+            "Description": "Name of Pressure Fluid",
+            "Value": "Acetylene"
+          },
+          {
+            "Key": "M",
+            "Symbol": "M",
+            "Name": "Molecular Weight",
+            "Description": "Pressure Molecular Weight",
+            "Value": 26.040000000000000000000000001
+          },
+          {
+            "Key": "k",
+            "Symbol": "k",
+            "Name": "k, (Cp / Cv)",
+            "Description": "Pressure Ratio of Specific Heats (Cp / Cv)",
+            "Value": 1.26000
+          },
+          {
+            "Key": "Z",
+            "Symbol": "Z",
+            "Name": "Compressibility",
+            "Description": "Pressure Compressability Factor",
+            "Value": 1.00000
+          },
+          {
+            "Key": "Spgvt",
+            "Symbol": "Spgvt",
+            "Name": "Sp. Gravity",
+            "Description": "Pressure Sp. Gravity",
+            "Value": 0.8988608905764584052468070418
+          },
+          {
+            "Key": "VacuumFluidName",
+            "Symbol": "",
+            "Name": "Fluid Name",
+            "Description": "Name of Vacuum Fluid",
+            "Value": ""
+          },
+          {
+            "Key": "Mv",
+            "Symbol": "M",
+            "Name": "Molecular Weight",
+            "Description": "Vacuum Molecular Weight",
+            "Value": null
+          },
+          {
+            "Key": "kv",
+            "Symbol": "k",
+            "Name": "k, (Cp / Cv)",
+            "Description": "Vacuum Ratio of Specific Heats (Cp / Cv)",
+            "Value": null
+          },
+          {
+            "Key": "Zv",
+            "Symbol": "Z",
+            "Name": "Compressibility",
+            "Description": "Vacuum Compressability Factor",
+            "Value": null
+          },
+          {
+            "Key": "SuperUserBackPressureModel",
+            "Symbol": "",
+            "Name": "Super User Back Pressure Model",
+            "Description": "Super User Back Pressure Model",
+            "Value": "BP"
+          },
+          {
+            "Key": "EnforceSectionVIIIRules",
+            "Symbol": "",
+            "Name": "ASME Section VIII/XIII (UV) Application",
+            "Description": "ASME Section VIII/XIII (UV) Application",
+            "Value": true
+          },
+          {
+            "Key": "MAWP",
+            "Symbol": "MAWP",
+            "Name": "System MAWP",
+            "Description": "Maximum Allowable Working Pressure",
+            "Value": "100 pressure.psig"
+          },
+          {
+            "Key": "Pn",
+            "Symbol": "Pn",
+            "Name": "Operating Pressure",
+            "Description": "Normal Operating Pressure",
+            "Value": " pressure.atm"
+          },
+          {
+            "Key": "isNonSTPUnitSelected",
+            "Symbol": "",
+            "Name": "isNonSTPUnitSelected",
+            "Description": "is Non-STP gas unit selected",
+            "Value": false
+          },
+          {
+            "Key": "Vreq(p)",
+            "Symbol": "Vreq",
+            "Name": "Required Pressure Flow",
+            "Description": "Required Gas/Vapor Volumetric Flow Rate",
+            "Value": "10000 flowrate.SCFM"
+          },
+          {
+            "Key": "Tn",
+            "Symbol": "Tn",
+            "Name": "Operating",
+            "Description": "Normal Operating Temperature",
+            "Value": " temp.degC"
+          },
+          {
+            "Key": "Tns",
+            "Symbol": "Tns",
+            "Name": "Normal System",
+            "Description": "Normal System",
+            "Value": " temp.degC"
+          },
+          {
+            "Key": "TdesignMin",
+            "Symbol": "TdesignMin",
+            "Name": "Min. Design",
+            "Description": "Minimum Design Temperature",
+            "Value": " temp.degC"
+          },
+          {
+            "Key": "Tdesign",
+            "Symbol": "TdesignMax",
+            "Name": "Max. Design",
+            "Description": "Maximum Design Temperature",
+            "Value": " temp.degC"
+          },
+          {
+            "Key": "SuperUserBackPressure",
+            "Symbol": "Super User Back pressure",
+            "Name": "Kb",
+            "Description": "Super User Back Pressure",
+            "Value": 1.0
+          },
+          {
+            "Key": "HasSuperUserModeBackPressure",
+            "Symbol": "",
+            "Name": "Has Super User Back Pressure",
+            "Description": "Has Super User Mode Back Pressure",
+            "Value": false
+          },
+          {
+            "Key": "calcPloss",
+            "Symbol": "",
+            "Name": "Calculate Ploss",
+            "Description": "Calculate Ploss",
+            "Value": false
+          },
+          {
+            "Key": "HasRuptureDisc",
+            "Symbol": "",
+            "Name": "Has Rupture Disc?",
+            "Description": "Has Rupture Disc?",
+            "Value": false
+          },
+          {
+            "Key": "VlFlowrateMethod",
+            "Symbol": "",
+            "Name": "Vl Flow Rate Method",
+            "Description": "Vl Flow Rate Method",
+            "Value": "LiquidVolume"
+          },
+          {
+            "Key": "Pset",
+            "Symbol": "Pset",
+            "Name": "Set Pressure",
+            "Description": "Pressure Setting",
+            "Value": "100 pressure.psig"
+          },
+          {
+            "Key": "Pover",
+            "Symbol": "Pover",
+            "Name": "Over Pressure",
+            "Description": "Pressure in Excess of Pset",
+            "Value": "16.00 pressure.psig"
+          },
+          {
+            "Key": "Ploss",
+            "Symbol": "Ploss",
+            "Name": "Inlet Loss",
+            "Description": "Inlet Line Loss",
+            "Value": "0 pressure.psig"
+          },
+          {
+            "Key": "pcntPloss",
+            "Symbol": "% Ploss",
+            "Name": "Inlet Loss %",
+            "Description": "Inlet Line Loss in percent of Set Pressure",
+            "Value": "0 percentage.decimal"
+          },
+          {
+            "Key": "Kc",
+            "Symbol": "Kc",
+            "Name": "Kc",
+            "Description": "Rupture Disc Combination Correction Factor",
+            "Value": 1.0
+          },
+          {
+            "Key": "Pbu",
+            "Symbol": "Pbu",
+            "Name": "Built-Up",
+            "Description": "Built-Up Back Pressure",
+            "Value": "0 pressure.psig"
+          },
+          {
+            "Key": "Psic",
+            "Symbol": "Psic",
+            "Name": "Constant Superimposed",
+            "Description": "Constant Superimposed Back Pressure",
+            "Value": "0 pressure.psig"
+          },
+          {
+            "Key": "Psiv",
+            "Symbol": "Psiv",
+            "Name": "Variable Superimposed",
+            "Description": "Variable Superimposed Back Pressure",
+            "Value": "0 pressure.psig"
+          },
+          {
+            "Key": "Pback",
+            "Symbol": "Pback",
+            "Name": "Total Back Pressure",
+            "Description": "Total Back Pressure",
+            "Value": "0 pressure.psig"
+          },
+          {
+            "Key": "PbackType",
+            "Symbol": "",
+            "Name": "PbackType",
+            "Description": "Back Pressure Correction Factor Type",
+            "Value": "None"
+          },
+          {
+            "Key": "Patm",
+            "Symbol": "Patm",
+            "Name": "Atm. Pressure",
+            "Description": "Atmospheric Pressure",
+            "Value": "14.696 absolutepressure.psia"
+          },
+          {
+            "Key": "P1(p)",
+            "Symbol": "P1",
+            "Name": "Relieving Pressure",
+            "Description": "Absolute Inlet Pressure (Relieving or Flowing Pressure)",
+            "Value": "130.696 absolutepressure.psia"
+          },
+          {
+            "Key": "P2(p)",
+            "Symbol": "P2",
+            "Name": "Outlet Pressure",
+            "Description": "Absolute Outlet Pressure",
+            "Value": "14.696 absolutepressure.psia"
+          },
+          {
+            "Key": "C",
+            "Symbol": "C",
+            "Name": "Gas Constant",
+            "Description": "Gas Coefficient",
+            "Value": 343.163852617207440
+          },
+          {
+            "Key": "PR",
+            "Symbol": "PR",
+            "Name": "Press. Ratio",
+            "Description": "Absolute Pressure Ratio",
+            "Value": 0.1124441451918956968843728959
+          },
+          {
+            "Key": "TPR",
+            "Symbol": "TPR",
+            "Name": "Theoretical Pressure Ratio",
+            "Description": "Theoretical Pressure Ratio for Critical Flow",
+            "Value": 0.553061843548458
+          },
+          {
+            "Key": "Fs",
+            "Symbol": "Fs",
+            "Name": "Fs",
+            "Description": "Subsonic Flow Factor",
+            "Value": 0.234103420936693
+          },
+          {
+            "Key": "Kb",
+            "Symbol": "Kb",
+            "Name": "Kb",
+            "Description": "Gas/Vapor Back Pressure Correction Factor",
+            "Value": 1.0
+          },
+          {
+            "Key": "AsmeApiDataSet",
+            "Symbol": "",
+            "Name": "Data Set",
+            "Description": "Data Set",
+            "Value": "ASME"
+          },
+          {
+            "Key": "ModelNumber",
+            "Symbol": "",
+            "Name": "Model Number",
+            "Description": "Model Number",
+            "Value": "243"
+          },
+          {
+            "Key": "Kd",
+            "Symbol": "Kd",
+            "Name": "Kd",
+            "Description": "Actual Flow Coefficient",
+            "Value": 0.975
+          },
+          {
+            "Key": "T",
+            "Symbol": "T",
+            "Name": "Relieving",
+            "Description": "Pressure Relieving Temperature",
+            "Value": "20 temp.degF"
+          },
+          {
+            "Key": "Vvalve(p)",
+            "Symbol": "V",
+            "Name": "Pressure Flow Capacity",
+            "Description": "Pressure Max. Gas/Vapor Volumetric Flow",
+            "Value": "794.5193559905962521213118688 flowrate.SCFM"
+          },
+          {
+            "Key": "Kmax",
+            "Symbol": "Kmax",
+            "Name": "Kmax",
+            "Description": "Flow Coefficient @ Full Capacity / Full Open",
+            "Value": 0.975
+          },
+          {
+            "Key": "Ppset",
+            "Symbol": "Pp-set",
+            "Name": "Pseudo-Set Pressure",
+            "Description": "Pseudo-Set Pressure",
+            "Value": "105.45454545454545454545454545 pressure.psig"
+          },
+          {
+            "Key": "Mwsp",
+            "Symbol": "M",
+            "Name": "Molecular Weight",
+            "Description": "Pressure Molecular Weight",
+            "Value": 26.04000
+          },
+          {
+            "Key": "PR'",
+            "Symbol": "PR'",
+            "Name": "Adj. Press. Ratio",
+            "Description": "Adjusted Absolute Pressure Ratio",
+            "Value": 0.1124441451918956968843728959
+          },
+          {
+            "Key": "FlowRateCapacity",
+            "Symbol": "FlowRateCapacity",
+            "Name": "The Capacity of Flowrate",
+            "Description": "The Capacity of Flowrate",
+            "Value": "Rated"
+          },
+          {
+            "Key": "MultivalveSizing",
+            "Symbol": "",
+            "Name": "Multivalve Sizing",
+            "Description": "Multivalve Sizing",
+            "Value": true
+          },
+          {
+            "Key": "Areq",
+            "Symbol": "Areq",
+            "Name": "Required Orifice Area (for Pressure)",
+            "Description": "Required Orifice Area (for Pressure)",
+            "Value": "4.4932826029756960342021912759 area.in2"
+          },
+          {
+            "Key": "TotalVvalve(p)",
+            "Symbol": "V",
+            "Name": "Total Actual Pressure Valve Flow",
+            "Description": "Total Valve Pressure Flow",
+            "Value": "11547.369713009811431618346007 flowrate.SCFM"
+          },
+          {
+            "Key": "TotalA",
+            "Symbol": "A",
+            "Name": "Total Selected Area",
+            "Description": "",
+            "Value": "4.783 area.in2"
+          },
+          {
+            "Key": "TotalAreq",
+            "Symbol": "Areq",
+            "Name": "Total Required Area",
+            "Description": "",
+            "Value": "4.6022986849177788428891338727 area.in2"
+          },
+          {
+            "Key": "TotalRatedVvalve(p)",
+            "Symbol": "Vp",
+            "Name": "Total Rated Pressure Valve Flow",
+            "Description": "",
+            "Value": "10392.632741708830288456511407 flowrate.SCFM"
+          },
+          {
+            "Key": "A",
+            "Symbol": "A",
+            "Name": "Orifice Area",
+            "Description": "Selected Orifice Area for a Valve",
+            "Value": "0.357 area.in2"
+          },
+          {
+            "Key": "AASME",
+            "Symbol": "AASME",
+            "Name": "Orifice Area (ASME Dataset)",
+            "Description": "Selected Orifice Area for a Valve",
+            "Value": "0.357 area.in2"
+          },
+          {
+            "Key": "Kapi",
+            "Symbol": "K (API)",
+            "Name": "K (API)",
+            "Description": "Derated Flow Coefficient",
+            "Value": 0.97500
+          },
+          {
+            "Key": "Orifice",
+            "Symbol": "",
+            "Name": "Orifice",
+            "Description": "Orifice",
+            "Value": "F"
+          },
+          {
+            "Key": "K",
+            "Symbol": "K",
+            "Name": "K",
+            "Description": "Derated Flow Coefficient",
+            "Value": 0.8775
+          },
+          {
+            "Key": "Kx",
+            "Symbol": "Kx",
+            "Name": "Kx",
+            "Description": "Flow Coefficient used for Flow Capacity Calculations",
+            "Value": 0.8775
+          },
+          {
+            "Key": "KxValue",
+            "Symbol": "",
+            "Name": "Kx Value",
+            "Description": "The Kx variable pressure value",
+            "Value": "K"
+          },
+          {
+            "Key": "CDTP",
+            "Symbol": "CDTP",
+            "Name": "CDTP",
+            "Description": "Cold Differential Test Pressure",
+            "Value": "100 pressure.psig"
+          },
+          {
+            "Key": "RatedVvalve(p)",
+            "Symbol": "Rated V",
+            "Name": "Rated Pressure Flow Capacity",
+            "Description": "Rated Pressure Max. Gas/Vapor Volumetric Flow",
+            "Value": "794.5193559905962521213118688 flowrate.SCFM"
+          },
+          {
+            "Key": "Asel",
+            "Symbol": "Asel",
+            "Name": "Selected Orifice Area",
+            "Description": "Total Selected Orifice Area of Valve(s)",
+            "Value": "0.357 area.in2"
+          },
+          {
+            "Key": "Vsel",
+            "Symbol": "Vsel",
+            "Name": "Total Flow Capacity",
+            "Description": "Total maximum gas/vapor volumetric flow rate of selected valve(s)",
+            "Value": "794.5193559905962521213118688 flowrate.SCFM"
+          },
+          {
+            "Key": "ValveName",
+            "Symbol": "",
+            "Name": "Valve Tag",
+            "Description": "Valve Name",
+            "Value": "Item-003"
+          },
+          {
+            "Key": "ValveInternals",
+            "Symbol": "",
+            "Name": "ValveInternals",
+            "Description": "ValveInternals",
+            "Value": "NoneSelected"
+          },
+          {
+            "Key": "IsDualDiaphragm",
+            "Symbol": "IsDualDiaphragm",
+            "Name": "IsDualDiaphragm",
+            "Description": "IsDualDiaphragm",
+            "Value": false
+          },
+          {
+            "Key": "IsDualOutlet",
+            "Symbol": "",
+            "Name": "Is Dual Outlet Valve",
+            "Description": "Is Dual Outlet Valve",
+            "Value": false
+          },
+          {
+            "Key": "Do",
+            "Symbol": "Do",
+            "Name": "Outlet Diameter",
+            "Description": "Valve Outlet Inside Diameter (STD Schedule Pipe)",
+            "Value": "1.76 length.in"
+          },
+          {
+            "Key": "r",
+            "Symbol": "r",
+            "Name": "Distance from Valve",
+            "Description": "Distance from the Point of Discharge",
+            "Value": "100 length.ft"
+          },
+          {
+            "Key": "Wvalve(p)",
+            "Symbol": "W",
+            "Name": "Flow Capacity",
+            "Description": "Max. Mass Flow Rate",
+            "Value": "0.4121600301340734052180034852 massflowrate.kgs"
+          },
+          {
+            "Key": "L100",
+            "Symbol": "L100",
+            "Name": "Noise @ 100-ft",
+            "Description": "Noise Level @ 100-ft from Discharge",
+            "Value": "101.3869058549781715 sound.db"
+          },
+          {
+            "Key": "Lp",
+            "Symbol": "Lp",
+            "Name": "Noise Level",
+            "Description": "Noise Level @ Distance Other Than 100-ft from Discharge",
+            "Value": "101.3869058549781715 sound.db"
+          },
+          {
+            "Key": "NameplateCriteria",
+            "Symbol": "",
+            "Name": "Nameplate Criteria",
+            "Description": "Nameplate Capacity Criteria",
+            "Value": "Air @ 60°F, 14.7 psia"
+          },
+          {
+            "Key": "Wnpg(p)",
+            "Symbol": "Wnpg",
+            "Name": "Press. Nameplate Capacity",
+            "Description": "Nameplate Capacity for Gas/Vapor Service",
+            "Value": "716 flowrate.SCFM"
+          },
+          {
+            "Key": "Fr",
+            "Symbol": "Fr",
+            "Name": "Reaction Force",
+            "Description": "Reactive Thrust Force (Reaction Force)",
+            "Value": "31.848327488377300439246040572 force.lbf"
+          },
+          {
+            "Key": "ValveDimensionA",
+            "Symbol": "A",
+            "Name": "A",
+            "Description": "Valve Dimension A",
+            "Value": "4.12 length.in"
+          },
+          {
+            "Key": "ValveDimensionB",
+            "Symbol": "B",
+            "Name": "B",
+            "Description": "Valve Dimension B",
+            "Value": "4.5 length.in"
+          },
+          {
+            "Key": "ValveDimensionC",
+            "Symbol": "C",
+            "Name": "C",
+            "Description": "Valve Dimension C",
+            "Value": "14.42 length.in"
+          },
+          {
+            "Key": "ValveWeight",
+            "Symbol": "ValveWeight",
+            "Name": "Weight",
+            "Description": "Valve Weight",
+            "Value": "26 mass.lbm"
+          },
+          {
+            "Key": "ValveActualWeight",
+            "Symbol": "ValveActualWeight",
+            "Name": "Weight",
+            "Description": "Valve Weight",
+            "Value": "26 mass.lbm"
+          },
+          {
+            "Key": "Kz",
+            "Symbol": "Kz",
+            "Name": "Kz",
+            "Description": "Flow Coefficient used for Reaction Force Calculations",
+            "Value": 0.975
+          },
+          {
+            "Key": "Po",
+            "Symbol": "Po",
+            "Name": "Outlet Static Pressure",
+            "Description": "Outlet Static Pressure",
+            "Value": "-3.696013835168837849256349763 pressure.psig"
+          }
+        ],
+        "PricingData": null,
+        "CustomizedData": null,
+        "ConfigData": [
+          {
+            "SectionName": "VMD",
+            "CombinedName": "VMD:A",
+            "OptionName": "A"
+          },
+          {
+            "SectionName": "ACC5",
+            "CombinedName": "ACC5:XI",
+            "OptionName": "XI"
+          },
+          {
+            "SectionName": "ACC1",
+            "CombinedName": "ACC1:XG",
+            "OptionName": "XG"
+          },
+          {
+            "SectionName": "ACC2",
+            "CombinedName": "ACC2:XH",
+            "OptionName": "XH"
+          },
+          {
+            "SectionName": "ACC9",
+            "CombinedName": "ACC9:XJ",
+            "OptionName": "XJ"
+          },
+          {
+            "SectionName": "ACC7",
+            "CombinedName": "ACC7:XA",
+            "OptionName": "XA"
+          },
+          {
+            "SectionName": "ACC3",
+            "CombinedName": "ACC3:XC",
+            "OptionName": "XC"
+          },
+          {
+            "SectionName": "CC",
+            "CombinedName": "CC:1",
+            "OptionName": "1"
+          },
+          {
+            "SectionName": "ACC4",
+            "CombinedName": "ACC4:XD",
+            "OptionName": "XD"
+          },
+          {
+            "SectionName": "ACC8",
+            "CombinedName": "ACC8:XF",
+            "OptionName": "XF"
+          },
+          {
+            "SectionName": "PE",
+            "CombinedName": "PE:MC",
+            "OptionName": "MC"
+          },
+          {
+            "SectionName": "PSP",
+            "CombinedName": "PSP:JU",
+            "OptionName": "JU"
+          },
+          {
+            "SectionName": "SPR",
+            "CombinedName": "SPR:LU",
+            "OptionName": "LU"
+          },
+          {
+            "SectionName": "MOD",
+            "CombinedName": "MOD:2",
+            "OptionName": "2"
+          },
+          {
+            "SectionName": "CODE",
+            "CombinedName": "CODE:8",
+            "OptionName": "8"
+          },
+          {
+            "SectionName": "MVL",
+            "CombinedName": "MVL:AA",
+            "OptionName": "AA"
+          },
+          {
+            "SectionName": "MVPT",
+            "CombinedName": "MVPT:AE",
+            "OptionName": "AE"
+          },
+          {
+            "SectionName": "SERV",
+            "CombinedName": "SERV:DE",
+            "OptionName": "DE"
+          },
+          {
+            "SectionName": "OR",
+            "CombinedName": "OR:BU",
+            "OptionName": "BU"
+          },
+          {
+            "SectionName": "MAT",
+            "CombinedName": "MAT:AH",
+            "OptionName": "AH"
+          },
+          {
+            "SectionName": "VS",
+            "CombinedName": "VS:AV",
+            "OptionName": "AV"
+          },
+          {
+            "SectionName": "IC",
+            "CombinedName": "IC:CF",
+            "OptionName": "CF"
+          },
+          {
+            "SectionName": "ICFS",
+            "CombinedName": "ICFS:BZ",
+            "OptionName": "BZ"
+          },
+          {
+            "SectionName": "OC",
+            "CombinedName": "OC:BK",
+            "OptionName": "BK"
+          },
+          {
+            "SectionName": "MVBT",
+            "CombinedName": "MVBT:AO",
+            "OptionName": "AO"
+          },
+          {
+            "SectionName": "N",
+            "CombinedName": "N:AM",
+            "OptionName": "AM"
+          },
+          {
+            "SectionName": "MVS",
+            "CombinedName": "MVS:DJ",
+            "OptionName": "DJ"
+          },
+          {
+            "SectionName": "MVSG",
+            "CombinedName": "MVSG:DJ",
+            "OptionName": "DJ"
+          },
+          {
+            "SectionName": "PSG",
+            "CombinedName": "PSG:DJ",
+            "OptionName": "DJ"
+          },
+          {
+            "SectionName": "FT",
+            "CombinedName": "FT:FG",
+            "OptionName": "FG"
+          },
+          {
+            "SectionName": "NU",
+            "CombinedName": "NU:1",
+            "OptionName": "1"
+          },
+          {
+            "SectionName": "ACC6",
+            "CombinedName": "ACC6:XE",
+            "OptionName": "XE"
+          },
+          {
+            "SectionName": "BLK",
+            "CombinedName": "BLK:BLN",
+            "OptionName": "BLN"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "TagId": 26,
+    "TagGuid": "79bdb042-86cd-4022-8a57-c2b0d956efca",
+    "TagName": "PSV-High Pressure 1",
+    "TagNumbers": "PSV-High Pressure 1",
+    "TagNotes": "",
+    "ProjectGuid": "c1ce7bdb-d9c1-47b0-a1b4-efdfac063436",
+    "ProjectName": "Test Crosby EM",
+    "CompanyGuid": "9f19872d-32cf-411b-a412-c91566120832",
+    "CompanyName": "My Company",
+    "Quantity": "1",
+    "CRMProjectID": "",
+    "SizingData": [
+      {
+        "Key": "ProductType",
+        "Symbol": "",
+        "Name": "Product Type",
+        "Description": "The current product type we are sizing for",
+        "Value": "ReliefValve"
+      },
+      {
+        "Key": "Service",
+        "Symbol": "",
+        "Name": "Valve Service",
+        "Description": "Valve Service",
+        "Value": "Gas"
+      },
+      {
+        "Key": "FlowRateMethod",
+        "Symbol": "",
+        "Name": "Flow Rate Method",
+        "Description": "Flow Rate Method",
+        "Value": "Mass"
+      },
+      {
+        "Key": "SizingBasis",
+        "Symbol": "",
+        "Name": "Sizing Basis",
+        "Description": "Sizing Basis",
+        "Value": "Blocked Discharge"
+      },
+      {
+        "Key": "Code",
+        "Symbol": "",
+        "Name": "Code",
+        "Description": "Code",
+        "Value": "ISO4126"
+      },
+      {
+        "Key": "AsmeApiDataSet",
+        "Symbol": "",
+        "Name": "Data Set",
+        "Description": "Data Set",
+        "Value": "ASME"
+      },
+      {
+        "Key": "CalculationMethod",
+        "Symbol": "",
+        "Name": "Calculation Method",
+        "Description": "Calculation Method",
+        "Value": "Metric"
+      },
+      {
+        "Key": "calcPover",
+        "Symbol": "",
+        "Name": "Calculate Pover",
+        "Description": "Calculate Pover",
+        "Value": true
+      },
+      {
+        "Key": "percentPset",
+        "Symbol": "% Pset",
+        "Name": "Over Pressure %",
+        "Description": "Over Pressure as Percentage of Set Pressure",
+        "Value": "10.00 percentage.%"
+      },
+      {
+        "Key": "calcPloss",
+        "Symbol": "",
+        "Name": "Calculate Ploss",
+        "Description": "Calculate Ploss",
+        "Value": false
+      },
+      {
+        "Key": "MultivalveSizing",
+        "Symbol": "",
+        "Name": "Multivalve Sizing",
+        "Description": "Multivalve Sizing",
+        "Value": false
+      },
+      {
+        "Key": "M",
+        "Symbol": "M",
+        "Name": "Molecular Weight",
+        "Description": "Pressure Molecular Weight",
+        "Value": 20.0
+      },
+      {
+        "Key": "n",
+        "Symbol": "n",
+        "Name": "Isentropoic Exponent",
+        "Description": "Isentropoic Exponent",
+        "Value": 1.3
+      },
+      {
+        "Key": "Z",
+        "Symbol": "Z",
+        "Name": "Compressibility",
+        "Description": "Pressure Compressability Factor",
+        "Value": 1.0
+      },
+      {
+        "Key": "PressureFluidName",
+        "Symbol": "",
+        "Name": "Fluid Name",
+        "Description": "Name of Pressure Fluid",
+        "Value": null
+      },
+      {
+        "Key": "T",
+        "Symbol": "T",
+        "Name": "Relieving",
+        "Description": "Pressure Relieving Temperature",
+        "Value": "40 temp.degC"
+      },
+      {
+        "Key": "Tn",
+        "Symbol": "Tn",
+        "Name": "Operating",
+        "Description": "Normal Operating Temperature",
+        "Value": " temp.degC"
+      },
+      {
+        "Key": "Tns",
+        "Symbol": "Tns",
+        "Name": "Normal System",
+        "Description": "Normal System",
+        "Value": " temp.degC"
+      },
+      {
+        "Key": "TdesignMin",
+        "Symbol": "TdesignMin",
+        "Name": "Min. Design",
+        "Description": "Minimum Design Temperature",
+        "Value": " temp.degC"
+      },
+      {
+        "Key": "Tdesign",
+        "Symbol": "TdesignMax",
+        "Name": "Max. Design",
+        "Description": "Maximum Design Temperature",
+        "Value": " temp.degC"
+      },
+      {
+        "Key": "HasCondensation",
+        "Symbol": "",
+        "Name": "Condensation is present.",
+        "Description": "Is Condensation present",
+        "Value": false
+      },
+      {
+        "Key": "IsCriticalityThermo",
+        "Symbol": "",
+        "Name": "Relieving temperature is greater than 90% of the thermodynamic critical temperature AND the relieving pressure is greater than 50% of the thermodynamic critical pressure.",
+        "Description": "Criticality is Thermo",
+        "Value": false
+      },
+      {
+        "Key": "Qreq",
+        "Symbol": "Qreq",
+        "Name": "Required Pressure Flow",
+        "Description": "Required Mass Flow Rate",
+        "Value": "15000 massflowrate.kghr"
+      },
+      {
+        "Key": "Patm",
+        "Symbol": "Patm",
+        "Name": "Atm. Pressure",
+        "Description": "Atmospheric Pressure",
+        "Value": "1.013 absolutepressure.bara"
+      },
+      {
+        "Key": "MAWP",
+        "Symbol": "MAWP",
+        "Name": "System MAWP",
+        "Description": "Maximum Allowable Working Pressure",
+        "Value": " pressure.atm"
+      },
+      {
+        "Key": "Pn",
+        "Symbol": "Pn",
+        "Name": "Operating Pressure",
+        "Description": "Normal Operating Pressure",
+        "Value": " pressure.atm"
+      },
+      {
+        "Key": "Pset",
+        "Symbol": "Pset",
+        "Name": "Set Pressure",
+        "Description": "Pressure Setting",
+        "Value": "30 pressure.barg"
+      },
+      {
+        "Key": "Pover",
+        "Symbol": "Pover",
+        "Name": "Over Pressure",
+        "Description": "Pressure in Excess of Pset",
+        "Value": "3.00 pressure.barg"
+      },
+      {
+        "Key": "Pbu",
+        "Symbol": "Pbu",
+        "Name": "Built-Up",
+        "Description": "Built-Up Back Pressure",
+        "Value": "0 pressure.psig"
+      },
+      {
+        "Key": "Psic",
+        "Symbol": "Psic",
+        "Name": "Constant Superimposed",
+        "Description": "Constant Superimposed Back Pressure",
+        "Value": "0 pressure.psig"
+      },
+      {
+        "Key": "Psiv",
+        "Symbol": "Psiv",
+        "Name": "Variable Superimposed",
+        "Description": "Variable Superimposed Back Pressure",
+        "Value": "0 pressure.psig"
+      },
+      {
+        "Key": "Pback",
+        "Symbol": "Pback",
+        "Name": "Total Back Pressure",
+        "Description": "Total Back Pressure",
+        "Value": "0 pressure.barg"
+      },
+      {
+        "Key": "pcntPloss",
+        "Symbol": "% Ploss",
+        "Name": "Inlet Loss %",
+        "Description": "Inlet Line Loss in percent of Set Pressure",
+        "Value": "0 percentage.decimal"
+      },
+      {
+        "Key": "Ploss",
+        "Symbol": "Ploss",
+        "Name": "Inlet Loss",
+        "Description": "Inlet Line Loss",
+        "Value": "0 pressure.psig"
+      },
+      {
+        "Key": "HasRuptureDisc",
+        "Symbol": "",
+        "Name": "Has Rupture Disc?",
+        "Description": "Has Rupture Disc?",
+        "Value": false
+      },
+      {
+        "Key": "Fd",
+        "Symbol": "Fd",
+        "Name": "Fd",
+        "Description": "Rupture Disc Combination Correction Factor",
+        "Value": 1.0
+      },
+      {
+        "Key": "Pu",
+        "Symbol": "Pu",
+        "Name": "Pu",
+        "Description": "Pu",
+        "Value": " absolutepressure.atm"
+      },
+      {
+        "Key": "Kc",
+        "Symbol": "Kc",
+        "Name": "Kc",
+        "Description": "Rupture Disc Combination Correction Factor",
+        "Value": 1.0
+      },
+      {
+        "Key": "PbackType",
+        "Symbol": "",
+        "Name": "PbackType",
+        "Description": "Back Pressure Correction Factor Type",
+        "Value": "None"
+      },
+      {
+        "Key": "PoverMin",
+        "Symbol": "Pover,Min",
+        "Name": "Over Pressure Min",
+        "Description": "Over Pressure Min",
+        "Value": "3.0 pressure.barg"
+      },
+      {
+        "Key": "PoverMax",
+        "Symbol": "Pover,Max",
+        "Name": "Over Pressure Max",
+        "Description": "Over Pressure Max",
+        "Value": "3.0 pressure.barg"
+      },
+      {
+        "Key": "P1(p)",
+        "Symbol": "P1",
+        "Name": "Relieving Pressure",
+        "Description": "Absolute Inlet Pressure (Relieving or Flowing Pressure)",
+        "Value": "34.013 absolutepressure.bara"
+      },
+      {
+        "Key": "P2(p)",
+        "Symbol": "P2",
+        "Name": "Outlet Pressure",
+        "Description": "Absolute Outlet Pressure",
+        "Value": "1.013 absolutepressure.bara"
+      },
+      {
+        "Key": "PR",
+        "Symbol": "PR",
+        "Name": "Press. Ratio",
+        "Description": "Absolute Pressure Ratio",
+        "Value": 0.0297827301325963602152118308
+      },
+      {
+        "Key": "k",
+        "Symbol": "k",
+        "Name": "k, (Cp / Cv)",
+        "Description": "Pressure Ratio of Specific Heats (Cp / Cv)",
+        "Value": 1.3
+      },
+      {
+        "Key": "TPR",
+        "Symbol": "TPR",
+        "Name": "Theoretical Pressure Ratio",
+        "Description": "Theoretical Pressure Ratio for Critical Flow",
+        "Value": 0.545727733814065
+      }
+    ],
+    "SpecialReqData": null,
+    "SelectedValves": [
+      {
+        "ValveId": 3826,
+        "DisplayName": "EMC, ",
+        "WorkflowKey": "CR G ISO_4126",
+        "Quantity": 1,
+        "ModelId": 132,
+        "Brand": "Crosby®",
+        "Name": "EMC",
+        "CatalogString": "EMC040-1A11C1C0J_",
+        "ValveData": [
+          {
+            "Key": "ProductType",
+            "Symbol": "",
+            "Name": "Product Type",
+            "Description": "The current product type we are sizing for",
+            "Value": "ReliefValve"
+          },
+          {
+            "Key": "Service",
+            "Symbol": "",
+            "Name": "Valve Service",
+            "Description": "Valve Service",
+            "Value": "Gas"
+          },
+          {
+            "Key": "FlowRateMethod",
+            "Symbol": "",
+            "Name": "Flow Rate Method",
+            "Description": "Flow Rate Method",
+            "Value": "Mass"
+          },
+          {
+            "Key": "SizingBasis",
+            "Symbol": "",
+            "Name": "Sizing Basis",
+            "Description": "Sizing Basis",
+            "Value": "Blocked Discharge"
+          },
+          {
+            "Key": "Code",
+            "Symbol": "",
+            "Name": "Code",
+            "Description": "Code",
+            "Value": "ISO4126"
+          },
+          {
+            "Key": "AsmeApiDataSet",
+            "Symbol": "",
+            "Name": "Data Set",
+            "Description": "Data Set",
+            "Value": "ASME"
+          },
+          {
+            "Key": "CalculationMethod",
+            "Symbol": "",
+            "Name": "Calculation Method",
+            "Description": "Calculation Method",
+            "Value": "Metric"
+          },
+          {
+            "Key": "calcPover",
+            "Symbol": "",
+            "Name": "Calculate Pover",
+            "Description": "Calculate Pover",
+            "Value": true
+          },
+          {
+            "Key": "percentPset",
+            "Symbol": "% Pset",
+            "Name": "Over Pressure %",
+            "Description": "Over Pressure as Percentage of Set Pressure",
+            "Value": "10.00 percentage.%"
+          },
+          {
+            "Key": "calcPloss",
+            "Symbol": "",
+            "Name": "Calculate Ploss",
+            "Description": "Calculate Ploss",
+            "Value": false
+          },
+          {
+            "Key": "MultivalveSizing",
+            "Symbol": "",
+            "Name": "Multivalve Sizing",
+            "Description": "Multivalve Sizing",
+            "Value": false
+          },
+          {
+            "Key": "M",
+            "Symbol": "M",
+            "Name": "Molecular Weight",
+            "Description": "Pressure Molecular Weight",
+            "Value": 20.0
+          },
+          {
+            "Key": "n",
+            "Symbol": "n",
+            "Name": "Isentropoic Exponent",
+            "Description": "Isentropoic Exponent",
+            "Value": 1.3
+          },
+          {
+            "Key": "Z",
+            "Symbol": "Z",
+            "Name": "Compressibility",
+            "Description": "Pressure Compressability Factor",
+            "Value": 1.0
+          },
+          {
+            "Key": "PressureFluidName",
+            "Symbol": "",
+            "Name": "Fluid Name",
+            "Description": "Name of Pressure Fluid",
+            "Value": null
+          },
+          {
+            "Key": "T",
+            "Symbol": "T",
+            "Name": "Relieving",
+            "Description": "Pressure Relieving Temperature",
+            "Value": "40 temp.degC"
+          },
+          {
+            "Key": "Tn",
+            "Symbol": "Tn",
+            "Name": "Operating",
+            "Description": "Normal Operating Temperature",
+            "Value": " temp.degC"
+          },
+          {
+            "Key": "Tns",
+            "Symbol": "Tns",
+            "Name": "Normal System",
+            "Description": "Normal System",
+            "Value": " temp.degC"
+          },
+          {
+            "Key": "TdesignMin",
+            "Symbol": "TdesignMin",
+            "Name": "Min. Design",
+            "Description": "Minimum Design Temperature",
+            "Value": " temp.degC"
+          },
+          {
+            "Key": "Tdesign",
+            "Symbol": "TdesignMax",
+            "Name": "Max. Design",
+            "Description": "Maximum Design Temperature",
+            "Value": " temp.degC"
+          },
+          {
+            "Key": "HasCondensation",
+            "Symbol": "",
+            "Name": "Condensation is present.",
+            "Description": "Is Condensation present",
+            "Value": false
+          },
+          {
+            "Key": "IsCriticalityThermo",
+            "Symbol": "",
+            "Name": "Relieving temperature is greater than 90% of the thermodynamic critical temperature AND the relieving pressure is greater than 50% of the thermodynamic critical pressure.",
+            "Description": "Criticality is Thermo",
+            "Value": false
+          },
+          {
+            "Key": "Qreq",
+            "Symbol": "Qreq",
+            "Name": "Required Pressure Flow",
+            "Description": "Required Mass Flow Rate",
+            "Value": "15000 massflowrate.kghr"
+          },
+          {
+            "Key": "Patm",
+            "Symbol": "Patm",
+            "Name": "Atm. Pressure",
+            "Description": "Atmospheric Pressure",
+            "Value": "1.013 absolutepressure.bara"
+          },
+          {
+            "Key": "MAWP",
+            "Symbol": "MAWP",
+            "Name": "System MAWP",
+            "Description": "Maximum Allowable Working Pressure",
+            "Value": " pressure.atm"
+          },
+          {
+            "Key": "Pn",
+            "Symbol": "Pn",
+            "Name": "Operating Pressure",
+            "Description": "Normal Operating Pressure",
+            "Value": " pressure.atm"
+          },
+          {
+            "Key": "Pset",
+            "Symbol": "Pset",
+            "Name": "Set Pressure",
+            "Description": "Pressure Setting",
+            "Value": "30 pressure.barg"
+          },
+          {
+            "Key": "Pover",
+            "Symbol": "Pover",
+            "Name": "Over Pressure",
+            "Description": "Pressure in Excess of Pset",
+            "Value": "3.00 pressure.barg"
+          },
+          {
+            "Key": "Pbu",
+            "Symbol": "Pbu",
+            "Name": "Built-Up",
+            "Description": "Built-Up Back Pressure",
+            "Value": "0 pressure.psig"
+          },
+          {
+            "Key": "Psic",
+            "Symbol": "Psic",
+            "Name": "Constant Superimposed",
+            "Description": "Constant Superimposed Back Pressure",
+            "Value": "0 pressure.psig"
+          },
+          {
+            "Key": "Psiv",
+            "Symbol": "Psiv",
+            "Name": "Variable Superimposed",
+            "Description": "Variable Superimposed Back Pressure",
+            "Value": "0 pressure.psig"
+          },
+          {
+            "Key": "Pback",
+            "Symbol": "Pback",
+            "Name": "Total Back Pressure",
+            "Description": "Total Back Pressure",
+            "Value": "0 pressure.barg"
+          },
+          {
+            "Key": "pcntPloss",
+            "Symbol": "% Ploss",
+            "Name": "Inlet Loss %",
+            "Description": "Inlet Line Loss in percent of Set Pressure",
+            "Value": "0 percentage.decimal"
+          },
+          {
+            "Key": "Ploss",
+            "Symbol": "Ploss",
+            "Name": "Inlet Loss",
+            "Description": "Inlet Line Loss",
+            "Value": "0 pressure.psig"
+          },
+          {
+            "Key": "HasRuptureDisc",
+            "Symbol": "",
+            "Name": "Has Rupture Disc?",
+            "Description": "Has Rupture Disc?",
+            "Value": false
+          },
+          {
+            "Key": "Fd",
+            "Symbol": "Fd",
+            "Name": "Fd",
+            "Description": "Rupture Disc Combination Correction Factor",
+            "Value": 1.0
+          },
+          {
+            "Key": "Pu",
+            "Symbol": "Pu",
+            "Name": "Pu",
+            "Description": "Pu",
+            "Value": " absolutepressure.atm"
+          },
+          {
+            "Key": "Kc",
+            "Symbol": "Kc",
+            "Name": "Kc",
+            "Description": "Rupture Disc Combination Correction Factor",
+            "Value": 1.0
+          },
+          {
+            "Key": "PbackType",
+            "Symbol": "",
+            "Name": "PbackType",
+            "Description": "Back Pressure Correction Factor Type",
+            "Value": "None"
+          },
+          {
+            "Key": "PoverMin",
+            "Symbol": "Pover,Min",
+            "Name": "Over Pressure Min",
+            "Description": "Over Pressure Min",
+            "Value": "3.0 pressure.barg"
+          },
+          {
+            "Key": "PoverMax",
+            "Symbol": "Pover,Max",
+            "Name": "Over Pressure Max",
+            "Description": "Over Pressure Max",
+            "Value": "3.0 pressure.barg"
+          },
+          {
+            "Key": "P1(p)",
+            "Symbol": "P1",
+            "Name": "Relieving Pressure",
+            "Description": "Absolute Inlet Pressure (Relieving or Flowing Pressure)",
+            "Value": "34.013 absolutepressure.bara"
+          },
+          {
+            "Key": "P2(p)",
+            "Symbol": "P2",
+            "Name": "Outlet Pressure",
+            "Description": "Absolute Outlet Pressure",
+            "Value": "1.013 absolutepressure.bara"
+          },
+          {
+            "Key": "PR",
+            "Symbol": "PR",
+            "Name": "Press. Ratio",
+            "Description": "Absolute Pressure Ratio",
+            "Value": 0.0297827301325963602152118308
+          },
+          {
+            "Key": "k",
+            "Symbol": "k",
+            "Name": "k, (Cp / Cv)",
+            "Description": "Pressure Ratio of Specific Heats (Cp / Cv)",
+            "Value": 1.3
+          },
+          {
+            "Key": "TPR",
+            "Symbol": "TPR",
+            "Name": "Theoretical Pressure Ratio",
+            "Description": "Theoretical Pressure Ratio for Critical Flow",
+            "Value": 0.545727733814065
+          },
+          {
+            "Key": "A",
+            "Symbol": "A",
+            "Name": "Orifice Area",
+            "Description": "Selected Orifice Area for a Valve",
+            "Value": "1.666253 area.in2"
+          },
+          {
+            "Key": "AASME",
+            "Symbol": "AASME",
+            "Name": "Orifice Area (ASME Dataset)",
+            "Description": "Selected Orifice Area for a Valve",
+            "Value": "1.666253 area.in2"
+          },
+          {
+            "Key": "Kmax",
+            "Symbol": "Kmax",
+            "Name": "Kmax",
+            "Description": "Flow Coefficient @ Full Capacity / Full Open",
+            "Value": 0.79
+          },
+          {
+            "Key": "ModelNumber",
+            "Symbol": "",
+            "Name": "Model Number",
+            "Description": "Model Number",
+            "Value": "EMC"
+          },
+          {
+            "Key": "Orifice",
+            "Symbol": "",
+            "Name": "Orifice",
+            "Description": "Orifice",
+            "Value": "DN40 / 1 1/2\""
+          },
+          {
+            "Key": "Kd",
+            "Symbol": "Kd",
+            "Name": "Kd",
+            "Description": "Actual Flow Coefficient",
+            "Value": 0.79
+          },
+          {
+            "Key": "K",
+            "Symbol": "K",
+            "Name": "K",
+            "Description": "Derated Flow Coefficient",
+            "Value": 0.711
+          },
+          {
+            "Key": "CDTP",
+            "Symbol": "CDTP",
+            "Name": "CDTP",
+            "Description": "Cold Differential Test Pressure",
+            "Value": "435.11321319067655761442184690 pressure.psig"
+          },
+          {
+            "Key": "Ktcf",
+            "Symbol": "Ktcf",
+            "Name": "Ktcf",
+            "Description": "Temperature Correction Factor for CDTP",
+            "Value": 1.0
+          },
+          {
+            "Key": "Kb",
+            "Symbol": "Kb",
+            "Name": "Kb",
+            "Description": "Gas/Vapor Back Pressure Correction Factor",
+            "Value": 1.0
+          },
+          {
+            "Key": "C",
+            "Symbol": "C",
+            "Name": "Gas Constant",
+            "Description": "Gas Coefficient",
+            "Value": 2.634351762698923176
+          },
+          {
+            "Key": "IsSystemCritical_ISO",
+            "Symbol": "",
+            "Name": "IsSystemCritical_ISO",
+            "Description": "IsSystemCritical_ISO",
+            "Value": true
+          },
+          {
+            "Key": "Kdr",
+            "Symbol": "Kdr",
+            "Name": "Kdr",
+            "Description": "Kdr",
+            "Value": 0.711
+          },
+          {
+            "Key": "Qm",
+            "Symbol": "Qm",
+            "Name": "Valve Flow",
+            "Description": "Flow Rate",
+            "Value": "17307.545127886032689414121350 massflowrate.kghr"
+          },
+          {
+            "Key": "QmActual",
+            "Symbol": "QmActual",
+            "Name": "Valve Flow (Actual)",
+            "Description": "Flow Rate (Actual)",
+            "Value": "19230.605697651147432682357056 massflowrate.kghr"
+          },
+          {
+            "Key": "Areq",
+            "Symbol": "Areq",
+            "Name": "Required Orifice Area (for Pressure)",
+            "Description": "Required Orifice Area (for Pressure)",
+            "Value": "931.6744034497057528450918639 area.mm2"
+          },
+          {
+            "Key": "v1",
+            "Symbol": "v1",
+            "Name": "Inlet Sp. Vol. Mixture",
+            "Description": "Specific volume of mixture at inlet",
+            "Value": "0.0382725590215505836003880869 specificvolume.m3kg"
+          },
+          {
+            "Key": "ValveInternals",
+            "Symbol": "",
+            "Name": "ValveInternals",
+            "Description": "ValveInternals",
+            "Value": "NoneSelected"
+          },
+          {
+            "Key": "IsDualDiaphragm",
+            "Symbol": "IsDualDiaphragm",
+            "Name": "IsDualDiaphragm",
+            "Description": "IsDualDiaphragm",
+            "Value": false
+          },
+          {
+            "Key": "IsDualOutlet",
+            "Symbol": "",
+            "Name": "Is Dual Outlet Valve",
+            "Description": "Is Dual Outlet Valve",
+            "Value": false
+          },
+          {
+            "Key": "Do",
+            "Symbol": "Do",
+            "Name": "Outlet Diameter",
+            "Description": "Valve Outlet Inside Diameter (STD Schedule Pipe)",
+            "Value": "65 length.in"
+          },
+          {
+            "Key": "u",
+            "Symbol": "u",
+            "Name": "Velocity",
+            "Description": "Velocity",
+            "Value": " velocity.fts"
+          },
+          {
+            "Key": "r",
+            "Symbol": "r",
+            "Name": "Distance from Valve",
+            "Description": "Distance from the Point of Discharge",
+            "Value": "30.000000000000 length.m"
+          },
+          {
+            "Key": "Fr",
+            "Symbol": "Fr",
+            "Name": "Reaction Force",
+            "Description": "Reactive Thrust Force (Reaction Force)",
+            "Value": " force.N"
+          },
+          {
+            "Key": "PWL",
+            "Symbol": "PWL",
+            "Name": "Sound Power Level",
+            "Description": "Noise Level @ 100-ft from Discharge",
+            "Value": " sound.db"
+          },
+          {
+            "Key": "PSLr",
+            "Symbol": "PSLr",
+            "Name": "Sound Pressure Level at Distance from Valve",
+            "Description": "Noise Level @ Distance Other Than 100-ft from Discharge",
+            "Value": " sound.db"
+          },
+          {
+            "Key": "Is_Restricted_Lift",
+            "Symbol": "",
+            "Name": "Is_Restricted_lift",
+            "Description": "Is Restricted Lift selected",
+            "Value": false
+          },
+          {
+            "Key": "Kb_ISO",
+            "Symbol": "Kb_ISO",
+            "Name": "Kb_ISO",
+            "Description": "Gas/Vapor Back Pressure Correction Factor ISO 4126",
+            "Value": 1.0
+          },
+          {
+            "Key": "Ao",
+            "Symbol": "Ao",
+            "Name": "Outlet Area",
+            "Description": "Valve Outlet Area (STD Schedule Pipe)",
+            "Value": " area.m2"
+          },
+          {
+            "Key": "LR",
+            "Symbol": "LR",
+            "Name": "Lift Restriction",
+            "Description": "Lift Restriction",
+            "Value": null
+          },
+          {
+            "Key": "ValveDimensionA",
+            "Symbol": "A",
+            "Name": "A",
+            "Description": "Valve Dimension A",
+            "Value": "140 length.in"
+          },
+          {
+            "Key": "ValveDimensionB",
+            "Symbol": "B",
+            "Name": "B",
+            "Description": "Valve Dimension B",
+            "Value": "115 length.in"
+          },
+          {
+            "Key": "ValveDimensionC",
+            "Symbol": "C",
+            "Name": "C",
+            "Description": "Valve Dimension C",
+            "Value": "569 length.in"
+          },
+          {
+            "Key": "ValveDimensionE",
+            "Symbol": "E",
+            "Name": "E",
+            "Description": "Valve Dimension E",
+            "Value": "75 length.in"
+          },
+          {
+            "Key": "ValveDimensionH",
+            "Symbol": "H",
+            "Name": "H",
+            "Description": "Valve Dimension H",
+            "Value": "155 length.in"
+          },
+          {
+            "Key": "ValveWeight",
+            "Symbol": "ValveWeight",
+            "Name": "Weight",
+            "Description": "Valve Weight",
+            "Value": "22 mass.lbm"
+          },
+          {
+            "Key": "ValveActualWeight",
+            "Symbol": "ValveActualWeight",
+            "Name": "Weight",
+            "Description": "Valve Weight",
+            "Value": "22 mass.lbm"
+          }
+        ],
+        "PricingData": null,
+        "CustomizedData": null,
+        "ConfigData": [
+          {
+            "SectionName": "RL",
+            "CombinedName": "RL:FL",
+            "OptionName": "FL"
+          },
+          {
+            "SectionName": "VMD",
+            "CombinedName": "VMD:V0",
+            "OptionName": "V0"
+          },
+          {
+            "SectionName": "GR",
+            "CombinedName": "GR:N0",
+            "OptionName": "N0"
+          },
+          {
+            "SectionName": "DN",
+            "CombinedName": "DN:D0",
+            "OptionName": "D0"
+          },
+          {
+            "SectionName": "PAEF",
+            "CombinedName": "PAEF:E",
+            "OptionName": "E"
+          },
+          {
+            "SectionName": "MOD",
+            "CombinedName": "MOD:EMC",
+            "OptionName": "EMC"
+          },
+          {
+            "SectionName": "CS",
+            "CombinedName": "CS:040",
+            "OptionName": "040"
+          },
+          {
+            "SectionName": "PR",
+            "CombinedName": "PR:-",
+            "OptionName": "-"
+          },
+          {
+            "SectionName": "VC",
+            "CombinedName": "VC:1A",
+            "OptionName": "1A"
+          },
+          {
+            "SectionName": "IF",
+            "CombinedName": "IF:1",
+            "OptionName": "1"
+          },
+          {
+            "SectionName": "OF",
+            "CombinedName": "OF:1",
+            "OptionName": "1"
+          },
+          {
+            "SectionName": "MV",
+            "CombinedName": "MV:C1",
+            "OptionName": "C1"
+          },
+          {
+            "SectionName": "SP",
+            "CombinedName": "SP:C",
+            "OptionName": "C"
+          },
+          {
+            "SectionName": "SM",
+            "CombinedName": "SM:0",
+            "OptionName": "0"
+          },
+          {
+            "SectionName": "CT",
+            "CombinedName": "CT:J",
+            "OptionName": "J"
+          },
+          {
+            "SectionName": "BW",
+            "CombinedName": "BW:B0",
+            "OptionName": "B0"
+          },
+          {
+            "SectionName": "BS",
+            "CombinedName": "BS:B0",
+            "OptionName": "B0"
+          },
+          {
+            "SectionName": "PRL",
+            "CombinedName": "PRL:N",
+            "OptionName": "N"
+          },
+          {
+            "SectionName": "VS",
+            "CombinedName": "VS:GAS",
+            "OptionName": "GAS"
+          },
+          {
+            "SectionName": "CC",
+            "CombinedName": "CC:-",
+            "OptionName": "-"
+          },
+          {
+            "SectionName": "NU",
+            "CombinedName": "NU:E",
+            "OptionName": "E"
+          },
+          {
+            "SectionName": "LN",
+            "CombinedName": "LN:E",
+            "OptionName": "E"
+          },
+          {
+            "SectionName": "DR",
+            "CombinedName": "DR:0",
+            "OptionName": "0"
+          },
+          {
+            "SectionName": "BUR",
+            "CombinedName": "BUR:A",
+            "OptionName": "A"
+          },
+          {
+            "SectionName": "TBPR",
+            "CombinedName": "TBPR:A",
+            "OptionName": "A"
+          },
+          {
+            "SectionName": "SR",
+            "CombinedName": "SR:F",
+            "OptionName": "F"
+          },
+          {
+            "SectionName": "GrpSERV",
+            "CombinedName": "GrpSERV:G",
+            "OptionName": "G"
+          },
+          {
+            "SectionName": "GrpSEAT",
+            "CombinedName": "GrpSEAT:M",
+            "OptionName": "M"
+          },
+          {
+            "SectionName": "GrpSIZE",
+            "CombinedName": "GrpSIZE:15",
+            "OptionName": "15"
+          },
+          {
+            "SectionName": "PSS",
+            "CombinedName": "PSS:3",
+            "OptionName": "3"
+          }
+        ]
+      }
+    ]
+  }
+]

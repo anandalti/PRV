@@ -1,0 +1,708 @@
+[
+					{
+                        "target": {
+                            "id": "<<FieldName>>",
+                            "symbol": "Calculate",
+                            "focusedField": "<<FieldName>>",
+                            "currentId": "<<currentId>>",
+                            "IsFireCase": false,
+                            "expression":"!IsMultivalve && IsASMESection8 ==true && SizingBasis !='Fire Case' && SetPressure !='' && (SetPressure==SystemMAWP||SystemMAWP == '') && SetPressure< 30 && OverPressure != 3",
+                            "expressionReqFields": ["IsMultivalve","SetPressure","IsASMESection8","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","3","3"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule1"}
+                    },
+                    {
+                        "target": {
+                            "id": "<<FieldName>>",
+                            "symbol": "Calculate",
+                            "focusedField": "<<FieldName>>",
+                            "currentId": "<<currentId>>",
+                            "IsFireCase": false,
+                            "expression":"!IsMultivalve && IsASMESection8 ==true && SizingBasis != 'Fire Case' && SetPressure !='' && (SetPressure == SystemMAWP || SystemMAWP == '') && SetPressure >= 30 && OverPressure != (SetPressure*0.1)",
+							"expressionReqFields": ["IsMultivalve","IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "expectedValue":["PressureUOM","SetPressure*0.1","SetPressure*0.1"],
+                            "uom": "pressure.psig",
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule2"}
+                    },
+                    {
+                        "target": {
+                            "id": "<<FieldName>>",
+                            "symbol": "Calculate",
+                            "focusedField": "<<FieldName>>",
+                            "currentId": "<<currentId>>",
+                            "IsFireCase": false,
+                            "expression":"!IsMultivalve && IsASMESection8 ==true && SizingBasis != 'Fire Case' && SetPressure !='' && SetPressure < SystemMAWP && SystemMAWP < 30 && SetPressure < 30 && (OverPressure<3 || OverPressure> (3 + SystemMAWP-SetPressure))",
+							"expressionReqFields": ["IsMultivalve","IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "expectedValue":["PressureUOM","3","(3 + SystemMAWP-SetPressure)"],
+                            "uom": "pressure.psig",
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule3","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "<<FieldName>>",
+                            "symbol": "Calculate",
+                            "focusedField": "<<FieldName>>",
+                            "currentId": "<<currentId>>",
+                            "IsFireCase": false,
+                            "expression":"!IsMultivalve && IsASMESection8 ==true && SizingBasis != 'Fire Case' && SetPressure !='' && SetPressure < SystemMAWP && SystemMAWP >= 30 && SetPressure < 30 && (OverPressure<3 || OverPressure> ((SystemMAWP*0.1) + SystemMAWP-SetPressure))",
+							"expressionReqFields": ["IsMultivalve","IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "expectedValue":["PressureUOM","3","(SystemMAWP*0.1) + SystemMAWP-SetPressure"],
+                            "uom": "pressure.psig",
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule4","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "<<FieldName>>",
+                            "symbol": "Calculate",
+                            "focusedField": "<<FieldName>>",
+                            "currentId": "<<currentId>>",
+                            "IsFireCase": false,
+                            "expression":"!IsMultivalve && IsASMESection8 ==true && SizingBasis != 'Fire Case' && SetPressure !=''  && SetPressure < SystemMAWP && SystemMAWP >= 30 && SetPressure >= 30 && (OverPressure< (SetPressure*0.1) || OverPressure>((SystemMAWP*0.1) + SystemMAWP-SetPressure))",
+							"expressionReqFields": ["IsMultivalve","IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","SetPressure*0.1","((SystemMAWP*0.1) + SystemMAWP-SetPressure)"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule5","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "<<FieldName>>",
+                            "symbol": "Calculate",
+                            "focusedField": "<<FieldName>>",
+                            "currentId": "<<currentId>>",
+                            "IsFireCase": true,
+                            "expression":"!IsMultivalve && IsASMESection8 ==true && SizingBasis == 'Fire Case' && SetPressure !='' && (SetPressure == SystemMAWP || SystemMAWP == '') && SetPressure < 30 && (OverPressure<3 || OverPressure> (SetPressure*0.21))",
+							"expressionReqFields": ["IsMultivalve","IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "expectedValue":["PressureUOM","3","SetPressure*0.21"],
+                            "dynamicMessage":true,
+                            "uom": "pressure.psig",
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule6","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "<<FieldName>>",
+                            "symbol": "Calculate",
+                            "focusedField": "<<FieldName>>",
+                            "currentId": "<<currentId>>",
+                            "IsFireCase": true,
+                            "expression":"!IsMultivalve && IsASMESection8 ==true && SizingBasis == 'Fire Case' && SetPressure !='' && (SetPressure == SystemMAWP || SystemMAWP == '') && SetPressure >= 30 && (OverPressure< (SetPressure*0.1) || OverPressure> (SetPressure*0.21))",
+							"expressionReqFields": ["IsMultivalve","IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","SetPressure*0.1","SetPressure*0.21"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule7","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "<<FieldName>>",
+                            "symbol": "Calculate",
+                            "focusedField": "<<FieldName>>",
+                            "currentId": "<<currentId>>",
+                            "IsFireCase": true,
+                            "expression":"!IsMultivalve && IsASMESection8 ==true && SizingBasis == 'Fire Case' && SetPressure !='' && SetPressure < SystemMAWP && SystemMAWP < 30 && SetPressure < 30 && (OverPressure<3 || OverPressure> ((SystemMAWP*0.21) + SystemMAWP-SetPressure))",
+							"expressionReqFields": ["IsMultivalve","IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","3","((SystemMAWP*0.21) + SystemMAWP-SetPressure)"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule8","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "<<FieldName>>",
+                            "symbol": "Calculate",
+                            "focusedField": "<<FieldName>>",
+                            "currentId": "<<currentId>>",
+                            "IsFireCase": true,
+                            "expression":"!IsMultivalve && IsASMESection8 ==true && SizingBasis == 'Fire Case' && SetPressure !='' && SetPressure < SystemMAWP && SystemMAWP >= 30 && SetPressure < 30 && (OverPressure<3 || OverPressure> ((SystemMAWP*0.21) + SystemMAWP-SetPressure))",
+							"expressionReqFields": ["IsMultivalve","IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","3","((SystemMAWP*0.21) + SystemMAWP-SetPressure)"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule9","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "<<FieldName>>",
+                            "symbol": "Calculate",
+                            "focusedField": "<<FieldName>>",
+                            "currentId": "<<currentId>>",
+                            "IsFireCase": true,
+                            "expression":"!IsMultivalve && IsASMESection8 ==true && SizingBasis == 'Fire Case' && SetPressure !='' && SetPressure < SystemMAWP && SystemMAWP >= 30 && SetPressure >= 30 && (OverPressure< (SetPressure*0.1) || OverPressure> ((SystemMAWP*0.21) + SystemMAWP-SetPressure))",
+							"expressionReqFields": ["IsMultivalve","IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","SetPressure*0.1","((SystemMAWP*0.21) + SystemMAWP-SetPressure)"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule10","dynamic":true}
+                    },
+					{
+                        "target": {
+                            "id": "<<FieldName>>",
+                            "symbol": "Calculate",
+                            "focusedField": "<<FieldName>>",
+                            "currentId": "<<currentId>>",
+                            "IsFireCase": false,
+                            "expression":"IsMultivalve && IsASMESection8 ==true && SizingBasis !='Fire Case' && SetPressure !='' && (SetPressure==SystemMAWP||SystemMAWP == '') && (SetPressure< (4/0.16)) && ((OverPressure < 3) || (OverPressure > 4))",
+                            "expressionReqFields": ["IsMultivalve","SetPressure","IsASMESection8","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","3","4"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule11","dynamic":true}
+                    },					
+                    {
+                        "target": {
+                            "id": "<<FieldName>>",
+                            "symbol": "Calculate",
+                            "focusedField": "<<FieldName>>",
+                            "currentId": "<<currentId>>",
+                            "IsFireCase": false,
+                            "expression":"IsMultivalve && IsASMESection8 ==true && SizingBasis !='Fire Case' && SetPressure !='' && (SetPressure==SystemMAWP||SystemMAWP == '') && (SetPressure>= (4/0.16)) && SetPressure< (3/0.10) && ((OverPressure < 3) || (OverPressure > (SetPressure*0.16)))",
+                            "expressionReqFields": ["IsMultivalve","SetPressure","IsASMESection8","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","3","SetPressure*0.16"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule11","dynamic":true}
+                    },					
+                    {
+                        "target": {
+                            "id": "<<FieldName>>",
+                            "symbol": "Calculate",
+                            "focusedField": "<<FieldName>>",
+                            "currentId": "<<currentId>>",
+                            "IsFireCase": false,
+                            "expression":"IsMultivalve && IsASMESection8 ==true && SizingBasis !='Fire Case' && SetPressure !='' && (SetPressure==SystemMAWP||SystemMAWP == '') && (SetPressure >= (3/0.10)) && ((OverPressure < (SetPressure*0.1)) || (OverPressure > (SetPressure*0.16)))",
+                            "expressionReqFields": ["IsMultivalve","SetPressure","IsASMESection8","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","SetPressure*0.1","SetPressure*0.16"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule11","dynamic":true}
+                    },					
+                    {
+                        "target": {
+                            "id": "<<FieldName>>",
+                            "symbol": "Calculate",
+                            "focusedField": "<<FieldName>>",
+                            "currentId": "<<currentId>>",
+                            "IsFireCase": false,
+                            "expression":"IsMultivalve && IsASMESection8 ==true && SizingBasis !='Fire Case' && SetPressure !='' && SystemMAWP !='' && (SetPressure<SystemMAWP) && (SystemMAWP < (4/0.16)) && (SetPressure < (3/0.10)) && ((OverPressure < 3) || (OverPressure > (4+ (SystemMAWP-SetPressure))))",
+                            "expressionReqFields": ["IsMultivalve","SetPressure","IsASMESection8","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","3","4+ (SystemMAWP-SetPressure)"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule11","dynamic":true}
+                    },					
+                    {
+                        "target": {
+                            "id": "<<FieldName>>",
+                            "symbol": "Calculate",
+                            "focusedField": "<<FieldName>>",
+                            "currentId": "<<currentId>>",
+                            "IsFireCase": false,
+                            "expression":"IsMultivalve && IsASMESection8 ==true && SizingBasis !='Fire Case' && SetPressure !='' && SystemMAWP !='' && (SetPressure<SystemMAWP) && (SystemMAWP >= (4/0.16)) && (SetPressure < (3/0.10)) && ((OverPressure < 3) || (OverPressure > ((SystemMAWP*0.16)+ (SystemMAWP-SetPressure))))",
+                            "expressionReqFields": ["IsMultivalve","SetPressure","IsASMESection8","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","3","(SystemMAWP*0.16)+ (SystemMAWP-SetPressure)"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule11","dynamic":true}
+                    },					
+                    {
+                        "target": {
+                            "id": "<<FieldName>>",
+                            "symbol": "Calculate",
+                            "focusedField": "<<FieldName>>",
+                            "currentId": "<<currentId>>",
+                            "IsFireCase": false,
+                            "expression":"IsMultivalve && IsASMESection8 ==true && SizingBasis !='Fire Case' && SetPressure !='' && SystemMAWP !='' && (SetPressure<SystemMAWP) && (SystemMAWP >= (4/0.16)) && (SetPressure >= (3/0.10)) && ((OverPressure < (SetPressure*0.10)) || (OverPressure > ((SystemMAWP*0.16)+ (SystemMAWP-SetPressure))))",
+                            "expressionReqFields": ["IsMultivalve","SetPressure","IsASMESection8","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","SetPressure*0.10","(SystemMAWP*0.16)+ (SystemMAWP-SetPressure)"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule11","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "<<FieldName>>",
+                            "symbol": "Calculate",
+                            "focusedField": "<<FieldName>>",
+                            "currentId": "<<currentId>>",
+                            "IsFireCase": true,
+                            "expression":"IsMultivalve && IsASMESection8 ==true && SizingBasis =='Fire Case' && SetPressure !='' && (SetPressure==SystemMAWP||SystemMAWP == '') && (SetPressure< (4/0.21)) && ((OverPressure < 3) || (OverPressure > 4))",
+                            "expressionReqFields": ["IsMultivalve","SetPressure","IsASMESection8","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","3","4"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule11","dynamic":true}
+                    },					
+                    {
+                        "target": {
+                            "id": "<<FieldName>>",
+                            "symbol": "Calculate",
+                            "focusedField": "<<FieldName>>",
+                            "currentId": "<<currentId>>",
+                            "IsFireCase": true,
+                            "expression":"IsMultivalve && IsASMESection8 ==true && SizingBasis =='Fire Case' && SetPressure !='' && (SetPressure==SystemMAWP||SystemMAWP == '') && (SetPressure>= (4/0.21)) && SetPressure< (3/0.10) && ((OverPressure < 3) || (OverPressure > (SetPressure*0.21)))",
+                            "expressionReqFields": ["IsMultivalve","SetPressure","IsASMESection8","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","3","SetPressure*0.21"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule11","dynamic":true}
+                    },					
+                    {
+                        "target": {
+                            "id": "<<FieldName>>",
+                            "symbol": "Calculate",
+                            "focusedField": "<<FieldName>>",
+                            "currentId": "<<currentId>>",
+                            "IsFireCase": true,
+                            "expression":"IsMultivalve && IsASMESection8 ==true && SizingBasis =='Fire Case' && SetPressure !='' && (SetPressure==SystemMAWP||SystemMAWP == '') && (SetPressure >= (3/0.10)) && ((OverPressure < (SetPressure*0.1)) || (OverPressure > (SetPressure*0.21)))",
+                            "expressionReqFields": ["IsMultivalve","SetPressure","IsASMESection8","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","SetPressure*0.1","SetPressure*0.21"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule11","dynamic":true}
+                    },					
+                    {
+                        "target": {
+                            "id": "<<FieldName>>",
+                            "symbol": "Calculate",
+                            "focusedField": "<<FieldName>>",
+                            "currentId": "<<currentId>>",
+                            "IsFireCase": true,
+                            "expression":"IsMultivalve && IsASMESection8 ==true && SizingBasis =='Fire Case' && SetPressure !='' && SystemMAWP !='' && (SetPressure<SystemMAWP) && (SystemMAWP < (4/0.21)) && (SetPressure < (3/0.10)) && ((OverPressure < 3) || (OverPressure > (4+ (SystemMAWP-SetPressure))))",
+                            "expressionReqFields": ["IsMultivalve","SetPressure","IsASMESection8","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","3","4+ (SystemMAWP-SetPressure)"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule11","dynamic":true}
+                    },					
+                    {
+                        "target": {
+                            "id": "<<FieldName>>",
+                            "symbol": "Calculate",
+                            "focusedField": "<<FieldName>>",
+                            "currentId": "<<currentId>>",
+                            "IsFireCase": true,
+                            "expression":"IsMultivalve && IsASMESection8 ==true && SizingBasis =='Fire Case' && SetPressure !='' && SystemMAWP !='' && (SetPressure<SystemMAWP) && (SystemMAWP >= (4/0.21)) && (SetPressure < (3/0.10)) && ((OverPressure < 3) || (OverPressure > ((SystemMAWP*0.21)+ (SystemMAWP-SetPressure))))",
+                            "expressionReqFields": ["IsMultivalve","SetPressure","IsASMESection8","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","3","(SystemMAWP*0.21)+ (SystemMAWP-SetPressure)"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule11","dynamic":true}
+                    },					
+                    {
+                        "target": {
+                            "id": "<<FieldName>>",
+                            "symbol": "Calculate",
+                            "focusedField": "<<FieldName>>",
+                            "currentId": "<<currentId>>",
+                            "IsFireCase": true,
+                            "expression":"IsMultivalve && IsASMESection8 ==true && SizingBasis =='Fire Case' && SetPressure !='' && SystemMAWP !='' && (SetPressure<SystemMAWP) && (SystemMAWP >= (4/0.21)) && (SetPressure >= (3/0.10)) && ((OverPressure < (SetPressure*0.10)) || (OverPressure > ((SystemMAWP*0.21)+ (SystemMAWP-SetPressure))))",
+                            "expressionReqFields": ["IsMultivalve","SetPressure","IsASMESection8","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","SetPressure*0.10","(SystemMAWP*0.21)+ (SystemMAWP-SetPressure)"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule11","dynamic":true}
+                    },
+					{
+                        "target": {
+                            "id": "<<FieldName>>",
+                            "symbol": "Calculate",
+                            "focusedField": "<<FieldName>>",
+                            "currentId": "<<currentId>>",
+                            "IsFireCase": false,
+                            "expression":"!IsMultivalve && IsASMESection8 ==true && SizingBasis !='Fire Case' && SetPressure !='' && OverPressure !='' && (SetPressure==SystemMAWP||SystemMAWP == '') && SetPressure< 30 && ((SetPressure + OverPressure) > (SetPressure + 3))",
+                            "expressionReqFields": ["IsMultivalve","SetPressure","IsASMESection8","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+							"expectedValue":["PressureUOM","SetPressure + 3","SetPressure + 3"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverOTHSectionVIIIRule1","dynamic":true}
+                    },
+					{
+                        "target": {
+                            "id": "<<FieldName>>",
+                            "symbol": "Calculate",
+                            "focusedField": "<<FieldName>>",
+                            "currentId": "<<currentId>>",
+                            "IsFireCase": false,
+                            "expression":"!IsMultivalve && IsASMESection8 ==true && SizingBasis != 'Fire Case' && SetPressure !='' && OverPressure !='' && (SetPressure == SystemMAWP || SystemMAWP == '') && SetPressure >= 30 && ((SetPressure + OverPressure) > (1.1 * SetPressure))",
+							"expressionReqFields": ["IsMultivalve","IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+							"uom": "pressure.psig",
+							"expectedValue":["PressureUOM","1.1 * SetPressure","1.1 * SetPressure"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverOTHSectionVIIIRule1","dynamic":true}
+                    },
+					{
+                        "target": {
+                            "id": "<<FieldName>>",
+                            "symbol": "Calculate",
+                            "focusedField": "<<FieldName>>",
+                            "currentId": "<<currentId>>",
+                            "IsFireCase": false,
+                            "expression":"!IsMultivalve && IsASMESection8 ==true && SizingBasis != 'Fire Case' && SetPressure !='' && OverPressure !='' && SetPressure < SystemMAWP && SystemMAWP < 30 && SetPressure < 30 && (SetPressure + OverPressure) > (SystemMAWP + 3))",
+							"expressionReqFields": ["IsMultivalve","IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+							"expectedValue":["PressureUOM","SystemMAWP + 3","SystemMAWP + 3"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverOTHSectionVIIIRule1","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "<<FieldName>>",
+                            "symbol": "Calculate",
+                            "focusedField": "<<FieldName>>",
+                            "currentId": "<<currentId>>",
+                            "IsFireCase": false,
+                            "expression":"!IsMultivalve && IsASMESection8 ==true && SizingBasis != 'Fire Case' && SetPressure !='' && OverPressure !='' && SetPressure < SystemMAWP && SystemMAWP >= 30 && SetPressure < 30 && ((SetPressure + OverPressure) > (1.1 * SystemMAWP)))",
+							"expressionReqFields": ["IsMultivalve","IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+							"expectedValue":["PressureUOM","1.1 * SystemMAWP","1.1 * SystemMAWP"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+						"message":{"type":"error","message":"PoverOTHSectionVIIIRule1","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "<<FieldName>>",
+                            "symbol": "Calculate",
+                            "focusedField": "<<FieldName>>",
+                            "currentId": "<<currentId>>",
+                            "IsFireCase": false,
+                            "expression":"!IsMultivalve && IsASMESection8 ==true && SizingBasis != 'Fire Case' && SetPressure !='' && OverPressure !='' && SetPressure < SystemMAWP && SystemMAWP >= 30 && SetPressure >= 30 && ((SetPressure + OverPressure) > (1.1 * SystemMAWP)))",
+							"expressionReqFields": ["IsMultivalve","IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+							"expectedValue":["PressureUOM","1.1 * SystemMAWP","1.1 * SystemMAWP"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverOTHSectionVIIIRule1","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "<<FieldName>>",
+                            "symbol": "Calculate",
+                            "focusedField": "<<FieldName>>",
+                            "currentId": "<<currentId>>",
+                            "IsFireCase": true,
+                            "expression":"!IsMultivalve && IsASMESection8 ==true && SizingBasis == 'Fire Case' && SetPressure !='' && OverPressure !='' && (SetPressure == SystemMAWP || SystemMAWP == '') && SetPressure < 30 && ((SetPressure + OverPressure) > (1.21 * SetPressure)))",
+							"expressionReqFields": ["IsMultivalve","IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "dynamicMessage":true,
+							"expectedValue":["PressureUOM","1.21 * SetPressure","1.21 * SetPressure"],
+                            "uom": "pressure.psig",
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverOTHSectionVIIIRule1","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "<<FieldName>>",
+                            "symbol": "Calculate",
+                            "focusedField": "<<FieldName>>",
+                            "currentId": "<<currentId>>",
+                            "IsFireCase": true,
+                            "expression":"!IsMultivalve && IsASMESection8 ==true && SizingBasis == 'Fire Case' && SetPressure !='' && OverPressure !='' && (SetPressure == SystemMAWP || SystemMAWP == '') && SetPressure >= 30 && ((SetPressure + OverPressure) > (1.21 * SetPressure)))",
+							"expressionReqFields": ["IsMultivalve","IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+							"expectedValue":["PressureUOM","1.21 * SetPressure","1.21 * SetPressure"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverOTHSectionVIIIRule1","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "<<FieldName>>",
+                            "symbol": "Calculate",
+                            "focusedField": "<<FieldName>>",
+                            "currentId": "<<currentId>>",
+                            "IsFireCase": true,
+                            "expression":"!IsMultivalve && IsASMESection8 ==true && SizingBasis == 'Fire Case' && SetPressure !='' && OverPressure !='' && SetPressure < SystemMAWP && SystemMAWP < 30 && SetPressure < 30 && ((SetPressure + OverPressure) > (1.21 * SystemMAWP)))",
+							"expressionReqFields": ["IsMultivalve","IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+							"expectedValue":["PressureUOM","1.21 * SystemMAWP","1.21 * SystemMAWP"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverOTHSectionVIIIRule1","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "<<FieldName>>",
+                            "symbol": "Calculate",
+                            "focusedField": "<<FieldName>>",
+                            "currentId": "<<currentId>>",
+                            "IsFireCase": true,
+                            "expression":"!IsMultivalve && IsASMESection8 ==true && SizingBasis == 'Fire Case' && SetPressure !='' && OverPressure !='' && SetPressure < SystemMAWP && SystemMAWP >= 30 && SetPressure < 30 && ((SetPressure + OverPressure) > (1.21 * SystemMAWP)))",
+							"expressionReqFields": ["IsMultivalve","IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","1.21 * SystemMAWP","1.21 * SystemMAWP"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverOTHSectionVIIIRule1","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "<<FieldName>>",
+                            "symbol": "Calculate",
+                            "focusedField": "<<FieldName>>",
+                            "currentId": "<<currentId>>",
+                            "IsFireCase": true,
+                            "expression":"!IsMultivalve && IsASMESection8 ==true && SizingBasis == 'Fire Case' && SetPressure !='' && SetPressure < SystemMAWP && SystemMAWP >= 30 && SetPressure >= 30 && ((SetPressure + OverPressure) > (1.21 * SystemMAWP)))",
+							"expressionReqFields": ["IsMultivalve","IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+							"expectedValue":["PressureUOM","1.21 * SystemMAWP","1.21 * SystemMAWP"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverOTHSectionVIIIRule1","dynamic":true}
+                    },
+							
+					
+					{
+                        "target": {
+                            "id": "<<FieldName>>",
+                            "symbol": "Calculate",
+                            "focusedField": "<<FieldName>>",
+                            "currentId": "<<currentId>>",
+                            "IsFireCase": false,
+                            "expression":"IsMultivalve && IsASMESection8 ==true && SizingBasis !='Fire Case' && SetPressure !='' && OverPressure !='' && (SetPressure==SystemMAWP||SystemMAWP == '') && (SetPressure< (4/0.16)) && ((SetPressure + OverPressure) > (SetPressure + 4))",
+                            "expressionReqFields": ["IsMultivalve","SetPressure","IsASMESection8","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+							"expectedValue":["PressureUOM","SetPressure + 4","SetPressure + 4"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverOTHSectionVIIIRule2","dynamic":true}
+                    },					
+                    {
+                        "target": {
+                            "id": "<<FieldName>>",
+                            "symbol": "Calculate",
+                            "focusedField": "<<FieldName>>",
+                            "currentId": "<<currentId>>",
+                            "IsFireCase": false,
+                            "expression":"IsMultivalve && IsASMESection8 ==true && SizingBasis !='Fire Case' && SetPressure !='' && OverPressure !='' && (SetPressure==SystemMAWP||SystemMAWP == '') && (SetPressure>= (4/0.16)) && SetPressure< (3/0.10) && (((SetPressure + OverPressure) > (SetPressure * 1.16)))",
+                            "expressionReqFields": ["IsMultivalve","SetPressure","IsASMESection8","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+							"expectedValue":["PressureUOM","SetPressure * 1.16","SetPressure * 1.16"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverOTHSectionVIIIRule2","dynamic":true}
+                    },					
+                    {
+                        "target": {
+                            "id": "<<FieldName>>",
+                            "symbol": "Calculate",
+                            "focusedField": "<<FieldName>>",
+                            "currentId": "<<currentId>>",
+                            "IsFireCase": false,
+                            "expression":"IsMultivalve && IsASMESection8 ==true && SizingBasis !='Fire Case' && SetPressure !='' && OverPressure !='' && (SetPressure==SystemMAWP||SystemMAWP == '') && (SetPressure >= (3/0.10)) && ((SetPressure + OverPressure) > (SetPressure * 1.16))",
+                            "expressionReqFields": ["IsMultivalve","SetPressure","IsASMESection8","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+							"expectedValue":["PressureUOM","SetPressure * 1.16","SetPressure * 1.16"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverOTHSectionVIIIRule2","dynamic":true}
+                    },					
+                    {
+                        "target": {
+                            "id": "<<FieldName>>",
+                            "symbol": "Calculate",
+                            "focusedField": "<<FieldName>>",
+                            "currentId": "<<currentId>>",
+                            "IsFireCase": false,
+                            "expression":"IsMultivalve && IsASMESection8 ==true && SizingBasis !='Fire Case' && SetPressure !='' && OverPressure !='' && SystemMAWP !='' && (SetPressure<SystemMAWP) && (SystemMAWP < (4/0.16)) && (SetPressure < (3/0.10)) && ((SetPressure + OverPressure) > (SystemMAWP + 4))",
+                            "expressionReqFields": ["IsMultivalve","SetPressure","IsASMESection8","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+							"expectedValue":["PressureUOM","SystemMAWP + 4","SystemMAWP + 4"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverOTHSectionVIIIRule2","dynamic":true}
+                    },					
+                    {
+                        "target": {
+                            "id": "<<FieldName>>",
+                            "symbol": "Calculate",
+                            "focusedField": "<<FieldName>>",
+                            "currentId": "<<currentId>>",
+                            "IsFireCase": false,
+                            "expression":"IsMultivalve && IsASMESection8 ==true && SizingBasis !='Fire Case' && SetPressure !='' && OverPressure !='' && SystemMAWP !='' && (SetPressure<SystemMAWP) && (SystemMAWP >= (4/0.16)) && (SetPressure < (3/0.10)) && ((SetPressure + OverPressure) > (SystemMAWP * 1.16))",
+                            "expressionReqFields": ["IsMultivalve","SetPressure","IsASMESection8","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+							"expectedValue":["PressureUOM","SystemMAWP * 1.16","SystemMAWP * 1.16"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverOTHSectionVIIIRule2","dynamic":true}
+                    },					
+                    {
+                        "target": {
+                            "id": "<<FieldName>>",
+                            "symbol": "Calculate",
+                            "focusedField": "<<FieldName>>",
+                            "currentId": "<<currentId>>",
+                            "IsFireCase": false,
+                            "expression":"IsMultivalve && IsASMESection8 ==true && SizingBasis !='Fire Case' && SetPressure !='' && OverPressure !='' && SystemMAWP !='' && (SetPressure<SystemMAWP) && (SystemMAWP >= (4/0.16)) && (SetPressure >= (3/0.10)) && ((SetPressure + OverPressure) > (SystemMAWP * 1.16))",
+                            "expressionReqFields": ["IsMultivalve","SetPressure","IsASMESection8","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+							"expectedValue":["PressureUOM","SystemMAWP * 1.16","SystemMAWP * 1.16"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverOTHSectionVIIIRule2","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "<<FieldName>>",
+                            "symbol": "Calculate",
+                            "focusedField": "<<FieldName>>",
+                            "currentId": "<<currentId>>",
+                            "IsFireCase": true,
+                            "expression":"IsMultivalve && IsASMESection8 ==true && SizingBasis =='Fire Case' && SetPressure !='' && OverPressure !='' && (SetPressure==SystemMAWP||SystemMAWP == '') && (SetPressure< (4/0.21)) && ((SetPressure + OverPressure) > (SetPressure + 4))",
+                            "expressionReqFields": ["IsMultivalve","SetPressure","IsASMESection8","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","SetPressure + 4","SetPressure + 4"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverOTHSectionVIIIRule2","dynamic":true}
+                    },					
+                    {
+                        "target": {
+                            "id": "<<FieldName>>",
+                            "symbol": "Calculate",
+                            "focusedField": "<<FieldName>>",
+                            "currentId": "<<currentId>>",
+                            "IsFireCase": true,
+                            "expression":"IsMultivalve && IsASMESection8 ==true && SizingBasis =='Fire Case' && SetPressure !='' && OverPressure !='' && (SetPressure==SystemMAWP||SystemMAWP == '') && (SetPressure>= (4/0.21)) && SetPressure< (3/0.10) && ((SetPressure + OverPressure) > (SetPressure * 1.21))",
+                            "expressionReqFields": ["IsMultivalve","SetPressure","IsASMESection8","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","SetPressure * 1.21","SetPressure * 1.21"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverOTHSectionVIIIRule2","dynamic":true}
+                    },					
+                    {
+                        "target": {
+                            "id": "<<FieldName>>",
+                            "symbol": "Calculate",
+                            "focusedField": "<<FieldName>>",
+                            "currentId": "<<currentId>>",
+                            "IsFireCase": true,
+                            "expression":"IsMultivalve && IsASMESection8 ==true && SizingBasis =='Fire Case' && SetPressure !='' && OverPressure !='' && (SetPressure==SystemMAWP||SystemMAWP == '') && (SetPressure >= (3/0.10)) && ((SetPressure + OverPressure) > (SetPressure * 1.21))",
+                            "expressionReqFields": ["IsMultivalve","SetPressure","IsASMESection8","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","SetPressure * 1.21","SetPressure * 1.21"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverOTHSectionVIIIRule2","dynamic":true}
+                    },					
+                    {
+                        "target": {
+                            "id": "<<FieldName>>",
+                            "symbol": "Calculate",
+                            "focusedField": "<<FieldName>>",
+                            "currentId": "<<currentId>>",
+                            "IsFireCase": true,
+                            "expression":"IsMultivalve && IsASMESection8 ==true && SizingBasis =='Fire Case' && SetPressure !='' && OverPressure !='' && SystemMAWP !='' && (SetPressure<SystemMAWP) && (SystemMAWP < (4/0.21)) && (SetPressure < (3/0.10)) && ((SetPressure + OverPressure) > (SystemMAWP + 4))",
+                            "expressionReqFields": ["IsMultivalve","SetPressure","IsASMESection8","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","SystemMAWP + 4","SystemMAWP + 4"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverOTHSectionVIIIRule2","dynamic":true}
+                    },					
+                    {
+                        "target": {
+                            "id": "<<FieldName>>",
+                            "symbol": "Calculate",
+                            "focusedField": "<<FieldName>>",
+                            "currentId": "<<currentId>>",
+                            "IsFireCase": true,
+                            "expression":"IsMultivalve && IsASMESection8 ==true && SizingBasis =='Fire Case' && SetPressure !='' && OverPressure !='' && SystemMAWP !='' && (SetPressure<SystemMAWP) && (SystemMAWP >= (4/0.21)) && (SetPressure < (3/0.10)) && ((SetPressure + OverPressure) > (SystemMAWP * 1.21))",
+                            "expressionReqFields": ["IsMultivalve","SetPressure","IsASMESection8","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","SystemMAWP * 1.21","SystemMAWP * 1.21"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverOTHSectionVIIIRule2","dynamic":true}
+                    },					
+                    {
+                        "target": {
+                            "id": "<<FieldName>>",
+                            "symbol": "Calculate",
+                            "focusedField": "<<FieldName>>",
+                            "currentId": "<<currentId>>",
+                            "IsFireCase": true,
+                            "expression":"IsMultivalve && IsASMESection8 ==true && SizingBasis =='Fire Case' && SetPressure !='' && OverPressure !='' && SystemMAWP !='' && (SetPressure<SystemMAWP) && (SystemMAWP >= (4/0.21)) && (SetPressure >= (3/0.10)) && ((SetPressure + OverPressure) > (SystemMAWP * 1.21))",
+                            "expressionReqFields": ["IsMultivalve","SetPressure","IsASMESection8","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","SystemMAWP * 1.21","SystemMAWP * 1.21"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverOTHSectionVIIIRule2","dynamic":true}
+                    }
+]

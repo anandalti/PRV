@@ -1,0 +1,2493 @@
+[
+    {
+        "sectionName": "applciationRequirements",
+        "sectionLabel": "Application Requirements",
+        "displayType": "form",
+        "displayOrder": 4,
+        "fields": [
+            {
+                "fieldName": "SizingBasis",
+                "label": "Sizing Basis",
+                "type": "combobox",
+                "fieldDisplayOrder": 1,
+                "mandatory": false,
+                "defaultValue": "Blocked Discharge",
+                "disabled": false,
+                "visible": true,
+                "grid": "6",
+                "dimensionName": "",
+                "infoText": "",
+                "options": [
+                    {
+                        "label": "Blocked Discharge",
+                        "value": "Blocked Discharge"
+                    },
+                    {
+                        "label": "Control Valve Failure",
+                        "value": "Control Valve Failure"
+                    },
+                    {
+                        "label": "Fire Case",
+                        "value": "Fire Case"
+                    },
+                    {
+                        "label": "Liquid Overflow",
+                        "value": "Liquid Overflow"
+                    },
+                    {
+                        "label": "Runaway Reaction",
+                        "value": "Runaway Reaction"
+                    },
+                    {
+                        "label": "Thermal Relief",
+                        "value": "Thermal Relief"
+                    },
+                    {
+                        "label": "Tube Rupture",
+                        "value": "Tube Rupture"
+                    },
+                    {
+                        "label": "Valve Capacity",
+                        "value": "Valve Capacity"
+                    }
+                ],
+                "validations": []
+            },
+            {
+                "fieldName": "IsASMESection8",
+                "label": "ASME Section VIII/XIII (UV) Application",
+                "type": "checkbox",
+                "fieldDisplayOrder":2,
+                "mandatory":false,
+                "grid": 6,
+                "defaultValue": true,
+                "disabled": false,
+                "visible": true,
+                "infoText": "",
+                "dimensionName":"",
+                "validations": [
+                    {
+                        "target": {
+                            "id": "SetPressure",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 == true && SetPressure!='' && DisplayUnitSystem !='Metric' && SetPressure<15",
+                            "expressionReqFields": ["SetPressure","DisplayUnitSystem","IsASMESection8","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"Psetgt15"}
+                    },
+                    {
+                        "target": {
+                            "id": "SetPressure",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 == true && SetPressure!='' && DisplayUnitSystem =='Metric' && SetPressure<1.034213593",
+                            "expressionReqFields": ["SetPressure","DisplayUnitSystem","IsASMESection8","PressureUOM"],
+                            "uom": "pressure.barg",
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"Psetgt15_Metric"}
+                    },
+                    {
+                        "target":{
+                            "id":"SetPressure",
+                            "symbol":"Calculate",
+                            "expression":"IsASMESection8 == true && SetPressure!='' && ConstantSuperimposed+VariableSuperimposed>=SetPressure",
+                            "expressionReqFields":["IsASMESection8","ConstantSuperimposed","VariableSuperimposed","SetPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"PsicPlusPsivltPset"}
+                    },
+                    {
+                        "target":{
+                            "id":"SetPressure",
+                            "symbol":"Calculate",
+                            "currentId": "IsASMESection8",
+                            "focusedField":"SetPressure",
+                            "expression":"IsASMESection8 == false && SetPressure!='' && ConstantSuperimposed+VariableSuperimposed>=SetPressure",
+                            "expressionReqFields":["IsASMESection8","ConstantSuperimposed","VariableSuperimposed","SetPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "value":true
+                        },
+                        "message":{"type":"warning","message":"PsicPlusPsivgtPset"}
+                    },
+                    {
+                        "target": {
+                            "id": "SizingBasis",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis !='Fire Case' && SetPressure !='' && (SetPressure==SystemMAWP||SystemMAWP == '') && SetPressure< (3 / 0.10) && OverPressure != 3",
+                            "expressionReqFields": ["SetPressure","IsASMESection8","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","3","3"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule1"}
+                    },
+                    {
+                        "target": {
+                            "id": "SizingBasis",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis != 'Fire Case' && SetPressure !='' && (SetPressure == SystemMAWP || SystemMAWP == '') && SetPressure >= 30 && OverPressure != (SetPressure*0.1)",
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "expectedValue":["PressureUOM","SetPressure*0.1","SetPressure*0.1"],                            
+                            "uom": "pressure.psig",
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule2"}
+                    },
+                    {
+                        "target": {
+                            "id": "SizingBasis",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis != 'Fire Case' && SetPressure !='' && SetPressure < SystemMAWP && SystemMAWP < 30 && SetPressure < 30 && (OverPressure<3 || OverPressure> (3 + SystemMAWP-SetPressure))",
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "expectedValue":["PressureUOM","3","(3 + SystemMAWP-SetPressure)"],
+                            "uom": "pressure.psig",
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule3","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "SizingBasis",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis != 'Fire Case' && SetPressure !='' && SetPressure < SystemMAWP && SystemMAWP >= 30 && SetPressure < 30 && (OverPressure<3 || OverPressure> ((SystemMAWP*0.1) + SystemMAWP-SetPressure))",
+                            
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "expectedValue":["PressureUOM","3","(SystemMAWP*0.1) + SystemMAWP-SetPressure"],
+                            "uom": "pressure.psig",
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule4","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "SizingBasis",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis != 'Fire Case' && SetPressure !=''  && SetPressure < SystemMAWP && SystemMAWP >= 30 && SetPressure >= 30 && (OverPressure< (SetPressure*0.1) || OverPressure>((SystemMAWP*0.1) + SystemMAWP-SetPressure))",
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","SetPressure*0.1","((SystemMAWP*0.1) + SystemMAWP-SetPressure)"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule5","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "SizingBasis",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis == 'Fire Case' && SetPressure !='' && (SetPressure == SystemMAWP || SystemMAWP == '') && SetPressure < 30 && (OverPressure<3 || OverPressure> (SetPressure*0.21))",
+                            
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "expectedValue":["PressureUOM","3","SetPressure*0.21"],
+                            "dynamicMessage":true,
+                            "uom": "pressure.psig",
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule6","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "SizingBasis",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis == 'Fire Case' && SetPressure !='' && (SetPressure == SystemMAWP || SystemMAWP == '') && SetPressure >= 30 && (OverPressure< (SetPressure*0.1) || OverPressure> (SetPressure*0.21))",
+                            
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","SetPressure*0.1","SetPressure*0.21"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule7","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "SizingBasis",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis == 'Fire Case' && SetPressure !='' && SetPressure < SystemMAWP && SystemMAWP < 30 && SetPressure < 30 && (OverPressure<3 || OverPressure> ((SystemMAWP*0.21) + SystemMAWP-SetPressure))",
+                            
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","3","((SystemMAWP*0.21) + SystemMAWP-SetPressure)"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule8","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "SizingBasis",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis == 'Fire Case' && SetPressure !='' && SetPressure < SystemMAWP && SystemMAWP >= 30 && SetPressure < 30 && (OverPressure<3 || OverPressure> ((SystemMAWP*0.21) + SystemMAWP-SetPressure))",
+                            
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","3","((SystemMAWP*0.21) + SystemMAWP-SetPressure)"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule9","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "SizingBasis",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis == 'Fire Case' && SetPressure !='' && SetPressure < SystemMAWP && SystemMAWP >= 30 && SetPressure >= 30 && (OverPressure< (SetPressure*0.1) || OverPressure> ((SystemMAWP*0.21) + SystemMAWP-SetPressure))",
+                            
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","SetPressure*0.1","((SystemMAWP*0.21) + SystemMAWP-SetPressure)"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule10","dynamic":true}
+                    }
+                ]
+            },
+            {
+                "fieldName": "DisplayUnitSystem",
+                "label": "Display Unit System",
+                "type": "select",
+                "fieldDisplayOrder": 3,
+                "mandatory": false,
+                "defaultValue": "All",
+                "disabled": false,
+                "visible": true,
+                "grid": "6",
+                "infoText": "",
+                "dimensionName": "",
+                "options": [
+                    {
+                        "label": "All",
+                        "value": "All"
+                    },
+                    {
+                        "label": "Metric",
+                        "value": "Metric"
+                    },
+                    {
+                        "label": "US Customary",
+                        "value": "English"
+                    }
+                ],
+                "validations": []
+            },
+            {
+                "fieldName": "CalculationMethod",
+                "label": "Calculation Method",
+                "type": "select",
+                "fieldDisplayOrder": 4,
+                "mandatory": false,
+                "defaultValue": "Metric",
+                "disabled": false,
+                "visible": true,
+                "grid": "6",
+                "infoText": "",
+                "dimensionName": "",
+                "options": [
+                    {
+                        "label": "US Customary",
+                        "value": "English"
+                    },
+                    {
+                        "label": "Metric",
+                        "value": "Metric"
+                    }
+                ],
+                "validations": []
+            },
+            {
+                "fieldName": "IsRuptureDisc",
+                "label": "Has Rupture Disc?",
+                "type": "checkbox",
+                "fieldDisplayOrder": 5,
+                "mandatory": false,
+                "defaultValue": false,
+                "disabled": false,
+                "visible": true,
+                "grid": 6,
+                "infoText": "",
+                "dimensionName": "",
+                "validations": []
+            },
+            {
+                "fieldName": "RuptureDiscKcFd",
+                "label": "Kc",
+                "type": "number",
+                "fieldDisplayOrder": 6,
+                "mandatory": true,
+                "defaultValue": [
+                    {
+                        "target":{
+                            "id":"IsRuptureDisc",
+                            "symbol":"Calculate",
+                            "expression":"!IsRuptureDisc?'1.0':RuptureDiscKcFd!=undefined&&RuptureDiscKcFd!=null&&RuptureDiscKcFd!=1.0?RuptureDiscKcFd:'0.900'",
+                            "expressionReqFields":["IsRuptureDisc","RuptureDiscKcFd"]
+                        },
+                        "value":""
+                    }
+                ],
+                "disabled": [
+                    {
+                        "target": {
+                            "id": "IsRuptureDisc",
+                            "symbol": "Calculate",
+                            "expression": "!IsRuptureDisc",
+                            "expressionReqFields": [
+                                "IsRuptureDisc"
+                            ]
+                        },
+                        "value": false
+                    }
+                ],
+                "grid": 6,
+                "visible": true,
+                "infoText": "Rupture Disc Combination Correction Factor",
+                "dimensionName": "",
+                "validations": [
+                    {
+                        "target":{
+                            "id":"IsRuptureDisc",
+                            "symbol":"Calculate",
+                            "expression":"IsRuptureDisc == true && RuptureDiscKcFd ==''",
+                            "expressionReqFields":["IsRuptureDisc","RuptureDiscKcFd"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"Kcreq"}
+                    },
+                    {
+                        "target":{
+                            "id":"IsRuptureDisc",
+                            "symbol":"Calculate",
+                            "expression":"IsRuptureDisc == true && RuptureDiscKcFd !='' && (RuptureDiscKcFd < 0 || RuptureDiscKcFd > 1)",
+                            "expressionReqFields":["IsRuptureDisc","RuptureDiscKcFd"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"RuptureDiscKcgt0"}
+                    }
+                ]
+            },
+            {
+                "fieldName": "IsSuperUser",
+                "label": "Enable Super User",
+                "type": "checkbox",
+                "fieldDisplayOrder": 7,
+                "mandatory": false,
+                "defaultValue": false,
+                "disabled": true,
+                "visible": true,
+                "grid": 6,
+                "infoText": "",
+                "dimensionName": "",
+                "validations": []
+            }
+        ]
+    },
+    {
+        "sectionName": "fluidProperties",
+        "sectionLabel": "Fluid Properties",
+        "displayType": "form",
+        "displayOrder": 5,
+        "fields": [
+            {
+                "fieldName": "gas",
+                "label": "Gas",
+                "type": "label",
+                
+                "fieldDisplayOrder":1,
+                "mandatory":false,
+                "defaultValue": "",
+                "disabled": false,
+                "visible": true,
+                "grid": 6,
+                "infoText": "",
+                "dimensionName":"",
+                "validations": []
+            },
+            {
+                "fieldName": "FluidName",
+                "label": "Gas Fluid Name",
+                "type": "combobox",
+                "fluidType": "1",
+                "fieldDisplayOrder":2,
+                "mandatory":false,
+                "options": [],
+                "defaultValue": "", 
+                "disabled": false,
+                "visible": true,
+                "infoText": "",
+                "grid": 6,
+                "dimensionName":"",
+                "validations": []
+            },
+            {
+                "fieldName": "MolWeight",
+                "label": "Molecular Weight",
+                "type": "number",
+                "fieldDisplayOrder":2,
+                "mandatory":true,
+                "defaultValue":"",
+                "disabled": false,
+                "visible": true,
+                "infoText": "",
+                "grid": 6,
+                "validations": [
+                    {
+                        "id": "MolWeight",
+                        "minValue": 1,
+                        "message":{"type":"error","message":"MolWeightgt1"}
+                    }
+                ],
+                "dimensionName":"",
+                "regex": "/^[|0]?\\d*\\.?\\d*$/"
+            },
+            {
+                "fieldName": "KCpByCv",
+                "label": "k, (Cp / Cv)",
+                "type": "number",
+                "fieldDisplayOrder":4,
+                "mandatory":true,
+                "defaultValue": "",
+                "disabled": false,
+                "visible": true,
+                "infoText": "Pressure Ratio of Specific Heats (Cp/Cv)",
+                "grid": 6,
+                "dimensionName":"",
+                "validations": [
+                    {
+                        "id": "KCpByCv",
+                        "minValue": 0,
+                        "message":{"type":"error","message":"KCpByCvgt0"}
+                    }
+                ],
+                "regex": "/^[|0]?\\d*\\.?\\d*$/"
+            },
+            {
+                "fieldName": "Compressibility",
+                "label": "Compressibility",
+                "type": "number",
+                "fieldDisplayOrder":5,
+                "mandatory":true,
+                "defaultValue": "",
+                "disabled": false,
+                "visible": true,
+                "infoText": "Pressure Compressibility Factor",
+                "grid": 6,
+                "dimensionName":"",
+                "validations": [
+                    {
+                        "id": "Compressibility",
+                        "minValue": 0,
+                        "message":{"type":"error","message":"Compressibilitygt0"}
+                    }
+                ],
+                "regex": "/^[|0]?\\d*\\.?\\d*$/"
+            },
+            {
+                "fieldName": "IsLiquidOnly|IsLiquid2",
+                "label": "Liquid|Liquid 2",
+                "type": "checkbox",
+                "fieldDisplayOrder":6,
+                "mandatory":false,
+                "hidden":["IsLiquidOnly"],
+                "defaultValue": [
+                    
+                    {"id":"IsLiquidOnly","value": true },
+                    {"id":"IsLiquid2","value":false}
+                ],
+                "disabled": false,
+                "visible": [
+                    {
+                        "id":"IsLiquidOnly",
+                        "currentId":"IsLiquidOnly",
+                        "value": true
+                    },
+                    {
+                        "id":"IsLiquid2",
+                        "currentId":"IsLiquid2",
+                        "value": true
+                    }
+                ],
+                "calculateFields":[
+                    {
+                        "target":{
+                            "id":"CalcReqFlowCapacity",
+                            "symbol": "Exec_Function_OnChange",
+                            "actionType":"OnChange",
+                            "functionName": "Calculate_21_ReqFlowCapacity",
+                            "functionReqFields":["Wv","Wl","Liquid2Wl","IsLiquid2","FlowCapacityWvUOM","FlowCapacityLiqUOM","FlowCapacityLiq2UOM","FlowCapacityUOM"],
+                            "requiredUnits":{"absPressureUOM": "abspressure.bara","pressureUOM": "pressure.barg","TemperatureUOM": "temp.degC"},
+                            "nextRound":false
+                        },
+                        "value":""
+                    }
+                ],
+                "grid": 6,
+                "infoText": "",
+                "dimensionName":"",
+                "validations": []
+            },
+            {
+                "fieldName": "FluidNameLiquid|FluidNameLiquid2",
+                "label": "Liquid Fluid Name",
+                "type": "combobox",
+                "fieldDisplayOrder":7,
+                "mandatory":false,
+                "options": [],
+                "defaultValue": "",
+                "disabled": [
+                    {
+                        "target":{
+                            "id":"IsLiquidOnly",
+                            "symbol":"Calculate",
+                            "currentId":"FluidNameLiquid",
+                            "expression":"!IsLiquidOnly",
+                            "expressionReqFields":["IsLiquidOnly"],
+                            "value": false
+                        },
+                        "value": false
+                    },
+                    {
+                        "target":{
+                            "id":"IsLiquid2",
+                            "currentId":"FluidNameLiquid2",
+                            "symbol":"Calculate",
+                            "expression":"!IsLiquid2",
+                            "expressionReqFields":["IsLiquid2"],
+                            "value": false
+                        },
+                        "value": false
+                    }
+                ],
+                "visible": [
+                    {
+                        "id":"IsLiquidOnly",
+                        "currentId":"FluidNameLiquid",
+                        "value": true
+                    },
+                    {
+                        "id":"IsLiquid2",
+                        "currentId":"FluidNameLiquid2",
+                        "value": true
+                    }
+                ],
+                "infoText": "",
+                "grid": 3,
+                "dimensionName":"",
+                "dependentFieldName": [
+                    {
+                        "id":"IsLiquidOnly",
+                        "value": true
+                    }
+                ],
+                "validations": []
+            },
+            {
+                "fieldName": "SpGravityLiquid|SpGravityLiquid2",
+                "label": "Specific Gravity",
+                "type": "number",
+                "fieldDisplayOrder":8,
+                "mandatory":[
+                    {
+                        "target":{
+                            "id":"IsLiquidOnly",
+                            "currentId":"SpGravityLiquid",
+                            "value": true
+                        },
+                        "value": true
+                    },
+                    {
+                        "target":{
+                            "id":"IsLiquid2",
+                            "currentId":"SpGravityLiquid2",
+                            "value": true
+                        },
+                        "value": true
+                    }
+                ],
+                "defaultValue":[],
+                "disabled": [
+                    {
+                        "target":{
+                            "id":"IsLiquidOnly",
+                            "symbol":"Calculate",
+                            "currentId":"SpGravityLiquid",
+                            "expression":"!IsLiquidOnly",
+                            "expressionReqFields":["IsLiquidOnly"],
+                            "value": false
+                        },
+                        "value": false
+                    },
+                    {
+                        "target":{
+                            "id":"IsLiquid2",
+                            "currentId":"SpGravityLiquid2",
+                            "symbol":"Calculate",
+                            "expression":"!IsLiquid2",
+                            "expressionReqFields":["IsLiquid2"],
+                            "value": false
+                        },
+                        "value": false
+                    }
+                    
+                ],
+                "visible": [
+                    {
+                        "id":"IsLiquidOnly",
+                        "currentId":"SpGravityLiquid",
+                        "value": true
+                    },
+                    {
+                        "id":"IsLiquid2",
+                        "currentId":"SpGravityLiquid2",
+                        "value": true
+                    }
+                ],
+                "infoText": "",
+                "grid": 4,
+                "gridTemplateColumns": "1fr 1fr 1fr",
+                "validations": [],
+                "dependentFieldName": [
+                    {
+                        "id":"IsLiquidOnly",
+                        "value": true
+                    }
+                ],
+                "dimensionName":""
+            },
+            {
+                "fieldName": "ViscosityLiquid|ViscosityLiquid2",
+                "label": "Viscosity",
+                "type": "inputUom",
+                "fieldDisplayOrder":9,
+                "mandatory":[
+                    {
+                        "target":{
+                            "id":"IsLiquidOnly",
+                            "currentId":"ViscosityLiquid",
+                            "value": true
+                        },
+                        "value": true
+                    },
+                    {
+                        "target":{
+                            "id":"IsLiquid2",
+                            "currentId":"ViscosityLiquid2",
+                            "value": true
+                        },
+                        "value": true
+                    }
+                ],
+                "UomFieldName":"ViscosityUOM",
+                "defaultValue":[],
+                "disabled": [
+                    {
+                        "target":{
+                            "id":"IsLiquidOnly",
+                            "symbol":"Calculate",
+                            "currentId":"ViscosityLiquid",
+                            "expression":"!IsLiquidOnly",
+                            "expressionReqFields":["IsLiquidOnly"],
+                            "value": false
+                        },
+                        "value": false
+                    },
+                    {
+                        "target":{
+                            "id":"IsLiquid2",
+                            "currentId":"ViscosityLiquid2",
+                            "symbol":"Calculate",
+                            "expression":"!IsLiquid2",
+                            "expressionReqFields":["IsLiquid2"],
+                            "value": false
+                        },
+                        "value": false
+                    }
+                    
+                ],
+                "visible": [
+                    {
+                        "id": "IsLiquidOnly",
+                        "currentId": "ViscosityLiquid",
+                        "value": true
+                    },
+                    {
+                        "id": "IsLiquid2",
+                        "currentId": "ViscosityLiquid2",
+                        "value": true
+                    }
+                    
+                ],
+                "infoText": "",
+                "grid": 4,
+                "gridTemplateColumns": "1fr 1fr",
+                "style":{"inputWidth":"9rem","dd_width":"6.5rem","inputUOMWidth":"17rem"},
+                "validations": [],
+                
+                "dimensionName":["viscosity",
+                    "viscositykin"
+                ],
+                "options":[]
+            }
+
+        ]
+    },
+    {
+        "sectionName": "pressureProperties",
+        "sectionLabel": "Pressure Properties",
+        "displayType": "form",
+        "displayOrder": 6,
+        "fields": [
+            {
+                "fieldName": "AtmPressure",
+                "label": "Atmospheric",
+                "type": "inputUom",
+                "UomFieldName": "AtmPressureUOM",
+                "fieldDisplayOrder": 1,
+                "mandatory": true,
+                "onBlurAction":true,
+                "defaultValue": {
+                    "value": "14.696"
+                },
+                "disabled": false,
+                "visible": true,
+                "infoText": "Atmospheric Pressure [Patm]",
+                "grid": 4,
+                "dimensionName": [
+                    "abspressure"
+                ],
+                "validations": [
+                    {
+                        "target":{
+                            "id":"AtmPressure",
+                            "symbol":"Calculate",
+                            "expression":"AtmPressure<0",
+                            "expressionReqFields":["AtmPressure","AtmPressureUOM"],
+                            "uom": "abspressure.psia",
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"AtmPressuregt0"}
+                    },
+                    
+                    {
+                        "target":{
+                            "id":"VariableSuperimposed",
+                            "symbol":"Validation_function",
+                            "validateFor":"PsicPsivPatmLessThanEqZero",
+                            "expression":"!isNaN(ConstantSuperimposed) && !isNaN(VariableSuperimposed) && !isNaN(AtmPressure) && (ConstantSuperimposed + VariableSuperimposed + AtmPressure <= 0)",
+                            "expressionReqFields":["VariableSuperimposed","ConstantSuperimposed","AtmPressure"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"PsicPsivPatmLessThanEqZero"}
+                    }
+                
+                ],
+                "options": [],
+                "regex": "NOT_ALLOW_NEGATIVE",
+                "defaultUnit": {
+                    "label": "psia",
+                    "value": "psia"
+                }
+            },
+            {
+                "fieldName": "SystemMAWP",
+                "label": "System MAWP",
+                "type": "inputUom",
+                "UomFieldName": "PressureUOM",
+                "fieldDisplayOrder": 2,
+                "mandatory": false,
+                "onBlurAction":true,
+                "defaultValue": "",
+                "disabled": false,
+                "visible": true,
+                "infoText": "System MAWP [MAWP]",
+                "grid": 4,
+                "dimensionName": [
+                    "pressure"
+                ],
+                "validations": [
+                    {
+                        "target":{
+                            "id":"SystemMAWP",
+                            "symbol":"Calculate",
+                            "expression":"SystemMAWP!=''&& SystemMAWP<SetPressure",
+                            "expressionReqFields":["SystemMAWP","SetPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"SetPressureltMAWP"}
+                    },
+                    {
+                        "target":{
+                            "id":"SetPressure",
+                            "symbol":"Calculate",
+                            "expression":"SystemMAWP!='' && SystemMAWP<SetPressure",
+                            "expressionReqFields":["SystemMAWP","SetPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"SetPressureltMAWP"}
+                    }
+                ],
+                "options": [],
+                "regex": "NOT_ALLOW_NEGATIVE",
+                "defaultUnit": {
+                    "label": "psia",
+                    "value": "psia"
+                }
+            },
+            {
+                "fieldName": "OperatingPressure",
+                "label": "Operating Pressure",
+                "type": "inputUom",
+                "UomFieldName": "PressureUOM",
+                "fieldDisplayOrder": 3,
+                "onBlurAction":true,
+                "mandatory": false,
+                "defaultValue": "",
+                "disabled": false,
+                "visible": true,
+                "infoText": "Operating Pressure [Pn]",
+                "grid": 4,
+                "dimensionName": [
+                    "pressure"
+                ],
+                "validations": [
+                    {
+                        "target": {
+                            "id": "OperatingPressure",
+                            "symbol": "Calculate",
+                            "expression": "OperatingPressure && SetPressure && OperatingPressure>SetPressure",
+                            "expressionReqFields": [
+                                "OperatingPressure",
+                                "SetPressure",
+                                "PressureUOM"
+                            ],
+                            "value": true
+                        },
+                        "message": {
+                            "type": "error",
+                            "message": "PsetgtPn"
+                        }
+                    },
+                    {
+                        "target": {
+                            "id": "SetPressure",
+                            "currentId": "OperatingPressure",
+                            "symbol": "Calculate",
+                            "expression": "OperatingPressure && SetPressure && OperatingPressure>(0.9*SetPressure)",
+                            "expressionReqFields": [
+                                "SetPressure",
+                                "OperatingPressure"
+                            ],
+                            "value": true
+                        },
+                        "message": {
+                            "type": "warning",
+                            "message": "Pngt90perPset"
+                        }
+                    }
+                ],
+                "options": [],
+                "regex": "NOT_ALLOW_NEGATIVE",
+                "defaultUnit": {
+                    "label": "psia",
+                    "value": "psia"
+                }
+            },
+            {
+                "fieldName": "SetPressure",
+                "label": "Set Pressure",
+                "type": "inputUom",
+                "UomFieldName": "PressureUOM",
+                "fieldDisplayOrder": 4,
+                "onBlurAction":true,
+                "mandatory": true,
+                "defaultValue": "",
+                "disabled": false,
+                "visible": true,
+                "infoText": "Set Pressure [Pset]",
+                "grid": 4,
+                "dimensionName": [
+                    "pressure"
+                ],
+                "validations": [
+                    {
+                        "target": {
+                            "id": "SetPressure",
+                            "symbol": "Calculate",
+                            "expression":"SetPressure && SetPressure<15",
+                            "expressionReqFields": ["SetPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"Psetgt15"}
+                    },
+                    
+                    {
+                        "target":{
+                            "id":"ConstantSuperimposed",
+                            "symbol":"Calculate",
+                            "currentId": "SetPressure",
+                            "focusedField":"ConstantSuperimposed",
+                            "expression":"SetPressure!='' && ConstantSuperimposed+VariableSuperimposed>=SetPressure",
+                            "expressionReqFields":["ConstantSuperimposed","VariableSuperimposed","SetPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"PsicPlusPsivltPset"}
+                    },
+                    {
+                        "target":{
+                            "id":"ConstantSuperimposed",
+                            "symbol":"Calculate",
+                            "currentId": "SetPressure",
+                            "focusedField":"ConstantSuperimposed",
+                            "expression":"SetPressure!='' && ConstantSuperimposed+VariableSuperimposed>=SetPressure",
+                            "expressionReqFields":["ConstantSuperimposed","VariableSuperimposed","SetPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "value":true
+                        },
+                        "message":{"type":"warning","message":"PsicPlusPsivgtPset"}
+                    },
+                    {
+                        "target":{
+                            "id":"SetPressure",
+                            "symbol":"Validation_function",
+                            "validateFor":"P1lt0",
+                            "expression":"!isNaN(OverPressure) && !isNaN(SetPressure) && !isNaN(InletLoss) && (SetPressure+OverPressure-InletLoss+AtmPressure)<0.000",
+                            "expressionReqFields":["SetPressure","OverPressure","InletLoss","AtmPressure","TotalBackPressure"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"P1lt0"}
+                    },
+                    {
+                        "target":{
+                            "id":"OperatingPressure",
+                            "symbol":"Calculate",
+                            "focusedField":"OperatingPressure",
+                            "expression":"OperatingPressure && SetPressure && OperatingPressure>(0.9*SetPressure)",
+                            "expressionReqFields":["SetPressure","OperatingPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "value":true
+                        },
+                        "message":{"type":"warning","message":"Pngt90perPset"}
+                    },
+                    {
+                        "target":{
+                            "id":"SetPressure",
+                            "symbol":"Calculate",
+                            "currentId": "InletLoss",
+                            "expression":"InletLoss && InletLoss>(0.03*SetPressure)",
+                            "expressionReqFields":["InletLoss","SetPressure","PressureUOM"],
+                            "value":true
+                        },
+                        "message":{"type":"warning","message":"Plossgt3perofPset"}
+                    }
+                ],
+                "options": [],
+                "regex": "NOT_ALLOW_NEGATIVE",
+                "defaultUnit": {
+                    "label": "psia",
+                    "value": "psia"
+                }
+            },
+            {
+                "fieldName": "OverPressurePer",
+                "label": "Over Pressure %",
+                "type": "radioInput",
+                "UomFieldName": "PressureUOM",
+                "fieldDisplayOrder": 5,
+                "mandatory": false,
+                "onBlurAction":true,
+                "defaultValue":  [
+                    
+                    {
+                        "target":{
+                            "id":"SizingBasis",
+                            "currentId": "OverPressurePer",
+                            "focusedField":"SetPressure",
+                            "symbol":"Calculate",
+                            "uom":"pressure.psig",
+                            "expectedResultType":"number",
+                            "expression": "(SizingBasis == 'Fire Case') ? 21 :(!SetPressure ? 10 :((SetPressure >= 30)? 10 : 300 / SetPressure))",
+                            "expressionReqFields":["SystemMAWP","SetPressure","SizingBasis","PressureUOM"],
+                            "nextRound":false
+                        },
+                        "value":"10"
+                    },
+                    {
+                        "target":{
+                            "id":"SystemMAWP",
+                            "currentId": "OverPressurePer",
+                            "focusedField":"SetPressure",
+                            "symbol":"Calculate",
+                            "uom":"pressure.psig",
+                            "expectedResultType":"number",
+                            "expression": "(SizingBasis == 'Fire Case') ? 21 :(!SetPressure ? 10 :((SetPressure >= 30) ? 10 : 300 / SetPressure))",
+                            "expressionReqFields":["SystemMAWP","SetPressure","SizingBasis","PressureUOM"],
+                            "nextRound":false
+                        },
+                        "value":"10"
+                    },
+                    {
+                        "target":{
+                            "id":"OverPressure",
+                            "focusedField":"OverPressure",
+                            "currentId": "OverPressurePer",
+                            "symbol":"Calculate",
+                            "uom":"pressure.psig",
+                            "expression": "!SetPressure?((SizingBasis == 'Fire Case') ? 21:10):(!OverPressure?0:(OverPressure*100/SetPressure)))",
+                            "expressionReqFields":["SetPressure","SystemMAWP","SizingBasis","OverPressure","PressureUOM"],
+                            "nextRound":false
+                        },
+                        "value":"10"
+                    },
+                    {
+                        "target":{
+                            "id":"SetPressure",
+                            "currentId": "OverPressurePer",
+                            "focusedField":"SystemMAWP",
+                            "symbol":"Calculate",
+                            "uom":"pressure.psig",
+                            "expectedResultType":"number",
+                            "expression": "(SizingBasis == 'Fire Case') ? 21 :(!SetPressure ? 10 :((SetPressure >= 30) ? 10 : (300 / SetPressure)))",
+                            "expressionReqFields":["SystemMAWP","SetPressure","SizingBasis","PressureUOM"],
+                            "nextRound":false
+                        },
+                        "value":"10"
+                    }
+                ],
+                "disabled": false,
+                "visible": true,
+                "infoText": "",
+                "grid": 4,
+                "dimensionName": [
+                    "%"
+                ],
+                "validations": [],
+                "fieldGroupType": "RADIO_GROUP",
+                "fieldGroupName": "Fl_OvrPsr_Per",
+                "options": [],
+                "regex": "NOT_ALLOW_NEGATIVE",
+                "defaultUnit": {
+                    "label": "%",
+                    "value": "%"
+                }
+            },
+            {
+                "fieldName": "OverPressure",
+                "label": "Over Pressure",
+                "type": "radioInput",
+                "UomFieldName": "PressureUOM",
+                "fieldDisplayOrder": 6,
+                "mandatory": false,
+                "onBlurAction":true,
+                "defaultValue": [
+                    {
+                        "target":{
+                            "id":"SizingBasis",
+                            "currentId": "OverPressure",
+                            "focusedField":"SizingBasis",
+                            "symbol":"Calculate",
+                            "uom": "pressure.psig",
+                            "expression":"!SetPressure ? 0 : ((SizingBasis == 'Fire Case') ? (0.21*SetPressure) : ((SetPressure<=30) ? 3 : 0.1*SetPressure))",
+                            "expressionReqFields":["SetPressure","SizingBasis","OverPressurePer","PressureUOM"],
+                            "nextRound":false
+                        },
+                        "value":"0.000"
+                    },
+                    {
+                        "target":{
+                            "id":"SystemMAWP",
+                            "currentId": "OverPressure",
+                            "focusedField":"SystemMAWP",
+                            "symbol":"Calculate",
+                            "uom": "pressure.psig",
+                            "expression":"!SetPressure ? 0 : ((SizingBasis == 'Fire Case') ? (0.21*SetPressure) : ((SetPressure<=30) ? 3 : 0.1*SetPressure))",
+                            "expressionReqFields":["SetPressure","SizingBasis","PressureUOM"],
+                            "nextRound":false
+                        },
+                        "value":"0.000"
+                    },
+                    {
+                        "target":{
+                            "id":"OverPressurePer",
+                            "currentId": "OverPressure",
+                            "focusedField":"OverPressurePer",
+                            "symbol":"Calculate",
+                            "expression":"SetPressure*OverPressurePer/100",
+                            "expressionReqFields":["SetPressure","OverPressurePer"],
+                            "nextRound":false
+                        },
+                        "value":"0.000"
+                    },
+                    {
+                        "target":{
+                            "id":"SetPressure",
+                            "currentId": "OverPressure",
+                            "focusedField":"SetPressure",
+                            "symbol":"Calculate",
+                            "uom": "pressure.psig",
+                            "expression":"!SetPressure ? 0 : ((SizingBasis == 'Fire Case') ? (0.21*SetPressure) : ((SetPressure<=30) ? 3 : 0.1*SetPressure))",
+                            "expressionReqFields":["SetPressure","SizingBasis","PressureUOM"],
+                            "nextRound":false
+                        },
+                        "value":"0.000"
+                    }            
+                ],
+                "disabled": false,
+                "visible": true,
+                "infoText": "",
+                "grid": 4,
+                "dimensionName": [
+                    "pressure"
+                ],
+                "validations": [
+                    {
+                        "target": {
+                            "id": "SizingBasis",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis !='Fire Case' && SetPressure !='' && (SetPressure==SystemMAWP||SystemMAWP == '') && SetPressure< 30 && OverPressure != 3",
+                            "expressionReqFields": ["SetPressure","IsASMESection8","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","3","3"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule1"}
+                    },
+                    {
+                        "target": {
+                            "id": "SizingBasis",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis != 'Fire Case' && SetPressure !='' && (SetPressure == SystemMAWP || SystemMAWP == '') && SetPressure >= 30 && OverPressure != (SetPressure*0.1)",
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "expectedValue":["PressureUOM","SetPressure*0.1","SetPressure*0.1"],
+                            "uom": "pressure.psig",
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule2"}
+                    },
+                    {
+                        "target": {
+                            "id": "SizingBasis",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis != 'Fire Case' && SetPressure !='' && SetPressure < SystemMAWP && SystemMAWP < 30 && SetPressure < 30 && (OverPressure<3 || OverPressure> (3 + SystemMAWP-SetPressure))",
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "expectedValue":["PressureUOM","3","(3 + SystemMAWP-SetPressure)"],
+                            "uom": "pressure.psig",
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule3","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "SizingBasis",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis != 'Fire Case' && SetPressure !='' && SetPressure < SystemMAWP && SystemMAWP >= 30 && SetPressure < 30 && (OverPressure<3 || OverPressure> ((SystemMAWP*0.1) + SystemMAWP-SetPressure))",
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "expectedValue":["PressureUOM","3","(SystemMAWP*0.1) + SystemMAWP-SetPressure"],
+                            "uom": "pressure.psig",
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule4","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "SizingBasis",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis != 'Fire Case' && SetPressure !=''  && SetPressure < SystemMAWP && SystemMAWP >= 30 && SetPressure >= 30 && (OverPressure< (SetPressure*0.1) || OverPressure>((SystemMAWP*0.1) + SystemMAWP-SetPressure))",
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","SetPressure*0.1","((SystemMAWP*0.1) + SystemMAWP-SetPressure)"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule5","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "SizingBasis",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis == 'Fire Case' && SetPressure !='' && (SetPressure == SystemMAWP || SystemMAWP == '') && SetPressure < 30 && (OverPressure<3 || OverPressure> (SetPressure*0.21))",
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "expectedValue":["PressureUOM","3","SetPressure*0.21"],
+                            "dynamicMessage":true,
+                            "uom": "pressure.psig",
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule6","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "SizingBasis",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis == 'Fire Case' && SetPressure !='' && (SetPressure == SystemMAWP || SystemMAWP == '') && SetPressure >= 30 && (OverPressure< (SetPressure*0.1) || OverPressure> (SetPressure*0.21))",
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","SetPressure*0.1","SetPressure*0.21"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule7","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "SizingBasis",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis == 'Fire Case' && SetPressure !='' && SetPressure < SystemMAWP && SystemMAWP < 30 && SetPressure < 30 && (OverPressure<3 || OverPressure> ((SystemMAWP*0.21) + SystemMAWP-SetPressure))",
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","3","((SystemMAWP*0.21) + SystemMAWP-SetPressure)"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule8","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "SizingBasis",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis == 'Fire Case' && SetPressure !='' && SetPressure < SystemMAWP && SystemMAWP >= 30 && SetPressure < 30 && (OverPressure<3 || OverPressure> ((SystemMAWP*0.21) + SystemMAWP-SetPressure))",
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","3","((SystemMAWP*0.21) + SystemMAWP-SetPressure)"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule9","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "SizingBasis",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis == 'Fire Case' && SetPressure !='' && SetPressure < SystemMAWP && SystemMAWP >= 30 && SetPressure >= 30 && (OverPressure< (SetPressure*0.1) || OverPressure> ((SystemMAWP*0.21) + SystemMAWP-SetPressure))",
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","SetPressure*0.1","((SystemMAWP*0.21) + SystemMAWP-SetPressure)"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule10","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "SetPressure",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis !='Fire Case' && SetPressure !='' && (SetPressure==SystemMAWP||SystemMAWP == '') && SetPressure< (3 / 0.10) && OverPressure != 3",
+                            "expressionReqFields": ["SetPressure","IsASMESection8","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","3","3"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule1"}
+                    },
+                    {
+                        "target": {
+                            "id": "SetPressure",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis != 'Fire Case' && SetPressure !='' && (SetPressure == SystemMAWP || SystemMAWP == '') && SetPressure >= 30 && OverPressure != (SetPressure*0.1)",
+                            
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "expectedValue":["PressureUOM","SetPressure*0.1","SetPressure*0.1"],
+                            
+                            "uom": "pressure.psig",
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule2"}
+                    },
+                    {
+                        "target": {
+                            "id": "SetPressure",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis != 'Fire Case' && SetPressure !='' && SetPressure < SystemMAWP && SystemMAWP < 30 && SetPressure < 30 && (OverPressure<3 || OverPressure> (3 + SystemMAWP-SetPressure))",
+                            
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "expectedValue":["PressureUOM","3","(3 + SystemMAWP-SetPressure)"],
+                            "uom": "pressure.psig",
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule3","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "SetPressure",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis != 'Fire Case' && SetPressure !='' && SetPressure < SystemMAWP && SystemMAWP >= 30 && SetPressure < 30 && (OverPressure<3 || OverPressure> ((SystemMAWP*0.1) + SystemMAWP-SetPressure))",
+                            
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "expectedValue":["PressureUOM","3","(SystemMAWP*0.1) + SystemMAWP-SetPressure"],
+                            "uom": "pressure.psig",
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule4","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "SetPressure",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis != 'Fire Case' && SetPressure !=''  && SetPressure < SystemMAWP && SystemMAWP >= 30 && SetPressure >= 30 && (OverPressure< (SetPressure*0.1) || OverPressure>((SystemMAWP*0.1) + SystemMAWP-SetPressure))",
+                            
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","SetPressure*0.1","((SystemMAWP*0.1) + SystemMAWP-SetPressure)"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule5","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "SetPressure",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis == 'Fire Case' && SetPressure !='' && (SetPressure == SystemMAWP || SystemMAWP == '') && SetPressure < 30 && (OverPressure<3 || OverPressure> (SetPressure*0.21))",
+                            
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "expectedValue":["PressureUOM","3","SetPressure*0.21"],
+                            "dynamicMessage":true,
+                            "uom": "pressure.psig",
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule6","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "SetPressure",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis == 'Fire Case' && SetPressure !='' && (SetPressure == SystemMAWP || SystemMAWP == '') && SetPressure >= 30 && (OverPressure< (SetPressure*0.1) || OverPressure> (SetPressure*0.21))",
+                            
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","SetPressure*0.1","SetPressure*0.21"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule7","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "SetPressure",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis == 'Fire Case' && SetPressure !='' && SetPressure < SystemMAWP && SystemMAWP < 30 && SetPressure < 30 && (OverPressure<3 || OverPressure> ((SystemMAWP*0.21) + SystemMAWP-SetPressure))",
+                            
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","3","((SystemMAWP*0.21) + SystemMAWP-SetPressure)"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule8","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "SetPressure",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis == 'Fire Case' && SetPressure !='' && SetPressure < SystemMAWP && SystemMAWP >= 30 && SetPressure < 30 && (OverPressure<3 || OverPressure> ((SystemMAWP*0.21) + SystemMAWP-SetPressure))",
+                            
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","3","((SystemMAWP*0.21) + SystemMAWP-SetPressure)"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule9","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "SetPressure",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis == 'Fire Case' && SetPressure !='' && SetPressure < SystemMAWP && SystemMAWP >= 30 && SetPressure >= 30 && (OverPressure< (SetPressure*0.1) || OverPressure> ((SystemMAWP*0.21) + SystemMAWP-SetPressure))",
+                            
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","SetPressure*0.1","((SystemMAWP*0.21) + SystemMAWP-SetPressure)"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule10","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "SystemMAWP",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis !='Fire Case' && SetPressure !='' && (SetPressure==SystemMAWP||SystemMAWP == '') && SetPressure< (3 / 0.10) && OverPressure != 3",
+                            "expressionReqFields": ["SetPressure","IsASMESection8","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","3","3"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule1"}
+                    },
+                    {
+                        "target": {
+                            "id": "SystemMAWP",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis != 'Fire Case' && SetPressure !='' && (SetPressure == SystemMAWP || SystemMAWP == '') && SetPressure >= 30 && OverPressure != (SetPressure*0.1)",
+                            
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "expectedValue":["PressureUOM","SetPressure*0.1","SetPressure*0.1"],
+                            
+                            "uom": "pressure.psig",
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule2"}
+                    },
+                    {
+                        "target": {
+                            "id": "SystemMAWP",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis != 'Fire Case' && SetPressure !='' && SetPressure < SystemMAWP && SystemMAWP < 30 && SetPressure < 30 && (OverPressure<3 || OverPressure> (3 + SystemMAWP-SetPressure))",
+                            
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "expectedValue":["PressureUOM","3","(3 + SystemMAWP-SetPressure)"],
+                            "uom": "pressure.psig",
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule3","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "SystemMAWP",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis != 'Fire Case' && SetPressure !='' && SetPressure < SystemMAWP && SystemMAWP >= 30 && SetPressure < 30 && (OverPressure<3 || OverPressure> ((SystemMAWP*0.1) + SystemMAWP-SetPressure))",
+                            
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "expectedValue":["PressureUOM","3","(SystemMAWP*0.1) + SystemMAWP-SetPressure"],
+                            "uom": "pressure.psig",
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule4","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "SystemMAWP",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis != 'Fire Case' && SetPressure !=''  && SetPressure < SystemMAWP && SystemMAWP >= 30 && SetPressure >= 30 && (OverPressure< (SetPressure*0.1) || OverPressure>((SystemMAWP*0.1) + SystemMAWP-SetPressure))",
+                            
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","SetPressure*0.1","((SystemMAWP*0.1) + SystemMAWP-SetPressure)"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule5","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "SystemMAWP",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis == 'Fire Case' && SetPressure !='' && (SetPressure == SystemMAWP || SystemMAWP == '') && SetPressure < 30 && (OverPressure<3 || OverPressure> (SetPressure*0.21))",
+                            
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "expectedValue":["PressureUOM","3","SetPressure*0.21"],
+                            "dynamicMessage":true,
+                            "uom": "pressure.psig",
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule6","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "SystemMAWP",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis == 'Fire Case' && SetPressure !='' && (SetPressure == SystemMAWP || SystemMAWP == '') && SetPressure >= 30 && (OverPressure< (SetPressure*0.1) || OverPressure> (SetPressure*0.21))",
+                            
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","SetPressure*0.1","SetPressure*0.21"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule7","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "SystemMAWP",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis == 'Fire Case' && SetPressure !='' && SetPressure < SystemMAWP && SystemMAWP < 30 && SetPressure < 30 && (OverPressure<3 || OverPressure> ((SystemMAWP*0.21) + SystemMAWP-SetPressure))",
+                            
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","3","((SystemMAWP*0.21) + SystemMAWP-SetPressure)"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule8","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "SystemMAWP",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis == 'Fire Case' && SetPressure !='' && SetPressure < SystemMAWP && SystemMAWP >= 30 && SetPressure < 30 && (OverPressure<3 || OverPressure> ((SystemMAWP*0.21) + SystemMAWP-SetPressure))",
+                            
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","3","((SystemMAWP*0.21) + SystemMAWP-SetPressure)"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule9","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "SystemMAWP",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis == 'Fire Case' && SetPressure !='' && SetPressure < SystemMAWP && SystemMAWP >= 30 && SetPressure >= 30 && (OverPressure< (SetPressure*0.1) || OverPressure> ((SystemMAWP*0.21) + SystemMAWP-SetPressure))",
+                            
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","SetPressure*0.1","((SystemMAWP*0.21) + SystemMAWP-SetPressure)"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule10","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "OverPressurePer",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis !='Fire Case' && SetPressure !='' && (SetPressure==SystemMAWP||SystemMAWP == '') && SetPressure< (3 / 0.10) && OverPressure != 3",
+                            "expressionReqFields": ["SetPressure","IsASMESection8","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","3","3"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule1"}
+                    },
+                    {
+                        "target": {
+                            "id": "OverPressurePer",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis != 'Fire Case' && SetPressure !='' && (SetPressure == SystemMAWP || SystemMAWP == '') && SetPressure >= 30 && OverPressure != (SetPressure*0.1)",
+                            
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "expectedValue":["PressureUOM","SetPressure*0.1","SetPressure*0.1"],
+                            
+                            "uom": "pressure.psig",
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule2"}
+                    },
+                    {
+                        "target": {
+                            "id": "OverPressurePer",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis != 'Fire Case' && SetPressure !='' && SetPressure < SystemMAWP && SystemMAWP < 30 && SetPressure < 30 && (OverPressure<3 || OverPressure> (3 + SystemMAWP-SetPressure))",
+                            
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "expectedValue":["PressureUOM","3","(3 + SystemMAWP-SetPressure)"],
+                            "uom": "pressure.psig",
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule3","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "OverPressurePer",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis != 'Fire Case' && SetPressure !='' && SetPressure < SystemMAWP && SystemMAWP >= 30 && SetPressure < 30 && (OverPressure<3 || OverPressure> ((SystemMAWP*0.1) + SystemMAWP-SetPressure))",
+                            
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "expectedValue":["PressureUOM","3","(SystemMAWP*0.1) + SystemMAWP-SetPressure"],
+                            "uom": "pressure.psig",
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule4","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "OverPressurePer",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis != 'Fire Case' && SetPressure !=''  && SetPressure < SystemMAWP && SystemMAWP >= 30 && SetPressure >= 30 && (OverPressure< (SetPressure*0.1) || OverPressure>((SystemMAWP*0.1) + SystemMAWP-SetPressure))",
+                            
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","SetPressure*0.1","((SystemMAWP*0.1) + SystemMAWP-SetPressure)"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule5","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "OverPressurePer",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis == 'Fire Case' && SetPressure !='' && (SetPressure == SystemMAWP || SystemMAWP == '') && SetPressure < 30 && (OverPressure<3 || OverPressure> (SetPressure*0.21))",
+                            
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "expectedValue":["PressureUOM","3","SetPressure*0.21"],
+                            "dynamicMessage":true,
+                            "uom": "pressure.psig",
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule6","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "OverPressurePer",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis == 'Fire Case' && SetPressure !='' && (SetPressure == SystemMAWP || SystemMAWP == '') && SetPressure >= 30 && (OverPressure< (SetPressure*0.1) || OverPressure> (SetPressure*0.21))",
+                            
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","SetPressure*0.1","SetPressure*0.21"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule7","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "OverPressurePer",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis == 'Fire Case' && SetPressure !='' && SetPressure < SystemMAWP && SystemMAWP < 30 && SetPressure < 30 && (OverPressure<3 || OverPressure> ((SystemMAWP*0.21) + SystemMAWP-SetPressure))",
+                            
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","3","((SystemMAWP*0.21) + SystemMAWP-SetPressure)"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule8","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "OverPressurePer",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis == 'Fire Case' && SetPressure !='' && SetPressure < SystemMAWP && SystemMAWP >= 30 && SetPressure < 30 && (OverPressure<3 || OverPressure> ((SystemMAWP*0.21) + SystemMAWP-SetPressure))",
+                            
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","3","((SystemMAWP*0.21) + SystemMAWP-SetPressure)"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule9","dynamic":true}
+                    },
+                    {
+                        "target": {
+                            "id": "OverPressurePer",
+                            "symbol": "Calculate",
+                            "expression":"IsASMESection8 ==true && SizingBasis == 'Fire Case' && SetPressure !='' && SetPressure < SystemMAWP && SystemMAWP >= 30 && SetPressure >= 30 && (OverPressure< (SetPressure*0.1) || OverPressure> ((SystemMAWP*0.21) + SystemMAWP-SetPressure))",
+                            
+							"expressionReqFields": ["IsASMESection8","SetPressure","SizingBasis","SystemMAWP","OverPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "expectedValue":["PressureUOM","SetPressure*0.1","((SystemMAWP*0.21) + SystemMAWP-SetPressure)"],
+                            "dynamicMessage":true,
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"PoverSectionVIIIRule10","dynamic":true}
+                    }                    
+                ],
+                "fieldGroupType": "RADIO_GROUP",
+                "fieldGroupName": "Fl_OvrPsr_Per",
+                "options": [],
+                "regex": "NOT_ALLOW_NEGATIVE"
+            },
+            {
+                "fieldName": "BackPressure",
+                "label": "Back Pressure",
+                "type": "label",
+                "style":{"flex":10},
+                "fieldDisplayOrder":4,
+                "mandatory":false,
+                "defaultValue": "",
+                "disabled": false,
+                "hideFromSideBar":true,
+                "visible": true,
+                "grid": 6,
+                "infoText": "",
+                "dimensionName":"",
+                "validations": []
+            },
+            {
+                "fieldName": "BuiltUp",
+                "label": "Built-Up",
+                "type": "inputUom",
+                "UomFieldName": "PressureUOM",
+                "fieldDisplayOrder": 7,
+                "onBlurAction":true,
+                "mandatory": false,
+                "defaultValue": {
+                    "value": "0.000"
+                },
+                "disabled": false,
+                "visible": true,
+                "infoText": "Build-Up [Pbu]",
+                "grid": 4,
+                "dimensionName": [
+                    "pressure"
+                ],
+                "validations": [],
+                "options": [],
+                "regex": "NOT_ALLOW_NEGATIVE"
+            },
+            {
+                "fieldName": "ConstantSuperimposed",
+                "label": "Constant Superimposed",
+                "type": "inputUom",
+                "UomFieldName": "PressureUOM",
+                "fieldDisplayOrder": 8,
+                "onBlurAction":true,
+                "mandatory": false,
+                "defaultValue": {
+                    "value": "0.000"
+                },
+                "disabled": false,
+                "visible": true,
+                "infoText": "Constant Superimposed [Psic]",
+                "grid": 4,
+                "dimensionName": [
+                    "pressure"
+                ],
+                "validations": [
+                    {
+                        "target":{
+                            "id":"ConstantSuperimposed",
+                            "symbol":"Validation_function",
+                            "validateFor":"PsicandPatmLessThanEqZero",
+                            "expression":"!isNaN(ConstantSuperimposed) && !isNaN(AtmPressure) && (ConstantSuperimposed + AtmPressure <= 0)",
+                            "expressionReqFields":["ConstantSuperimposed","AtmPressure"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"PsicandPatmLessThanEqZero"}
+                    },
+                    {
+                        "target":{
+                            "id":"VariableSuperimposed",
+                            "symbol":"Calculate",
+                            "currentId": "ConstantSuperimposed",
+                            "focusedField":"VariableSuperimposed",
+                            "expression":"IsASMESection8 == true && SetPressure!='' && ConstantSuperimposed+VariableSuperimposed>=SetPressure",
+                            "expressionReqFields":["IsASMESection8","ConstantSuperimposed","VariableSuperimposed","SetPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"PsicPlusPsivltPset"}
+                    },
+                    {
+                        "target":{
+                            "id":"VariableSuperimposed",
+                            "symbol":"Calculate",
+                            "currentId": "ConstantSuperimposed",
+                            "focusedField":"VariableSuperimposed",
+                            "expression":"IsASMESection8 == false && SetPressure!='' && ConstantSuperimposed+VariableSuperimposed>=SetPressure",
+                            "expressionReqFields":["IsASMESection8","ConstantSuperimposed","VariableSuperimposed","SetPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "value":true
+                        },
+                        "message":{"type":"warning","message":"PsicPlusPsivgtPset"}
+                    }
+                ],
+                "options": [],
+                "regex": "NOT_ALLOW_NEGATIVE"
+            },
+            {
+                "fieldName": "VariableSuperimposed",
+                "label": "Variable Superimposed",
+                "type": "inputUom",
+                "UomFieldName": "PressureUOM",
+                "fieldDisplayOrder": 9,
+                "onBlurAction":true,
+                "mandatory": false,
+                "defaultValue": {
+                    "value": "0.000"
+                },
+                "disabled": false,
+                "visible": true,
+                "infoText": "Variable Superimposed [Psiv]",
+                "grid": 4,
+                "dimensionName": [
+                    "pressure"
+                ],
+                "validations": [
+                    {
+                        "target":{
+                            "id":"VariableSuperimposed",
+                            "symbol":"Validation_function",
+                            "validateFor":"PsivandPatmLessThanEqZero",
+                            "expression":"!isNaN(VariableSuperimposed) && !isNaN(AtmPressure) && (VariableSuperimposed + AtmPressure <= 0)",
+                            "expressionReqFields":["VariableSuperimposed","AtmPressure"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"PsivandPatmLessThanEqZero"}
+                    },
+                    {
+                        "target":{
+                            "id":"SetPressure",
+                            "symbol":"Calculate",
+                            "currentId": "VariableSuperimposed",
+                            "focusedField":"SetPressure",
+                            "expression":"IsASMESection8 == true && SetPressure!='' && ConstantSuperimposed+VariableSuperimposed>=SetPressure",
+                            "expressionReqFields":["IsASMESection8","ConstantSuperimposed","VariableSuperimposed","SetPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"PsicPlusPsivltPset"}
+                    },
+                    {
+                        "target":{
+                            "id":"SetPressure",
+                            "symbol":"Calculate",
+                            "currentId": "VariableSuperimposed",
+                            "focusedField":"SetPressure",
+                            "expression":"IsASMESection8 == false && SetPressure!='' && ConstantSuperimposed+VariableSuperimposed>=SetPressure",
+                            "expressionReqFields":["IsASMESection8","ConstantSuperimposed","VariableSuperimposed","SetPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "value":true
+                        },
+                        "message":{"type":"warning","message":"PsicPlusPsivgtPset"}
+                    },
+                    {
+                        "target":{
+                            "id":"SetPressure",
+                            "symbol":"Calculate",
+                            "currentId": "VariableSuperimposed",
+                            "focusedField":"SetPressure",
+                            "expression":"IsASMESection8 == false && SetPressure!='' && ConstantSuperimposed+VariableSuperimposed>=SetPressure",
+                            "expressionReqFields":["IsASMESection8","ConstantSuperimposed","VariableSuperimposed","SetPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "value":true
+                        },
+                        "message":{"type":"warning","message":"PsicPlusPsivgtPset"}
+                    }
+                ],
+                "options": [],
+                "regex": "NOT_ALLOW_NEGATIVE"
+            },
+            {
+                "fieldName": "TotalBackPressure",
+                "label": "Total Back Pressure",
+                "type": "inputUom",
+                "UomFieldName": "PressureUOM",
+                "fieldDisplayOrder":10,
+                "mandatory":false,
+                "defaultValue": [
+                    {
+                        "target":{
+                            "id":"BuiltUp",
+                            "currentId": "TotalBackPressure",
+                            "focusedField": "BuiltUp",
+                            "symbol":"Calculate",
+                            "expression":"Number(BuiltUp)+Number(ConstantSuperimposed)+Number(VariableSuperimposed)",
+                            "expressionReqFields":["BuiltUp","ConstantSuperimposed","VariableSuperimposed","PressureUOM"]
+                        },
+                        "value":"0"
+                    },
+                    {
+                        "target":{
+                            "id":"ConstantSuperimposed",
+                            "currentId": "TotalBackPressure",
+                            "symbol":"Calculate",
+                            "expression":"Number(BuiltUp)+Number(ConstantSuperimposed)+Number(VariableSuperimposed)",
+                            "expressionReqFields":["BuiltUp","ConstantSuperimposed","VariableSuperimposed","PressureUOM"]
+                        },
+                        "value":"0"
+                    },
+                    {
+                        "target":{
+                            "id":"VariableSuperimposed",
+                            "currentId": "TotalBackPressure",
+                            "symbol":"Calculate",
+                            "expression":"Number(BuiltUp)+Number(ConstantSuperimposed)+Number(VariableSuperimposed)",
+                            "expressionReqFields":["BuiltUp","ConstantSuperimposed","VariableSuperimposed","PressureUOM"]
+                        },
+                        "value":"0"
+                    }
+                ],
+                "disabled": true,
+                "visible": true,
+                "infoText": "Total Back Pressure [Pback]",
+                "grid": 4,
+                "dimensionName":["pressure"],
+                "validations": [
+                    {
+                        "target":{
+                            "id":"SetPressure",
+                            "symbol":"Calculate",
+                            "currentId": "TotalBackPressure",
+                            "focusedField":"SetPressure",
+                            "expression":"SetPressure!='' && ((Number(SetPressure)+Number(OverPressure)-Number(InletLoss))<=(Number(BuiltUp)+Number(ConstantSuperimposed)+Number(VariableSuperimposed)))",
+                            "expressionReqFields":["SetPressure","OverPressure","InletLoss","BuiltUp","ConstantSuperimposed","VariableSuperimposed"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"InPresgtOutPres"}    
+                    },
+                    {
+                        "target":{
+                            "id":"OverPressure",
+                            "symbol":"Calculate",
+                            "currentId": "TotalBackPressure",
+                            "focusedField":"OverPressure",
+                            "expression":"SetPressure!='' && ((Number(SetPressure)+Number(OverPressure)-Number(InletLoss))<=(Number(BuiltUp)+Number(ConstantSuperimposed)+Number(VariableSuperimposed)))",
+                            "expressionReqFields":["SetPressure","OverPressure","InletLoss","BuiltUp","ConstantSuperimposed","VariableSuperimposed"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"InPresgtOutPres"}    
+                    },
+                    {
+                        "target":{
+                            "id":"InletLoss",
+                            "symbol":"Calculate",
+                            "currentId": "TotalBackPressure",
+                            "focusedField":"InletLoss",
+                            "expression":"SetPressure!='' && ((Number(SetPressure)+Number(OverPressure)-Number(InletLoss))<=(Number(BuiltUp)+Number(ConstantSuperimposed)+Number(VariableSuperimposed)))",
+                            "expressionReqFields":["SetPressure","OverPressure","InletLoss","BuiltUp","ConstantSuperimposed","VariableSuperimposed"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"InPresgtOutPres"}    
+                    },
+                    {
+                        "target":{
+                            "id":"BuiltUp",
+                            "currentId": "TotalBackPressure",
+                            "symbol":"Calculate",
+                            "focusedField":"BuiltUp",
+                            "expression":"SetPressure!='' && ((Number(SetPressure)+Number(OverPressure)-Number(InletLoss))<=(Number(BuiltUp)+Number(ConstantSuperimposed)+Number(VariableSuperimposed)))",
+                            "expressionReqFields":["SetPressure","OverPressure","InletLoss","BuiltUp","ConstantSuperimposed","VariableSuperimposed"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"InPresgtOutPres"}
+                    },
+                    {
+                        "target":{
+                            "id":"ConstantSuperimposed",
+                            "currentId": "TotalBackPressure",
+                            "symbol":"Calculate",
+                            "focusedField":"ConstantSuperimposed",
+                            "expression":"SetPressure!='' && ((Number(SetPressure)+Number(OverPressure)-Number(InletLoss))<=(Number(BuiltUp)+Number(ConstantSuperimposed)+Number(VariableSuperimposed)))",
+                            "expressionReqFields":["SetPressure","OverPressure","InletLoss","BuiltUp","ConstantSuperimposed","VariableSuperimposed"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"InPresgtOutPres"}
+                    },
+                    {
+                        "target":{
+                            "id":"VariableSuperimposed",
+                            "currentId": "TotalBackPressure",
+                            "symbol":"Calculate",
+                            "focusedField":"VariableSuperimposed",
+                            "expression":"SetPressure!='' && ((Number(SetPressure)+Number(OverPressure)-Number(InletLoss))<=(Number(BuiltUp)+Number(ConstantSuperimposed)+Number(VariableSuperimposed)))",
+                            "expressionReqFields":["SetPressure","OverPressure","InletLoss","BuiltUp","ConstantSuperimposed","VariableSuperimposed"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"InPresgtOutPres"}
+                        
+                    }
+                ],
+                "options":[],
+                "regex": "NOT_ALLOW_NEGATIVE"
+            },
+            {
+                "fieldName": "divider",
+                "label": "",
+                "type": "divider",
+                "fieldDisplayOrder":4,
+                "mandatory":false,
+                "defaultValue": "",
+                "disabled": false,
+                "hideFromSideBar":true,
+                "visible": true,
+                "grid": 6,
+                "infoText": "",
+                "dimensionName":"",
+                "validations": []
+            },
+            {
+                "fieldName": "InletLossPer",
+                "label": "Inlet Loss %",
+                "type": "radioInput",
+                "UomFieldName": "PressureUOM",
+                "fieldDisplayOrder":13,
+                "mandatory":false,
+                "onBlurAction":true,
+                "defaultValue": [
+                    {
+                        "target":{
+                            "id":"InletLoss",
+                            "focusedField": "InletLoss",
+                            "currentId": "InletLossPer",
+                            "symbol":"Calculate",
+                            "expression":"!SetPressure?'0.000':(InletLoss*100/SetPressure)",
+                            "expressionReqFields":["SetPressure","InletLoss"],
+							"nextRound":false
+                            
+                        },
+                        "value":"0.000"
+                    }
+                ],
+                "disabled": false,
+                "visible": true,
+                "infoText": "",
+                "grid": 4,
+                "dimensionName":["%"],
+                "validations": [
+                    {
+                        "target":{
+                            "id":"InletLoss",
+                            "symbol":"Calculate",
+                            "currentId": "InletLossPer",
+                            "expression":"!SetPressure?false:((InletLoss*100/SetPressure)>3)",
+                            "expressionReqFields":["InletLossPer","InletLoss","SetPressure","PressureUOM"],
+                            "value":true
+                        },
+                        "message":{"type":"warning","message":"Plossgt3perofPset"}
+                    }
+                ],
+                "fieldGroupType":"RADIO_GROUP",
+                "fieldGroupName":"IsInletLossPer",
+                "options":[],
+                "defaultUnit": { "label": "%", "value": "%" },
+                "defaultSelected":"InletLoss",
+                "regex": "NOT_ALLOW_NEGATIVE"
+            },
+            {
+                "fieldName": "InletLoss",
+                "label": "Inlet Loss",
+                "type": "radioInput",
+                "UomFieldName": "PressureUOM",
+                "fieldDisplayOrder":14,
+                "mandatory":false,
+                "onBlurAction":true,
+                "defaultValue": [
+                    {
+                        "target":{
+                            "id":"InletLossPer",
+                            "focusedField": "InletLossPer",
+                            "currentId": "InletLoss",
+                            "actionType":"OnBlur",
+                            "symbol":"Calculate",
+                            "expression":"!SetPressure?'0.000':(SetPressure*InletLossPer/100)",
+                            "expressionReqFields":["SetPressure","InletLossPer"],
+                            "nextRound":false
+                        },
+                        "value":"0.000"
+                    },
+                    {
+                        "target":{
+                            "id":"SetPressure",
+                            "focusedField": "SetPressure",
+                            "currentId": "InletLoss",
+                            "symbol":"Calculate",
+                            "expression":"!SetPressure?'0.000':(SetPressure*InletLossPer/100)",
+                            "expressionReqFields":["SetPressure","InletLossPer"],
+                            "nextRound":false
+                        },
+                        "value":"0.000"
+                    }       
+                ],
+                "disabled": false,
+                "visible": true,
+                "infoText": "",
+                "grid": 4,
+                "dimensionName":["pressure"],
+                "validations": [
+                    {
+                        "target":{
+                            "id":"InletLossPer",
+                            "symbol":"Calculate",
+                            "currentId": "InletLoss",
+                            "expression":"!SetPressure?false:((InletLoss*100/SetPressure)>3)",
+                            "expressionReqFields":["InletLossPer","InletLoss","SetPressure","PressureUOM"],
+                            "value":true
+                        },
+                        "message":{"type":"warning","message":"Plossgt3perofPset"}
+                    }
+                ],
+                "fieldGroupType":"RADIO_GROUP",
+                "fieldGroupName":"IsInletLossPer",
+                "options":[],
+                "defaultUnit": { "label": "psia", "value": "psia" },
+                "defaultSelected":"InletLoss",
+                "regex": "NOT_ALLOW_NEGATIVE"
+            }
+        ]
+    },
+    {
+        "sectionName": "temperatureProperties",
+        "sectionLabel": "Temperature Properties",
+        "displayType": "form",
+        "displayOrder": 7,
+        "fields": [
+            {
+                "fieldName": "Relieving",
+                "label": "Relieving",
+                "type": "inputUom",
+                "UomFieldName": "TemperatureUOM",
+                "fieldDisplayOrder": 1,
+                "mandatory": true,
+                "defaultValue": "",
+                "disabled": false,
+                "visible": true,
+                "infoText": "",
+                "grid": 4,
+                "dimensionName": [
+                    "temperature"
+                ],
+                "validations": [
+                    {
+                        "id": "Relieving",
+                        "minValue": -273.15,
+                        "uom": "temp.degC",
+                        "message":{"type":"error","message":"Rtemp"}  
+                    },
+                    {
+                        "target":{
+                            "id":"Relieving",
+                            "symbol":"Calculate",
+                            "expression":"NormalSystem != '' && Relieving!='' && DesignMax<NormalSystem && Relieving<NormalSystem",
+                            "expressionReqFields":["Relieving", "NormalSystem", "DesignMax"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"NTgtRT"}
+                    }
+                ],
+                "options": [],
+                "regex": "ALLOW_NEGATIVE"
+            },
+            {
+                "fieldName": "Operating",
+                "label": "Operating",
+                "type": "inputUom",
+                "UomFieldName": "TemperatureUOM",
+                "fieldDisplayOrder": 2,
+                "mandatory": [
+                    {
+                        "target":{
+                            "id":"SizingBasis",
+                            "currentId": "Operating",
+                            "symbol":"Calculate",
+							"expression":"SizingBasis=='Fire Case'",
+                            "expressionReqFields":["SizingBasis"],
+							"nextRound":false
+                            
+                        },
+                        "value":false
+                    }
+                ],
+                "defaultValue": "",
+                "disabled": false,
+                "visible": true,
+                "infoText": "",
+                "grid": 4,
+                "dimensionName": [
+                    "temperature"
+                ],
+                "validations": [
+                    {
+                        "target":{
+                            "id":"Operating",
+                            "symbol":"Calculate",
+                            "expression":"Operating!='' && NormalSystem!='' && Operating<NormalSystem",
+                            "expressionReqFields":["Operating", "NormalSystem"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"NTgtOT"}
+                    }
+                ],
+                "options": [],
+                "defaultUnit": {
+                    "label": "°C",
+                    "value": "°C"
+                },
+                "regex": "ALLOW_NEGATIVE"
+            },
+            {
+                "fieldName": "DesignMin",
+                "label": "Design Min",
+                "type": "inputUom",
+                "UomFieldName": "TemperatureUOM",
+                "fieldDisplayOrder":3,
+                "mandatory":false,
+                "defaultValue": "",
+                "disabled": false,
+                "visible": true,
+                "infoText": "",
+                "grid": 4,
+                "dimensionName":["temperature"],
+                "validations": [
+                    {
+                        "target":{
+                            "id":"DesignMin",
+                            "symbol":"Calculate",
+                            "expression":"DesignMax !='' && DesignMin!='' && DesignMax<DesignMin",
+                            "expressionReqFields":["DesignMax", "DesignMin"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"MinDTgtMDT"}
+                    }
+                ],
+                "options": [],
+                "defaultUnit": {
+                    "label": "°C",
+                    "value": "°C"
+                },
+                "regex": "ALLOW_NEGATIVE"
+            },
+            {
+                "fieldName": "DesignMax",
+                "label": "Design Max",
+                "type": "inputUom",
+                "UomFieldName": "TemperatureUOM",
+                "fieldDisplayOrder": 5,
+                "mandatory": false,
+                "defaultValue": "",
+                "disabled": false,
+                "visible": true,
+                "infoText": "",
+                "grid": 4,
+                "dimensionName": [
+                    "temperature"
+                ],
+                "validations": [
+                    {
+                        "target":{
+                            "id":"DesignMax",
+                            "symbol":"Calculate",
+                            "expression":"DesignMax !='' && NormalSystem!='' && DesignMax<NormalSystem",
+                            "expressionReqFields":["DesignMax", "NormalSystem"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"NTgtMDT"}
+                    }
+                ],
+                "options": [],
+                "defaultUnit": {
+                    "label": "°C",
+                    "value": "°C"
+                },
+                "regex": "ALLOW_NEGATIVE"
+            },
+            {
+                "fieldName": "NormalSystem",
+                "label": "Normal System",
+                "type": "inputUominfo",
+                "UomFieldName": "TemperatureUOM",
+                "fieldDisplayOrder": 6,
+                "mandatory": false,
+                "defaultValue": "",
+                "disabled": false,
+                "visible": true,
+                "infoText":"Normal System [Tns]",
+                "iconInfoText": "The temperature used for the correction factor should be based on the temperature at the inlet to the relief valve at its normal service (nonrelieving) conditions. The temperature at the valve may not be equal to the operating temperature of the process due to valve's physical location, collection of noncondensable vapors below the valve inlet, isolation from the process by a rupture disk, or heat tracing of the valve.\" - API 520, Part I, 4.2.3.3",
+                "grid": 6,
+                "dimensionName": [
+                    "temperature"
+                ],
+                "validations": [
+                    {
+                        "target":{
+                            "id":"NormalSystem",
+                            "symbol":"Validation_function",
+                            "validateFor":"NormalSystemgtOtherTemp",
+                            "expression":"",
+                            "expressionReqFields":["NormalSystem","DesignMax","Operating","Relieving"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"NTgtOTT"}
+                    }
+                ],
+                "options": [
+                    {
+                        "label": "°C",
+                        "value": "°C"
+                    },
+                    {
+                        "label": "°F",
+                        "value": "°F"
+                    },
+                    {
+                        "label": "°K",
+                        "value": "°K"
+                    },
+                    {
+                        "label": "°R",
+                        "value": "°R"
+                    }
+                ],
+                "defaultUnit": {
+                    "label": "°C",
+                    "value": "°C"
+                },
+                "regex": "ALLOW_NEGATIVE"
+            }
+        ]
+    },
+    {
+        "sectionName": "FlowCapacity",
+        "sectionLabel": "Flow Capacity",
+        "displayType": "form",
+        "displayOrder": 8,
+        "fields": [
+            {
+                "fieldName": "Wv",
+                "label": "Vapor Flow Capacity",
+                "type": "inputUom",
+                "UomFieldName": "FlowCapacityWvUOM",
+                "fieldDisplayOrder": 1,
+                "mandatory": false,
+                "defaultValue": "",
+                "disabled": false,
+                "visible": true,
+                "infoText": "Vapor Flow Capacity [Wv]",
+                "grid": 4,
+                "calculateFields":[
+                    {
+                        "target":{
+                            "id":"CalcReqFlowCapacity",
+                            "symbol": "Exec_Function_OnChange",
+                            "actionType":"OnChange",
+                            "functionName": "Calculate_21_ReqFlowCapacity",
+                            "functionReqFields":["Wv","Wl","Liquid2Wl","IsLiquid2","FlowCapacityWvUOM","FlowCapacityLiqUOM","FlowCapacityLiq2UOM","FlowCapacityUOM"],
+                            "requiredUnits":{"absPressureUOM": "abspressure.bara","pressureUOM": "pressure.barg","TemperatureUOM": "temp.degC"},
+                            "nextRound":false
+                        },
+                        "value":""
+                    }
+                ],
+                "dimensionName": [
+                    "massflow","gasvolflow","gasvolflowact"
+                ],
+                "validations": [],
+                "options": [],
+                "defaultUnit": {
+                    "label": "SCFM",
+                    "value": "SCFM"
+                },
+                "regex": "NOT_ALLOW_NEGATIVE",
+                "fieldBlankMessage": {"type": "information","message": "Wf21WvBlank"}
+            },
+            {
+                "fieldName": "Wl",
+                "label": "Liquid Flow Capacity",
+                "type": "inputUom",
+                "UomFieldName": "FlowCapacityLiqUOM",
+                "fieldDisplayOrder": 2,
+                "mandatory": false,
+                "defaultValue": "",
+                "disabled": false,
+                "visible": true,
+                "infoText": "Liquid Flow Capacity [Wl]",
+                "grid": 4,
+                "calculateFields":[
+                    {
+                        "target":{
+                            "id":"CalcReqFlowCapacity",
+                            "symbol": "Exec_Function_OnChange",
+                            "actionType":"OnChange",
+                            "functionName": "Calculate_21_ReqFlowCapacity",
+                            "functionReqFields":["Wv","Wl","Liquid2Wl","IsLiquid2","FlowCapacityWvUOM","FlowCapacityLiqUOM","FlowCapacityLiq2UOM","FlowCapacityUOM"],
+                            "requiredUnits":{"absPressureUOM": "abspressure.bara","pressureUOM": "pressure.barg","TemperatureUOM": "temp.degC"},
+                            "nextRound":false
+                        },
+                        "value":""
+                    }
+                ],
+                "dimensionName": [
+                    "massflow",
+                    "liquidvolflow"
+                ],
+                "validations": [],
+                "options": [],
+                "defaultUnit": {
+                    "label": "SCFM",
+                    "value": "SCFM"
+                },
+                "regex": "NOT_ALLOW_NEGATIVE",
+                "fieldBlankMessage": {"type": "information","message": "Wf21WlBlank"}
+            },
+            {
+                "fieldName": "Liquid2Wl",
+                "label": "Liquid2 Flow Capacity",
+                "type": "inputUom",
+                "UomFieldName": "FlowCapacityLiq2UOM",
+                "fieldDisplayOrder":3,
+                "mandatory": false,
+                "defaultValue": "",
+                "disabled": false,
+                "visible": [
+                    {
+                        "id": "IsLiquid2",
+                        "currentId": "Liquid2Wl",
+                        "value": true
+                    }
+                ],
+                "infoText": "Liquid2 Flow Capacity",
+                "grid": 4,
+                "calculateFields":[
+                    {
+                        "target":{
+                            "id":"CalcReqFlowCapacity",
+                            "symbol": "Exec_Function_OnChange",
+                            "actionType":"OnChange",
+                            "functionName": "Calculate_21_ReqFlowCapacity",
+                            "functionReqFields":["Wv","Wl","Liquid2Wl","IsLiquid2","FlowCapacityWvUOM","FlowCapacityLiqUOM","FlowCapacityLiq2UOM","FlowCapacityUOM"],
+                            "requiredUnits":{"absPressureUOM": "abspressure.bara","pressureUOM": "pressure.barg","TemperatureUOM": "temp.degC"},
+                            "nextRound":false
+                        },
+                        "value":""
+                    }
+                ],
+                "dimensionName": [
+                    "massflow",
+                    "liquidvolflow"
+                ],
+                "validations": [],
+                "options": [],
+                "defaultUnit": {
+                    "label": "SCFM",
+                    "value": "SCFM"
+                },
+                "regex": "NOT_ALLOW_NEGATIVE",
+                "fieldBlankMessage": {"type": "information","message": "Wf21Wl2Blank"}
+            },
+            {
+                "fieldName": "Wreq",
+                "label": "Required Pressure Flow",
+                "type": "inputUom",
+                "UomFieldName": "FlowCapacityUOM",
+                "fieldDisplayOrder": 4,
+                "mandatory": true,
+                "defaultValue":"",
+                "disableUOM": false,
+                "disabled": true,
+                "visible": true,
+                "infoText": "Required Pressure Flow [Wreq]",
+                "grid": 4,
+                "dimensionName": [
+                    "massflow"
+                ],
+                "validations": [],
+                "options": [],
+                "defaultUnit": {
+                    "label": "SCFM",
+                    "value": "SCFM"
+                },
+                "regex": "NOT_ALLOW_NEGATIVE",
+                "fieldBlankMessage": {"type": "information","message": "Wf21WreqBlank"}
+            }
+        ]
+    }
+]

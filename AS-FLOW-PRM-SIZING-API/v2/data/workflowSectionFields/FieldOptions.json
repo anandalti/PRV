@@ -1,0 +1,1838 @@
+[
+  {
+    "FieldId": 3128,
+    "FieldOptionId": 1045,
+    "Label": "Blocked Discharge",
+    "Value": "Blocked Discharge"
+  },
+  {
+    "FieldId": 3128,
+    "FieldOptionId": 1046,
+    "Label": "Control Valve Failure",
+    "Value": "Control Valve Failure"
+  },
+  {
+    "FieldId": 3128,
+    "FieldOptionId": 1047,
+    "Label": "Fire Case",
+    "Value": "Fire Case"
+  },
+  {
+    "FieldId": 3128,
+    "FieldOptionId": 1048,
+    "Label": "Liquid Overflow",
+    "Value": "Liquid Overflow"
+  },
+  {
+    "FieldId": 3128,
+    "FieldOptionId": 1049,
+    "Label": "Runaway Reaction",
+    "Value": "Runaway Reaction"
+  },
+  {
+    "FieldId": 3128,
+    "FieldOptionId": 1050,
+    "Label": "Thermal Relief",
+    "Value": "Thermal Relief"
+  },
+  {
+    "FieldId": 3128,
+    "FieldOptionId": 1051,
+    "Label": "Tube Rupture",
+    "Value": "Tube Rupture"
+  },
+  {
+    "FieldId": 3128,
+    "FieldOptionId": 1052,
+    "Label": "Vavle Capacity",
+    "Value": "Vavle Capacity"
+  },
+  {
+    "FieldId": 3130,
+    "FieldOptionId": 1053,
+    "Label": "All",
+    "Value": "All"
+  },
+  {
+    "FieldId": 3130,
+    "FieldOptionId": 1054,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 3130,
+    "FieldOptionId": 1055,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 3131,
+    "FieldOptionId": 1056,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 33,
+    "FieldOptionId": 13,
+    "Label": "Blocked Discharge",
+    "Value": "Blocked Discharge"
+  },
+  {
+    "FieldId": 33,
+    "FieldOptionId": 14,
+    "Label": "Control Valve Failure",
+    "Value": "Control Valve Failure"
+  },
+  {
+    "FieldId": 33,
+    "FieldOptionId": 15,
+    "Label": "Fire Case",
+    "Value": "Fire Case"
+  },
+  {
+    "FieldId": 33,
+    "FieldOptionId": 16,
+    "Label": "Runaway Reaction",
+    "Value": "Runaway Reaction"
+  },
+  {
+    "FieldId": 33,
+    "FieldOptionId": 17,
+    "Label": "Thermal Relief",
+    "Value": "Thermal Relief"
+  },
+  {
+    "FieldId": 33,
+    "FieldOptionId": 18,
+    "Label": "Tube Rupture",
+    "Value": "Tube Rupture"
+  },
+  {
+    "FieldId": 33,
+    "FieldOptionId": 19,
+    "Label": "Valve Capacity",
+    "Value": "Valve Capacity"
+  },
+  {
+    "FieldId": 34,
+    "FieldOptionId": 20,
+    "Label": "All",
+    "Value": "All"
+  },
+  {
+    "FieldId": 34,
+    "FieldOptionId": 21,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 34,
+    "FieldOptionId": 22,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 35,
+    "FieldOptionId": 23,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 35,
+    "FieldOptionId": 24,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 64,
+    "FieldOptionId": 25,
+    "Label": "All",
+    "Value": "All"
+  },
+  {
+    "FieldId": 64,
+    "FieldOptionId": 26,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 64,
+    "FieldOptionId": 27,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 65,
+    "FieldOptionId": 28,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 65,
+    "FieldOptionId": 29,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 103,
+    "FieldOptionId": 30,
+    "Label": "Normal",
+    "Value": "Normal"
+  },
+  {
+    "FieldId": 103,
+    "FieldOptionId": 31,
+    "Label": "Emergency",
+    "Value": "Emergency"
+  },
+  {
+    "FieldId": 104,
+    "FieldOptionId": 32,
+    "Label": "Nonvolatile Liquid, Psat ≤ 0.73psi (5.0kPa)",
+    "Value": "Nonvolatile Liquid, Psat ≤ 0.73psi (5.0kPa)"
+  },
+  {
+    "FieldId": 104,
+    "FieldOptionId": 33,
+    "Label": "Volatile Liquid, Psat > 0.73 psi (5.0kPa)",
+    "Value": "Volatile Liquid, Psat > 0.73 psi (5.0kPa)"
+  },
+  {
+    "FieldId": 107,
+    "FieldOptionId": 34,
+    "Label": "Below 77°F (25°C)",
+    "Value": "Below 77°F (25°C)"
+  },
+  {
+    "FieldId": 107,
+    "FieldOptionId": 35,
+    "Label": "Greater Than or Equal to 77°F (25°C)",
+    "Value": "Greater Than or Equal to 77°F (25°C)"
+  },
+  {
+    "FieldId": 108,
+    "FieldOptionId": 36,
+    "Label": "Hexane or Similar",
+    "Value": "Hexane or Similar"
+  },
+  {
+    "FieldId": 108,
+    "FieldOptionId": 37,
+    "Label": "Higher than Hexane or Unknown",
+    "Value": "Higher than Hexane or Unknown"
+  },
+  {
+    "FieldId": 109,
+    "FieldOptionId": 38,
+    "Label": "Below 42°",
+    "Value": "Below 42°"
+  },
+  {
+    "FieldId": 109,
+    "FieldOptionId": 39,
+    "Label": "Between 42° and 58°",
+    "Value": "Between 42° and 58°"
+  },
+  {
+    "FieldId": 109,
+    "FieldOptionId": 40,
+    "Label": "Above 58°",
+    "Value": "Above 58°"
+  },
+  {
+    "FieldId": 123,
+    "FieldOptionId": 41,
+    "Label": "None",
+    "Value": "None"
+  },
+  {
+    "FieldId": 123,
+    "FieldOptionId": 42,
+    "Label": "Partial",
+    "Value": "Partial"
+  },
+  {
+    "FieldId": 123,
+    "FieldOptionId": 43,
+    "Label": "Full",
+    "Value": "Full"
+  },
+  {
+    "FieldId": 123,
+    "FieldOptionId": 44,
+    "Label": "Double Walled Tank",
+    "Value": "Double Walled Tank"
+  },
+  {
+    "FieldId": 143,
+    "FieldOptionId": 45,
+    "Label": "Spherical",
+    "Value": "Spherical"
+  },
+  {
+    "FieldId": 143,
+    "FieldOptionId": 46,
+    "Label": "Rectangular",
+    "Value": "Rectangular"
+  },
+  {
+    "FieldId": 143,
+    "FieldOptionId": 47,
+    "Label": "Cylindrical",
+    "Value": "Cylindrical"
+  },
+  {
+    "FieldId": 159,
+    "FieldOptionId": 48,
+    "Label": "Blocked Discharge",
+    "Value": "Blocked Discharge"
+  },
+  {
+    "FieldId": 159,
+    "FieldOptionId": 49,
+    "Label": "Control Valve Failure",
+    "Value": "Control Valve Failure"
+  },
+  {
+    "FieldId": 159,
+    "FieldOptionId": 50,
+    "Label": "Fire Case",
+    "Value": "Fire Case"
+  },
+  {
+    "FieldId": 159,
+    "FieldOptionId": 51,
+    "Label": "Runaway Reaction",
+    "Value": "Runaway Reaction"
+  },
+  {
+    "FieldId": 159,
+    "FieldOptionId": 52,
+    "Label": "Thermal Relief",
+    "Value": "Thermal Relief"
+  },
+  {
+    "FieldId": 159,
+    "FieldOptionId": 53,
+    "Label": "Tube Rupture",
+    "Value": "Tube Rupture"
+  },
+  {
+    "FieldId": 159,
+    "FieldOptionId": 54,
+    "Label": "Valve Capacity",
+    "Value": "Valve Capacity"
+  },
+  {
+    "FieldId": 160,
+    "FieldOptionId": 55,
+    "Label": "All",
+    "Value": "All"
+  },
+  {
+    "FieldId": 160,
+    "FieldOptionId": 56,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 160,
+    "FieldOptionId": 57,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 161,
+    "FieldOptionId": 58,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 3131,
+    "FieldOptionId": 1057,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 3167,
+    "FieldOptionId": 1058,
+    "Label": "Blocked Discharge",
+    "Value": "Blocked Discharge"
+  },
+  {
+    "FieldId": 3167,
+    "FieldOptionId": 1059,
+    "Label": "Control Valve Failure",
+    "Value": "Control Valve Failure"
+  },
+  {
+    "FieldId": 3167,
+    "FieldOptionId": 1060,
+    "Label": "Fire Case",
+    "Value": "Fire Case"
+  },
+  {
+    "FieldId": 3167,
+    "FieldOptionId": 1061,
+    "Label": "Liquid Overflow",
+    "Value": "Liquid Overflow"
+  },
+  {
+    "FieldId": 3167,
+    "FieldOptionId": 1062,
+    "Label": "Runaway Reaction",
+    "Value": "Runaway Reaction"
+  },
+  {
+    "FieldId": 3167,
+    "FieldOptionId": 1063,
+    "Label": "Thermal Relief",
+    "Value": "Thermal Relief"
+  },
+  {
+    "FieldId": 3167,
+    "FieldOptionId": 1064,
+    "Label": "Tube Rupture",
+    "Value": "Tube Rupture"
+  },
+  {
+    "FieldId": 3167,
+    "FieldOptionId": 1065,
+    "Label": "Valve Capacity",
+    "Value": "Valve Capacity"
+  },
+  {
+    "FieldId": 3169,
+    "FieldOptionId": 1066,
+    "Label": "All",
+    "Value": "All"
+  },
+  {
+    "FieldId": 3169,
+    "FieldOptionId": 1067,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 3169,
+    "FieldOptionId": 1068,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 3170,
+    "FieldOptionId": 1069,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 223,
+    "FieldOptionId": 72,
+    "Label": "Blocked Discharge",
+    "Value": "Blocked Discharge"
+  },
+  {
+    "FieldId": 223,
+    "FieldOptionId": 73,
+    "Label": "Control Valve Failure",
+    "Value": "Control Valve Failure"
+  },
+  {
+    "FieldId": 223,
+    "FieldOptionId": 74,
+    "Label": "Fire Case",
+    "Value": "Fire Case"
+  },
+  {
+    "FieldId": 223,
+    "FieldOptionId": 75,
+    "Label": "Liquid Overflow",
+    "Value": "Liquid Overflow"
+  },
+  {
+    "FieldId": 223,
+    "FieldOptionId": 76,
+    "Label": "Runaway Reaction",
+    "Value": "Runaway Reaction"
+  },
+  {
+    "FieldId": 223,
+    "FieldOptionId": 77,
+    "Label": "Thermal Relief",
+    "Value": "Thermal Relief"
+  },
+  {
+    "FieldId": 223,
+    "FieldOptionId": 78,
+    "Label": "Tube Rupture",
+    "Value": "Tube Rupture"
+  },
+  {
+    "FieldId": 223,
+    "FieldOptionId": 79,
+    "Label": "Valve Capacity",
+    "Value": "Valve Capacity"
+  },
+  {
+    "FieldId": 226,
+    "FieldOptionId": 80,
+    "Label": "All",
+    "Value": "All"
+  },
+  {
+    "FieldId": 226,
+    "FieldOptionId": 81,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 226,
+    "FieldOptionId": 82,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 227,
+    "FieldOptionId": 83,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 227,
+    "FieldOptionId": 84,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 254,
+    "FieldOptionId": 85,
+    "Label": "Blocked Discharge",
+    "Value": "Blocked Discharge"
+  },
+  {
+    "FieldId": 254,
+    "FieldOptionId": 86,
+    "Label": "Control Valve Failure",
+    "Value": "Control Valve Failure"
+  },
+  {
+    "FieldId": 254,
+    "FieldOptionId": 87,
+    "Label": "Fire Case",
+    "Value": "Fire Case"
+  },
+  {
+    "FieldId": 254,
+    "FieldOptionId": 88,
+    "Label": "Liquid Overflow",
+    "Value": "Liquid Overflow"
+  },
+  {
+    "FieldId": 254,
+    "FieldOptionId": 89,
+    "Label": "Runaway Reaction",
+    "Value": "Runaway Reaction"
+  },
+  {
+    "FieldId": 254,
+    "FieldOptionId": 90,
+    "Label": "Thermal Relief",
+    "Value": "Thermal Relief"
+  },
+  {
+    "FieldId": 254,
+    "FieldOptionId": 91,
+    "Label": "Tube Rupture",
+    "Value": "Tube Rupture"
+  },
+  {
+    "FieldId": 254,
+    "FieldOptionId": 92,
+    "Label": "Valve Capacity",
+    "Value": "Valve Capacity"
+  },
+  {
+    "FieldId": 255,
+    "FieldOptionId": 93,
+    "Label": "All",
+    "Value": "All"
+  },
+  {
+    "FieldId": 255,
+    "FieldOptionId": 94,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 255,
+    "FieldOptionId": 95,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 256,
+    "FieldOptionId": 96,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 283,
+    "FieldOptionId": 97,
+    "Label": "Economizer",
+    "Value": "Economizer"
+  },
+  {
+    "FieldId": 283,
+    "FieldOptionId": 98,
+    "Label": "HP Drum",
+    "Value": "HP Drum"
+  },
+  {
+    "FieldId": 283,
+    "FieldOptionId": 99,
+    "Label": "HP Superheater",
+    "Value": "HP Superheater"
+  },
+  {
+    "FieldId": 283,
+    "FieldOptionId": 100,
+    "Label": "IP Drum",
+    "Value": "IP Drum"
+  },
+  {
+    "FieldId": 283,
+    "FieldOptionId": 101,
+    "Label": "IP Superheater",
+    "Value": "IP Superheater"
+  },
+  {
+    "FieldId": 283,
+    "FieldOptionId": 102,
+    "Label": "LP Drum",
+    "Value": "LP Drum"
+  },
+  {
+    "FieldId": 283,
+    "FieldOptionId": 103,
+    "Label": "LP Superheater",
+    "Value": "LP Superheater"
+  },
+  {
+    "FieldId": 283,
+    "FieldOptionId": 104,
+    "Label": "Preheater",
+    "Value": "Preheater"
+  },
+  {
+    "FieldId": 283,
+    "FieldOptionId": 105,
+    "Label": "Reheater Inlet",
+    "Value": "Reheater Inlet"
+  },
+  {
+    "FieldId": 283,
+    "FieldOptionId": 106,
+    "Label": "Reheater Outlet",
+    "Value": "Reheater Outlet"
+  },
+  {
+    "FieldId": 284,
+    "FieldOptionId": 107,
+    "Label": "All",
+    "Value": "All"
+  },
+  {
+    "FieldId": 284,
+    "FieldOptionId": 108,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 284,
+    "FieldOptionId": 109,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 285,
+    "FieldOptionId": 110,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 285,
+    "FieldOptionId": 111,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 3170,
+    "FieldOptionId": 1070,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 3203,
+    "FieldOptionId": 1071,
+    "Label": "Blocked Discharge",
+    "Value": "Blocked Discharge"
+  },
+  {
+    "FieldId": 3203,
+    "FieldOptionId": 1072,
+    "Label": "Control Valve Failure",
+    "Value": "Control Valve Failure"
+  },
+  {
+    "FieldId": 3203,
+    "FieldOptionId": 1073,
+    "Label": "Fire Case",
+    "Value": "Fire Case"
+  },
+  {
+    "FieldId": 3203,
+    "FieldOptionId": 1074,
+    "Label": "Liquid Overflow",
+    "Value": "Liquid Overflow"
+  },
+  {
+    "FieldId": 3203,
+    "FieldOptionId": 1075,
+    "Label": "Runaway Reaction",
+    "Value": "Runaway Reaction"
+  },
+  {
+    "FieldId": 3203,
+    "FieldOptionId": 1076,
+    "Label": "Thermal Relief",
+    "Value": "Thermal Relief"
+  },
+  {
+    "FieldId": 3203,
+    "FieldOptionId": 1077,
+    "Label": "Tube Rupture",
+    "Value": "Tube Rupture"
+  },
+  {
+    "FieldId": 3203,
+    "FieldOptionId": 1078,
+    "Label": "Valve Capacity",
+    "Value": "Valve Capacity"
+  },
+  {
+    "FieldId": 3205,
+    "FieldOptionId": 1079,
+    "Label": "All",
+    "Value": "All"
+  },
+  {
+    "FieldId": 3205,
+    "FieldOptionId": 1080,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 3205,
+    "FieldOptionId": 1081,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 349,
+    "FieldOptionId": 124,
+    "Label": "Blocked Discharge",
+    "Value": "Blocked Discharge"
+  },
+  {
+    "FieldId": 349,
+    "FieldOptionId": 125,
+    "Label": "Control Valve Failure",
+    "Value": "Control Valve Failure"
+  },
+  {
+    "FieldId": 349,
+    "FieldOptionId": 126,
+    "Label": "Fire Case",
+    "Value": "Fire Case"
+  },
+  {
+    "FieldId": 349,
+    "FieldOptionId": 127,
+    "Label": "Runaway Reaction",
+    "Value": "Runaway Reaction"
+  },
+  {
+    "FieldId": 349,
+    "FieldOptionId": 128,
+    "Label": "Thermal Relief",
+    "Value": "Thermal Relief"
+  },
+  {
+    "FieldId": 349,
+    "FieldOptionId": 129,
+    "Label": "Tube Rupture",
+    "Value": "Tube Rupture"
+  },
+  {
+    "FieldId": 349,
+    "FieldOptionId": 130,
+    "Label": "Valve Capacity",
+    "Value": "Valve Capacity"
+  },
+  {
+    "FieldId": 350,
+    "FieldOptionId": 131,
+    "Label": "All",
+    "Value": "All"
+  },
+  {
+    "FieldId": 350,
+    "FieldOptionId": 132,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 350,
+    "FieldOptionId": 133,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 351,
+    "FieldOptionId": 134,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 351,
+    "FieldOptionId": 135,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 382,
+    "FieldOptionId": 136,
+    "Label": "Blocked Discharge",
+    "Value": "Blocked Discharge"
+  },
+  {
+    "FieldId": 382,
+    "FieldOptionId": 137,
+    "Label": "Control Valve Failure",
+    "Value": "Control Valve Failure"
+  },
+  {
+    "FieldId": 382,
+    "FieldOptionId": 138,
+    "Label": "Fire Case",
+    "Value": "Fire Case"
+  },
+  {
+    "FieldId": 382,
+    "FieldOptionId": 139,
+    "Label": "Vavle Capacity",
+    "Value": "Vavle Capacity"
+  },
+  {
+    "FieldId": 383,
+    "FieldOptionId": 140,
+    "Label": "All",
+    "Value": "All"
+  },
+  {
+    "FieldId": 383,
+    "FieldOptionId": 141,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 383,
+    "FieldOptionId": 142,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 384,
+    "FieldOptionId": 143,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 388,
+    "FieldOptionId": 144,
+    "Label": "Steam",
+    "Value": "Steam"
+  },
+  {
+    "FieldId": 3206,
+    "FieldOptionId": 1082,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 3206,
+    "FieldOptionId": 1083,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 3256,
+    "FieldOptionId": 1084,
+    "Label": "Blocked Discharge",
+    "Value": "Blocked Discharge"
+  },
+  {
+    "FieldId": 3256,
+    "FieldOptionId": 1085,
+    "Label": "Control Valve Failure",
+    "Value": "Control Valve Failure"
+  },
+  {
+    "FieldId": 3256,
+    "FieldOptionId": 1086,
+    "Label": "Fire Case",
+    "Value": "Fire Case"
+  },
+  {
+    "FieldId": 3256,
+    "FieldOptionId": 1087,
+    "Label": "Liquid Overflow",
+    "Value": "Liquid Overflow"
+  },
+  {
+    "FieldId": 3256,
+    "FieldOptionId": 1088,
+    "Label": "Runaway Reaction",
+    "Value": "Runaway Reaction"
+  },
+  {
+    "FieldId": 3256,
+    "FieldOptionId": 1089,
+    "Label": "Thermal Relief",
+    "Value": "Thermal Relief"
+  },
+  {
+    "FieldId": 3256,
+    "FieldOptionId": 1090,
+    "Label": "Tube Rupture",
+    "Value": "Tube Rupture"
+  },
+  {
+    "FieldId": 3256,
+    "FieldOptionId": 1091,
+    "Label": "Valve Capacity",
+    "Value": "Valve Capacity"
+  },
+  {
+    "FieldId": 3258,
+    "FieldOptionId": 1092,
+    "Label": "All",
+    "Value": "All"
+  },
+  {
+    "FieldId": 3258,
+    "FieldOptionId": 1093,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 3258,
+    "FieldOptionId": 1094,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 3259,
+    "FieldOptionId": 1095,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 3259,
+    "FieldOptionId": 1096,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 3293,
+    "FieldOptionId": 1097,
+    "Label": "Blocked Discharge",
+    "Value": "Blocked Discharge"
+  },
+  {
+    "FieldId": 3293,
+    "FieldOptionId": 1098,
+    "Label": "Control Valve Failure",
+    "Value": "Control Valve Failure"
+  },
+  {
+    "FieldId": 3293,
+    "FieldOptionId": 1099,
+    "Label": "Fire Case",
+    "Value": "Fire Case"
+  },
+  {
+    "FieldId": 3293,
+    "FieldOptionId": 1100,
+    "Label": "Liquid Overflow",
+    "Value": "Liquid Overflow"
+  },
+  {
+    "FieldId": 1758,
+    "FieldOptionId": 588,
+    "Label": "Blocked Discharge",
+    "Value": "Blocked Discharge"
+  },
+  {
+    "FieldId": 1758,
+    "FieldOptionId": 589,
+    "Label": "Economizer",
+    "Value": "Economizer"
+  },
+  {
+    "FieldId": 1758,
+    "FieldOptionId": 590,
+    "Label": "Control Valve Failure",
+    "Value": "Control Valve Failure"
+  },
+  {
+    "FieldId": 1758,
+    "FieldOptionId": 591,
+    "Label": "Fire Case",
+    "Value": "Fire Case"
+  },
+  {
+    "FieldId": 1758,
+    "FieldOptionId": 592,
+    "Label": "Liquid Overflow",
+    "Value": "Liquid Overflow"
+  },
+  {
+    "FieldId": 1758,
+    "FieldOptionId": 593,
+    "Label": "Runaway Reaction",
+    "Value": "Runaway Reaction"
+  },
+  {
+    "FieldId": 1758,
+    "FieldOptionId": 594,
+    "Label": "Thermal Relief",
+    "Value": "Thermal Relief"
+  },
+  {
+    "FieldId": 485,
+    "FieldOptionId": 171,
+    "Label": "Blocked Discharge",
+    "Value": "Blocked Discharge"
+  },
+  {
+    "FieldId": 485,
+    "FieldOptionId": 172,
+    "Label": "Control Valve Failure",
+    "Value": "Control Valve Failure"
+  },
+  {
+    "FieldId": 485,
+    "FieldOptionId": 173,
+    "Label": "Fire Case",
+    "Value": "Fire Case"
+  },
+  {
+    "FieldId": 485,
+    "FieldOptionId": 174,
+    "Label": "Liquid Overflow",
+    "Value": "Liquid Overflow"
+  },
+  {
+    "FieldId": 485,
+    "FieldOptionId": 175,
+    "Label": "Runaway Reaction",
+    "Value": "Runaway Reaction"
+  },
+  {
+    "FieldId": 485,
+    "FieldOptionId": 176,
+    "Label": "Thermal Relief",
+    "Value": "Thermal Relief"
+  },
+  {
+    "FieldId": 485,
+    "FieldOptionId": 177,
+    "Label": "Tube Rupture",
+    "Value": "Tube Rupture"
+  },
+  {
+    "FieldId": 485,
+    "FieldOptionId": 178,
+    "Label": "Valve Capacity",
+    "Value": "Valve Capacity"
+  },
+  {
+    "FieldId": 486,
+    "FieldOptionId": 179,
+    "Label": "All",
+    "Value": "All"
+  },
+  {
+    "FieldId": 486,
+    "FieldOptionId": 180,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 486,
+    "FieldOptionId": 181,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 487,
+    "FieldOptionId": 182,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 487,
+    "FieldOptionId": 183,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 3293,
+    "FieldOptionId": 1101,
+    "Label": "Runaway Reaction",
+    "Value": "Runaway Reaction"
+  },
+  {
+    "FieldId": 3293,
+    "FieldOptionId": 1102,
+    "Label": "Thermal Relief",
+    "Value": "Thermal Relief"
+  },
+  {
+    "FieldId": 3293,
+    "FieldOptionId": 1103,
+    "Label": "Tube Rupture",
+    "Value": "Tube Rupture"
+  },
+  {
+    "FieldId": 3293,
+    "FieldOptionId": 1104,
+    "Label": "Valve Capacity",
+    "Value": "Valve Capacity"
+  },
+  {
+    "FieldId": 3295,
+    "FieldOptionId": 1105,
+    "Label": "All",
+    "Value": "All"
+  },
+  {
+    "FieldId": 3295,
+    "FieldOptionId": 1106,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 3295,
+    "FieldOptionId": 1107,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 3296,
+    "FieldOptionId": 1108,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 3296,
+    "FieldOptionId": 1109,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 3343,
+    "FieldOptionId": 1110,
+    "Label": "Blocked Discharge",
+    "Value": "Blocked Discharge"
+  },
+  {
+    "FieldId": 3343,
+    "FieldOptionId": 1111,
+    "Label": "Control Valve Failure",
+    "Value": "Control Valve Failure"
+  },
+  {
+    "FieldId": 3343,
+    "FieldOptionId": 1112,
+    "Label": "Fire Case",
+    "Value": "Fire Case"
+  },
+  {
+    "FieldId": 3343,
+    "FieldOptionId": 1113,
+    "Label": "Liquid Overflow",
+    "Value": "Liquid Overflow"
+  },
+  {
+    "FieldId": 3343,
+    "FieldOptionId": 1114,
+    "Label": "Runaway Reaction",
+    "Value": "Runaway Reaction"
+  },
+  {
+    "FieldId": 3343,
+    "FieldOptionId": 1115,
+    "Label": "Thermal Relief",
+    "Value": "Thermal Relief"
+  },
+  {
+    "FieldId": 3343,
+    "FieldOptionId": 1116,
+    "Label": "Tube Rupture",
+    "Value": "Tube Rupture"
+  },
+  {
+    "FieldId": 3343,
+    "FieldOptionId": 1117,
+    "Label": "Valve Capacity",
+    "Value": "Valve Capacity"
+  },
+  {
+    "FieldId": 3345,
+    "FieldOptionId": 1118,
+    "Label": "All",
+    "Value": "All"
+  },
+  {
+    "FieldId": 3345,
+    "FieldOptionId": 1119,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 3345,
+    "FieldOptionId": 1120,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 3346,
+    "FieldOptionId": 1121,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 3346,
+    "FieldOptionId": 1122,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 3399,
+    "FieldOptionId": 1123,
+    "Label": "Blocked Discharge",
+    "Value": "Blocked Discharge"
+  },
+  {
+    "FieldId": 3399,
+    "FieldOptionId": 1124,
+    "Label": "Control Valve Failure",
+    "Value": "Control Valve Failure"
+  },
+  {
+    "FieldId": 3399,
+    "FieldOptionId": 1125,
+    "Label": "Fire Case",
+    "Value": "Fire Case"
+  },
+  {
+    "FieldId": 3399,
+    "FieldOptionId": 1126,
+    "Label": "Liquid Overflow",
+    "Value": "Liquid Overflow"
+  },
+  {
+    "FieldId": 3399,
+    "FieldOptionId": 1127,
+    "Label": "Runaway Reaction",
+    "Value": "Runaway Reaction"
+  },
+  {
+    "FieldId": 3399,
+    "FieldOptionId": 1128,
+    "Label": "Thermal Relief",
+    "Value": "Thermal Relief"
+  },
+  {
+    "FieldId": 3399,
+    "FieldOptionId": 1129,
+    "Label": "Tube Rupture",
+    "Value": "Tube Rupture"
+  },
+  {
+    "FieldId": 3399,
+    "FieldOptionId": 1130,
+    "Label": "Valve Capacity",
+    "Value": "Valve Capacity"
+  },
+  {
+    "FieldId": 3401,
+    "FieldOptionId": 1131,
+    "Label": "All",
+    "Value": "All"
+  },
+  {
+    "FieldId": 3401,
+    "FieldOptionId": 1132,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 3401,
+    "FieldOptionId": 1133,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 3402,
+    "FieldOptionId": 1134,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 3402,
+    "FieldOptionId": 1135,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 858,
+    "FieldOptionId": 287,
+    "Label": "All",
+    "Value": "All"
+  },
+  {
+    "FieldId": 858,
+    "FieldOptionId": 288,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 858,
+    "FieldOptionId": 289,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 859,
+    "FieldOptionId": 290,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 859,
+    "FieldOptionId": 291,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 1758,
+    "FieldOptionId": 595,
+    "Label": "Tube Rupture",
+    "Value": "Tube Rupture"
+  },
+  {
+    "FieldId": 1758,
+    "FieldOptionId": 596,
+    "Label": "Valve Capacity",
+    "Value": "Valve Capacity"
+  },
+  {
+    "FieldId": 1762,
+    "FieldOptionId": 597,
+    "Label": "All",
+    "Value": "All"
+  },
+  {
+    "FieldId": 1762,
+    "FieldOptionId": 598,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 1762,
+    "FieldOptionId": 599,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 1763,
+    "FieldOptionId": 600,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 1763,
+    "FieldOptionId": 601,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 2892,
+    "FieldOptionId": 969,
+    "Label": "Blocked Discharge",
+    "Value": "Blocked Discharge"
+  },
+  {
+    "FieldId": 2892,
+    "FieldOptionId": 970,
+    "Label": "Control Valve Failure",
+    "Value": "Control Valve Failure"
+  },
+  {
+    "FieldId": 2892,
+    "FieldOptionId": 971,
+    "Label": "Fire Case",
+    "Value": "Fire Case"
+  },
+  {
+    "FieldId": 2892,
+    "FieldOptionId": 972,
+    "Label": "Runaway Reaction",
+    "Value": "Runaway Reaction"
+  },
+  {
+    "FieldId": 2892,
+    "FieldOptionId": 973,
+    "Label": "Thermal Relief",
+    "Value": "Thermal Relief"
+  },
+  {
+    "FieldId": 2892,
+    "FieldOptionId": 974,
+    "Label": "Tube Rupture",
+    "Value": "Tube Rupture"
+  },
+  {
+    "FieldId": 2892,
+    "FieldOptionId": 975,
+    "Label": "Valve Capacity",
+    "Value": "Valve Capacity"
+  },
+  {
+    "FieldId": 2894,
+    "FieldOptionId": 976,
+    "Label": "All",
+    "Value": "All"
+  },
+  {
+    "FieldId": 2894,
+    "FieldOptionId": 977,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 2894,
+    "FieldOptionId": 978,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 2895,
+    "FieldOptionId": 979,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 2895,
+    "FieldOptionId": 980,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 2924,
+    "FieldOptionId": 981,
+    "Label": "Blocked Discharge",
+    "Value": "Blocked Discharge"
+  },
+  {
+    "FieldId": 2924,
+    "FieldOptionId": 982,
+    "Label": "Control Valve Failure",
+    "Value": "Control Valve Failure"
+  },
+  {
+    "FieldId": 2924,
+    "FieldOptionId": 983,
+    "Label": "Fire Case",
+    "Value": "Fire Case"
+  },
+  {
+    "FieldId": 2924,
+    "FieldOptionId": 984,
+    "Label": "Liquid Overflow",
+    "Value": "Liquid Overflow"
+  },
+  {
+    "FieldId": 2924,
+    "FieldOptionId": 985,
+    "Label": "Runaway Reaction",
+    "Value": "Runaway Reaction"
+  },
+  {
+    "FieldId": 2924,
+    "FieldOptionId": 986,
+    "Label": "Thermal Relief",
+    "Value": "Thermal Relief"
+  },
+  {
+    "FieldId": 2924,
+    "FieldOptionId": 987,
+    "Label": "Tube Rupture",
+    "Value": "Tube Rupture"
+  },
+  {
+    "FieldId": 2924,
+    "FieldOptionId": 988,
+    "Label": "Valve Capacity",
+    "Value": "Valve Capacity"
+  },
+  {
+    "FieldId": 2928,
+    "FieldOptionId": 989,
+    "Label": "All",
+    "Value": "All"
+  },
+  {
+    "FieldId": 2928,
+    "FieldOptionId": 990,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 2928,
+    "FieldOptionId": 991,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 2929,
+    "FieldOptionId": 992,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 2929,
+    "FieldOptionId": 993,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 2956,
+    "FieldOptionId": 994,
+    "Label": "Blocked Discharge",
+    "Value": "Blocked Discharge"
+  },
+  {
+    "FieldId": 2956,
+    "FieldOptionId": 995,
+    "Label": "Control Valve Failure",
+    "Value": "Control Valve Failure"
+  },
+  {
+    "FieldId": 2956,
+    "FieldOptionId": 996,
+    "Label": "Fire Case",
+    "Value": "Fire Case"
+  },
+  {
+    "FieldId": 2956,
+    "FieldOptionId": 997,
+    "Label": "Runaway Reaction",
+    "Value": "Runaway Reaction"
+  },
+  {
+    "FieldId": 2956,
+    "FieldOptionId": 998,
+    "Label": "Thermal Relief",
+    "Value": "Thermal Relief"
+  },
+  {
+    "FieldId": 2956,
+    "FieldOptionId": 999,
+    "Label": "Tube Rupture",
+    "Value": "Tube Rupture"
+  },
+  {
+    "FieldId": 2956,
+    "FieldOptionId": 1000,
+    "Label": "Valve Capacity",
+    "Value": "Valve Capacity"
+  },
+  {
+    "FieldId": 2958,
+    "FieldOptionId": 1001,
+    "Label": "All",
+    "Value": "All"
+  },
+  {
+    "FieldId": 2958,
+    "FieldOptionId": 1002,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 2958,
+    "FieldOptionId": 1003,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 2959,
+    "FieldOptionId": 1004,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 2959,
+    "FieldOptionId": 1005,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 2990,
+    "FieldOptionId": 1006,
+    "Label": "Blocked Discharge",
+    "Value": "Blocked Discharge"
+  },
+  {
+    "FieldId": 2990,
+    "FieldOptionId": 1007,
+    "Label": "Control Valve Failure",
+    "Value": "Control Valve Failure"
+  },
+  {
+    "FieldId": 2990,
+    "FieldOptionId": 1008,
+    "Label": "Fire Case",
+    "Value": "Fire Case"
+  },
+  {
+    "FieldId": 2990,
+    "FieldOptionId": 1009,
+    "Label": "Runaway Reaction",
+    "Value": "Runaway Reaction"
+  },
+  {
+    "FieldId": 2990,
+    "FieldOptionId": 1010,
+    "Label": "Thermal Relief",
+    "Value": "Thermal Relief"
+  },
+  {
+    "FieldId": 2990,
+    "FieldOptionId": 1011,
+    "Label": "Tube Rupture",
+    "Value": "Tube Rupture"
+  },
+  {
+    "FieldId": 2992,
+    "FieldOptionId": 1012,
+    "Label": "All",
+    "Value": "All"
+  },
+  {
+    "FieldId": 2992,
+    "FieldOptionId": 1013,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 2992,
+    "FieldOptionId": 1014,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 2993,
+    "FieldOptionId": 1015,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 2993,
+    "FieldOptionId": 1016,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 3024,
+    "FieldOptionId": 1017,
+    "Label": "Wetted",
+    "Value": "Wetted"
+  },
+  {
+    "FieldId": 3024,
+    "FieldOptionId": 1018,
+    "Label": "Unwetted",
+    "Value": "Unwetted"
+  },
+  {
+    "FieldId": 3039,
+    "FieldOptionId": 1019,
+    "Label": "Cylindrical",
+    "Value": "Cylindrical"
+  },
+  {
+    "FieldId": 3039,
+    "FieldOptionId": 1020,
+    "Label": "Spherical",
+    "Value": "Spherical"
+  },
+  {
+    "FieldId": 3056,
+    "FieldOptionId": 1021,
+    "Label": "Blocked Discharge",
+    "Value": "Blocked Discharge"
+  },
+  {
+    "FieldId": 3056,
+    "FieldOptionId": 1022,
+    "Label": "Control Valve Failure",
+    "Value": "Control Valve Failure"
+  },
+  {
+    "FieldId": 3056,
+    "FieldOptionId": 1023,
+    "Label": "Fire Case",
+    "Value": "Fire Case"
+  },
+  {
+    "FieldId": 3056,
+    "FieldOptionId": 1024,
+    "Label": "Runaway Reaction",
+    "Value": "Runaway Reaction"
+  },
+  {
+    "FieldId": 3056,
+    "FieldOptionId": 1025,
+    "Label": "Thermal Relief",
+    "Value": "Thermal Relief"
+  },
+  {
+    "FieldId": 3056,
+    "FieldOptionId": 1026,
+    "Label": "Tube Rupture",
+    "Value": "Tube Rupture"
+  },
+  {
+    "FieldId": 3056,
+    "FieldOptionId": 1027,
+    "Label": "Valve Capacity",
+    "Value": "Valve Capacity"
+  },
+  {
+    "FieldId": 3058,
+    "FieldOptionId": 1028,
+    "Label": "All",
+    "Value": "All"
+  },
+  {
+    "FieldId": 3058,
+    "FieldOptionId": 1029,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 3058,
+    "FieldOptionId": 1030,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 3059,
+    "FieldOptionId": 1031,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 3059,
+    "FieldOptionId": 1032,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 3089,
+    "FieldOptionId": 1033,
+    "Label": "Blocked Discharge",
+    "Value": "Blocked Discharge"
+  },
+  {
+    "FieldId": 3089,
+    "FieldOptionId": 1034,
+    "Label": "Control Valve Failure",
+    "Value": "Control Valve Failure"
+  },
+  {
+    "FieldId": 3089,
+    "FieldOptionId": 1035,
+    "Label": "Fire Case",
+    "Value": "Fire Case"
+  },
+  {
+    "FieldId": 3089,
+    "FieldOptionId": 1036,
+    "Label": "Runaway Reaction",
+    "Value": "Runaway Reaction"
+  },
+  {
+    "FieldId": 3089,
+    "FieldOptionId": 1037,
+    "Label": "Thermal Relief",
+    "Value": "Thermal Relief"
+  },
+  {
+    "FieldId": 3089,
+    "FieldOptionId": 1038,
+    "Label": "Tube Rupture",
+    "Value": "Tube Rupture"
+  },
+  {
+    "FieldId": 3089,
+    "FieldOptionId": 1039,
+    "Label": "Valve Capacity",
+    "Value": "Valve Capacity"
+  },
+  {
+    "FieldId": 3091,
+    "FieldOptionId": 1040,
+    "Label": "All",
+    "Value": "All"
+  },
+  {
+    "FieldId": 3091,
+    "FieldOptionId": 1041,
+    "Label": "Metric",
+    "Value": "Metric"
+  },
+  {
+    "FieldId": 3091,
+    "FieldOptionId": 1042,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 3092,
+    "FieldOptionId": 1043,
+    "Label": "US Customary",
+    "Value": "English"
+  },
+  {
+    "FieldId": 3092,
+    "FieldOptionId": 1044,
+    "Label": "Metric",
+    "Value": "Metric"
+  }
+]

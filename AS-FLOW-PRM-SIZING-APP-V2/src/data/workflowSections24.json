@@ -1,0 +1,1218 @@
+[
+    {
+        "sectionName": "applciationRequirements",
+        "sectionLabel": "Application Requirements",
+        "displayType": "form",
+        "displayOrder": 4,
+        "fields": [
+            {
+                "fieldName": "SizingBasis",
+                "label": "Sizing Basis",
+                "type": "input",
+                "fieldDisplayOrder": 1,
+                "mandatory": false,
+                "defaultValue": "Blocked Discharge",
+                "disabled": false,
+                "visible": true,
+                "grid": "6",
+                "dimensionName": "",
+                "infoText": "Sizing Basis",
+                "validations": []
+            },
+            {
+                "fieldName": "DisplayUnitSystem",
+                "label": "Display Unit System",
+                "type": "select",
+                "fieldDisplayOrder": 3,
+                "mandatory": false,
+                "defaultValue": "All",
+                "disabled": false,
+                "visible": true,
+                "grid": "6",
+                "infoText": "",
+                "dimensionName": "",
+                "options": [
+                    {
+                        "label": "All",
+                        "value": "All"
+                    },
+                    {
+                        "label": "Metric",
+                        "value": "Metric"
+                    },
+                    {
+                        "label": "US Customary",
+                        "value": "English"
+                    }
+                ],
+                "validations": []
+            },
+            {
+                "fieldName": "CalculationMethod",
+                "label": "Calculation Method",
+                "type": "select",
+                "fieldDisplayOrder": 4,
+                "mandatory": false,
+                "defaultValue": "Metric",
+                "disabled": false,
+                "visible": true,
+                "grid": "6",
+                "infoText": "",
+                "dimensionName": "",
+                "options": [
+                    {
+                        "label": "US Customary",
+                        "value": "English"
+                    },
+                    {
+                        "label": "Metric",
+                        "value": "Metric"
+                    }
+                ],
+                "validations": []
+            },
+            {
+                "fieldName": "IsSuperUser",
+                "label": "Enable Super User",
+                "type": "checkbox",
+                "fieldDisplayOrder": 7,
+                "mandatory": false,
+                "defaultValue": false,
+                "disabled": true,
+                "visible": true,
+                "grid": 6,
+                "infoText": "",
+                "dimensionName": "",
+                "validations": []
+            }
+        ]
+    },
+    {
+        "sectionName": "fluidProperties",
+        "sectionLabel": "Fluid Properties",
+        "displayType": "form",
+        "displayOrder": 5,
+        "fields": [
+            {
+                "fieldName": "IsPressureOnly|IsVacuumOnly",
+                "label": "Pressure|Vacuum",
+                "type": "checkbox",
+                "fieldDisplayOrder": 1,
+                "mandatory": false,
+                "defaultValue": [
+                    {
+                        "id": "IsPressureOnly",
+                        "value": true
+                    },
+                    {
+                        "id": "IsVacuumOnly",
+                        "value": false
+                    }
+                ],
+                "disabled": false,
+                "visible": [
+                    {
+                        "id": "IsPressureOnly",
+                        "currentId": "IsPressureOnly",
+                        "value": true
+                    },
+                    {
+                        "id": "IsVacuumOnly",
+                        "currentId": "IsVacuumOnly",
+                        "value": true
+                    }
+                ],
+                "grid": 6,
+                "infoText": "",
+                "dimensionName": "",
+                "validations": []
+            },
+            {
+                "fieldName": "FluidName|FluidNameVacuum",
+                "label": "Fluid Name",
+                "type": "combobox",
+                "fieldDisplayOrder": 2,
+                "mandatory": false,
+                "options": [],
+                "defaultValue": "",
+                "disabled": [
+                    {
+                        "target": {
+                            "id": "IsPressureOnly",
+                            "symbol": "Calculate",
+                            "currentId": "FluidNameVacuum",
+                            "expression": "!IsPressureOnly",
+                            "expressionReqFields": [
+                                "IsPressureOnly"
+                            ],
+                            "value": false
+                        },
+                        "value": false
+                    },
+                    {
+                        "target": {
+                            "id": "IsVacuumOnly",
+                            "currentId": "FluidNameVacuum",
+                            "symbol": "Calculate",
+                            "expression": "!IsVacuumOnly",
+                            "expressionReqFields": [
+                                "IsVacuumOnly"
+                            ],
+                            "value": false
+                        },
+                        "value": false
+                    }
+                ],
+                "visible": [
+                    {
+                        "id": "IsPressureOnly",
+                        "currentId": "FluidName",
+                        "value": true
+                    },
+                    {
+                        "id": "IsVacuumOnly",
+                        "currentId": "FluidNameVacuum",
+                        "value": true
+                    }
+                ],
+                "infoText": "",
+                "grid": 3,
+                "dimensionName": "",
+                "dependentFieldName": [
+                    {
+                        "id": "IsPressureOnly",
+                        "value": true
+                    }
+                ],
+                "validations": []
+            },
+            {
+                "fieldName": "MolWeight|MolWeightVacuum",
+                "label": "Molecular Weight",
+                "type": "number",
+                "fieldDisplayOrder": 3,
+                "onBlurAction": true,
+                "mandatory": [
+                    {
+                        "target": {
+                            "id": "IsPressureOnly",
+                            "currentId": "MolWeight",
+                            "value": true
+                        },
+                        "value": true
+                    },
+                    {
+                        "target": {
+                            "id": "IsVacuumOnly",
+                            "currentId": "MolWeightVacuum",
+                            "value": true
+                        },
+                        "value": true
+                    }
+                ],
+                "defaultValue": [
+                    {
+                        "id": "MolWeight",
+                        "value": ""
+                    },
+                    {
+                        "id": "MolWeightVacuum",
+                        "value": ""
+                    }
+                ],
+                "disabled": [
+                    {
+                        "target": {
+                            "id": "IsPressureOnly",
+                            "symbol": "Calculate",
+                            "currentId": "MolWeight",
+                            "expression": "!IsPressureOnly?true:((FlowRatePopupFlag==true)?true:false)",
+                            "expressionReqFields": [
+                                "IsPressureOnly","FlowRatePopupFlag"
+                            ],
+                            "value": false
+                        },
+                        "value": false
+                    },
+                    {
+                        "target": {
+                            "id": "IsVacuumOnly",
+                            "currentId": "MolWeightVacuum",
+                            "symbol": "Calculate",
+                            "expression": "!IsVacuumOnly?true:((FlowRateVacuumPopupFlag==)true?true:false)",
+                            "expressionReqFields": [
+                                "IsVacuumOnly","FlowRateVacuumPopupFlag"
+                            ],
+                            "value": false
+                        },
+                        "value": false
+                    }
+                ],
+                "visible": [
+                    {
+                        "id": "IsPressureOnly",
+                        "currentId": "MolWeight",
+                        "value": true
+                    },
+                    {
+                        "id": "IsVacuumOnly",
+                        "currentId": "MolWeightVacuum",
+                        "value": true
+                    }
+                ],
+                
+                "infoText": "",
+                "grid": 4,
+                "gridTemplateColumns": "1fr 1fr 1fr",
+                "validations": [
+                    {
+                        "id": "MolWeight",
+                        "minValue": 1,
+                        "message": {
+                            "type": "error",
+                            "message": "MolWeightgt1"
+                        }
+                    },
+                    {
+                        "id": "MolWeightVacuum",
+                        "minValue": 1,
+                        "message": {
+                            "type": "error",
+                            "message": "MolWeightgt1"
+                        }
+                    }
+                ],
+                "dependentFieldName": [
+                    {
+                        "id": "IsPressureOnly",
+                        "value": true
+                    }
+                ],
+                "dimensionName": "",
+                "regex": "NOT_ALLOW_NEGATIVE"
+            },
+            {
+                "fieldName": "KCpByCv|KCpByCvVacuum",
+                "label": "k, (Cp / Cv)",
+                "type": "number",
+                "fieldDisplayOrder": 4,
+                "onBlurAction": true,
+                "mandatory": [
+                    {
+                        "target": {
+                            "id": "IsPressureOnly",
+                            "currentId": "KCpByCv",
+                            "value": true
+                        },
+                        "value": true
+                    },
+                    {
+                        "target": {
+                            "id": "IsVacuumOnly",
+                            "currentId": "KCpByCvVacuum",
+                            "value": true
+                        },
+                        "value": true
+                    }
+                ],
+                "defaultValue": [
+                    {
+                        "id": "KCpByCv",
+                        "value": ""
+                    },
+                    {
+                        "id": "KCpByCvVacuum",
+                        "value": ""
+                    }
+                ],
+                "disabled": [
+                    {
+                        "target": {
+                            "id": "IsPressureOnly",
+                            "symbol": "Calculate",
+                            "currentId": "KCpByCv",
+                            "expression": "!IsPressureOnly?true:((FlowRatePopupFlag==true)?true:false)",
+                            "expressionReqFields": [
+                                "IsPressureOnly","FlowRatePopupFlag"
+                            ],
+                            "value": false
+                        },
+                        "value": false
+                    },
+                    {
+                        "target": {
+                            "id": "IsVacuumOnly",
+                            "currentId": "KCpByCvVacuum",
+                            "symbol": "Calculate",
+                            "expression": "!IsVacuumOnly?true:((FlowRateVacuumPopupFlag==true)?true:false)",
+                            "expressionReqFields": [
+                                "IsVacuumOnly","FlowRateVacuumPopupFlag"
+                            ],
+                            "value": false
+                        },
+                        "value": false
+                    }
+                ],
+                "visible": [
+                    {
+                        "id": "IsPressureOnly",
+                        "currentId": "KCpByCv",
+                        "value": true
+                    },
+                    {
+                        "id": "IsVacuumOnly",
+                        "currentId": "KCpByCvVacuum",
+                        "value": true
+                    }
+                ],
+                "infoText": "Pressure Ratio of Specific Heats (Cp/Cv)",
+                "grid": 4,
+                "gridTemplateColumns": "1fr 1fr 1fr",
+                "dimensionName": "",
+                "dependentFieldName": [
+                    {
+                        "id": "IsPressureOnly",
+                        "value": true
+                    }
+                ],
+                "validations": [
+                    {
+                        "id": "KCpByCv",
+                        "minValue": 0,
+                        "message": {
+                            "type": "error",
+                            "message": "KCpByCvgt0"
+                        }
+                    },
+                    {
+                        "id": "KCpByCvVacuum",
+                        "minValue": 0,
+                        "message": {
+                            "type": "error",
+                            "message": "KCpByCvgt0"
+                        }
+                    }
+                ],
+                "regex": "NOT_ALLOW_NEGATIVE"
+            },
+            {
+                "fieldName": "Compressibility|CompressibilityVacuum",
+                "label": "Compressibility",
+                "type": "number",
+                "fieldDisplayOrder": 5,
+                "mandatory": [
+                    {
+                        "target": {
+                            "id": "IsPressureOnly",
+                            "currentId": "Compressibility",
+                            "value": true
+                        },
+                        "value": true
+                    },
+                    {
+                        "target": {
+                            "id": "IsVacuumOnly",
+                            "currentId": "CompressibilityVacuum",
+                            "value": true
+                        },
+                        "value": true
+                    }
+                ],
+                "defaultValue": [
+                    {
+                        "id": "Compressibility",
+                        "value": ""
+                    },
+                    {
+                        "id": "CompressibilityVacuum",
+                        "value": ""
+                    }
+                ],
+                "disabled": [
+                    {
+                        "target": {
+                            "id": "IsPressureOnly",
+                            "symbol": "Calculate",
+                            "currentId": "Compressibility",
+                            "expression": "!IsPressureOnly?true:((FlowRatePopupFlag==true)?true:false)",
+                            "expressionReqFields": [
+                                "IsPressureOnly","FlowRatePopupFlag"
+                            ],
+                            "value": false
+                        },
+                        "value": false
+                    },
+                    {
+                        "target": {
+                            "id": "IsVacuumOnly",
+                            "currentId": "CompressibilityVacuum",
+                            "symbol": "Calculate",
+                            "expression": "!IsVacuumOnly?true:((FlowRateVacuumPopupFlag==true)?true:false)",
+                            "expressionReqFields": [
+                                "IsVacuumOnly","FlowRateVacuumPopupFlag"
+                            ],
+                            "value": false
+                        },
+                        "value": false
+                    }
+                ],
+                "visible": [
+                    {
+                        "id": "IsPressureOnly",
+                        "currentId": "Compressibility",
+                        "value": true
+                    },
+                    {
+                        "id": "IsVacuumOnly",
+                        "currentId": "CompressibilityVacuum",
+                        "value": true
+                    }
+                ],
+                "infoText": "Pressure Compressibility Factor",
+                "grid": 4,
+                "gridTemplateColumns": "1fr 1fr 1fr",
+                "dimensionName": "",
+                "dependentFieldName": [
+                    {
+                        "id": "IsPressureOnly",
+                        "value": true
+                    }
+                ],
+                "validations": [
+                    {
+                        "target": {
+                            "id": "Compressibility",
+                            "symbol": "Calculate",
+                            "expression": "Compressibility<=0",
+                            "expressionReqFields": [
+                                "Compressibility"
+                            ],
+                            "value": true
+                        },
+                        "message": {
+                            "type": "error",
+                            "message": "Compressibilitygt0"
+                        }
+                    },
+                    {
+                        "target": {
+                            "id": "CompressibilityVacuum",
+                            "symbol": "Calculate",
+                            "expression": "CompressibilityVacuum<=0",
+                            "expressionReqFields": [
+                                "CompressibilityVacuum"
+                            ],
+                            "value": true
+                        },
+                        "message": {
+                            "type": "error",
+                            "message": "Compressibilitygt0"
+                        }
+                    }
+                ],
+                "regex": "NOT_ALLOW_NEGATIVE"
+            }
+        ]
+    },
+    {
+        "sectionName": "systemPressure",
+        "sectionLabel": "System Pressure",
+        "displayType": "form",
+        "displayOrder": 6,
+        "fields": [
+            {
+                "fieldName": "AtmPressure",
+                "label": "Atmospheric",
+                "type": "inputUom",
+                "UomFieldName": "AtmPressureUOM",
+                "fieldDisplayOrder": 1,
+                "mandatory": true,
+                "defaultValue": {
+                    "value": "14.696"
+                },
+                "disabled": false,
+                "visible": true,
+                "infoText": "Atmospheric Pressure [Patm]",
+                "grid": 4,
+                "dimensionName": [
+                    "abspressure"
+                ],
+                "validations": [
+                    {
+                        "id": "AtmPressure",
+                        "minValue": 0,
+                        "message":{"type":"error", "message":"AtmPressuregt0"}
+                    }
+                ],
+                "options": [
+                    {
+                        "label": "psia",
+                        "value": "psia"
+                    },
+                    {
+                        "label": "kPa",
+                        "value": "kPa"
+                    },
+                    {
+                        "label": "bar",
+                        "value": "bar"
+                    },
+                    {
+                        "label": "atm",
+                        "value": "atm"
+                    }
+                ],
+                "defaultUnit": {
+                    "label": "psia",
+                    "value": "psia"
+                },
+                "regex": "NOT_ALLOW_NEGATIVE"
+            },
+            {
+                "fieldName": "SystemMAWP",
+                "label": "System MAWP",
+                "type": "inputUom",
+                "UomFieldName": "PressureUOM",
+                "fieldDisplayOrder": 2,
+                "mandatory": false,
+                "defaultValue": "",
+                "disabled": [
+                    {
+                        "target": {
+                            "id": "IsPressureOnly",
+                            "currentId": "SystemMAWP",
+                            "symbol": "Calculate",
+                            "expression": "!IsPressureOnly",
+                            "expressionReqFields": [
+                                "IsPressureOnly"
+                            ],
+                            "nextRound": false
+                        },
+                        "value": false
+                    }
+                ],
+                "visible": [
+                    {
+                        "id": "IsPressureOnly",
+                        "currentId": "SystemMAWP",
+                        "value": true
+                    }
+                ],
+                "infoText": "System MAWP [MAWP]",
+                "grid": 4,
+                "dimensionName": [
+                    "pressure"
+                ],
+                "validations": [],
+                "options": [],
+                "regex": "NOT_ALLOW_NEGATIVE"
+            },
+            {
+                "fieldName": "SystemMAWV",
+                "label": "System MAWV",
+                "type": "inputUom",
+                "UomFieldName": "PressureUOM",
+                "fieldDisplayOrder": 2,
+                "mandatory": false,
+                "defaultValue": "",
+                "disabled": [
+                    {
+                        "target": {
+                            "id": "IsVacuumOnly",
+                            "currentId": "SystemMAWV",
+                            "symbol": "Calculate",
+                            "expression": "!IsVacuumOnly",
+                            "expressionReqFields": [
+                                "IsVacuumOnly"
+                            ],
+                            "nextRound": false
+                        },
+                        "value": false
+                    }
+                ],
+                "visible": [
+                    {
+                        "id": "IsVacuumOnly",
+                        "currentId": "SystemMAWV",
+                        "value": true
+                    }
+                ],
+                "infoText": "System MAWV [MAWV]",
+                "grid": 4,
+                "dimensionName": [
+                    "pressure"
+                ],
+                "validations": [
+                    {
+                        "id": "SystemMAWV",
+                        "minValue": 0,
+                        "message":{"type":"error","message":"SMAWVgt0"}
+                    }
+                ],
+                "options": [],
+                "defaultUnit": {
+                    "label": "psia",
+                    "value": "psia"
+                },
+                "regex": "NOT_ALLOW_NEGATIVE"
+            },
+            {
+                "fieldName": "OperatingPressure",
+                "label": "Operating Pressure",
+                "type": "inputUom",
+                "UomFieldName": "PressureUOM",
+                "fieldDisplayOrder": 3,
+                "mandatory": false,
+                "defaultValue": "",
+                "disabled": false,
+                "visible": true,
+                "infoText": "Operating Pressure [Pn]",
+                "grid": 4,
+                "dimensionName": [
+                    "pressure"
+                ],
+                "validations": [
+                ],
+                "options": [],
+                "defaultUnit": {
+                    "label": "psia",
+                    "value": "psia"
+                },
+                "regex": "NOT_ALLOW_NEGATIVE"
+            },
+            {
+                "fieldName": "VesselPressure",
+                "label": "Vessel Pressure",
+                "type": "inputUom",
+                "UomFieldName": "PressureUOM",
+                "fieldDisplayOrder": 4,
+                "mandatory": [
+                    {
+                        "target": {
+                            "id": "IsPressureOnly",
+                            "currentId": "VesselPressure",
+                            "symbol": "Calculate",
+                            "expression": "IsPressureOnly",
+                            "expressionReqFields": [
+                                "IsPressureOnly"
+                            ],
+                            "nextRound": false
+                        },
+                        "value": false
+                    }
+                ],
+                "defaultValue": "",
+                "disabled": [
+                    {
+                        "target": {
+                            "id": "IsPressureOnly",
+                            "currentId": "VesselPressure",
+                            "symbol": "Calculate",
+                            "expression": "!IsPressureOnly",
+                            "expressionReqFields": [
+                                "IsPressureOnly"
+                            ],
+                            "nextRound": false
+                        },
+                        "value": false
+                    }
+                ],
+                "visible": [
+                    {
+                        "target": {
+                            "id": "IsPressureOnly",
+                            "currentId": "VesselPressure",
+                            "symbol": "Calculate",
+                            "expression": "IsPressureOnly",
+                            "expressionReqFields": [
+                                "IsPressureOnly"
+                            ],
+                            "nextRound": false
+                        },
+                        "value": false
+                    }
+                ],
+                "infoText": "Vessel Pressure[PTank]",
+                "grid": 4,
+                "dimensionName": [
+                    "pressure"
+                ],
+                "validations": [
+                    {
+                        "id": "VesselPressure",
+                        "minValue": 0,
+                        "message":{"type":"error","message":"VPressuregt0"}
+                    }
+                ],
+                "options": [],
+                "regex": "NOT_ALLOW_NEGATIVE"
+            },
+            {
+                "fieldName": "VesselVacuum",
+                "label": "Vessel Vacuum",
+                "type": "inputUom",
+                "UomFieldName": "PressureUOMVacuum",
+                "fieldDisplayOrder": 5,
+                "mandatory": [
+                    {
+                        "target": {
+                            "id": "IsVacuumOnly",
+                            "currentId": "VesselVacuum",
+                            "symbol": "Calculate",
+                            "expression": "IsVacuumOnly",
+                            "expressionReqFields": [
+                                "IsVacuumOnly"
+                            ],
+                            "nextRound": false
+                        },
+                        "value": false
+                    }
+                ],
+                "defaultValue": "",
+                "disabled": [
+                    {
+                        "target": {
+                            "id": "IsVacuumOnly",
+                            "currentId": "VesselVacuum",
+                            "symbol": "Calculate",
+                            "expression": "!IsVacuumOnly",
+                            "expressionReqFields": [
+                                "IsVacuumOnly"
+                            ],
+                            "nextRound": false
+                        },
+                        "value": false
+                    }
+                ],
+                "visible": [
+                    {
+                        "target": {
+                            "id": "IsVacuumOnly",
+                            "currentId": "VesselVacuum",
+                            "symbol": "Calculate",
+                            "expression": "IsVacuumOnly",
+                            "expressionReqFields": [
+                                "IsVacuumOnly"
+                            ],
+                            "nextRound": false
+                        },
+                        "value": false
+                    }
+                ],
+                "infoText": "Vessel Vacuum [VTank]",
+                "grid": 4,
+                "dimensionName": [
+                    "pressure"
+                ],
+                "validations": [
+                    {
+                        "id": "VesselVacuum",
+                        "minValue": 0,
+                        "maxValue":5,
+                        "message":{"type":"error","message":"VVacuum0to4"}
+                    }
+                ],
+                "options": [],
+                "regex": "NOT_ALLOW_NEGATIVE"
+            }
+            
+        ]
+    },
+    {
+        "sectionName": "temperatureProperties",
+        "sectionLabel": "Temperature Properties",
+        "displayType": "form",
+        "displayOrder": 7,
+        "fields": [
+            {
+                "fieldName": "Relieving",
+                "label": "Relieving (for Press.)",
+                "type": "inputUom",
+                "UomFieldName": "TemperatureUOM",
+                "fieldDisplayOrder": 1,
+                "mandatory": [
+                    {
+                        "id": "IsPressureOnly",
+                        "currentId": "Relieving",
+                        "value": false
+                    },
+                    {
+                        "target": {
+                            "id": "IsPressureOnly",
+                            "currentId": "Relieving",
+                            "symbol": "Calculate",
+                            "expression": "IsPressureOnly ?true:false",
+                            "expressionReqFields": [
+                                "IsPressureOnly"
+                            ],
+                            "nextRound": false
+                        },
+                        "value": false
+                    }
+                ],
+                "defaultValue": "",
+                "disabled": [
+                    {
+                        "id": "IsPressureOnly",
+                        "currentId": "Relieving",
+                        "value": false
+                    }
+                ],
+                "visible": [
+                    {
+                        "id": "IsPressureOnly",
+                        "currentId": "Relieving",
+                        "value": true
+                    }
+                ],
+                "infoText": "",
+                "grid": 4,
+                "dimensionName": [
+                    "temperature"
+                ],
+                "validations": [],
+                "options": [],
+                "defaultUnit": {
+                    "label": "°C",
+                    "value": "°C"
+                },
+                "regex": "ALLOW_NEGATIVE"
+            },
+            {
+                "fieldName": "RelievingforVacuum",
+                "label": "Relieving (for Vac.)",
+                "type": "inputUom",
+                "UomFieldName": "TemperatureUOM",
+                "fieldDisplayOrder": 1,
+                "mandatory": [
+                    {
+                        "target": {
+                            "id": "IsVacuumOnly",
+                            "currentId": "RelievingforVacuum",
+                            "symbol": "Calculate",
+                            "expression": "IsVacuumOnly ?true:false",
+                            "expressionReqFields": [
+                                "IsVacuumOnly"
+                            ],
+                            "nextRound": false
+                        },
+                        "value": false
+                    }
+                ],
+                "defaultValue": "",
+                "disabled": [
+                    {
+                        "id": "IsVacuumOnly",
+                        "currentId": "RelievingforVacuum",
+                        "value": false
+                    }
+                ],
+                "visible": [
+                    {
+                        "id": "IsVacuumOnly",
+                        "currentId": "RelievingforVacuum",
+                        "value": true
+                    }
+                ],
+                "infoText": "",
+                "grid": 4,
+                "dimensionName": [
+                    "temperature"
+                ],
+                "validations": [],
+                "options": [
+                    {
+                        "label": "°C",
+                        "value": "°C"
+                    },
+                    {
+                        "label": "°F",
+                        "value": "°F"
+                    },
+                    {
+                        "label": "°K",
+                        "value": "°K"
+                    },
+                    {
+                        "label": "°R",
+                        "value": "°R"
+                    }
+                ],
+                "defaultUnit": {
+                    "label": "°C",
+                    "value": "°C"
+                },
+                "regex": "ALLOW_NEGATIVE"
+            },
+            {
+                "fieldName": "Operating",
+                "label": "Operating",
+                "type": "inputUom",
+                "UomFieldName": "TemperatureUOM",
+                "fieldDisplayOrder": 2,
+                "mandatory": false,
+                "defaultValue": "",
+                "disabled": false,
+                "visible": true,
+                "infoText": "",
+                "grid": 4,
+                "dimensionName": [
+                    "temperature"
+                ],
+                "validations": [],
+                "options": [
+                    {
+                        "label": "°C",
+                        "value": "°C"
+                    },
+                    {
+                        "label": "°F",
+                        "value": "°F"
+                    },
+                    {
+                        "label": "°K",
+                        "value": "°K"
+                    },
+                    {
+                        "label": "°R",
+                        "value": "°R"
+                    }
+                ],
+                "defaultUnit": {
+                    "label": "°C",
+                    "value": "°C"
+                },
+                "regex": "ALLOW_NEGATIVE"
+            },
+            {
+                "fieldName": "DesignMin",
+                "label": "Design Min.",
+                "type": "inputUom",
+                "UomFieldName": "TemperatureUOM",
+                "fieldDisplayOrder":3,
+                "mandatory":false,
+                "defaultValue": "",
+                "disabled": false,
+                "visible": true,
+                "infoText": "",
+                "grid": 4,
+                "dimensionName":["temperature"],
+                "validations": [
+                    {
+                        "target":{
+                            "id":"DesignMin",
+                            "symbol":"Calculate",
+                            "expression":"DesignMax !='' && DesignMin!='' && DesignMax<DesignMin",
+                            "expressionReqFields":["DesignMax", "DesignMin"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"MinDTgtMDT"}
+                    }
+                ],
+                "options": [
+                    {
+                        "label": "°C",
+                        "value": "°C"
+                    },
+                    {
+                        "label": "°F",
+                        "value": "°F"
+                    },
+                    {
+                        "label": "°K",
+                        "value": "°K"
+                    },
+                    {
+                        "label": "°R",
+                        "value": "°R"
+                    }
+                ],
+                "defaultUnit": {
+                    "label": "°C",
+                    "value": "°C"
+                },
+                "regex": "ALLOW_NEGATIVE"
+            },
+            {
+                "fieldName": "DesignMax",
+                "label": "Design Max.",
+                "type": "inputUom",
+                "UomFieldName": "TemperatureUOM",
+                "fieldDisplayOrder": 4,
+                "mandatory": false,
+                "defaultValue": "",
+                "disabled": false,
+                "visible": true,
+                "infoText": "",
+                "grid": 4,
+                "dimensionName": [
+                    "temperature"
+                ],
+                "validations": [],
+                "options": [
+                    {
+                        "label": "°C",
+                        "value": "°C"
+                    },
+                    {
+                        "label": "°F",
+                        "value": "°F"
+                    },
+                    {
+                        "label": "°K",
+                        "value": "°K"
+                    },
+                    {
+                        "label": "°R",
+                        "value": "°R"
+                    }
+                ],
+                "defaultUnit": {
+                    "label": "°C",
+                    "value": "°C"
+                },
+                "regex": "ALLOW_NEGATIVE"
+            }
+        ]
+    },
+    {
+        "sectionName": "flowCapacity",
+        "sectionLabel": "Flow Capacity",
+        "displayType": "form",
+        "displayOrder": 8,
+        "fields": [
+            {
+                "fieldName": "Wreq",
+                "label": "Required Pressure Flow",
+                "type": "inputUominfo",
+                "UomFieldName": "FlowCapacityUOM",
+                "fieldDisplayOrder": 1,
+                "mandatory": false,
+                "defaultValue": "",
+                "disabled": false,
+                "visible": [
+                    {
+                        "id": "IsPressureOnly",
+                        "currentId": "Wreq",
+                        "value": true
+                    }
+                ], 
+                "infoText":"[Wreq(p)] Required Mass Flow Rate",
+                "iconInfoText": "Required Pressure Flow is needed to calculate Valve Size.",
+                "grid": 6,
+                "dimensionName": [
+                    "gasvolflow",
+                    "gasvolflowact",
+                    "massflow"
+                ],
+                "validations": [],
+                "options": [],
+                "defaultUnit": {
+                    "label": "SCFM",
+                    "value": "SCFM"
+                },
+                "regex": "NOT_ALLOW_NEGATIVE",
+                "fieldBlankMessage": {"type": "information","message": "Wf1WreqBlank"}
+            },
+            {
+                "fieldName": "WreqV",
+                "label": "Required Vacuum Flow",
+                "type": "inputUominfo",
+                "UomFieldName": "FlowCapacityUOM",
+                "fieldDisplayOrder": 1,
+                "mandatory": false,
+                "defaultValue": "",
+                "disabled": false,
+                "visible": [
+                    {
+                        "id": "IsVacuumOnly",
+                        "currentId": "WreqV",
+                        "value": true
+                    }
+                ],
+                "infoText":"[Wreq(v)] Required Mass Flow Rate",
+                "iconInfoText":"Required Vacuum Flow is needed to calculate Valve Size.",
+                "grid": 6,
+                "dimensionName": [
+                    "gasvolflow",
+                    "gasvolflowact",
+                    "massflow"
+                ],
+                "validations": [],
+                "options": [],
+                "defaultUnit": {
+                    "label": "SCFM",
+                    "value": "SCFM"
+                },
+                "regex": "NOT_ALLOW_NEGATIVE",
+                "fieldBlankMessage": {"type": "information","message": "Wf1WreqVBlank"}
+            },
+            {
+                "fieldName": "CalculateFlowRate",
+                "label": "CALCULATE FLOW",
+                "type": "modal",
+                "fieldDisplayOrder": 4,
+                "mandatory": false,
+                "defaultValue": false,
+                "disabled": [
+                    {
+                        "target":{
+                            "id":"VesselPressure",
+                            "symbol":"Calculate",
+                            "currentId":"CalculateFlowRate",
+                            "expression": "AtmPressure =='' || ((IsPressureOnly && IsVacuumOnly) ? (VesselVacuum=='' || VesselPressure=='' || Relieving=='' || RelievingforVacuum==''):(IsPressureOnly ? (VesselPressure==''  || Relieving==''):(IsVacuumOnly ?(VesselVacuum=='' || RelievingforVacuum==''):false)))",
+                            "expressionReqFields":["AtmPressure","VesselPressure", "IsPressureOnly","IsVacuumOnly","VesselVacuum", "Relieving","RelievingforVacuum"],
+                            "nextRound":false
+                        },
+                        "value":true
+                    }
+                ],
+                "isPopUpField": true,
+                "visible": true,
+                "grid": "6",
+                "dimensionName": "",
+                "infoText": "",
+                "validations": [],
+                "action": {
+                    "type": "modal",
+                    "target": "CalculateFlowrate"
+                },
+                "regex": "^(|[1-9][0-9]*)$"
+            },
+            {
+                "fieldName": "info",
+                "label": "Please enter a temperature and pressure.",
+                "type": "textinfo",
+                "isPopUpField": true,
+                "hideFromSideBar1": true,
+                "hideFromSideBar":true,
+                "style": {
+                    "color": "red",
+                    "fontSize": "0.75rem",
+                    "fontWeight": "bold",
+                    "marginLeft":"4rem"
+                },
+                "fieldDisplayOrder": 5,
+                "mandatory": false,
+                "defaultValue": "",
+                "disabled": true,
+                "visible": [
+                    {
+                        "target":{
+                        "id":"SetPressure",
+                        "symbol":"Calculate",
+                        "expression": "AtmPressure =='' || ((IsPressureOnly && IsVacuumOnly) ? (VesselVacuum=='' || VesselPressure=='' || Relieving=='' || RelievingforVacuum==''):(IsPressureOnly ? (VesselPressure=='' || Relieving==''):(IsVacuumOnly ?(VesselVacuum=='' || RelievingforVacuum==''):false)))",
+                        "expressionReqFields":["AtmPressure","VesselVacuum", "VesselPressure","IsPressureOnly","IsVacuumOnly", "Relieving","RelievingforVacuum"],
+                        "nextRound":false
+                    },
+                    "value":true
+                    }
+                ],
+                "grid": 6,
+                "infoText": "",
+                "dimensionName": "",
+                "validations": []
+            }
+        ]
+    }
+]

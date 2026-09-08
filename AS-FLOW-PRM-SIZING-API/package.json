@@ -1,0 +1,72 @@
+{
+  "name": "as-flow-prm-sizing-api",
+  "version": "0.0.1",
+  "description": "This the API portion of PRV PA",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www",
+    "start:dev": "env-cmd -f .env.dev nodemon ./bin/www",
+    "start:stage": "env-cmd -f .env.stage nodemon ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://EmersonAutomationSolutions@dev.azure.com/EmersonAutomationSolutions/AS-FLOW-LRP%204758%20PRM%20Global%20Online%20Store%20to%20SAP%20Phase%20II/_git/AS-FLOW-PRM-SIZING-API"
+  },
+  "keywords": [
+    "PRV2Size",
+    "PRVPA",
+    "PRMSizing",
+    "API",
+    "Nodejs"
+  ],
+  "author": "SLK DEV TEAM",
+  "license": "Emerson",
+  "dependencies": {
+    "@apollo/server": "^5.5.1",
+    "@as-integrations/express4": "^1.1.2",
+    "@e965/xlsx": "^0.20.3",
+    "@okta/jwt-verifier": "^4.0.2",
+    "axios": "^1.15.2",
+    "bcrypt": "^6.0.0",
+    "bignumber.js": "^9.1.2",
+    "cookie-parser": "^1.4.6",
+    "csrf": "^3.1.0",
+    "csrf-csrf": "^4.0.3",
+    "dataloader": "^2.2.3",
+    "debug": "^4.3.4",
+    "dotenv": "^16.4.5",
+    "env-cmd": "^10.1.0",
+    "exceljs": "^4.4.0",
+    "express": "^4.22.2",
+    "express-rate-limit": "^8.5.2",
+    "express-session": "^1.18.0",
+    "graphql": "^16.11.0",
+    "helmet": "^7.1.0",
+    "http-errors": "^2.0.0",
+    "https": "^1.0.0",
+    "js2xmlparser": "^5.0.0",
+    "jsonwebtoken": "^9.0.3",
+    "knex": "^3.2.8",
+    "mathjs": "^15.2.0",
+    "morgan": "1.11.0",
+    "mssql": "^12.2.0",
+    "multer": "^2.2.0",
+    "pg": "^8.11.5",
+    "soap": "^1.8.0",
+    "xmlbuilder": "^15.1.1"
+  },
+  "overrides": {
+    "@azure/identity": "^4.13.1",
+    "@azure/msal-node": "^5.1.5",
+    "@xmldom/xmldom": "^0.8.13",
+    "follow-redirects": "^1.16.0",
+    "uuid": "^11.1.1",
+    "inflight": "file:./patches/inflight",
+    "tmp": "0.2.7",
+    "form-data": "^4.0.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

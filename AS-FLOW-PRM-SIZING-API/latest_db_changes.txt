@@ -1,0 +1,25 @@
+//    2/13/2026 query for report 
+Update public."ReportSubTemplate"
+set "Name" = 'Equations 13b' where "Name" = 'Equaitons 13b';
+
+INSERT INTO public."ReportSubTemplate" ("Name")
+VALUES
+  ('ModelSummary'),
+  ('ProjectSummary'),
+  ('Equations 3 Vacc'),
+  ('Equations 12a Vacc'),
+  ('Equations 10a Vacc'),
+  ('PricingSummary'),
+  ('BlankSpace'),
+  ('Inputs 31'),
+  ('Equations 10l'),
+  ('Equations 13e'),
+  ('Static header PV');
+
+// 3/27/2026 query for valve limits 
+UPDATE public."ConfigValveLimits"
+	SET "Expression"='Pback <= 16 pressure.barg;MAWP <= 40 pressure.barg;Pset <= 40 pressure.barg;Pset >= 0.2 pressure.barg;Pn <= 0.95 * Pset;T <= 427 temp.degC;T >= -196 temp.degC'
+	WHERE "ConfigValveLimitId" = 126;
+UPDATE public."ConfigValveLimits"
+	SET "Expression"='Pback <= 16 pressure.barg;MAWP <= 40 pressure.barg;Pset <= 40 pressure.barg;Pset >= 2.0 pressure.barg;Pn <= 0.95 * Pset;T <= 427 temp.degC;T >= -60 temp.degC'
+	WHERE "ConfigValveLimitId" = 128;

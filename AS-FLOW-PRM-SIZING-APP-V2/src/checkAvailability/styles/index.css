@@ -1,0 +1,700 @@
+/* ─────────────────────────────────────────────
+   Check Availability – Global Styles
+   Matches PRV AVAILABILITY CHECK mockup
+───────────────────────────────────────────── */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 11px;
+  color: #000;
+  background: #fff;
+}
+
+/* ─── App Shell ─────────────────────────────── */
+.av-app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* ─── Navbar ────────────────────────────────── */
+.av-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #013b84; /* deep Emerson blue */
+  color: #fff;
+  height: 42px;
+  padding: 0 20px;
+  flex-shrink: 0;
+}
+
+.av-navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* .av-logo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 5px);
+  grid-template-rows: repeat(3, 5px);
+  gap: 2px;
+}
+
+.av-logo-dot {
+  width: 5px;
+  height: 5px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.av-brand {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+} */
+.av-emerson-logo {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.av-navbar-title {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+  text-transform: uppercase;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.av-navbar-right {
+  flex: 1;
+}
+
+.av-search-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 24px;
+  width: 100%;
+  flex: 1;
+}
+
+.av-search-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+}
+
+.av-search-label {
+  min-width: 48px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #333;
+}
+
+.av-input-text {
+  flex: 1;
+  min-width: 280px;
+  max-width: 520px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  padding: 9px 12px;
+  font-size: 13px;
+  color: #1a1a1a;
+  background: #fff;
+}
+
+.av-input-text:focus {
+  outline: 2px solid #3a8f25;
+  outline-offset: 1px;
+}
+
+.av-search-grid {
+  display: grid;
+  grid-template-columns: minmax(260px, 320px) minmax(0, 1fr);
+  gap: 18px;
+  width: 100%;
+}
+
+.av-metadata-column,
+.av-table-column {
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  padding: 18px;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.av-section-heading {
+  font-size: 13px;
+  font-weight: 700;
+  color: #013b84;
+  margin-bottom: 8px;
+}
+
+.av-metadata-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.av-metadata-column .av-field label {
+  width: 110px;
+  min-width: 110px;
+  text-align: left;
+  color: #333;
+}
+
+.av-table-container {
+  flex: 1;
+  overflow: auto;
+}
+
+.av-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+  table-layout: fixed;
+}
+
+.av-table th,
+.av-table td {
+  padding: 10px 12px;
+  border: 1px solid #d7d7d7;
+  text-align: left;
+}
+
+.av-table th {
+  background: #f3f6fb;
+  font-weight: 700;
+  color: #102a43;
+}
+
+.av-table-empty {
+  text-align: center;
+  color: #66757f;
+  font-style: italic;
+  padding: 36px 12px;
+}
+
+/* ─── Body Layout ───────────────────────────── */
+.av-main-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.av-sidebar-toggle {
+  position: absolute;
+  top: 24px;
+  left: 360px;
+  width: 28px;
+  height: 48px;
+  border: 1px solid #0052a1;
+  border-left: none;
+  border-radius: 0 4px 4px 0;
+  background: linear-gradient(180deg, #e8f2ff 0%, #ffffff 100%);
+  color: #013b84;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  z-index: 20;
+  transition:
+    left 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.av-sidebar-toggle:hover {
+  background: linear-gradient(180deg, #d4e7ff 0%, #f5fbff 100%);
+  color: #002663;
+  transform: translateX(-1px);
+}
+
+.av-main-content.av-sidebar-hidden .av-sidebar-toggle {
+  left: 0;
+}
+
+.av-sidebar-hidden .av-sidebar {
+  width: 0;
+  min-width: 0;
+  padding: 0;
+  border-right: none;
+  overflow: hidden;
+}
+
+/* ─── Left Sidebar ──────────────────────────── */
+.av-sidebar {
+  width: 360px;
+  min-width: 260px;
+  border-right: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  padding: 12px 8px 12px 4px;
+  gap: 0;
+  overflow-y: auto;
+  background: #fff;
+}
+
+/* ─── Header Panel (inside sidebar) ─────────── */
+.av-header-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.av-metadata-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 8px;
+}
+
+.av-field {
+  display: flex;
+  align-items: center;
+  /* min-height: 18px; */
+}
+
+.av-field-mt {
+  margin-top: 8px;
+}
+
+.av-field label {
+  width: 130px;
+  min-width: 130px;
+  font-weight: 600;
+  font-size: 11px;
+  color: #333;
+  text-align: right;
+  padding-right: 8px;
+  white-space: nowrap;
+}
+
+.av-value {
+  font-size: 11px;
+  color: #000;
+  font-weight: 500;
+}
+
+.av-value-small {
+  font-size: 9px;
+  word-break: break-all;
+  line-height: 1.2;
+}
+
+.av-select {
+  border: 1px solid #999;
+  font-size: 10px;
+  padding: 1px 3px;
+  max-width: 110px;
+  background: #fff;
+}
+
+.av-lead-time {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.av-input-small {
+  width: 36px;
+  border: 1px solid #999;
+  font-size: 10px;
+  padding: 1px 3px;
+  text-align: center;
+}
+
+.av-unit {
+  font-size: 10px;
+}
+
+.av-action-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+  margin-bottom: 4px;
+  padding-right: 4px;
+}
+
+.av-btn {
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 5px 14px;
+  border: 1px solid;
+}
+
+.av-btn-primary {
+  background: #3a8f25;
+  color: #fff;
+  border-color: #2c6e1c;
+}
+
+.av-btn-primary:hover {
+  background: #2f7a1e;
+}
+
+.av-divider {
+  border: none;
+  border-top: 1px solid #bbb;
+  margin: 10px 0;
+}
+
+/* ─── Commitment Card ───────────────────────── */
+.av-commitment-card {
+  border: 2px solid #3a8f25;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.av-card-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: #3a8f25;
+  white-space: nowrap;
+}
+
+.av-card-value {
+  font-size: 12px;
+  font-weight: 700;
+  color: #000;
+  white-space: nowrap;
+}
+
+/* ─── Ref Block ─────────────────────────────── */
+.av-ref-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 6px;
+}
+
+.av-ref-item {
+  display: flex;
+  align-items: flex-start;
+  font-size: 10px;
+}
+
+.av-ref-item label {
+  width: 130px;
+  min-width: 130px;
+  font-weight: 600;
+  text-align: right;
+  padding-right: 8px;
+  color: #333;
+}
+
+.av-ref-item span {
+  font-weight: 500;
+  color: #000;
+}
+
+/* ─── Warning Block ─────────────────────────── */
+.av-warning-block {
+  margin-top: 16px;
+  padding: 0 4px;
+}
+
+.av-warning-text {
+  color: #c00000;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* ─── Export Row ────────────────────────────── */
+.av-export-row {
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+}
+
+.av-export-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.av-btn-export {
+  background: #c8c8c8;
+  color: #222;
+  border-color: #888;
+  width: 130px;
+  position: relative;
+}
+
+.av-btn-export::after {
+  content: "▾";
+  margin-left: 8px;
+}
+
+.av-btn-export:hover {
+  background: #aaa;
+}
+
+.av-export-menu {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  width: 180px;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4px;
+}
+
+.av-export-menu button {
+  background: none;
+  border: none;
+  padding: 8px 12px;
+  text-align: left;
+  font-size: 11px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.av-export-menu button:hover {
+  background: #f0f0f0;
+}
+
+/* Enhanced export menu styling */
+.av-export-header {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 8px 12px;
+  border-bottom: 1px solid #eee;
+  color: #013b84;
+  background: linear-gradient(180deg, #f7fbff 0%, #ffffff 100%);
+}
+
+.av-export-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px 8px;
+}
+
+.av-export-section-header {
+  font-size: 11px;
+  font-weight: 700;
+  color: #0052a1;
+  padding: 2px 0 4px 0;
+}
+
+.av-export-divider {
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.06),
+    rgba(0, 0, 0, 0.12),
+    rgba(0, 0, 0, 0.06)
+  );
+  margin: 6px 8px;
+}
+
+.av-export-menu .av-export-section button {
+  background: #ffffff;
+  border: 1px solid #d0d7df;
+  border-radius: 4px;
+  padding: 8px 10px;
+  font-size: 12px;
+  color: #003045;
+  cursor: pointer;
+}
+
+.av-export-menu .av-export-section button:hover {
+  background: #f0f6ff;
+  border-color: #b6d0ff;
+}
+
+.av-export-menu .av-export-section button + button {
+  margin-top: 6px;
+}
+
+/* ─── Editable factory input ────────────────── */
+.av-input-factory {
+  border: 1px solid #999;
+  font-size: 10px;
+  padding: 1px 4px;
+  width: 120px;
+  background: #fffde7; /* light yellow to indicate it's editable */
+}
+
+.av-input-factory:focus {
+  outline: 1px solid #3a8f25;
+  background: #fff;
+}
+
+/* ─── Dirty button (values differ from defaults) */
+.av-btn-dirty {
+  animation: av-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes av-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(58, 143, 37, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 0 5px rgba(58, 143, 37, 0);
+  }
+}
+
+/* ─── Print / PDF styles ────────────────────── */
+@media print {
+  .av-no-print {
+    display: none !important;
+  }
+  .av-navbar {
+    background: #003f8a !important;
+    color: #fff !important;
+    -webkit-print-color-adjust: exact;
+  }
+  .av-app-container {
+    height: auto !important;
+    overflow: visible !important;
+  }
+  .av-main-content {
+    overflow: visible !important;
+  }
+  .av-table-area {
+    overflow: visible !important;
+  }
+  .av-table-container {
+    overflow: visible !important;
+    border: none !important;
+  }
+  .av-row-missing {
+    background: #c00000 !important;
+    -webkit-print-color-adjust: exact;
+  }
+  .av-row-missing td {
+    color: #fff !important;
+    -webkit-print-color-adjust: exact;
+  }
+}
+
+/* ─── Table Area ────────────────────────────── */
+.av-table-area {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.av-table-container {
+  flex: 1;
+  overflow: auto;
+  border-left: 1px solid #ccc;
+}
+
+/* ─── Table ─────────────────────────────────── */
+.av-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 10px;
+  table-layout: auto;
+}
+
+.av-table thead {
+  background: #e8e8e8;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.av-table th {
+  padding: 4px 6px;
+  font-weight: 700;
+  font-size: 10px;
+  color: #222;
+  border: 1px solid #bbb;
+  white-space: nowrap;
+  text-align: left;
+}
+
+.av-table td {
+  padding: 2px 6px;
+  border-bottom: 1px solid #e0e0e0;
+  border-right: 1px solid #e8e8e8;
+  height: 20px;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.av-table tbody tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.av-table tbody tr:hover {
+  background: #e8f0fe;
+}
+
+/* Missing rows — red background */
+.av-row-missing {
+  background: #c00000 !important;
+}
+
+.av-row-missing td {
+  color: #fff !important;
+  border-color: #9a0000 !important;
+}
+
+/* Expand / collapse toggle */
+.av-toggle {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 4px;
+  color: #333;
+}
+
+.av-toggle svg {
+  width: 10px;
+  height: 10px;
+}

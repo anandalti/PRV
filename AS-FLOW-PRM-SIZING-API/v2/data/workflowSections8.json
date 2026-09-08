@@ -1,0 +1,1835 @@
+[
+    {
+        "sectionName": "applciationRequirements",
+        "sectionLabel": "Application Requirements",
+        "displayType": "form",
+        "displayOrder": 4,
+        "fields": [
+            {
+                "fieldName": "SizingBasis",
+                "label": "Sizing Basis",
+                "type": "combobox",
+                "fieldDisplayOrder": 1,
+                "mandatory": false,
+                "defaultValue": "Blocked Discharge",
+                "disabled": false,
+                "visible": true,
+                "grid": "6",
+                "dimensionName": "",
+                "calculateFields":[
+                    {
+                        "target":{
+                            "id":"SaturatedSteam",
+                            "symbol":"API_FUNCTION_CALL",
+                            "api":"/calculateSaturatedSteam",
+                            "actionType":"OnChange",
+                            "method":"GET",
+                            "apiParameters":["SetPressure","OverPressure","InletLoss","AtmPressure","AtmPressureUOM","PressureUOM","TemperatureUOM"],
+                            "apiResponseParams":["SaturatedSteam"],
+                            "nextRound":false
+                        },
+                        "value":""
+                    }
+                ],
+                "infoText": "",
+                "options": [
+                    
+                    {
+                        "label": "Economizer",
+                        "value": "Economizer"
+                    },
+                    {
+                        "label": "HP Drum",
+                        "value": "HP Drum"
+                    },
+                    {
+                        "label": "HP Superheater",
+                        "value": "HP Superheater"
+                    },
+                    {
+                        "label": "IP Drum",
+                        "value": "IP Drum"
+                    },
+                    {
+                        "label": "IP Superheater",
+                        "value": "IP Superheater"
+                    },
+                    {
+                        "label": "LP Drum",
+                        "value": "LP Drum"
+                    },
+                    {
+                        "label": "LP Superheater",
+                        "value": "LP Superheater"
+                    },
+                    {
+                        "label": "Preheater",
+                        "value": "Preheater"
+                    },
+                    {
+                        "label": "Reheater Inlet",
+                        "value": "Reheater Inlet"
+                    },
+                    {
+                        "label": "Reheater Outlet",
+                        "value": "Reheater Outlet"
+                    }
+                ],
+                "validations": []
+            },
+            {
+                "fieldName": "DisplayUnitSystem",
+                "label": "Display Unit System",
+                "type": "combobox",
+                "fieldDisplayOrder": 2,
+                "mandatory": false,
+                "defaultValue": "All",
+                "disabled": false,
+                "visible": true,
+                "grid": "6",
+                "infoText": "",
+                "dimensionName": "",
+                "options": [
+                    {
+                        "label": "All",
+                        "value": "All"
+                    },
+                    {
+                        "label": "Metric",
+                        "value": "Metric"
+                    },
+                    {
+                        "label": "US Customary",
+                        "value": "English"
+                    }
+                ],
+                "validations": [
+                    {
+                        "target": {
+                            "id": "SetPressure",
+                            "symbol": "Calculate",
+                            "currentId": "DisplayUnitSystem",
+                            "focusedField": "SetPressure",
+                            "expression":"SetPressure!='' && DisplayUnitSystem !='Metric' && SetPressure<15",
+                            "expressionReqFields": ["SetPressure","DisplayUnitSystem","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"Psetgt15"}
+                    },
+                    {
+                        "target": {
+                            "id": "SetPressure",
+                            "symbol": "Calculate",
+                            "currentId": "DisplayUnitSystem",
+                            "focusedField": "SetPressure",
+                            "expression":"SetPressure!='' && DisplayUnitSystem =='Metric' && SetPressure<15",
+                            "expressionReqFields": ["SetPressure","DisplayUnitSystem","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"Psetgt15_Metric"}
+                    },
+                    {
+                        "target":{
+                            "id":"SetPressure",
+                            "symbol":"Calculate",
+                            "currentId": "DisplayUnitSystem",
+                            "focusedField":"SetPressure",
+                            "expression":"SetPressure!='' && ((ConstantSuperimposed+VariableSuperimposed)>SetPressure)",
+                            "expressionReqFields":["ConstantSuperimposed","VariableSuperimposed","SetPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"PsicPlusPsivltPset"}
+                    }
+                ]
+            },
+            {
+                "fieldName": "CalculationMethod",
+                "label": "Calculation Method",
+                "type": "combobox",
+                "fieldDisplayOrder": 3,
+                "mandatory": false,
+                "defaultValue": "English",
+                "disabled": false,
+                "visible": true,
+                "grid": "6",
+                "infoText": "",
+                "dimensionName": "",
+                "options": [
+                    {
+                        "label": "US Customary",
+                        "value": "English"
+                    },
+                    {
+                        "label": "Metric",
+                        "value": "Metric"
+                    }
+                ],
+                "validations": []
+            },
+            {
+                "fieldName": "IsSuperUser",
+                "label": "Enable Super User",
+                "type": "checkbox",
+                "fieldDisplayOrder": 4,
+                "mandatory": false,
+                "defaultValue": false,
+                "disabled": true,
+                "visible": true,
+                "grid": 6,
+                "infoText": "",
+                "dimensionName": "",
+                "validations": []
+            }
+        ]
+    },
+    {
+        "sectionName": "fluidProperties",
+        "sectionLabel": "Fluid Properties",
+        "displayType": "form",
+        "displayOrder": 5,
+        "fields": [
+            {
+                "fieldName": "FluidName",
+                "label": "Fluid Name",
+                "type": "combobox",
+                "fieldDisplayOrder": 1,
+                "mandatory": false,
+                "options": [],
+                "defaultValue": {
+                    "value": "Steam"
+                },
+                "disabled": true,
+                "visible": true,
+                "infoText": "",
+                "grid": 6,
+                "dimensionName": "",
+                "validations": []
+            },
+            {
+                "fieldName": "IsSaturatedSteam",
+                "label": "Saturated Steam",
+                "type": "checkbox",
+                "fieldDisplayOrder": 2,
+                "mandatory": false,
+                "grid": 6,
+                "defaultValue": [
+                    {
+                        "target": {
+                            "id": "SizingBasis",
+                            "symbol": "Calculate",
+                            "currentId": "IsSaturatedSteam",
+                            "focusedField": "SizingBasis",
+                            "expression": "(SizingBasis=='Economizer' || SizingBasis == 'Preheater')?true:false",
+                            "expressionReqFields": ["SizingBasis"]
+                        },
+                        "value": false
+                    }
+                ],
+                "disabled": [
+                    {
+                        "target": {
+                            "id": "SizingBasis",
+                            "symbol": "Calculate",
+                            "currentId": "IsSaturatedSteam",
+                            "focusedField": "SizingBasis",
+                            "expression": "SizingBasis=='Economizer'  || SizingBasis == 'Preheater'",
+                            "expressionReqFields": [
+                                "SizingBasis"
+                            ]
+                        },
+                        "value": true
+                    }
+                ],
+                "calculateFields":[
+                    {
+                        "target":{
+                            "id":"IsSaturatedSteam",
+                            "symbol":"COPY_FIELD_DATA",
+                            "currentId":"IsSaturatedSteam",
+                            "focusedField":"IsSaturatedSteam",
+                            "expression":"IsSaturatedSteam==true && SizingBasis!='Economizer' && SizingBasis != 'Preheater'",
+                            "expressionReqFields":["IsSaturatedSteam","SizingBasis"],
+                            "parametersObjects":[{"from":"SaturatedSteam","to":"Relieving"}],
+                            "nextRound":false
+                        },
+                        "value":""
+                    }
+                ],
+                "visible": true,
+                "infoText": "",
+                "dimensionName": "",
+                "validations": []
+            },
+            {
+                "fieldName": "IsSetOnAir",
+                "label": "Set On Air",
+                "type": "checkbox",
+                "fieldDisplayOrder": 3,
+                "mandatory": false,
+                "grid": 6,
+                "defaultValue":true,
+                "disabled": false,
+                "visible": true,
+                "infoText": "",
+                "dimensionName": "",
+                "validations": []
+            },
+            {
+                "fieldName": "MolWeight",
+                "label": "Molecular Weight",
+                "type": "number",
+                "fieldDisplayOrder": 4,
+                "mandatory": false,
+                "defaultValue": {
+                    "value": "18.020"
+                },
+                "disabled": false,
+                "visible": true,
+                "infoText": "",
+                "grid": 6,
+                "validations": [
+                    {
+                        "target":{
+                            "id":"MolWeight",
+                            "symbol":"Calculate",
+                            "currentId":"MolWeight",
+                            "focusedField":"MolWeight",
+                            "expression":"MolWeight!='' && MolWeight <= 1",
+                            "expressionReqFields":["MolWeight"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"MolWeightgt1"}
+                    }
+                ],
+                "dimensionName": "",
+                "regex": "NOT_ALLOW_NEGATIVE"
+            },
+            {
+                "fieldName": "KCpByCv",
+                "label": "k, (Cp / Cv)",
+                "type": "number",
+                "fieldDisplayOrder": 5,
+                "mandatory": true,
+                "defaultValue": {
+                    "value": "1.310"
+                },
+                "disabled": false,
+                "visible": true,
+                "infoText": "Pressure Ratio of Specific Heats (Cp/Cv)",
+                "grid": 6,
+                "dimensionName": "",
+                "validations": [
+                    {
+                        "target":{
+                            "id":"KCpByCv",
+                            "symbol":"Calculate",
+                            "currentId":"KCpByCv",
+                            "focusedField":"KCpByCv",
+                            "expression":"KCpByCv<=0",
+                            "expressionReqFields":["KCpByCv"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"KCpByCvgt0"}
+                    }
+                ],
+                "regex": "NOT_ALLOW_NEGATIVE"
+            },
+            {
+                "fieldName": "Compressibility",
+                "label": "Compressibility",
+                "type": "number",
+                "fieldDisplayOrder": 6,
+                "mandatory": true,
+                "defaultValue": {
+                    "value": "1.000"
+                },
+                "disabled": false,
+                "visible": true,
+                "infoText": "Pressure Compressibility Factor",
+                "grid": 6,
+                "dimensionName": "",
+                "validations": [
+                    {
+                        "target":{
+                            "id":"Compressibility",
+                            "symbol":"Calculate",
+                            "currentId":"Compressibility",
+                            "focusedField":"Compressibility",
+                            "expression":"Compressibility<=0",
+                            "expressionReqFields":["Compressibility"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"Compressibilitygt0"}
+                    }
+                ],
+                "regex": "NOT_ALLOW_NEGATIVE"
+            },
+            {
+                "fieldName": "SteamCondition",
+                "label": "Steam Condition",
+                "type": "input",
+                "fieldDisplayOrder":7,
+                "mandatory":false,
+                "defaultValue": "",
+                "disabled": true,
+                "visible": true,
+                "infoText": "Steam Condition",
+                "grid": 6,
+                "dimensionName":"",
+                "validations": []
+            }
+        ]
+    },
+    {
+        "sectionName": "pressureProperties",
+        "sectionLabel": "Pressure Properties",
+        "displayType": "form",
+        "displayOrder": 6,
+        "fields": [
+            {
+                "fieldName": "AtmPressure",
+                "label": "Atmospheric",
+                "type": "inputUom",
+                "UomFieldName": "AtmPressureUOM",
+                "fieldDisplayOrder":1,
+                "mandatory":true,
+                "defaultValue": {"value":"14.696"},
+                "onBlurAction":true,
+                "calculateFields":[
+                    {
+                        "target":{
+                            "id":"SaturatedSteam",
+                            "symbol":"API_FUNCTION_CALL",
+                            "api":"/calculateSaturatedSteam",
+                            "actionType":"OnBlur",
+                            "method":"GET",
+                            "apiParameters":["SetPressure","OverPressure","InletLoss","AtmPressure","AtmPressureUOM","PressureUOM","TemperatureUOM"],
+                            "apiResponseParams":["SaturatedSteam"],
+                            "nextRound":false
+                        },
+                        "value":""
+                    }
+                ],
+                "disabled": false,
+                "visible": true,
+                "infoText": "Atmospheric Pressure [Patm]",
+                "grid": 4,
+                "dimensionName":["abspressure"],
+                "validations": [
+                    {
+                        "target":{
+                            "id":"SetPressure",
+                            "symbol":"Calculate",
+                            "currentId": "AtmPressure",
+                            "focusedField":"SetPressure",
+                            "expression":"!isNaN(OverPressure) && !isNaN(SetPressure) && !isNaN(InletLoss) && (SetPressure+OverPressure-InletLoss+AtmPressure)<0.000",
+                            "expressionReqFields":["SetPressure","OverPressure","InletLoss","AtmPressure","TotalBackPressure"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"P1lt0"}
+                    },
+                    {
+                        "target":{
+                            "id":"AtmPressure",
+                            "symbol":"Calculate",
+                            "currentId":"AtmPressure",
+                            "focusedField":"AtmPressure",
+                            "expression":"AtmPressure!='' && AtmPressure<=0",
+                            "expressionReqFields":["AtmPressure"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"AtmPressuregt0"}
+                    },
+                    {
+                        "target":{
+                            "id":"VariableSuperimposed",
+                            "symbol":"Calculate",
+                            "currentId":"AtmPressure",
+                            "focusedField":"VariableSuperimposed",
+                            "expression":"!isNaN(ConstantSuperimposed) && !isNaN(VariableSuperimposed) && !isNaN(AtmPressure) && ((ConstantSuperimposed + VariableSuperimposed + AtmPressure) <= 0)",
+                            "expressionReqFields":["VariableSuperimposed","ConstantSuperimposed","AtmPressure"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"PsicPsivPatmLessThanEqZero"}
+                    },
+                    {
+                        "target":{
+                            "id":"ConstantSuperimposed",
+                            "symbol":"Calculate",
+                            "currentId":"AtmPressure",
+                            "focusedField":"ConstantSuperimposed",
+                            "expression":"!isNaN(ConstantSuperimposed) && !isNaN(VariableSuperimposed) && !isNaN(AtmPressure) && ((ConstantSuperimposed + VariableSuperimposed + AtmPressure) <= 0)",
+                            "expressionReqFields":["VariableSuperimposed","ConstantSuperimposed","AtmPressure"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"PsicPsivPatmLessThanEqZero"}
+                    }
+                ],
+                "options":[],
+                "defaultUnit": { "label": "psia", "value": "psia" },
+                "regex": "NOT_ALLOW_NEGATIVE"
+            },
+            {
+                "fieldName": "SystemMAWP",
+                "label": "System MAWP",
+                "type": "inputUom",
+                "UomFieldName": "PressureUOM",
+                "fieldDisplayOrder":2,
+                "mandatory":false,
+                "defaultValue": "",
+                "disabled": false,
+                "visible": true,
+                "infoText": "System MAWP [MAWP]",
+                "grid": 4,
+                "dimensionName":["pressure"],
+                "onBlurAction":true,
+                "validations": [
+                    {
+                        "target":{
+                            "id":"SetPressure",
+                            "symbol":"Calculate",
+                            "currentId": "SystemMAWP",
+                            "focusedField":"SetPressure",
+                            "expression":"SystemMAWP!='' && SystemMAWP<SetPressure",
+                            "expressionReqFields":["SystemMAWP","SetPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"SetPressureltMAWP"}
+                    },
+                    {
+                        "target":{
+                            "id":"OperatingPressure",
+                            "symbol":"Calculate",
+                            "currentId": "SystemMAWP",
+                            "focusedField":"OperatingPressure",
+                            "expression":"OperatingPressure!='' && SetPressure !='' && OperatingPressure>SetPressure && OperatingPressure>SystemMAWP",
+                            "expressionReqFields":["OperatingPressure","SetPressure","SystemMAWP","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"MAWPgtPn"}
+                    },
+                    {
+                        "target":{
+                            "id":"SetPressure",
+                            "symbol":"Calculate",
+                            "currentId": "SystemMAWP",
+                            "focusedField":"SetPressure",
+                            "expression":"OperatingPressure!='' && SetPressure !='' && OperatingPressure>SetPressure && OperatingPressure>SystemMAWP",
+                            "expressionReqFields":["OperatingPressure","SetPressure","SystemMAWP","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"MAWPgtPn"}
+                    }
+                ],
+                "options":[],
+                "defaultUnit": { "label": "psia", "value": "psia" },
+                "regex": "NOT_ALLOW_NEGATIVE"
+            },
+            {
+                "fieldName": "OperatingPressure",
+                "label": "Operating Pressure",
+                "type": "inputUom",
+                "UomFieldName": "PressureUOM",
+                "fieldDisplayOrder":3,
+                "mandatory":false,
+                "onBlurAction":true,
+                "defaultValue": "",
+                "disabled": false,
+                "visible": true,
+                "infoText": "Operating Pressure [Pn]",
+                "grid": 4,
+                "dimensionName":["pressure"],
+                "validations": [
+                    {
+                        "target":{
+                            "id":"SystemMAWP",
+                            "symbol":"Calculate",
+                            "currentId": "OperatingPressure",
+                            "focusedField":"SystemMAWP",
+                            "expression":"OperatingPressure!='' && SetPressure !='' && OperatingPressure>SetPressure && OperatingPressure>SystemMAWP",
+                            "expressionReqFields":["OperatingPressure","SetPressure","SystemMAWP","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"MAWPgtPn"}
+                    },
+                    {
+                        "target":{
+                            "id":"SetPressure",
+                            "symbol":"Calculate",
+                            "currentId": "OperatingPressure",
+                            "focusedField":"SetPressure",
+                            "expression":"OperatingPressure!='' && SetPressure !='' && OperatingPressure>SetPressure && OperatingPressure>SystemMAWP",
+                            "expressionReqFields":["OperatingPressure","SetPressure","SystemMAWP","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"MAWPgtPn"}
+                    },
+                    {
+                        "target":{
+                            "id":"SetPressure",
+                            "symbol":"Calculate",
+                            "currentId": "OperatingPressure",
+                            "focusedField":"SetPressure",
+                            "expression":"OperatingPressure!='' && SetPressure != '' && OperatingPressure>SetPressure",
+                            "expressionReqFields":["OperatingPressure","SetPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "value":true
+                        },
+                        "message":{"type":"warning","message":"PsetgtPn"}
+                    },
+                    {
+                        "target":{
+                            "id":"SetPressure",
+                            "symbol":"Calculate",
+                            "currentId": "OperatingPressure",
+                            "focusedField":"SetPressure",
+                            "expression":"OperatingPressure>(0.9*SetPressure)",
+                            "expressionReqFields":["SetPressure","OperatingPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "value":true
+                        },
+                        "message":{"type":"warning","message":"Pngt90perPset"}
+                    }
+                ],
+                "options":[],
+                "defaultUnit": { "label": "psia", "value": "psia" },
+                "regex": "NOT_ALLOW_NEGATIVE"
+            },
+            {
+                "fieldName": "SetPressure",
+                "label": "Set Pressure",
+                "type": "inputUom",
+                "UomFieldName": "PressureUOM",
+                "fieldDisplayOrder":4,
+                "mandatory":true,
+                "defaultValue": "",
+                "calculateFields":[
+                    {
+                        "target":{
+                            "id":"SaturatedSteam",
+                            "symbol":"API_FUNCTION_CALL",
+                            "api":"/calculateSaturatedSteam",
+                            "actionType":"OnBlur",
+                            "method":"GET",
+                            "apiParameters":["SetPressure","OverPressure","InletLoss","AtmPressure","AtmPressureUOM","PressureUOM","TemperatureUOM"],
+                            "apiResponseParams":["SaturatedSteam"],
+                            "nextRound":false
+                        },
+                        "value":""
+                    }
+                ],
+                "disabled": false,
+                "visible": true,
+                "infoText": "Set Pressure [Pset]",
+                "grid": 4,
+                "dimensionName":["pressure"],
+                "onBlurAction":true,
+                "validations": [
+                    {
+                        "target": {
+                            "id": "SetPressure",
+                            "symbol": "Calculate",
+                            "currentId": "SetPressure",
+                            "focusedField":"SetPressure",
+                            "expression":"SetPressure!='' && DisplayUnitSystem !='Metric' && SetPressure<15",
+                            "expressionReqFields": ["SetPressure","DisplayUnitSystem","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"Psetgt15"}
+                    },
+                    {
+                        "target": {
+                            "id": "SetPressure",
+                            "symbol": "Calculate",
+                            "currentId": "SetPressure",
+                            "focusedField":"SetPressure",
+                            "expression":"SetPressure!='' && DisplayUnitSystem =='Metric' && SetPressure<15",
+                            "expressionReqFields": ["SetPressure","DisplayUnitSystem","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "value": true
+                        },
+                        "message":{"type":"error","message":"Psetgt15_Metric"}
+                    },
+                    {
+                        "target":{
+                            "id":"ConstantSuperimposed",
+                            "symbol":"Calculate",
+                            "currentId": "SetPressure",
+                            "focusedField":"ConstantSuperimposed",
+                            "expression":"SetPressure!='' && (ConstantSuperimposed+VariableSuperimposed)>SetPressure",
+                            "expressionReqFields":["ConstantSuperimposed","VariableSuperimposed","SetPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"PsicPlusPsivltPset"}
+                    },
+                    {
+                        "target":{
+                            "id":"VariableSuperimposed",
+                            "symbol":"Calculate",
+                            "currentId": "SetPressure",
+                            "focusedField":"VariableSuperimposed",
+                            "expression":"SetPressure!='' && (ConstantSuperimposed+VariableSuperimposed)>SetPressure",
+                            "expressionReqFields":["ConstantSuperimposed","VariableSuperimposed","SetPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"PsicPlusPsivltPset"}
+                    },
+                    {
+                        "target":{
+                            "id":"OverPressure",
+                            "symbol":"Calculate",
+                            "currentId": "SetPressure",
+                            "focusedField":"OverPressure",
+                            "expression":"!isNaN(OverPressure) && !isNaN(SetPressure) && !isNaN(InletLoss) && (SetPressure+OverPressure-InletLoss+AtmPressure)<0.000",
+                            "expressionReqFields":["SetPressure","OverPressure","InletLoss","AtmPressure","TotalBackPressure"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"P1lt0"}
+                    },
+                    {
+                        "target":{
+                            "id":"InletLoss",
+                            "symbol":"Calculate",
+                            "currentId": "SetPressure",
+                            "focusedField":"InletLoss",
+                            "expression":"!isNaN(OverPressure) && !isNaN(SetPressure) && !isNaN(InletLoss) && (SetPressure+OverPressure-InletLoss+AtmPressure)<0.000",
+                            "expressionReqFields":["SetPressure","OverPressure","InletLoss","AtmPressure","TotalBackPressure"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"P1lt0"}
+                    },
+                    {
+                        "target":{
+                            "id":"AtmPressure",
+                            "symbol":"Calculate",
+                            "currentId": "SetPressure",
+                            "focusedField":"AtmPressure",
+                            "expression":"!isNaN(OverPressure) && !isNaN(SetPressure) && !isNaN(InletLoss) && (SetPressure+OverPressure-InletLoss+AtmPressure)<0.000",
+                            "expressionReqFields":["SetPressure","OverPressure","InletLoss","AtmPressure","TotalBackPressure"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"P1lt0"}
+                    },
+                    {
+                        "target":{
+                            "id":"OperatingPressure",
+                            "symbol":"Calculate",
+                            "currentId": "SetPressure",
+                            "focusedField":"OperatingPressure",
+                            "expression":"OperatingPressure>(0.9*SetPressure)",
+                            "expressionReqFields":["SetPressure","OperatingPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "value":true
+                        },
+                        "message":{"type":"warning","message":"Pngt90perPset"}
+                    }
+                ],
+                
+                "options":[],
+                "defaultUnit": { "label": "psia", "value": "psia" },
+                "regex": "NOT_ALLOW_NEGATIVE"
+            },
+            {
+                "fieldName": "OverPressurePer",
+                "label": "Over Pressure %",
+                "type": "radioInput",
+                "UomFieldName": "PressureUOM",
+                "fieldDisplayOrder":5,
+                "mandatory":false,
+                "onBlurAction":true,
+                "defaultValue":  [
+                    {
+                        "target":{
+                            "id":"SetPressure",
+                            "currentId": "OverPressurePer",
+                            "focusedField":"SetPressure",
+                            "symbol":"Calculate",
+                            "uom": "pressure.psig",
+                            "expression":"!SetPressure ? 3 :((SetPressure < 200/3) ? (200/SetPressure) : 3)",
+                            "expressionReqFields":["SetPressure","PressureUOM"],
+                            "nextRound":false
+                        },
+                        "value":"3"
+                    },{
+                        "target":{
+                            "id":"OverPressure",
+                            "focusedField":"OverPressure",
+                            "currentId": "OverPressurePer",
+                            "symbol":"Calculate",
+                            "uom":"pressure.psig",
+                            "expression":"!SetPressure ? 3 : ((SetPressure < (200/3)) ? (200/SetPressure) : 3)",
+                            "expressionReqFields":["SetPressure","PressureUOM"],
+                            "nextRound":false
+                        },
+                        "value":"3"
+                    }
+                ],
+                "calculateFields":[
+                    {
+                        "target":{
+                            "id":"SaturatedSteam",
+                            "symbol":"API_FUNCTION_CALL",
+                            "api":"/calculateSaturatedSteam",
+                            "actionType":"OnBlur",
+                            "method":"GET",
+                            "apiParameters":["SetPressure","OverPressure","InletLoss","AtmPressure","AtmPressureUOM","PressureUOM","TemperatureUOM"],
+                            "apiResponseParams":["SaturatedSteam"],
+                            "nextRound":false
+                        },
+                        "value":""
+                    }
+                ],
+                "onchangevalidation":false,
+                "disabled": true,
+                "visible": true,
+                "infoText": "",
+                "grid": 4,
+                "dimensionName":["%"],
+                "validations": [],
+                "fieldGroupType":"RADIO_GROUP",
+                "fieldGroupName":"IsOverPressurePer",
+                "options":[],
+                "defaultUnit": { "label": "%", "value": "%" },
+                "defaultSelected":"OverPressurePer",
+                "regex": "NOT_ALLOW_NEGATIVE"
+            },
+            {
+                "fieldName": "OverPressure",
+                "label": "Over Pressure",
+                "type": "radioInput",
+                "UomFieldName": "PressureUOM",
+                "fieldDisplayOrder":6,
+                "mandatory":false,
+                "onBlurAction":true,
+                "defaultValue":[
+                    {
+                        "target":{
+                            "id":"OverPressurePer",
+                            "currentId": "OverPressure",
+                            "focusedField":"OverPressurePer",
+                            "symbol":"Calculate",
+                            "expression":"SetPressure*OverPressurePer/100",
+                            "expressionReqFields":["SetPressure","OverPressurePer"],
+                            "nextRound":false
+                        },
+                        "value":""
+                    },
+                    {
+                        "target":{
+                            "id":"SetPressure",
+                            "currentId": "OverPressure",
+                            "focusedField":"SetPressure",
+                            "symbol":"Calculate",
+                            "uom": "pressure.psig",
+                            "expression":"!SetPressure ? 0 : ((SetPressure< 200/3)?2:(0.03*SetPressure))",
+                            "expressionReqFields":["SetPressure","PressureUOM"],
+                            "nextRound":false
+                        },
+                        "value":""
+                    }             
+                ],
+                "calculateFields":[
+                    {
+                        "target":{
+                            "id":"SaturatedSteam",
+                            "symbol":"API_FUNCTION_CALL",
+                            "api":"/calculateSaturatedSteam",
+                            "actionType":"OnBlur",
+                            "method":"GET",
+                            "apiParameters":["SetPressure","OverPressure","InletLoss","AtmPressure","AtmPressureUOM","PressureUOM","TemperatureUOM"],
+                            "apiResponseParams":["SaturatedSteam"],
+                            "nextRound":false
+                        },
+                        "value":""
+                    }
+                ],
+                "onchangevalidation":false,
+                "disabled": true,
+                "visible": true,
+                "infoText": "",
+                "grid": 4,
+                "dimensionName":["pressure"],
+                "validations": [],
+                "fieldGroupType":"RADIO_GROUP",
+                "fieldGroupName":"IsOverPressurePer",
+                "options":[],
+                "defaultSelected":"OverPressurePer",
+                "regex": "NOT_ALLOW_NEGATIVE"
+            },
+            {
+                "fieldName": "BackPressure",
+                "label": "Back Pressure",
+                "type": "label",
+                "style":{"flex":10},
+                "fieldDisplayOrder":7,
+                "mandatory":false,
+                "defaultValue": "",
+                "disabled": false,
+                "hideFromSideBar":true,
+                "visible": true,
+                "grid": 6,
+                "infoText": "",
+                "dimensionName":"",
+                "validations": []
+            },
+            {
+                "fieldName": "BuiltUp",
+                "label": "Built-Up",
+                "type": "inputUom",
+                "UomFieldName": "PressureUOM",
+                "fieldDisplayOrder":8,
+                "onBlurAction":true,
+                "mandatory":false,
+                "defaultValue": {"value":"0.000"},
+                "disabled": false,
+                "visible": true,
+                "infoText": "Build-Up [Pbu]",
+                "grid": 4,
+                "dimensionName":["pressure"],
+                "validations": [],
+                "options":[],
+                "regex": "NOT_ALLOW_NEGATIVE"
+            },
+            {
+                "fieldName": "ConstantSuperimposed",
+                "label": "Constant Superimposed",
+                "type": "inputUom",
+                "UomFieldName": "PressureUOM",
+                "fieldDisplayOrder":9,
+                "onBlurAction":true,
+                "mandatory":false,
+                "defaultValue": {"value":"0.000"},
+                "disabled": false,
+                "visible": true,
+                "infoText": "Constant Superimposed [Psic]",
+                "grid": 4,
+                "dimensionName":["pressure"],
+                "validations": [
+                    {
+                        "target":{
+                            "id":"VariableSuperimposed",
+                            "symbol":"Calculate",
+                            "currentId": "ConstantSuperimposed",
+                            "focusedField":"VariableSuperimposed",
+                            "expression":"SetPressure!='' && (ConstantSuperimposed+VariableSuperimposed)>SetPressure",
+                            "expressionReqFields":["ConstantSuperimposed","VariableSuperimposed","SetPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"PsicPlusPsivltPset"}
+                    },
+                    {
+                        "target":{
+                            "id":"SetPressure",
+                            "symbol":"Calculate",
+                            "currentId": "ConstantSuperimposed",
+                            "focusedField":"SetPressure",
+                            "expression":"SetPressure!='' && (ConstantSuperimposed+VariableSuperimposed)>SetPressure",
+                            "expressionReqFields":["ConstantSuperimposed","VariableSuperimposed","SetPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"PsicPlusPsivltPset"}
+                    },
+                    {
+                        "target":{
+                            "id":"AtmPressure",
+                            "symbol":"Calculate",
+                            "currentId": "ConstantSuperimposed",
+                            "focusedField":"AtmPressure",
+                            "expression":"!isNaN(ConstantSuperimposed) && !isNaN(AtmPressure) && ((ConstantSuperimposed + AtmPressure) <= 0)",
+                            "expressionReqFields":["ConstantSuperimposed","AtmPressure"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"PsicandPatmLessThanEqZero"}
+                    }
+                ],
+                "options":[],
+                "regex": "NOT_ALLOW_NEGATIVE"
+            },
+            {
+                "fieldName": "VariableSuperimposed",
+                "label": "Variable Superimposed",
+                "type": "inputUom",
+                "UomFieldName": "PressureUOM",
+                "fieldDisplayOrder":10,
+                "mandatory":false,
+                "onBlurAction":true,
+                "defaultValue": {"value":"0.000"},
+                "disabled": false,
+                "visible": true,
+                "infoText": "Variable Superimposed [Psiv]",
+                "grid": 4,
+                "dimensionName":["pressure"],
+                "validations": [
+                    {
+                        "target":{
+                            "id":"SetPressure",
+                            "symbol":"Calculate",
+                            "currentId": "VariableSuperimposed",
+                            "focusedField":"SetPressure",
+                            "expression":"SetPressure!='' && (ConstantSuperimposed+VariableSuperimposed)>SetPressure",
+                            "expressionReqFields":["ConstantSuperimposed","VariableSuperimposed","SetPressure","PressureUOM"],
+                            "uom": "pressure.psig",
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"PsicPlusPsivltPset"}
+                    },
+                    {
+                        "target":{
+                            "id":"AtmPressure",
+                            "symbol":"Calculate",
+                            "currentId": "VariableSuperimposed",
+                            "focusedField":"AtmPressure",
+                            "expression":"!isNaN(VariableSuperimposed) && !isNaN(AtmPressure) && ((VariableSuperimposed + AtmPressure) <= 0)",
+                            "expressionReqFields":["VariableSuperimposed","AtmPressure"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"PsivandPatmLessThanEqZero"}
+                    }
+                ],
+                "options":[],
+                "regex": "NOT_ALLOW_NEGATIVE"
+            },
+            {
+                "fieldName": "TotalBackPressure",
+                "label": "Total Back Pressure",
+                "type": "inputUom",
+                "UomFieldName": "PressureUOM",
+                "fieldDisplayOrder":11,
+                "mandatory":false,
+                "onBlurAction":true,
+                "defaultValue": [
+                    {
+                        "target":{
+                            "id":"BuiltUp",
+                            "currentId": "TotalBackPressure",
+                            "focusedField": "BuiltUp",
+                            "symbol":"Calculate",
+                            "expression":"Number(BuiltUp)+Number(ConstantSuperimposed)+Number(VariableSuperimposed)",
+                            "expressionReqFields":["BuiltUp","ConstantSuperimposed","VariableSuperimposed","PressureUOM"]
+                        },
+                        "value":"0"
+                    },
+                    {
+                        "target":{
+                            "id":"ConstantSuperimposed",
+                            "currentId": "TotalBackPressure",
+                            "focusedField": "ConstantSuperimposed",
+                            "symbol":"Calculate",
+                            "expression":"Number(BuiltUp)+Number(ConstantSuperimposed)+Number(VariableSuperimposed)",
+                            "expressionReqFields":["BuiltUp","ConstantSuperimposed","VariableSuperimposed","PressureUOM"]
+                        },
+                        "value":"0"
+                    },
+                    {
+                        "target":{
+                            "id":"VariableSuperimposed",
+                            "currentId": "TotalBackPressure",
+                            "focusedField": "VariableSuperimposed",
+                            "symbol":"Calculate",
+                            "expression":"Number(BuiltUp)+Number(ConstantSuperimposed)+Number(VariableSuperimposed)",
+                            "expressionReqFields":["BuiltUp","ConstantSuperimposed","VariableSuperimposed","PressureUOM"]
+                        },
+                        "value":"0"
+                    }
+                ],
+                "disabled": true,
+                "visible": true,
+                "infoText": "Total Back Pressure [Pback]",
+                "grid": 4,
+                "dimensionName":["pressure"],
+                "validations": [
+                    {
+                        "target":{
+                            "id":"SetPressure",
+                            "symbol":"Calculate",
+                            "currentId": "TotalBackPressure",
+                            "focusedField":"SetPressure",
+                            "expression":"SetPressure!='' && ((Number(SetPressure)+Number(OverPressure)-Number(InletLoss))<=(Number(BuiltUp)+Number(ConstantSuperimposed)+Number(VariableSuperimposed)))",
+                            "expressionReqFields":["SetPressure","OverPressure","InletLoss","BuiltUp","ConstantSuperimposed","VariableSuperimposed"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"InPresgtOutPres"}    
+                    },
+                    {
+                        "target":{
+                            "id":"OverPressure",
+                            "symbol":"Calculate",
+                            "currentId": "TotalBackPressure",
+                            "focusedField":"OverPressure",
+                            "expression":"SetPressure!='' && ((Number(SetPressure)+Number(OverPressure)-Number(InletLoss))<=(Number(BuiltUp)+Number(ConstantSuperimposed)+Number(VariableSuperimposed)))",
+                            "expressionReqFields":["SetPressure","OverPressure","InletLoss","BuiltUp","ConstantSuperimposed","VariableSuperimposed"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"InPresgtOutPres"}    
+                    },
+                    {
+                        "target":{
+                            "id":"InletLoss",
+                            "symbol":"Calculate",
+                            "currentId": "TotalBackPressure",
+                            "focusedField":"InletLoss",
+                            "expression":"SetPressure!='' && ((Number(SetPressure)+Number(OverPressure)-Number(InletLoss))<=(Number(BuiltUp)+Number(ConstantSuperimposed)+Number(VariableSuperimposed)))",
+                            "expressionReqFields":["SetPressure","OverPressure","InletLoss","BuiltUp","ConstantSuperimposed","VariableSuperimposed"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"InPresgtOutPres"}    
+                    },
+                    {
+                        "target":{
+                            "id":"BuiltUp",
+                            "currentId": "TotalBackPressure",
+                            "symbol":"Calculate",
+                            "focusedField":"BuiltUp",
+                            "expression":"SetPressure!='' && ((Number(SetPressure)+Number(OverPressure)-Number(InletLoss))<=(Number(BuiltUp)+Number(ConstantSuperimposed)+Number(VariableSuperimposed)))",
+                            "expressionReqFields":["SetPressure","OverPressure","InletLoss","BuiltUp","ConstantSuperimposed","VariableSuperimposed"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"InPresgtOutPres"}
+                    },
+                    {
+                        "target":{
+                            "id":"ConstantSuperimposed",
+                            "currentId": "TotalBackPressure",
+                            "symbol":"Calculate",
+                            "focusedField":"ConstantSuperimposed",
+                            "expression":"SetPressure!='' && ((Number(SetPressure)+Number(OverPressure)-Number(InletLoss))<=(Number(BuiltUp)+Number(ConstantSuperimposed)+Number(VariableSuperimposed)))",
+                            "expressionReqFields":["SetPressure","OverPressure","InletLoss","BuiltUp","ConstantSuperimposed","VariableSuperimposed"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"InPresgtOutPres"}
+                    },
+                    {
+                        "target":{
+                            "id":"VariableSuperimposed",
+                            "currentId": "TotalBackPressure",
+                            "symbol":"Calculate",
+                            "focusedField":"VariableSuperimposed",
+                            "expression":"SetPressure!='' && ((Number(SetPressure)+Number(OverPressure)-Number(InletLoss))<=(Number(BuiltUp)+Number(ConstantSuperimposed)+Number(VariableSuperimposed)))",
+                            "expressionReqFields":["SetPressure","OverPressure","InletLoss","BuiltUp","ConstantSuperimposed","VariableSuperimposed"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"InPresgtOutPres"}
+                        
+                    }
+                ],
+                "options":[],
+                "regex": "NOT_ALLOW_NEGATIVE"
+            },
+            {
+                "fieldName": "divider",
+                "label": "",
+                "type": "divider",
+                "fieldDisplayOrder":12,
+                "mandatory":false,
+                "defaultValue": "",
+                "disabled": false,
+                "hideFromSideBar":true,
+                "visible": true,
+                "grid": 6,
+                "infoText": "",
+                "dimensionName":"",
+                "validations": []
+            },
+            {
+                "fieldName": "InletLossPer",
+                "label": "Inlet Loss %",
+                "type": "radioInput",
+                "UomFieldName": "PressureUOM",
+                "fieldDisplayOrder":13,
+                "mandatory":false,
+                "onBlurAction":true,
+                "defaultValue": [
+                    {
+                        "target":{
+                            "id":"InletLoss",
+                            "focusedField": "InletLoss",
+                            "currentId": "InletLossPer",
+                            "symbol":"Calculate",
+                            "expression":"!SetPressure?'0.000':(InletLoss*100/SetPressure)",
+                            "expressionReqFields":["SetPressure","InletLoss"],
+							"nextRound":false
+                            
+                        },
+                        "value":"0.000"
+                    }
+                ],
+                "calculateFields":[
+                    {
+                        "target":{
+                            "id":"SaturatedSteam",
+                            "symbol":"API_FUNCTION_CALL",
+                            "api":"/calculateSaturatedSteam",
+                            "actionType":"OnBlur",
+                            "method":"GET",
+                            "apiParameters":["SetPressure","OverPressure","InletLoss","AtmPressure","AtmPressureUOM","PressureUOM","TemperatureUOM"],
+                            "apiResponseParams":["SaturatedSteam"],
+                            "nextRound":false
+                        },
+                        "value":""
+                    }
+                ],
+                "disabled": false,
+                "visible": true,
+                "infoText": "",
+                "grid": 4,
+                "dimensionName":["%"],
+                "validations": [
+                    {
+                        "target":{
+                            "id":"InletLoss",
+                            "symbol":"Calculate",
+                            "currentId": "InletLossPer",
+                            "focusedField": "InletLoss",
+                            "expression":"!SetPressure?false:((InletLoss*100/SetPressure)>3)",
+                            "expressionReqFields":["InletLossPer","InletLoss","SetPressure","PressureUOM"],
+                            "value":true
+                        },
+                        "message":{"type":"warning","message":"Plossgt3perofPset"}
+                    }
+                ],
+                "fieldGroupType":"RADIO_GROUP",
+                "fieldGroupName":"IsInletLossPer",
+                "options":[],
+                "defaultUnit": { "label": "%", "value": "%" },
+                "defaultSelected":"InletLoss",
+                "regex": "NOT_ALLOW_NEGATIVE"
+            },
+            {
+                "fieldName": "InletLoss",
+                "label": "Inlet Loss",
+                "type": "radioInput",
+                "UomFieldName": "PressureUOM",
+                "fieldDisplayOrder":14,
+                "mandatory":false,
+                "onBlurAction":true,
+                "defaultValue": [
+                    {
+                        "target":{
+                            "id":"InletLossPer",
+                            "focusedField": "InletLossPer",
+                            "currentId": "InletLoss",
+                            "actionType":"OnBlur",
+                            "symbol":"Calculate",
+                            "expression":"!SetPressure?'0.000':(SetPressure*InletLossPer/100)",
+                            "expressionReqFields":["SetPressure","InletLossPer"],
+                            "nextRound":false
+                        },
+                        "value":"0.000"
+                    },
+                    {
+                        "target":{
+                            "id":"SetPressure",
+                            "focusedField": "SetPressure",
+                            "currentId": "InletLoss",
+                            "symbol":"Calculate",
+                            "expression":"!SetPressure?'0.000':(SetPressure*InletLossPer/100)",
+                            "expressionReqFields":["SetPressure","InletLossPer"],
+                            "nextRound":false
+                        },
+                        "value":"0.000"
+                    }                
+                ],
+                "calculateFields":[
+                    {
+                        "target":{
+                            "id":"SaturatedSteam",
+                            "symbol":"API_FUNCTION_CALL",
+                            "api":"/calculateSaturatedSteam",
+                            "actionType":"OnBlur",
+                            "method":"GET",
+                            "apiParameters":["SetPressure","OverPressure","InletLoss","AtmPressure","AtmPressureUOM","PressureUOM","TemperatureUOM"],
+                            "apiResponseParams":["SaturatedSteam"],
+                            "nextRound":false
+                        },
+                        "value":""
+                    }
+                ],
+                "disabled": false,
+                "visible": true,
+                "infoText": "",
+                "grid": 4,
+                "dimensionName":["pressure"],
+                "validations": [
+                    {
+                        "target":{
+                            "id":"InletLossPer",
+                            "symbol":"Calculate",
+                            "currentId": "InletLoss",
+                            "focusedField":"InletLossPer",
+                            "expression":"!SetPressure?false:((InletLoss*100/SetPressure)>3)",
+                            "expressionReqFields":["InletLossPer","InletLoss","SetPressure","PressureUOM"],
+                            "value":true
+                        },
+                        "message":{"type":"warning","message":"Plossgt3perofPset"}
+                    }
+                ],
+                "fieldGroupType":"RADIO_GROUP",
+                "fieldGroupName":"IsInletLossPer",
+                "options":[],
+                "defaultUnit": { "label": "psia", "value": "psia" },
+                "defaultSelected":"InletLoss",
+                "regex": "NOT_ALLOW_NEGATIVE"
+            }
+        ]        
+    },
+    {
+        "sectionName": "temperatureProperties",
+        "sectionLabel": "Temperature Properties",
+        "displayType": "form",
+        "displayOrder": 7,
+        "fields": [
+            {
+                "fieldName": "SaturatedSteam",
+                "label": "Saturated Steam",
+                "type": "inputUom",
+                "UomFieldName": "TemperatureUOM",
+                "fieldDisplayOrder":2,
+                "mandatory":false,
+                "defaultValue": "",
+                "disabled": true,
+                "visible": true,
+                "infoText": "",
+                "grid": 4,
+                "dimensionName":["temperature"],
+                "validations": [
+                    
+                    {
+                        "target":{
+                            "id":"Relieving",
+                            "symbol":"Calculate",
+                            "uom": "temp.degC",
+                            "currentId":"SaturatedSteam",
+                            "focusedField":"Relieving",
+                            "expression":"SizingBasis != 'Economizer' && SizingBasis != 'Preheater' && Relieving<SaturatedSteam",
+                            "expressionReqFields":["SizingBasis","Relieving","SaturatedSteam","TemperatureUOM"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"RtltSst"}
+                    }
+                ],
+                "options":[],
+                "defaultUnit": { "label": "°C", "value": "°C" },
+                "regex": "ALLOW_NEGATIVE"
+            },
+            {
+                "fieldName": "WaterRelieving",
+                "label": "Water Relieving",
+                "type": "inputUom",
+                "UomFieldName": "TemperatureUOM",
+                "fieldDisplayOrder":3,
+                "mandatory":[
+                    {
+                        "target":{
+                        "id":"SizingBasis",
+                        "symbol":"Calculate",
+                        "currentId":"WaterRelieving",
+                        "focusedField":"SizingBasis",
+                        "expression":"SizingBasis == 'Economizer' || SizingBasis == 'Preheater'",
+                        "expressionReqFields":["SizingBasis"],
+                        "nextRound":false
+                    },
+                    "value":true
+                    }
+                ],   
+                "hideFromSideBar":[{
+                    "target":{
+                        "id":"SizingBasis",
+                        "symbol":"Calculate",
+                        "currentId":"WaterRelieving",
+                        "focusedField":"SizingBasis",
+                        "expression":"SizingBasis != 'Economizer' && SizingBasis != 'Preheater'",
+                        "expressionReqFields":["SizingBasis"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }],             
+                "defaultValue": "0.0", 
+                "disabled": [{
+                    "target":{
+                        "id":"SizingBasis",
+                        "symbol":"Calculate",
+                        "currentId":"WaterRelieving",
+                        "focusedField":"SizingBasis",
+                        "expression":"SizingBasis != 'Economizer' && SizingBasis != 'Preheater'",
+                        "expressionReqFields":["SizingBasis"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }],
+                "visible":[
+                    {
+                        "target":{
+                        "id":"SizingBasis",
+                        "symbol":"Calculate",
+                        "currentId":"WaterRelieving",
+                        "focusedField":"SizingBasis",
+                        "expression":"SizingBasis == 'Economizer' || SizingBasis == 'Preheater'",
+                        "expressionReqFields":["SizingBasis"],
+                        "nextRound":false
+                    },
+                    "value":true
+                    }
+                ],
+                "infoText": "",
+                "grid": 4,
+                          
+                "dimensionName":["temperature"],
+                "validations": [
+                    {
+                        "target":{
+                            "id":"WaterRelieving",
+                            "symbol":"Calculate",
+                            "currentId":"WaterRelieving",
+                            "focusedField":"WaterRelieving",
+                            "expression":"WaterRelieving!='' && WaterRelieving<=-273.15",
+                            "expressionReqFields":["WaterRelieving"],
+                            "uom": "temp.degC",
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"Rtemp"}
+                    },
+                    {
+                        "target":{
+                            "id":"SaturatedSteam",
+                            "symbol":"Calculate",
+                            "uom": "temp.degC",
+                            "currentId":"WaterRelieving",
+                            "focusedField":"SaturatedSteam",
+                            "expression":"WaterRelieving>SaturatedSteam",
+                            "expressionReqFields":["WaterRelieving","SaturatedSteam","TemperatureUOM"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"TwatergtTsat"}
+                    }
+                ],
+                "options":[],
+                "defaultUnit": { "label": "°C", "value": "°C" },
+                "regex": "ALLOW_NEGATIVE"
+            },
+            {
+                "fieldName": "Relieving",
+                "label": "Relieving",
+                "type": "inputUom",
+                "UomFieldName": "TemperatureUOM",
+                "fieldDisplayOrder":4,
+                "mandatory":[
+                    {
+                        "target":{
+                            "id":"SizingBasis",
+                            "symbol":"Calculate",
+                            "currentId":"Relieving",
+                            "focusedField":"SizingBasis",
+                            "expression":"SizingBasis != 'Economizer' && SizingBasis != 'Preheater'",
+                            "expressionReqFields":["SizingBasis"],
+                            "nextRound":false
+                        },
+                        "value":true
+                    }
+                    
+                ],   
+                "hideFromSideBar":[{
+                    "target":{
+                        "id":"SizingBasis",
+                        "symbol":"Calculate",
+                        "currentId":"Relieving",
+                        "focusedField":"SizingBasis",
+                        "expression":"SizingBasis == 'Economizer' || SizingBasis == 'Preheater'",
+                        "expressionReqFields":["SizingBasis"],
+                        "nextRound":false
+                    },
+                    "value":true
+                }],            
+                "defaultValue": "", 
+                "disabled": [
+                    {
+                        "target": {
+                            "id": "IsSaturatedSteam",
+                            "symbol": "Calculate",
+                            "currentId": "Relieving",
+                            "focusedField":"IsSaturatedSteam",
+                            "expression": "IsSaturatedSteam",
+                            "expressionReqFields": [
+                                "IsSaturatedSteam","SizingBasis"
+                            ]
+                        },
+                        "value": false
+                    }
+                ],
+                "visible":[
+                    {
+                        "target":{
+                            "id":"SizingBasis",
+                            "symbol":"Calculate",
+                            "currentId":"Relieving",
+                            "focusedField":"SizingBasis",
+                            "expression":"SizingBasis != 'Economizer' && SizingBasis != 'Preheater'",
+                            "expressionReqFields":["SizingBasis"],
+                            "nextRound":false
+                        },
+                        "value":true
+                    }
+                    
+                ],
+                "infoText": "",
+                "grid": 4,
+                "action":{
+                    "type":"copy",
+                    "targetField":"SaturatedSteam",
+                    "currentField":"Relieving"
+                },
+                "calculateFields":[
+                    {
+                        "target":{
+                            "id":"SaturatedSteam",
+                            "symbol":"API_FUNCTION_CALL",
+                            "api":"/calculateSaturatedSteam",
+                            "actionType":"OnBlur",
+                            "method":"GET",
+                            "apiParameters":["SetPressure","OverPressure","InletLoss","AtmPressure","Relieving","AtmPressureUOM","PressureUOM","TemperatureUOM"],
+                            "apiResponseParams":["SaturatedSteam","ho","Ksh"],
+                            "nextRound":false
+                        },
+                        "value":""
+                    }
+                ],
+                "dimensionName":["temperature"],
+                "validations": [
+                    {
+                        "target":{
+                            "id":"Relieving",
+                            "symbol":"Calculate",
+                            "currentId":"Relieving",
+                            "focusedField":"Relieving",
+                            "expression":"Relieving!='' && Relieving<=-273.15",
+                            "expressionReqFields":["Relieving","TemperatureUOM"],
+                            "uom": "temp.degC",
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"Rtemp"}
+                    },
+                    {
+                        "target":{
+                            "id":"SaturatedSteam",
+                            "symbol":"Calculate",
+                            "uom": "temp.degC",
+                            "currentId":"Relieving",
+                            "focusedField":"SaturatedSteam",
+                            "expression":"SizingBasis != 'Economizer' && SizingBasis != 'Preheater' && Relieving<SaturatedSteam",
+                            "expressionReqFields":["SizingBasis","Relieving","SaturatedSteam","TemperatureUOM"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"RtltSst"}
+                    },
+                    {
+                        "target":{
+                            "id":"SetPressure",
+                            "symbol":"Calculate",
+                            "uom": "temp.degC",
+                            "currentId":"Relieving",
+                            "focusedField":"SetPressure",
+                            "expression":"SizingBasis != 'Economizer' && SizingBasis != 'Preheater' && Relieving<SaturatedSteam",
+                            "expressionReqFields":["SizingBasis","Relieving","SaturatedSteam","TemperatureUOM"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"RtltSst"}
+                    },
+                    {
+                        "target":{
+                            "id":"OverPressure",
+                            "symbol":"Calculate",
+                            "uom": "temp.degC",
+                            "currentId":"Relieving",
+                            "focusedField":"OverPressure",
+                            "expression":"SizingBasis != 'Economizer' && SizingBasis != 'Preheater' && Relieving<SaturatedSteam",
+                            "expressionReqFields":["SizingBasis","Relieving","SaturatedSteam","TemperatureUOM"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"RtltSst"}
+                    },
+                    {
+                        "target":{
+                            "id":"OverPressurePer",
+                            "symbol":"Calculate",
+                            "uom": "temp.degC",
+                            "currentId":"Relieving",
+                            "focusedField":"OverPressurePer",
+                            "expression":"SizingBasis != 'Economizer' && SizingBasis != 'Preheater' && Relieving<SaturatedSteam",
+                            "expressionReqFields":["SizingBasis","Relieving","SaturatedSteam","TemperatureUOM"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"RtltSst"}
+                    },
+                    {
+                        "target":{
+                            "id":"InletLoss",
+                            "symbol":"Calculate",
+                            "uom": "temp.degC",
+                            "currentId":"Relieving",
+                            "focusedField":"InletLoss",
+                            "expression":"SizingBasis != 'Economizer' && SizingBasis != 'Preheater' && Relieving<SaturatedSteam",
+                            "expressionReqFields":["SizingBasis","Relieving","SaturatedSteam","TemperatureUOM"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"RtltSst"}
+                    },
+                    {
+                        "target":{
+                            "id":"InletLossPer",
+                            "symbol":"Calculate",
+                            "uom": "temp.degC",
+                            "currentId":"Relieving",
+                            "focusedField":"InletLossPer",
+                            "expression":"SizingBasis != 'Economizer' && SizingBasis != 'Preheater' && Relieving<SaturatedSteam",
+                            "expressionReqFields":["SizingBasis","Relieving","SaturatedSteam","TemperatureUOM"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"RtltSst"}
+                    },
+                    {
+                        "target":{
+                            "id":"AtmPressure",
+                            "symbol":"Calculate",
+                            "uom": "temp.degC",
+                            "currentId":"Relieving",
+                            "focusedField":"AtmPressure",
+                            "expression":"SizingBasis != 'Economizer' && SizingBasis != 'Preheater' && Relieving<SaturatedSteam",
+                            "expressionReqFields":["SizingBasis","Relieving","SaturatedSteam","TemperatureUOM"],
+                            "value":true
+                        },
+                        "message":{"type":"error","message":"RtltSst"}
+                    }
+                ],
+                "options":[],
+                "defaultUnit": { "label": "°C", "value": "°C" },
+                "regex": "ALLOW_NEGATIVE"
+            },
+            {
+                "fieldName": "Operating",
+                "label": "Operating",
+                "type": "inputUom",
+                "UomFieldName": "TemperatureUOM",
+                "fieldDisplayOrder": 4,
+                "mandatory": false,
+                "defaultValue": "",
+                "disabled": false,
+                "visible": true,
+                "infoText": "",
+                "grid": 4,
+                "dimensionName": [
+                    "temperature"
+                ],
+                "validations": [
+                    {
+                        "target": {
+                            "id": "DesignMax",
+                            "symbol": "Calculate",
+                            "currentId": "Operating",
+                            "focusedField": "DesignMax",
+                            "expression": "DesignMax !='' && Operating!='' && (DesignMax<=Operating)",
+                            "expressionReqFields": [
+                                "DesignMax",
+                                "Operating"
+                            ],
+                            "value": true
+                        },
+                        "message": {
+                            "type": "error",
+                            "message": "OTgtMDT"
+                        }
+                    },
+                    {
+                        "target": {
+                            "id": "DesignMin",
+                            "symbol": "Calculate",
+                            "currentId": "Operating",
+                            "focusedField": "DesignMin",
+                            "expression": "DesignMin !='' && Operating!='' && (DesignMin>Operating)",
+                            "expressionReqFields": [
+                                "DesignMin",
+                                "Operating"
+                            ],
+                            "value": true
+                        },
+                        "message": {
+                            "type": "error",
+                            "message": "OTltMDT"
+                        }
+                    }
+                ],
+                "options": [],
+                "defaultUnit": {
+                    "label": "°C",
+                    "value": "°C"
+                },
+                "regex": "ALLOW_NEGATIVE"
+            },
+            {
+                "fieldName": "DesignMin",
+                "label": "Design Min.",
+                "type": "inputUom",
+                "UomFieldName": "TemperatureUOM",
+                "fieldDisplayOrder": 5,
+                "mandatory": false,
+                "defaultValue": "",
+                "disabled": false,
+                "visible": true,
+                "infoText": "",
+                "grid": 4,
+                "dimensionName": [
+                    "temperature"
+                ],
+                "validations": [
+                    {
+                        "target": {
+                            "id": "DesignMax",
+                            "symbol": "Calculate",
+                            "currentId": "DesignMin",
+                            "focusedField": "DesignMax",
+                            "expression": "DesignMax !='' && DesignMin!='' && DesignMax<DesignMin",
+                            "expressionReqFields": [
+                                "DesignMax",
+                                "DesignMin"
+                            ],
+                            "value": true
+                        },
+                        "message": {
+                            "type": "error",
+                            "message": "MinDTgtMDT"
+                        }
+                    },
+                    {
+                        "target": {
+                            "id": "Operating",
+                            "symbol": "Calculate",
+                            "currentId": "DesignMin",
+                            "focusedField": "Operating",
+                            "expression": "DesignMin !='' && Operating!='' && (DesignMin>Operating)",
+                            "expressionReqFields": [
+                                "DesignMin",
+                                "Operating"
+                            ],
+                            "value": true
+                        },
+                        "message": {
+                            "type": "error",
+                            "message": "OTltMDT"
+                        }
+                    }
+                ],
+                "options": [],
+                "defaultUnit": {
+                    "label": "°C",
+                    "value": "°C"
+                },
+                "regex": "ALLOW_NEGATIVE"
+            },
+            {
+                "fieldName": "DesignMax",
+                "label": "Design Max.",
+                "type": "inputUom",
+                "UomFieldName": "TemperatureUOM",
+                "fieldDisplayOrder": 6,
+                "mandatory": false,
+                "defaultValue": "",
+                "disabled": false,
+                "visible": true,
+                "infoText": "",
+                "grid": 4,
+                "dimensionName": [
+                    "temperature"
+                ],
+                "validations": [
+                    {
+                        "target": {
+                            "id": "DesignMin",
+                            "symbol": "Calculate",
+                            "currentId": "DesignMax",
+                            "focusedField": "DesignMin",
+                            "expression": "DesignMax !='' && DesignMin!='' && DesignMax<DesignMin",
+                            "expressionReqFields": [
+                                "DesignMax",
+                                "DesignMin"
+                            ],
+                            "value": true
+                        },
+                        "message": {
+                            "type": "error",
+                            "message": "MinDTgtMDT"
+                        }
+                    },
+                    {
+                        "target": {
+                            "id": "Operating",
+                            "symbol": "Calculate",
+                            "currentId": "DesignMax",
+                            "focusedField": "Operating",
+                            "expression": "DesignMax !='' && Operating!='' && (DesignMax<=Operating)",
+                            "expressionReqFields": [
+                                "DesignMax",
+                                "Operating"
+                            ],
+                            "value": true
+                        },
+                        "message": {
+                            "type": "error",
+                            "message": "OTgtMDT"
+                        }
+                    }
+                ],
+                "options": [],
+                "defaultUnit": {
+                    "label": "°C",
+                    "value": "°C"
+                },
+                "regex": "ALLOW_NEGATIVE"
+            }
+        ]
+        
+    },
+    {
+        "sectionName": "flowCapacity",
+        "sectionLabel": "Flow Capacity",
+        "displayType": "form",
+        "displayOrder": 8,
+        "fields": [
+            {
+                "fieldName": "Wreq",
+                "label": "Required Pressure Flow",
+                "type": "inputUominfo",
+                "UomFieldName": "FlowCapacityUOM",
+                "fieldDisplayOrder": 1,
+                "mandatory": false,
+                "defaultValue": "",
+                "disabled": false,
+                "visible": true,
+                "infoText":"[Wreq] Required Mass Flow Rate",
+                "iconInfoText": "Required Pressure Flow is needed to calculate Valve Orifice Area",
+                "grid": 6,
+                "dimensionName": [
+                    "massflow"
+                ],
+                "validations": [],
+                "options": [],
+                "defaultUnit": {
+                    "label": "SCFM",
+                    "value": "SCFM"
+                },
+                "regex": "NOT_ALLOW_NEGATIVE",
+                "fieldBlankMessage": {"type": "information","message": "Wf8WreqBlank"}
+            }
+        ]
+    }
+]

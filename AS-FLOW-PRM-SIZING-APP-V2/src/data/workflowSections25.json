@@ -1,0 +1,827 @@
+[{
+    "sectionName": "applciationRequirements",
+    "sectionLabel": "Application Requirements",
+    "displayType": "form",
+    "displayOrder": 4,
+    "fields": [
+        {
+            "fieldName": "DisplayUnitSystem",
+            "label": "Display Unit System",
+            "type": "select",
+            "fieldDisplayOrder": 1,
+            "mandatory": false,
+            "defaultValue": "All",
+            "disabled": false,
+            "visible": true,
+            "grid": "6",
+            "infoText": "",
+            "dimensionName": "",
+            "options": [
+                {
+                    "label": "All",
+                    "value": "All"
+                },
+                {
+                    "label": "Metric",
+                    "value": "Metric"
+                },
+                {
+                    "label": "US Customary",
+                    "value": "English"
+                }
+            ],
+            "validations": []
+        },
+        {
+            "fieldName": "CalculationMethod",
+            "label": "Calculation Method",
+            "type": "select",
+            "fieldDisplayOrder": 2,
+            "mandatory": false,
+            "defaultValue": "Metric",
+            "disabled": false,
+            "visible": true,
+            "grid": "6",
+            "infoText": "",
+            "dimensionName": "",
+            "options": [
+                {
+                    "label": "US Customary",
+                    "value": "English"
+                },
+                {
+                    "label": "Metric",
+                    "value": "Metric"
+                }
+            ],
+            "validations": []
+        }
+    ]
+},
+{
+    "sectionName": "fluidProperties",
+    "sectionLabel": "Fluid Properties",
+    "displayType": "form",
+    "displayOrder": 5,
+    "fields": [
+        {
+            "fieldName": "FluidName",
+            "label": "Fluid Name",
+            "type": "combobox",
+            "fieldDisplayOrder":1,
+            "mandatory":false,
+            "options": [
+                { "label": "Acetone", "value": "Acetone" },
+                { "label": "Acetylene", "value": "Acetylene" },
+                { "label": "Air", "value": "Air" },
+                { "label": "Ammonia", "value": "Ammonia" },
+                { "label": "Argon", "value": "Argon" },
+                { "label": "Benzene", "value": "Benzene" },
+                { "label": "Butane-n", "value": "Butane-n" },
+                { "label": "Carbon Dioxide", "value": "Carbon Dioxide" },
+                { "label": "Carbon Monoxide", "value": "Carbon Monoxide" }
+            ],
+            "defaultValue": {"id":"FluidName", "value":"Water"}, 
+            "disabled": false,
+            "visible": true,
+            "infoText": "",
+            "grid": 6,
+            "dimensionName":"",
+            "validations": []
+        },
+        {
+            "fieldName": "SpGravity",
+            "label": "Specific Gravity",
+            "type": "number",
+            "fieldDisplayOrder": 2,
+            "mandatory": true,
+            "defaultValue": "",
+            "disabled": [
+                {
+                    "target":{
+                        "id":"FluidName",   
+                        "currentId":"SpGravity",
+                        "symbol":"Calculate",
+                        "expression":"FluidName == 'Water'",
+                        "expressionReqFields":["FluidName"],
+                        "value": true
+                    },
+                    "value": true
+                }
+                ],
+            "visible": true,
+            "infoText": "Pressure Specific Gravity",
+            "grid": 6,
+            "validations": [
+                {
+                    "id": "SpGravity",
+                    "minValue": 0,
+                    "message":{"type":"error","message":"Spgt0"}
+                }
+            ],
+            "dimensionName": "",
+            "regex": "/^[|0]?\\d*\\.?\\d*$/"
+        },
+        {
+            "fieldName": "Viscosity",
+            "label": "Viscosity",
+            "type": "inputUom",
+            "fieldDisplayOrder": 3,
+            "mandatory": true,
+            "defaultValue": "",
+            "disabled": false,
+            "visible": true,
+            "infoText": "Viscosity [μ]",
+            "grid": 4,
+            "dimensionName": [
+                "viscosity",
+                "viscositykin"
+            ],
+            "options": [],
+            "validations": [
+            
+                {
+                    "target": {
+                        "id": "Viscosity",
+                        "symbol": "Calculate",
+                        "expression": "Viscosity>500",
+                        "expressionReqFields": [
+                            "Viscosity"
+                        ],
+                        "value": true
+                    },
+                   "message":{"type":"error","message":"Viscgt500"}
+                }
+            ],
+            "regex": "/^[|0]?\\d*\\.?\\d*$/"
+        },
+        {
+            "fieldName": "VaporPressure",
+            "label": "Vapor Pressure",
+            "type": "inputUom",
+            "fieldDisplayOrder": 4,
+            "mandatory": true,
+            "defaultValue": "",
+            "disabled": [
+                {
+                    "target":{
+                        "id":"FluidName",
+                        "currentId":"VaporPressure",
+                        "symbol":"Calculate",
+                        "expression":"FluidName == 'Water'",
+                        "expressionReqFields":["FluidName"],
+                        "value": true
+                    },
+                    "value": true
+                }
+            ],
+            "visible": true,
+            "infoText": "Vapor Pressure[Pv1]",
+            "grid": 4,
+            "dimensionName": [
+                "abspressure"
+            ],
+            "validations": [
+                {
+                    "id": "VaporPressure",
+                    "minValue": 0,
+                    "message":{"type":"error","message":"VaporPressuregt0"}
+                }
+            ],
+            "options": [],
+            "regex": "/^[|0]?\\d*\\.?\\d*$/"
+        },
+        {
+            "fieldName": "CriticalPressure",
+            "label": "Critical Pressure",
+            "type": "inputUom",
+            "UomFieldName": "",
+            "fieldDisplayOrder": 5,
+            "mandatory": true,
+            "defaultValue": "3208.200",
+            "disabled": false,
+            "visible": true,
+            "infoText": "",
+            "grid": 4,
+            "dimensionName": ["abspressure"],
+            "validations": [
+                {
+                    "id": "CriticalPressure",
+                    "minValue": 0,
+                    "message":{"type":"error","message":"CriticalPressuregt0"}
+                }
+            ],
+            "regex": "/^[|0]?\\d*\\.?\\d*$/"
+        }
+    ]
+    
+},
+{
+    "sectionName": "pressureProperties",
+    "sectionLabel": "Pressure Properties",
+    "displayType": "form",
+    "displayOrder": 6,
+    "fields": [
+        {
+            "fieldName": "AtmPressure",
+            "label": "Atmospheric",
+            "type": "inputUom",
+            "UomFieldName": "AtmPressureUOM",
+            "fieldDisplayOrder": 1,
+            "mandatory": true,
+            "defaultValue": {
+                "value": "14.696"
+            },
+            "disabled": false,
+            "visible": true,
+            "infoText": "Atmospheric Pressure [Patm]",
+            "grid": 4,
+            "dimensionName": [
+                "abspressure"
+            ],
+            "validations": [
+                {
+                    "id": "AtmPressure",
+                    "minValue": 0,
+                    "message":{"type":"error","message":"AtmPressuregt0"}
+                }
+            ],
+            "options": [
+                {
+                    "label": "psia",
+                    "value": "psia"
+                },
+                {
+                    "label": "kPa",
+                    "value": "kPa"
+                },
+                {
+                    "label": "bar",
+                    "value": "bar"
+                },
+                {
+                    "label": "atm",
+                    "value": "atm"
+                }
+            ],
+            "defaultUnit": {
+                "label": "psia",
+                "value": "psia"
+            }
+        },
+        {
+            "fieldName": "PumpPressureAtZeroFlow",
+            "label": "Pump Pressure At Shut-off(Zero Flow)",
+            "type": "inputUom",
+            "UomFieldName": "PressureUOM",
+            "fieldDisplayOrder": 2,
+            "mandatory": true,
+            "defaultValue": "",
+            "disabled": false,
+            "visible": true,
+            "infoText": "Shut-off Pump Pressure[Ppso]",
+            "grid": 4,
+            "dimensionName": [
+                "pressure"
+            ],
+            "validations": [
+                {
+                    "target": {
+                        "id": "PumpPressureAtZeroFlow",
+                        "symbol": "Calculate",
+                        "expression": "!ExistingBypassLinePressure && !PumpPressureAtZeroFlow && ExistingBypassLinePressure>PumpPressureAtZeroFlow",
+                        "expressionReqFields": [
+                            "ExistingBypassLinePressure",
+                            "PumpPressureAtZeroFlow"
+                        ],
+                        "value": true
+                    },
+                   "message":{"type":"error","message":"ExistingBypassLineltp"}
+                },
+                {
+                    "target": {
+                        "id": "PumpPressureAtNormalProcessFlow",
+                        "symbol": "Calculate",
+                        "expression": "!PumpPressureAtNormalProcessFlow && !PumpPressureAtZeroFlow && PumpPressureAtNormalProcessFlow>PumpPressureAtZeroFlow",
+                        "expressionReqFields": [
+                            "PumpPressureAtZeroFlow",
+                            "PumpPressureAtNormalProcessFlow"
+                        ],
+                        "value": true
+                    },
+                   "message":{"type":"warning","message":"PumpPressureAtNormalProcessFlowgtppazf"}
+                }
+            ],	
+            "options": [
+                {
+                    "label": "psia",
+                    "value": "psia"
+                },
+                {
+                    "label": "kPa",
+                    "value": "kPa"
+                },
+                {
+                    "label": "bar",
+                    "value": "bar"
+                },
+                {
+                    "label": "atm",
+                    "value": "atm"
+                }
+            ],
+            "defaultUnit": {
+                "label": "psia",
+                "value": "psia"
+            }
+        },
+        {
+            "fieldName": "PumpPressureAtNormalProcessFlow",
+            "label": "Pump Pressure At Normal Process Flow",
+            "type": "inputUom",
+            "UomFieldName": "PressureUOM",
+            "fieldDisplayOrder": 3,
+            "mandatory": true,
+            "defaultValue": "",
+            "disabled": false,
+            "visible": true,
+            "infoText": "Normal Pump Pressure[Ppn]",
+            "grid": 4,
+            "dimensionName": [
+                "pressure"
+            ],
+            "validations": [
+                {
+                    "target": {
+                        "id": "PumpPressureAtRecirculationFlow",
+                        "symbol": "Calculate",
+                        "expression": "!PumpPressureAtNormalProcessFlow && !PumpPressureAtRecirculationFlow && PumpPressureAtNormalProcessFlow>PumpPressureAtRecirculationFlow",
+                        "expressionReqFields": [
+                            "PumpPressureAtNormalProcessFlow",
+                            "PumpPressureAtRecirculationFlow"
+                        ],
+                        "value": true
+                    },
+                   "message":{"type":"warning","message":"PumpPressureAtRecirculationFlowgte"}
+                },
+                {
+                    "target": {
+                        "id": "PumpPressureAtRecirculationFlow",
+                        "symbol": "Calculate",
+                        "expression": "!PumpPressureAtRecirculationFlow && !PumpPressureAtNormalProcessFlow && PumpPressureAtRecirculationFlow<PumpPressureAtNormalProcessFlow/4",
+                        "expressionReqFields": [
+                            "PumpPressureAtNormalProcessFlow",
+                            "PumpPressureAtRecirculationFlow"
+                        ],
+                        "value": true
+                    },
+                   "message":{"type":"warning","message":"PumpPressureAtNormalProcessFlowlt25"}
+                },
+                {
+                    "target": {
+                        "id": "PumpPressureAtZeroFlow",
+                        "symbol": "Calculate",
+                        "expression": "!PumpPressureAtNormalProcessFlow && !PumpPressureAtZeroFlow && PumpPressureAtNormalProcessFlow>PumpPressureAtZeroFlow",
+                        "expressionReqFields": [
+                            "PumpPressureAtZeroFlow",
+                            "PumpPressureAtNormalProcessFlow"
+                        ],
+                        "value": true
+                    },
+                   "message":{"type":"warning","message":"PumpPressureAtNormalProcessFlowgtppazf"}
+                }
+            ],
+            "options": [
+                {
+                    "label": "psia",
+                    "value": "psia"
+                },
+                {
+                    "label": "kPa",
+                    "value": "kPa"
+                },
+                {
+                    "label": "bar",
+                    "value": "bar"
+                },
+                {
+                    "label": "atm",
+                    "value": "atm"
+                }
+            ],
+            "defaultUnit": {
+                "label": "psia",
+                "value": "psia"
+            }
+        },
+        {
+            "fieldName": "PumpPressureAtRecirculationFlow",
+            "label": "Pump Pressure At Recirculation Flow",
+            "type": "inputUom",
+            "UomFieldName": "PressureUOM",
+            "fieldDisplayOrder": 4,
+            "mandatory": true,
+            "defaultValue": "",
+            "disabled": false,
+            "visible": true,
+            "infoText": "Recirculation Pump Pressure [Ppbp]",
+            "grid": 4,
+            "dimensionName": [
+                "pressure"
+            ],
+            "validations": [
+                {
+                    "target": {
+                        "id": "PumpPressureAtNormalProcessFlow",
+                        "symbol": "Calculate",
+                        "expression": "!PumpPressureAtNormalProcessFlow && !PumpPressureAtRecirculationFlow && PumpPressureAtNormalProcessFlow>PumpPressureAtRecirculationFlow",
+                        "expressionReqFields": [
+                            "PumpPressureAtNormalProcessFlow",
+                            "PumpPressureAtRecirculationFlow"
+                        ],
+                        "value": true
+                    },
+                   "message":{"type":"warning","message":"PumpPressureAtRecirculationFlowgte"}
+                },
+                {
+                    "target": {
+                        "id": "PumpPressureAtNormalProcessFlow",
+                        "symbol": "Calculate",
+                        "expression": "!PumpPressureAtRecirculationFlow && !PumpPressureAtNormalProcessFlow && PumpPressureAtRecirculationFlow<PumpPressureAtNormalProcessFlow/4",
+                        "expressionReqFields": [
+                            "PumpPressureAtNormalProcessFlow",
+                            "PumpPressureAtRecirculationFlow"
+                        ],
+                        "value": true
+                    },
+                   "message":{"type":"warning","message":"PumpPressureAtNormalProcessFlowlt25"}
+                },
+                {
+                    "target": {
+                        "id": "PumpPressureAtRecirculationFlow",
+                        "symbol": "Calculate",
+                        "expression": "!PumpPressureAtNormalProcessFlow && !PumpPressureAtRecirculationFlow && PumpPressureAtNormalProcessFlow > PumpPressureAtRecirculationFlow",
+                        "expressionReqFields": [
+                            "PumpPressureAtNormalProcessFlow",
+                            "PumpPressureAtRecirculationFlow"
+                        ],
+                        "value": true
+                    },
+                   "message":{"type":"warning","message":"PumpPressureAtZeroFlowgtppbp"}
+                }
+            ],
+            "options": [
+                {
+                    "label": "psia",
+                    "value": "psia"
+                },
+                {
+                    "label": "kPa",
+                    "value": "kPa"
+                },
+                {
+                    "label": "bar",
+                    "value": "bar"
+                },
+                {
+                    "label": "atm",
+                    "value": "atm"
+                }
+            ],
+            "defaultUnit": {
+                "label": "psia",
+                "value": "psia"
+            }
+        },
+        {
+            "fieldName": "ExistingBypassLinePressure",
+            "label": "Existing Bypass Line Pressure",
+            "type": "inputUom",
+            "UomFieldName": "PressureUOM",
+            "fieldDisplayOrder": 5,
+            "mandatory": true,
+            "defaultValue": "",
+            "disabled": false,
+            "visible": true,
+            "infoText": "Existing BLP[Pabp]",
+            "grid": 4,
+            "dimensionName": [
+                "pressure"
+            ],
+            "validations": [
+                {
+                    "target": {
+                        "id": "PumpPressureAtRecirculationFlow",
+                        "symbol": "Calculate",
+                        "expression": "!ExistingBypassLinePressure && !PumpPressureAtRecirculationFlow && ExistingBypassLinePressure > PumpPressureAtRecirculationFlow",
+                        "expressionReqFields": [
+                            "ExistingBypassLinePressure",
+                            "PumpPressureAtRecirculationFlow"
+                        ],
+                        "value": true
+                    },
+                   "message":{"type":"error","message":"PABPgtPPBP"}
+                },
+                {
+                    "target": {
+                        "id": "PumpPressureAtNormalProcessFlow",
+                        "symbol": "Calculate",
+                        "expression": "!PumpPressureAtNormalProcessFlow && !ExistingBypassLinePressure && PumpPressureAtNormalProcessFlow < ExistingBypassLinePressure",
+                        "expressionReqFields": [
+                            "PumpPressureAtNormalProcessFlow",
+                            "ExistingBypassLinePressure"
+                        ],
+                        "value": true
+                    },
+                   "message":{"type":"error","message":"PABPgtPPN"}
+                }
+            ],
+            "options": []
+        }
+    ]
+},
+{
+    "sectionName": "temperatureProperties",
+    "sectionLabel": "Temperature Properties",
+    "displayType": "form",
+    "displayOrder": 7,
+    "fields": [
+        {
+            "fieldName": "NormalOperating",
+            "label": "Normal Operating",
+            "type": "inputUom",
+            "UomFieldName": "TemperatureUOM",
+            "fieldDisplayOrder": 1,
+            "mandatory": true,
+            "defaultValue": "",
+            "disabled": false,
+            "visible": true,
+            "infoText": "Operating[Tn]",
+            "grid": 4,
+            "dimensionName": [
+                "temperature"
+            ],
+            "validations": [],
+            "options": [
+                {
+                    "label": "°C",
+                    "value": "°C"
+                },
+                {
+                    "label": "°F",
+                    "value": "°F"
+                },
+                {
+                    "label": "°K",
+                    "value": "°K"
+                },
+                {
+                    "label": "°R",
+                    "value": "°R"
+                }
+            ],
+            "defaultUnit": {
+                "label": "°C",
+                "value": "°C"
+            }
+        },
+        {
+            "fieldName": "MaximumOperating",
+            "label": "Maximum Operating",
+            "type": "inputUom",
+            "UomFieldName": "TemperatureUOM",
+            "fieldDisplayOrder": 4,
+            "mandatory": true,
+            "defaultValue": "",
+            "disabled": false,
+            "visible": true,
+            "infoText": "Max.Operating Temp.[Tmax]",
+            "grid": 4,
+            "dimensionName": [
+                "temperature"
+            ],
+            "validations": [
+                {
+                    "target": {
+                        "id": "MaximumOperating",
+                        "symbol": "Calculate",
+                        "expression": "NormalOperating > MaximumOperating",
+                        "expressionReqFields": [
+                            "NormalOperating",
+                            "MaximumOperating"
+                        ],
+                        "value": true
+                    },
+                   "message":{"type":"warning","message":"MaximumOperatinggtnot"}
+                }
+            ],
+            "options": [
+                {
+                    "label": "°C",
+                    "value": "°C"
+                },
+                {
+                    "label": "°F",
+                    "value": "°F"
+                },
+                {
+                    "label": "°K",
+                    "value": "°K"
+                },
+                {
+                    "label": "°R",
+                    "value": "°R"
+                }
+            ],
+            "defaultUnit": {
+                "label": "°C",
+                "value": "°C"
+            }
+        }
+    ]
+},
+{
+    "sectionName": "pumpFlow",
+    "sectionLabel": "Pump Flow",
+    "displayType": "form",
+    "displayOrder": 8,
+    "fields": [
+        {
+            "fieldName": "NormalProcess",
+            "label": "Normal Process",
+            "type": "inputUom",
+            "UomFieldName": "FlowCapacityUOM",
+            "fieldDisplayOrder": 1,
+            "mandatory": true,
+            "defaultValue": "",
+            "disabled": false,
+            "visible": true,
+            "infoText": "Normal Pump Flow Required[VlnReq]",
+            "grid": 4,
+            "dimensionName": [
+                "liquidvolflow","massflow"
+            ],
+            "validations": [
+                {
+                    "id":"NormalProcess",
+                    "minValue": 0,
+                    "message":{"type":"error","message":"NormalProcessgt0"}
+                }
+            ],
+            "options": [
+                {
+                    "label": "SCFD",
+                    "value": "SCFD"
+                },
+                {
+                    "label": "SCFH",
+                    "value": "SCFH"
+                },
+                {
+                    "label": "SCFM",
+                    "value": "SCFM"
+                },
+                {
+                    "label": "SCFS",
+                    "value": "SCFS"
+                }
+            ],
+            "defaultUnit": {
+                "label": "SCFM",
+                "value": "SCFM"
+            }
+        },
+        {
+            "fieldName": "MaximumProcess",
+            "label": "Maximum Process",
+            "type": "inputUom",
+            "UomFieldName": "FlowCapacityUOM",
+            "fieldDisplayOrder": 2,
+            "mandatory": true,
+            "defaultValue": "",
+            "disabled": false,
+            "visible": true,
+            "infoText": "Maximun Pump Flow Required[VlmReq]",
+            "grid": 4,
+            "dimensionName": [
+                "liquidvolflow","massflow"
+            ],
+            "validations": [
+                {
+                    "id":"MaximumProcess",
+                    "minValue": 0,
+                    "message":{"type":"error","message":"MaximumProcessgt0"} 
+                },
+                {
+                    "target": {
+                        "id": "MaximumProcess",
+                        "symbol": "Calculate",
+                        "expression": "NormalProcess > MaximumProcess",
+                        "expressionReqFields": [
+                            "MaximumProcess",
+                            "NormalProcess"
+                        ],
+                        "value": true
+                    },
+                   "message":{"type":"error","message":"NormalProcessltmp"}
+                },
+                {
+                    "target": {
+                        "id": "MaximumProcess",
+                        "symbol": "Calculate",
+                        "expression": "MaximumProcess>NormalProcess * 2",
+                        "expressionReqFields": [
+                            "MaximumProcess",
+                            "NormalProcess"
+                        ],
+                        "value": true
+                    },
+                   "message":{"type":"warning","message":"MaximumProcessinto2"}
+                }
+            ],
+            "options": [
+                {
+                    "label": "SCFD",
+                    "value": "SCFD"
+                },
+                {
+                    "label": "SCFH",
+                    "value": "SCFH"
+                },
+                {
+                    "label": "SCFM",
+                    "value": "SCFM"
+                },
+                {
+                    "label": "SCFS",
+                    "value": "SCFS"
+                }
+            ],
+            "defaultUnit": {
+                "label": "SCFM",
+                "value": "SCFM"
+            }
+        },
+        {
+            "fieldName": "Recirculation",
+            "label": "Recirculation",
+            "type": "inputUom",
+            "UomFieldName": "FlowCapacityUOM",
+            "fieldDisplayOrder": 3,
+            "mandatory": true,
+            "defaultValue": "",
+            "disabled": false,
+            "visible": true,
+            "infoText": "Recirculation  Pump Flow Required[VlbpReq]",
+            "grid": 4,
+            "dimensionName": [
+                "liquidvolflow","massflow"
+            ],
+            "validations": [
+                {
+                    "id":"Recirculation",
+                    "minValue": 0,
+                    "message":{"type":"error","message":"Recirculationgt0"}
+                },
+                {
+                    "target": {
+                        "id": "Recirculation",
+                        "symbol": "Calculate",
+                        "expression": "Recirculation > 0.5 * NormalProcess",
+                        "expressionReqFields": [
+                            "Recirculation",
+                            "NormalProcess"
+                        ],
+                        "value": true
+                    },
+                   "message":{"type":"warning","message":"Recirculationgtfity"}
+                }
+            ],
+            "options": []
+        }
+    ]
+},
+{
+    "sectionName": "bprRecommendation",
+    "sectionLabel": "BPR Recommendation",
+    "displayType": "form",
+    "displayOrder": 9,
+    "fields": [
+        {
+            "fieldName": "BPR",
+            "label": "No BPR is recommended at this time",
+            "type": "icon",
+            "iconlocation": "src/assets/check.png",
+            "fieldDisplayOrder":1,
+            "mandatory":false,
+            "defaultValue": "",
+            "disabled": false,
+            "visible": true,
+            "grid": 6,
+            "infoText": "",
+            "dimensionName":"",
+            "validations": []
+        }
+    ]
+}
+]

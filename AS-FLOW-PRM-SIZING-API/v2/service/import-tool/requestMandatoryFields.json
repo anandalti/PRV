@@ -1,0 +1,51 @@
+{
+    "SalesOrder": {
+        "MessageHeader": {
+            "Sender": {
+                "ID": "PRV001"
+            },
+            "Target": {
+                "ID": "OGSI"
+            },
+            "BusinessGroup": "SSOP"
+        },
+        "DataArea": {
+            "SalesOrderHeader": [{
+                "OrderHeader": {
+                    "OriginatingSystem": "PRV001",
+                    "DestinationSystem": "EPM_RO_OU_CLUJ1",
+                    "AgreementWith": "416273",
+                    "ShippingProfile": {
+                        "ShipToAddr": "6718104"
+                    },
+                    "BillingProfile": {
+                        "BillToAddr": "954851"
+                    },
+                    "CustomerPONbr": "26008EAQ-260004",
+                    "POReceiptDate": "2026-06-22",
+                    "RequestDate": "2026-06-22",
+                    "RecievedDate": "2026-06-22",
+                    "CurrencyCode": "USD"
+                },
+                "OrderExportInfo": {
+                    "PreCarrierFrtPayTerms": "COL",
+                    "INCOTerms": "FCA",
+                    "EndCustomerNbr": "512851",
+                    "ExplainEndUse": "Repair"
+                },
+                "AdditionalHdrInfo": {
+                    "CheckPoint": "EUR"
+                }
+            }],
+            "SalesOrderLine": [{
+                "OrderLine": {
+                    "LineNbr": "1.001",
+                    "Qty": "2",
+                    "UnitPrice": "3,416.58",
+                    "Division": "",
+                    "ModelString": "GTOMNI"
+                }
+            }]
+        }
+    }
+}

@@ -1,0 +1,698 @@
+[
+  {
+    "P1": 1.05,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 101,
+    "TsatUnit": "temp.degC",
+    "Kssat": 3.832,
+    "Ksat": 1.315
+  },
+  {
+    "P1": 1.06,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 101.2,
+    "TsatUnit": "temp.degC",
+    "Kssat": 3.538,
+    "Ksat": 1.315
+  },
+  {
+    "P1": 1.07,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 101.5,
+    "TsatUnit": "temp.degC",
+    "Kssat": 3.313,
+    "Ksat": 1.315
+  },
+  {
+    "P1": 1.08,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 101.8,
+    "TsatUnit": "temp.degC",
+    "Kssat": 3.133,
+    "Ksat": 1.315
+  },
+  {
+    "P1": 1.09,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 102,
+    "TsatUnit": "temp.degC",
+    "Kssat": 2.987,
+    "Ksat": 1.315
+  },
+  {
+    "P1": 1.1,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 102.3,
+    "TsatUnit": "temp.degC",
+    "Kssat": 2.865,
+    "Ksat": 1.315
+  },
+  {
+    "P1": 1.12,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 102.8,
+    "TsatUnit": "temp.degC",
+    "Kssat": 2.672,
+    "Ksat": 1.315
+  },
+  {
+    "P1": 1.14,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 103.3,
+    "TsatUnit": "temp.degC",
+    "Kssat": 2.527,
+    "Ksat": 1.315
+  },
+  {
+    "P1": 1.16,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 103.8,
+    "TsatUnit": "temp.degC",
+    "Kssat": 2.413,
+    "Ksat": 1.315
+  },
+  {
+    "P1": 1.18,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 104.3,
+    "TsatUnit": "temp.degC",
+    "Kssat": 2.322,
+    "Ksat": 1.315
+  },
+  {
+    "P1": 1.2,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 104.8,
+    "TsatUnit": "temp.degC",
+    "Kssat": 2.248,
+    "Ksat": 1.314
+  },
+  {
+    "P1": 1.25,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 106,
+    "TsatUnit": "temp.degC",
+    "Kssat": 2.112,
+    "Ksat": 1.314
+  },
+  {
+    "P1": 1.3,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 107.1,
+    "TsatUnit": "temp.degC",
+    "Kssat": 2.021,
+    "Ksat": 1.314
+  },
+  {
+    "P1": 1.35,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 108.2,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.958,
+    "Ksat": 1.314
+  },
+  {
+    "P1": 1.4,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 109.3,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.913,
+    "Ksat": 1.313
+  },
+  {
+    "P1": 1.45,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 110.3,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.882,
+    "Ksat": 1.313
+  },
+  {
+    "P1": 1.5,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 111.4,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.86,
+    "Ksat": 1.313
+  },
+  {
+    "P1": 1.6,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 113.3,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.836,
+    "Ksat": 1.313
+  },
+  {
+    "P1": 1.7,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 115.1,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.829,
+    "Ksat": 1.312
+  },
+  {
+    "P1": 1.8,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 116.9,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.834,
+    "Ksat": 1.312
+  },
+  {
+    "P1": 1.9,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 118.6,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.835,
+    "Ksat": 1.311
+  },
+  {
+    "P1": 2,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 120.2,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.838,
+    "Ksat": 1.311
+  },
+  {
+    "P1": 3,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 133.5,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.86,
+    "Ksat": 1.307
+  },
+  {
+    "P1": 4,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 143.6,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.876,
+    "Ksat": 1.304
+  },
+  {
+    "P1": 5,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 151.8,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.888,
+    "Ksat": 1.301
+  },
+  {
+    "P1": 6,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 158.8,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.898,
+    "Ksat": 1.299
+  },
+  {
+    "P1": 7,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 165,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.906,
+    "Ksat": 1.296
+  },
+  {
+    "P1": 8,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 170.4,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.913,
+    "Ksat": 1.294
+  },
+  {
+    "P1": 9,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 175.4,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.919,
+    "Ksat": 1.293
+  },
+  {
+    "P1": 10,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 179.9,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.924,
+    "Ksat": 1.291
+  },
+  {
+    "P1": 11,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 184.1,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.928,
+    "Ksat": 1.289
+  },
+  {
+    "P1": 12,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 188,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.932,
+    "Ksat": 1.288
+  },
+  {
+    "P1": 13,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 191.6,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.936,
+    "Ksat": 1.287
+  },
+  {
+    "P1": 14,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 195,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.939,
+    "Ksat": 1.285
+  },
+  {
+    "P1": 15,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 198.3,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.942,
+    "Ksat": 1.284
+  },
+  {
+    "P1": 16,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 201.4,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.944,
+    "Ksat": 1.283
+  },
+  {
+    "P1": 17,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 204.3,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.946,
+    "Ksat": 1.282
+  },
+  {
+    "P1": 18,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 207.1,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.949,
+    "Ksat": 1.281
+  },
+  {
+    "P1": 19,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 209.8,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.95,
+    "Ksat": 1.28
+  },
+  {
+    "P1": 20,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 212.4,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.952,
+    "Ksat": 1.279
+  },
+  {
+    "P1": 21,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 214.9,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.954,
+    "Ksat": 1.278
+  },
+  {
+    "P1": 22,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 217.3,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.955,
+    "Ksat": 1.277
+  },
+  {
+    "P1": 23,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 219.6,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.956,
+    "Ksat": 1.276
+  },
+  {
+    "P1": 24,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 221.8,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.957,
+    "Ksat": 1.275
+  },
+  {
+    "P1": 25,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 224,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.958,
+    "Ksat": 1.274
+  },
+  {
+    "P1": 26,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 226.1,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.959,
+    "Ksat": 1.274
+  },
+  {
+    "P1": 28,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 230.1,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.961,
+    "Ksat": 1.272
+  },
+  {
+    "P1": 30,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 233.9,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.962,
+    "Ksat": 1.27
+  },
+  {
+    "P1": 32,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 237.5,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.963,
+    "Ksat": 1.269
+  },
+  {
+    "P1": 34,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 240.9,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.964,
+    "Ksat": 1.268
+  },
+  {
+    "P1": 36,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 244.2,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.964,
+    "Ksat": 1.266
+  },
+  {
+    "P1": 38,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 247.3,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.964,
+    "Ksat": 1.265
+  },
+  {
+    "P1": 40,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 250.4,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.964,
+    "Ksat": 1.264
+  },
+  {
+    "P1": 50,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 263.9,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.962,
+    "Ksat": 1.258
+  },
+  {
+    "P1": 60,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 275.6,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.956,
+    "Ksat": 1.254
+  },
+  {
+    "P1": 65,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 280.9,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.953,
+    "Ksat": 1.251
+  },
+  {
+    "P1": 70,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 285.8,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.949,
+    "Ksat": 1.249
+  },
+  {
+    "P1": 75,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 290.5,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.944,
+    "Ksat": 1.247
+  },
+  {
+    "P1": 80,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 295,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.939,
+    "Ksat": 1.245
+  },
+  {
+    "P1": 85,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 299.3,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.933,
+    "Ksat": 1.243
+  },
+  {
+    "P1": 90,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 303.3,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.927,
+    "Ksat": 1.241
+  },
+  {
+    "P1": 95,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 307.3,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.921,
+    "Ksat": 1.239
+  },
+  {
+    "P1": 100,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 311,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.915,
+    "Ksat": 1.238
+  },
+  {
+    "P1": 105,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 314.6,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.908,
+    "Ksat": 1.236
+  },
+  {
+    "P1": 110,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 318.1,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.9,
+    "Ksat": 1.235
+  },
+  {
+    "P1": 115,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 321.4,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.892,
+    "Ksat": 1.234
+  },
+  {
+    "P1": 120,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 324.7,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.884,
+    "Ksat": 1.233
+  },
+  {
+    "P1": 125,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 327.8,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.876,
+    "Ksat": 1.232
+  },
+  {
+    "P1": 130,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 330.9,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.867,
+    "Ksat": 1.232
+  },
+  {
+    "P1": 135,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 333.8,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.857,
+    "Ksat": 1.232
+  },
+  {
+    "P1": 140,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 336.7,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.847,
+    "Ksat": 1.232
+  },
+  {
+    "P1": 145,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 339.5,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.837,
+    "Ksat": 1.233
+  },
+  {
+    "P1": 150,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 342.2,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.826,
+    "Ksat": 1.234
+  },
+  {
+    "P1": 155,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 344.8,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.814,
+    "Ksat": 1.235
+  },
+  {
+    "P1": 160,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 347.4,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.802,
+    "Ksat": 1.237
+  },
+  {
+    "P1": 165,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 349.9,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.789,
+    "Ksat": 1.239
+  },
+  {
+    "P1": 170,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 352.3,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.775,
+    "Ksat": 1.241
+  },
+  {
+    "P1": 175,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 354.7,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.761,
+    "Ksat": 1.244
+  },
+  {
+    "P1": 180,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 357,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.745,
+    "Ksat": 1.247
+  },
+  {
+    "P1": 185,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 359.3,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.728,
+    "Ksat": 1.25
+  },
+  {
+    "P1": 190,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 361.5,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.709,
+    "Ksat": 1.253
+  },
+  {
+    "P1": 195,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 363.6,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.689,
+    "Ksat": 1.257
+  },
+  {
+    "P1": 200,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 365.7,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.665,
+    "Ksat": 1.262
+  },
+  {
+    "P1": 205,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 367.8,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.638,
+    "Ksat": 1.268
+  },
+  {
+    "P1": 210,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 369.8,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.605,
+    "Ksat": 1.277
+  },
+  {
+    "P1": 215,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 371.8,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.559,
+    "Ksat": 1.293
+  },
+  {
+    "P1": 220,
+    "P1Unit": "abspressure.bara",
+    "Tsat": 373.7,
+    "TsatUnit": "temp.degC",
+    "Kssat": 1.459,
+    "Ksat": 1.352
+  }
+]

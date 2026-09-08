@@ -1,0 +1,236 @@
+{
+    "totalRequiredArea": {
+                      "fieldName": "totalRequiredArea",
+                      "label": "Total Required Area",
+                      "type": "inputUom",
+                      "fieldDisplayOrder": 1,
+                      "isValidationRequired": true,
+                      "validateActionType": "both",
+                      "mandatory": false,
+                      "defaultValue": "",
+                      "disabled": false,
+                      "disableUOM": false,
+                      "visible": true,
+                      "hideFromSideBar": true,
+                      "options":[
+                        { "label": "in²", "value": "area.in2", "display": "English" },
+                        { "label": "cm²", "value": "area.cm2", "display": "Metric" },
+                        { "label": "mm²", "value": "area.mm2", "display": "Metric" }
+                        ],
+                      "dimensionName": [
+                          "area"
+                      ],
+                      "infoText": "Total Selected Area",
+                      "grid": "3",
+                      "style": null,
+                      "regex": "NOT_ALLOW_NEGATIVE",
+                      "uomFieldName": "OrificeAreaUOM",
+                      "defaultUOM": {
+                          "Metric": "area.in2",
+                          "English": "area.in2"
+                      },
+                      "defaultUOMValue": "area.in2",
+                      "value": "",
+                      "error": null,
+                      "uomValue": "area.in2",
+                      "visibility": true,
+                      "fieldList": null,
+                      "funcExecResultFields": [],
+                      "focusedFieldName": ""
+                  },
+    "totalSelectedArea": {
+                      "fieldName": "totalSelectedArea",
+                      "label": "Total Selected Area",
+                      "type": "inputUom",
+                      "fieldDisplayOrder": 1,
+                      "isValidationRequired": true,
+                      "validateActionType": "both",
+                      "mandatory": false,
+                      "defaultValue": "",
+                      "disabled": false,
+                      "disableUOM": false,
+                      "visible": true,
+                      "hideFromSideBar": true,
+                      "options":[
+                            { "label": "in²", "value": "area.in2", "display": "English" },
+                            { "label": "cm²", "value": "area.cm2", "display": "Metric" },
+                            { "label": "mm²", "value": "area.mm2", "display": "Metric" }
+                        ],
+                      "dimensionName": [
+                          "area"
+                      ],
+                      "infoText": "Total Selected Area",
+                      "grid": "3",
+                      "style": null,
+                      "regex": "NOT_ALLOW_NEGATIVE",
+                      "uomFieldName": "OrificeAreaUOM",
+                      "defaultUOM": {
+                          "Metric": "area.in2",
+                          "English": "area.in2"
+                      },
+                      "defaultUOMValue": "area.in2",
+                      "value": "",
+                      "error": null,
+                      "uomValue": "area.in2",
+                      "visibility": true,
+                      "fieldList": null,
+                      "funcExecResultFields": [],
+                      "focusedFieldName": ""
+                  },
+    "flowRateMetIcon" : {
+              "fieldName": "FlowRateMet",
+              "label": "Flowrate has been met",
+              "type": "icon",
+              "iconlocation": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiBmaWxsPSJub25lIiBhcmlhLWxhYmVsPSJDaGVjayI+DQogIDxnIHRyYW5zZm9ybT0ic2tld1goLTgpIiB0cmFuc2Zvcm0tb3JpZ2luPSIxMiAxMiI+DQogICAgPCEtLSBDYXJ0b29uIG91dGxpbmUgKGRhcmsgYm9yZGVyIGFyb3VuZCBzdHJva2VzKSAtLT4NCiAgICA8cGF0aCBkPSJNMy41IDEzIFE4IDE3LjUgOS41IDE4LjUiIHN0cm9rZT0iIzAwNWE0MiIgc3Ryb2tlLXdpZHRoPSI1LjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPg0KICAgIDxwYXRoIGQ9Ik05LjUgMTguNSBRMTQgMTEgMjAuNSA1LjUiIHN0cm9rZT0iIzAwNWE0MiIgc3Ryb2tlLXdpZHRoPSI1LjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPg0KICAgIDwhLS0gR3JlZW4gZmlsbCBzdHJva2VzIC0tPg0KICAgIDxwYXRoIGQ9Ik0zLjUgMTMgUTggMTcuNSA5LjUgMTguNSIgc3Ryb2tlPSIjMDBhYTdlIiBzdHJva2Utd2lkdGg9IjMuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+DQogICAgPHBhdGggZD0iTTkuNSAxOC41IFExNCAxMSAyMC41IDUuNSIgc3Ryb2tlPSIjMDBhYTdlIiBzdHJva2Utd2lkdGg9IjMuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+DQogIDwvZz4NCjwvc3ZnPg0K",
+              "disabled": false,
+              "hideFromSideBar": true,
+              "visible": false,
+              "grid": 4
+            },
+    "flowRateNotMetIcon" : {
+              "fieldName": "FlowRateNotMet",
+              "label": "Flowrate has not been met",
+              "type": "icon",
+              "iconlocation": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiBmaWxsPSJub25lIiBhcmlhLWxhYmVsPSJDYW5jZWwiPg0KICA8ZyB0cmFuc2Zvcm09InNrZXdYKC04KSIgdHJhbnNmb3JtLW9yaWdpbj0iMTIgMTIiPg0KICAgIDwhLS0gQ2FydG9vbiBvdXRsaW5lIChkYXJrIGJvcmRlciBhcm91bmQgc3Ryb2tlcykgLS0+DQogICAgPHBhdGggZD0iTTcgNyBRMTIgMTIuNSAxNyAxNyIgc3Ryb2tlPSIjN2EwMDIwIiBzdHJva2Utd2lkdGg9IjUuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+DQogICAgPHBhdGggZD0iTTE3IDcgUTEyIDEyLjUgNyAxNyIgc3Ryb2tlPSIjN2EwMDIwIiBzdHJva2Utd2lkdGg9IjUuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+DQogICAgPCEtLSBSZWQgZmlsbCBzdHJva2VzIC0tPg0KICAgIDxwYXRoIGQ9Ik03IDcgUTEyIDEyLjUgMTcgMTciIHN0cm9rZT0iI2QzMTI0NSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPg0KICAgIDxwYXRoIGQ9Ik0xNyA3IFExMiAxMi41IDcgMTciIHN0cm9rZT0iI2QzMTI0NSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPg0KICA8L2c+DQo8L3N2Zz4NCg==",
+              "disabled": false,
+              "hideFromSideBar": true,
+              "visible": true,
+              "grid": 4
+            },
+
+    "selectTwoOrMoreValveIcon" : {
+              "fieldName": "SelectTwoOrMoreValve",
+              "label": "Select 2 or More Valve",
+              "type": "text",
+              "disabled": false,
+              "hideFromSideBar": true,
+              "visible": true,
+              "style": {
+                "color": "#eb0f49",
+                "fontSize": "1rem",
+                "fontWeight": "bold",
+                "marginLeft": "10px"
+              },
+              "grid": 4
+            },
+
+    "RequiredPressFlow" : {
+                      "fieldName": "RequiredPressFlow",
+                      "label": "Required Pressure Flow",
+                      "type": "inputUom",
+                      "fieldDisplayOrder": 1,
+                      "isValidationRequired": true,
+                      "validateActionType": "both",
+                      "mandatory": false,
+                      "defaultValue": {
+                          "RequiredPressFlow": ""
+                      },
+                      "disabled": false,
+                      "disableUOM": true,
+                      "visible": true,
+                      "hideFromSideBar": true,
+                      "options": [],
+                      "dimensionName": ["massflow","gasvolflow","gasvolflowact"],
+                      "infoText": "Required Pressure Flow",
+                      "grid": "3",
+                      "style": null,
+                      "regex": "NOT_ALLOW_NEGATIVE",
+                      "uomFieldName": "FlowCapacityUOM",
+                      "defaultUOM": {
+                          "Metric": "pressure.mmhgg",
+                          "English": "gasvolflow.SCFM"
+                      },
+                      "defaultUOMValue": "gasvolflow.SCFM",
+                      "UomFieldName": "FlowCapacityUOM",
+                      "value": "",
+                      "error": null,
+                      "uomValue": "gasvolflow.SCFM",
+                      "visibility": true,
+                      "fieldList": null,
+                      "funcExecResultFields": [],
+                      "focusedFieldName": ""
+                  },
+
+    "RatedPressFlow" : {
+                      "fieldName": "RatedPressFlow",
+                      "label": "Total Rated Pressure Valve Flow",
+                      "type": "inputUom",
+                      "fieldDisplayOrder": 1,
+                      "isValidationRequired": true,
+                      "validateActionType": "both",
+                      "mandatory": false,
+                      "defaultValue": "",
+                      "disabled": false,
+                      "disableUOM": true,
+                      "visible": true,
+                      "hideFromSideBar": true,
+                      "options": [],
+                      "dimensionName": ["massflow","gasvolflow","gasvolflowact"],
+                      "infoText": "Total Rated Pressure Valve Flow",
+                      "grid": "3",
+                      "style": null,
+                      "regex": "NOT_ALLOW_NEGATIVE",
+                      "uomFieldName": "FlowCapacityUOM",
+                      "defaultUOM": {
+                          "Metric": "pressure.mmhgg",
+                          "English": "gasvolflow.SCFM"
+                      },
+                      "defaultUOMValue": "gasvolflow.SCFM",
+                      "UomFieldName": "FlowCapacityUOM",
+                      "value": "",
+                      "error": null,
+                      "uomValue": "gasvolflow.SCFM",
+                      "visibility": true,
+                      "fieldList": null,
+                      "funcExecResultFields": [],
+                      "focusedFieldName": ""
+                  },
+
+    "TotalSelectedPercentage" :{
+                "fieldName": "TotalSelectedPercentage",
+                "label": "Total Selected %",
+                "type": "number",
+                "mandatory":true,
+                "defaultValue": "",
+                "value": "",
+                "disabled": false,
+                "visible": true,
+                "infoText": "Pressure Compressibility Factor",                
+                "regex": "NOT_ALLOW_NEGATIVE"
+            },
+
+    "TotalActualPressFlow" :{
+                      "fieldName": "TotalActualPressFlow",
+                      "label": "Total Actual Pressure Valve Flow",
+                      "type": "inputUom",
+                      "fieldDisplayOrder": 1,
+                      "isValidationRequired": true,
+                      "validateActionType": "both",
+                      "mandatory": false,
+                      "defaultValue": "",
+                      "disabled": false,
+                      "disableUOM": true,
+                      "visible": true,
+                      "hideFromSideBar": true,
+                      "options": [],
+                      "dimensionName": ["massflow","gasvolflow","gasvolflowact"],
+                      "infoText": "Total Actual Pressure Valve Flow",
+                      "grid": "3",
+                      "style": null,
+                      "regex": "NOT_ALLOW_NEGATIVE",
+                      "uomFieldName": "FlowCapacityUOM",
+                      "defaultUOM": {
+                          "Metric": "pressure.mmhgg",
+                          "English": "gasvolflow.SCFM"
+                      },
+                      "defaultUOMValue": "gasvolflow.SCFM",
+                      "UomFieldName": "FlowCapacityUOM",
+                      "value": "",
+                      "error": null,
+                      "uomValue": "gasvolflow.SCFM",
+                      "visibility": true,
+                      "fieldList": null,
+                      "funcExecResultFields": [],
+                      "focusedFieldName": ""
+                  }
+}

@@ -1,0 +1,199 @@
+.bgColor_Transparent{
+    background-color:transparent !important; 
+}
+
+.bgColor_Green{
+    background-color:#00aa7e !important; 
+}
+
+.bgColor_Green:hover{
+    background-color:#04906a !important; 
+}
+
+.textColorBlack{
+    color: #212121 !important;
+}
+
+.textColorWhite{
+    color: #ffffff !important;
+}
+
+.border{
+    border: 1px solid #212121 !important;
+}
+
+.borderGreen{
+    border-color: #04906a !important;
+}
+.borderRadius{
+    border-radius: 0 !important;
+}
+
+.button{
+    height:25px;
+    min-width: 140px;
+}
+
+.headerButton {
+    color: #2d383f;
+    border: 1px solid #2d383f;
+    height: 25px;
+    margin: 0 5px;
+    font-size: 0.75rem !important;
+    min-width: 150px;
+    width: 80% !important;
+    text-align: center;
+    font-weight: 550 !important;
+    border-radius: 0;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    background-color: #fff;
+    padding: 5px 10px !important;
+} 
+.headerButton:hover{
+    color: #2d383f !important;
+    border: none !important;
+    background-color: #c4ced1 !important;
+ }
+
+.footerButton{
+    background-color:#00aa7e !important;
+    border-radius: 0 !important;
+    letter-spacing: .08em;
+    border: 1px solid #00aa7e !important;
+    color: #ffffff !important;
+    height: 25px;
+    margin: 0 5px;
+    min-width: 140px;
+    width: 9rem !important;
+    /* width: 80% !important; */
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 550 !important;
+    font-size: 0.75rem !important;
+}
+.footerButton:hover{
+    background-color:#04906a !important; 
+    border-color: #00aa7e;
+ }
+
+ .footerButton:disabled{
+    background-color:#848e8c !important;
+    border-radius: 0 !important;
+    letter-spacing: .08em;
+    border: 1px solid #848e8c !important;
+    color: #ffffff !important;
+    height: 25px;
+    margin: 0 5px;
+    min-width: 140px;
+    width: 9rem !important;
+    /* width: 80% !important; */
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 550 !important;
+    font-size: 0.75rem !important;
+}
+.footerButton:hover:disabled{
+    background-color:#8d9492 !important; 
+    border-color: #8d9492;
+ }
+
+.footerNext{
+    margin-left:auto !important;
+}
+
+
+.footerPrev{
+    margin-right: auto;
+}
+
+.footerNext{
+    margin-left: auto;
+}
+
+ .displayFlex{
+    display: flex !important;
+    /* gap:1.5rem; */
+}
+
+.displayFlexEnd{
+    justify-content: flex-end !important;
+    align-items: center;
+}
+
+.justiFyContentSpaceBetween{
+    justify-content: space-between ;
+}
+.justiFyContentSpaceAround{
+    /* justify-content: center; */
+    align-items: center;
+}
+.justiFyContentRight{
+    justify-content: right;
+}
+
+.buttonWidth{
+    width: 200px;
+}
+
+.gridCenter{
+     margin: 0 auto !important;
+     
+}
+
+.modalButton{
+    background-color:#00aa7e !important;
+    border-radius: 0 !important;
+    letter-spacing: .08em;
+    border: 1px solid #00aa7e !important;
+    color: #ffffff !important;
+    height: 30px;
+    margin: 0 5px;
+    min-width: 140px;
+    /* width: 15rem !important; */
+    /* width: 30% !important; */
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 550 !important;
+    font-size: 0.75rem !important;
+    padding: 0px 20px !important;
+}
+.modalButton:hover{
+    background-color:#04906a !important; 
+    border-color: #00aa7e;
+ }
+
+ .modalButton:disabled{
+    background-color:#848e8c !important;
+    border-radius: 0 !important;
+    border: 1px solid #848e8c !important;
+    color: #ffffff !important;
+}
+
+.modalButton_disabled{
+    background-color:#848e8c !important;
+    border-radius: 0 !important;
+    border: 1px solid #848e8c !important;
+    color: #ffffff !important;
+    letter-spacing: .08em;
+    height: 30px;
+    margin: 0 5px;
+    min-width: 140px;
+    /* width: 15rem !important; */
+    /* width: 30% !important; */
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 550 !important;
+    font-size: 0.75rem !important;
+    padding: 0px 20px !important;
+}
+
+ .errorClass{
+    color: crimson;
+    font-weight: 450 !important;
+    font-size: 0.9rem;
+ }
+
+ .buttonPadding{
+    padding: 5px 10px !important;
+ }

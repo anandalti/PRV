@@ -1,0 +1,2301 @@
+{
+  "workflowId": 3,
+  "sectionId": 18,
+  "sectionName": "API2000TankData",
+  "sectionLabel": "Calculate Required Flow Rate",
+  "displayType": "popup",
+  "displayOrder": 1,
+  "fields": [
+    {
+      "sectionId": 18,
+      "fieldId": 100,
+      "fieldName": "SizingBassis",
+      "label": "7th Ed., Main",
+      "type": "label",
+      "fieldDisplayOrder": 0,
+      "isValidationRequired": true,
+      "validateActionType": null,
+      "gridSection": 1,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": "sev_Ed_Main",
+      "disabled": true,
+      "visible": false,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": null,
+      "infoText": "",
+      "grid": "3",
+      "style": {
+        "gridDirection": "column",
+        "gridTemplateColumns": "0.3fr 0.8fr 0.8fr 0.2fr"
+      },
+      "regex": null,
+      "uomFieldName": "",
+      "defaultUOM": null,
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 2
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 101,
+      "fieldName": "sev_Ed_Main",
+      "label": "7th Ed., Main",
+      "type": "radio",
+      "fieldDisplayOrder": 1,
+      "isValidationRequired": true,
+      "validateActionType": "onChange",
+      "gridSection": 1,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": true,
+      "disabled": false,
+      "visible": true,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": null,
+      "infoText": "",
+      "grid": "3",
+      "style": {
+        "gridDirection": "column",
+        "gridTemplateColumns": "0.3fr 0.8fr 0.8fr 0.2fr"
+      },
+      "regex": null,
+      "uomFieldName": "",
+      "defaultUOM": null,
+      "fieldGroupType": "RADIO_GROUP",
+      "fieldGroupName": "SizingBassis",
+      "defaultSelected": "sev_Ed_Main",
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 3
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 102,
+      "fieldName": "sev_Ed_AnnexA",
+      "label": "7th Ed., Annex A",
+      "type": "radio",
+      "fieldDisplayOrder": 2,
+      "isValidationRequired": true,
+      "validateActionType": "onChange",
+      "gridSection": 1,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": false,
+      "disabled": false,
+      "visible": true,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": null,
+      "infoText": "",
+      "grid": "3",
+      "style": {
+        "gridDirection": "column",
+        "gridTemplateColumns": "0.3fr 0.8fr 0.8fr 0.2fr"
+      },
+      "regex": null,
+      "uomFieldName": "",
+      "defaultUOM": null,
+      "fieldGroupType": "RADIO_GROUP",
+      "fieldGroupName": "SizingBassis",
+      "defaultSelected": "sev_Ed_Main",
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 4
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 103,
+      "fieldName": "RequiredCapacityMethod",
+      "label": "Required Capacity Method",
+      "type": "select",
+      "fieldDisplayOrder": 3,
+      "isValidationRequired": true,
+      "validateActionType": "onChange",
+      "gridSection": 1,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": "Normal",
+      "disabled": false,
+      "visible": true,
+      "hideFromSideBar": true,
+      "options": [
+        {
+          "label": "Normal",
+          "value": "Normal"
+        },
+        {
+          "label": "Emergency",
+          "value": "Emergency"
+        }
+      ],
+      "dimensionName": null,
+      "infoText": "",
+      "grid": "4",
+      "style": null,
+      "regex": null,
+      "uomFieldName": "",
+      "defaultUOM": null
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 104,
+      "fieldName": "ProductInTank",
+      "label": "Product In Tank",
+      "type": "select",
+      "fieldDisplayOrder": 4,
+      "isValidationRequired": true,
+      "validateActionType": "onChange",
+      "gridSection": 1,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": "Nonvolatile Liquid, Psat ≤ 0.73psi (5.0kPa)",
+      "disabled": false,
+      "visible": true,
+      "hideFromSideBar": true,
+      "options": [
+        {
+          "label": "Nonvolatile Liquid, Psat ≤ 0.73psi (5.0kPa)",
+          "value": "Nonvolatile Liquid, Psat ≤ 0.73psi (5.0kPa)"
+        },
+        {
+          "label": "Volatile Liquid, Psat > 0.73 psi (5.0kPa)",
+          "value": "Volatile Liquid, Psat > 0.73 psi (5.0kPa)"
+        }
+      ],
+      "dimensionName": null,
+      "infoText": "Product In Tank[]",
+      "grid": "4",
+      "style": null,
+      "regex": null,
+      "uomFieldName": "",
+      "defaultUOM": null,
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 5
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 105,
+      "fieldName": "IsFlashingLiquid",
+      "label": "Product Can Flash Due To High Temperature or Dissolved",
+      "type": "checkbox",
+      "fieldDisplayOrder": 5,
+      "isValidationRequired": true,
+      "validateActionType": "onChange",
+      "gridSection": 1,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": false,
+      "disabled": false,
+      "visible": true,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": null,
+      "infoText": "",
+      "grid": "4",
+      "style": null,
+      "regex": null,
+      "uomFieldName": "",
+      "defaultUOM": null,
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 6
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 106,
+      "fieldName": "IsSimpleEmergencyFlowRateCalc",
+      "label": "Use the simple Emergency Flow Rate Calculation?",
+      "type": "checkbox",
+      "fieldDisplayOrder": 6,
+      "isValidationRequired": true,
+      "validateActionType": "onChange",
+      "gridSection": 1,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": false,
+      "disabled": false,
+      "visible": false,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": null,
+      "infoText": "",
+      "grid": "4",
+      "style": null,
+      "regex": null,
+      "uomFieldName": "",
+      "defaultUOM": null,
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 7
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 107,
+      "fieldName": "AverageStorageTemperature",
+      "label": "Average Storage Temperature",
+      "type": "select",
+      "fieldDisplayOrder": 7,
+      "isValidationRequired": true,
+      "validateActionType": "onChange",
+      "gridSection": 1,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": "Below 77°F (25°C)",
+      "disabled": false,
+      "visible": true,
+      "hideFromSideBar": true,
+      "options": [
+        {
+          "label": "Below 77°F (25°C)",
+          "value": "Below 77°F (25°C)"
+        },
+        {
+          "label": "Greater Than or Equal to 77°F (25°C)",
+          "value": "Greater Than or Equal to 77°F (25°C)"
+        }
+      ],
+      "dimensionName": null,
+      "infoText": "",
+      "grid": "4",
+      "style": null,
+      "regex": null,
+      "uomFieldName": "",
+      "defaultUOM": null,
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 8
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 108,
+      "fieldName": "VaporSaturationPressure",
+      "label": "Vapor(Satuartion) Pressure",
+      "type": "select",
+      "fieldDisplayOrder": 8,
+      "isValidationRequired": true,
+      "validateActionType": "onChange",
+      "gridSection": 1,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": "Hexane or Similar",
+      "disabled": false,
+      "visible": true,
+      "hideFromSideBar": true,
+      "options": [
+        {
+          "label": "Hexane or Similar",
+          "value": "Hexane or Similar"
+        },
+        {
+          "label": "Higher than Hexane or Unknown",
+          "value": "Higher than Hexane or Unknown"
+        }
+      ],
+      "dimensionName": null,
+      "infoText": "",
+      "grid": "4",
+      "style": null,
+      "regex": null,
+      "uomFieldName": "",
+      "defaultUOM": null,
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 9
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 109,
+      "fieldName": "TankLatitude",
+      "label": "Tank Latitude",
+      "type": "select",
+      "fieldDisplayOrder": 9,
+      "isValidationRequired": true,
+      "validateActionType": "onChange",
+      "gridSection": 1,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": "Below 42°",
+      "disabled": false,
+      "visible": true,
+      "hideFromSideBar": true,
+      "options": [
+        {
+          "label": "Below 42°",
+          "value": "Below 42°"
+        },
+        {
+          "label": "Between 42° and 58°",
+          "value": "Between 42° and 58°"
+        },
+        {
+          "label": "Above 58°",
+          "value": "Above 58°"
+        }
+      ],
+      "dimensionName": null,
+      "infoText": "",
+      "grid": "4",
+      "style": null,
+      "regex": null,
+      "uomFieldName": "",
+      "defaultUOM": null,
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 10
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 110,
+      "fieldName": "WorldMap",
+      "label": "World Map",
+      "type": "modal",
+      "fieldDisplayOrder": 10,
+      "isValidationRequired": false,
+      "validateActionType": null,
+      "gridSection": 1,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": "",
+      "disabled": false,
+      "visible": true,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": null,
+      "infoText": "",
+      "grid": "6",
+      "style": null,
+      "regex": null,
+      "uomFieldName": "",
+      "defaultUOM": null,
+      "copyAction": {
+        "type": "modal",
+        "target": "CalculateFlowrate"
+      }
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 111,
+      "fieldName": "TankVolume",
+      "label": "Tank Volume",
+      "type": "inputUom",
+      "fieldDisplayOrder": 11,
+      "isValidationRequired": true,
+      "validateActionType": "both",
+      "gridSection": 1,
+      "popupFields": true,
+      "mandatory": true,
+      "defaultValue": "",
+      "disabled": false,
+      "disableUOM": false,
+      "visible": true,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": [
+        "volume"
+      ],
+      "infoText": "Tank Volume[VoLtank]",
+      "grid": "4",
+      "style": {
+        "gridTemplateColumns": "1.5fr 1.15fr 1.35fr"
+      },
+      "regex": null,
+      "uomFieldName": "TankVolumeUOM",
+      "defaultUOM": {
+        "Metric": "volume.cm3",
+        "English": "volume.BBL"
+      },
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 11
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 112,
+      "fieldName": "PumpInRate",
+      "label": "Pump In Rate",
+      "type": "inputUom",
+      "fieldDisplayOrder": 12,
+      "isValidationRequired": true,
+      "validateActionType": "both",
+      "gridSection": 1,
+      "popupFields": true,
+      "mandatory": true,
+      "defaultValue": "",
+      "disabled": false,
+      "disableUOM": false,
+      "visible": true,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": [
+        "liquidvolflow"
+      ],
+      "infoText": "Pump-in Rate[Fin]",
+      "grid": "4",
+      "style": {
+        "gridTemplateColumns": "1.5fr 1.15fr 1.35fr"
+      },
+      "regex": null,
+      "uomFieldName": "PumpInRateUOM",
+      "defaultUOM": {
+        "Metric": "liquidvolflow.Lhr",
+        "English": "liquidvolflow.BBLh"
+      },
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 12
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 113,
+      "fieldName": "PumpOutRate",
+      "label": "Pump Out Rate",
+      "type": "inputUom",
+      "fieldDisplayOrder": 13,
+      "isValidationRequired": true,
+      "validateActionType": "both",
+      "gridSection": 1,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": "",
+      "disabled": false,
+      "disableUOM": false,
+      "visible": false,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": [
+        "liquidvolflow"
+      ],
+      "infoText": "Pump-out Rate[Fout]",
+      "grid": "4",
+      "style": {
+        "gridTemplateColumns": "1.5fr 1.15fr 1.35fr"
+      },
+      "regex": null,
+      "uomFieldName": "PumpInRateUOM",
+      "defaultUOM": {
+        "Metric": "liquidvolflow.Lhr",
+        "English": "liquidvolflow.BBLh"
+      },
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 13
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 114,
+      "fieldName": "IsBoilingPointRadio",
+      "label": "BoilingPoint",
+      "type": "label",
+      "fieldDisplayOrder": 14,
+      "isValidationRequired": true,
+      "validateActionType": null,
+      "gridSection": 1,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": "BoilingPoint",
+      "disabled": true,
+      "visible": false,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": null,
+      "infoText": "",
+      "grid": "3",
+      "style": {
+        "gridDirection": "column",
+        "gridTemplateColumns": "0.3fr 0.8fr 0.8fr 0.2fr"
+      },
+      "regex": null,
+      "uomFieldName": "",
+      "defaultUOM": null,
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 14
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 115,
+      "fieldName": "BoilingPoint",
+      "label": "Boiling Point",
+      "type": "radioInput",
+      "fieldDisplayOrder": 14,
+      "isValidationRequired": true,
+      "validateActionType": "both",
+      "gridSection": 1,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": "",
+      "disabled": false,
+      "disableUOM": false,
+      "visible": false,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": [
+        "temperature"
+      ],
+      "infoText": "Boiling Point [BP]",
+      "grid": "4",
+      "style": null,
+      "regex": "NOT_ALLOW_NEGATIVE",
+      "uomFieldName": "TemperatureUOM",
+      "defaultUOM": {
+        "English": "temp.degF",
+        "Metric": "temp.degC"
+      },
+      "fieldGroupType": "RADIO_GROUP",
+      "fieldGroupName": "IsBoilingPointRadio",
+      "defaultSelected": "BoilingPoint",
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 15
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 116,
+      "fieldName": "FlashPoint",
+      "label": "Flash Point",
+      "type": "radioInput",
+      "fieldDisplayOrder": 15,
+      "isValidationRequired": true,
+      "validateActionType": "both",
+      "gridSection": 1,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": "",
+      "disabled": false,
+      "disableUOM": false,
+      "visible": false,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": [
+        "temperature"
+      ],
+      "infoText": "Flash Point [FP]",
+      "grid": "4",
+      "style": null,
+      "regex": "NOT_ALLOW_NEGATIVE",
+      "uomFieldName": "TemperatureUOM",
+      "defaultUOM": {
+        "English": "temp.degF",
+        "Metric": "temp.degC"
+      },
+      "fieldGroupType": "RADIO_GROUP",
+      "fieldGroupName": "IsBoilingPointRadio",
+      "defaultSelected": "BoilingPoint",
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 16
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 117,
+      "fieldName": "SystemMAWP",
+      "label": "System MAWP",
+      "type": "inputUom",
+      "fieldDisplayOrder": 16,
+      "isValidationRequired": true,
+      "validateActionType": "both",
+      "gridSection": 1,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": "",
+      "disabled": false,
+      "disableUOM": false,
+      "visible": false,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": [
+        "pressure"
+      ],
+      "infoText": "System MAWP[MAWP]",
+      "grid": "4",
+      "style": {
+        "gridTemplateColumns": "1.5fr 1.15fr 1.35fr"
+      },
+      "regex": null,
+      "uomFieldName": "PressureUOM",
+      "defaultUOM": {
+        "Metric": "pressure.barg",
+        "English": "pressure.psig"
+      },
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 17
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 118,
+      "fieldName": "LatentHeatOfVaporization",
+      "label": "Latent Heat of Vaporization",
+      "type": "inputUom",
+      "fieldDisplayOrder": 17,
+      "isValidationRequired": true,
+      "validateActionType": "both",
+      "gridSection": 1,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": "",
+      "disabled": false,
+      "disableUOM": false,
+      "visible": false,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": [
+        "latentheat"
+      ],
+      "infoText": "Latent Heat of Vaporization[Hvap]",
+      "grid": "4",
+      "style": {
+        "gridTemplateColumns": "1.5fr 1.15fr 1.35fr"
+      },
+      "regex": null,
+      "uomFieldName": "LatentHeatOfVaporizationUOM",
+      "defaultUOM": {
+        "English": "latentheat.BTUlb",
+        "Metric": "latentheat.calg"
+      },
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 18
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 119,
+      "fieldName": "MolWtVapor",
+      "label": "Molecular Weight, Vapor",
+      "type": "number",
+      "fieldDisplayOrder": 18,
+      "isValidationRequired": true,
+      "validateActionType": "onBlur",
+      "gridSection": 1,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": 28,
+      "disabled": false,
+      "visible": false,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": null,
+      "infoText": "Molecular Weight, Vapor [MpAPI2000]",
+      "grid": "4",
+      "style": null,
+      "regex": null,
+      "uomFieldName": "",
+      "defaultUOM": null,
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 19
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 120,
+      "fieldName": "Relieving",
+      "label": "Relieving",
+      "type": "inputUom",
+      "fieldDisplayOrder": 19,
+      "isValidationRequired": true,
+      "validateActionType": "both",
+      "gridSection": 1,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": "",
+      "disabled": false,
+      "disableUOM": false,
+      "visible": false,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": [
+        "temperature"
+      ],
+      "infoText": "Relieving[T]",
+      "grid": "4",
+      "style": {
+        "gridTemplateColumns": "1.5fr 1.15fr 1.35fr"
+      },
+      "regex": null,
+      "uomFieldName": "TemperatureUOM",
+      "defaultUOM": {
+        "English": "temp.degF",
+        "Metric": "temp.degC"
+      },
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 20
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 121,
+      "fieldName": "EnvironmentalFactor",
+      "label": "Environmental Factor",
+      "type": "number",
+      "fieldDisplayOrder": 20,
+      "isValidationRequired": true,
+      "validateActionType": "onBlur",
+      "gridSection": 1,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": 1,
+      "disabled": false,
+      "visible": false,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": null,
+      "infoText": "Environmental Factor",
+      "grid": "4",
+      "style": null,
+      "regex": null,
+      "uomFieldName": "",
+      "defaultUOM": null,
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 21
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 122,
+      "fieldName": "WettedArea",
+      "label": "Wetted Area",
+      "type": "inputUom",
+      "fieldDisplayOrder": 21,
+      "isValidationRequired": true,
+      "validateActionType": "both",
+      "gridSection": 1,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": "",
+      "disabled": false,
+      "disableUOM": false,
+      "visible": false,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": [
+        "area"
+      ],
+      "infoText": "Wetted Area[Awet]",
+      "grid": "4",
+      "style": {
+        "gridTemplateColumns": "1.5fr 1.15fr 1.35fr"
+      },
+      "regex": null,
+      "uomFieldName": "AreaUOM",
+      "defaultUOM": {
+        "English": "area.in2",
+        "Metric": "area.mm2"
+      },
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 22
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 123,
+      "fieldName": "TankHasInsulation",
+      "label": "Tank has Insulation",
+      "type": "select",
+      "fieldDisplayOrder": 22,
+      "isValidationRequired": true,
+      "validateActionType": "onChange",
+      "gridSection": 1,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": "None",
+      "disabled": false,
+      "visible": true,
+      "hideFromSideBar": true,
+      "options": [
+        {
+          "label": "None",
+          "value": "None"
+        },
+        {
+          "label": "Partial",
+          "value": "Partial"
+        },
+        {
+          "label": "Full",
+          "value": "Full"
+        },
+        {
+          "label": "Double Walled Tank",
+          "value": "Double Walled Tank"
+        }
+      ],
+      "dimensionName": null,
+      "infoText": "",
+      "grid": "4",
+      "style": null,
+      "regex": null,
+      "uomFieldName": "",
+      "defaultUOM": null,
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 23
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 124,
+      "fieldName": "InsulationThickness",
+      "label": "Insulation Thickness",
+      "type": "inputUom",
+      "fieldDisplayOrder": 23,
+      "isValidationRequired": true,
+      "validateActionType": "both",
+      "gridSection": 1,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": "",
+      "disabled": false,
+      "disableUOM": false,
+      "visible": false,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": [
+        "length"
+      ],
+      "infoText": "Insulation Thickness[Lin]",
+      "grid": "4",
+      "style": {
+        "gridTemplateColumns": "1.5fr 1.15fr 1.35fr"
+      },
+      "regex": null,
+      "uomFieldName": "insulationThicknessUOM",
+      "defaultUOM": {
+        "English": "length.ft",
+        "Metric": "length.cm"
+      },
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 24
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 125,
+      "fieldName": "InsulationThermalConductivity",
+      "label": "Insulation Thermal Conductivity",
+      "type": "inputUom",
+      "fieldDisplayOrder": 24,
+      "isValidationRequired": true,
+      "validateActionType": "both",
+      "gridSection": 1,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": "",
+      "disabled": false,
+      "disableUOM": false,
+      "visible": false,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": [
+        "thermalconductivity"
+      ],
+      "infoText": "Insulation Thermal Conductivity[Lin]",
+      "grid": "4",
+      "style": {
+        "gridTemplateColumns": "1.5fr 1.15fr 1.35fr"
+      },
+      "regex": null,
+      "uomFieldName": "InsulationThermalConductivityUOM",
+      "defaultUOM": {
+        "Metric": "thermalconductivity.WmK",
+        "English": "thermalconductivity.calsmK"
+      },
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 25
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 126,
+      "fieldName": "HeatTransferCoefficient",
+      "label": "Heat Transfer Coefficient",
+      "type": "inputUom",
+      "fieldDisplayOrder": 25,
+      "isValidationRequired": true,
+      "validateActionType": "both",
+      "gridSection": 1,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": "",
+      "disabled": false,
+      "disableUOM": false,
+      "visible": false,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": [
+        "heattransfer"
+      ],
+      "infoText": "Heat Transfer Coefficient[Hhtc]",
+      "grid": "4",
+      "style": {
+        "gridTemplateColumns": "1.5fr 1.15fr 1.35fr"
+      },
+      "regex": null,
+      "uomFieldName": "HeatTransferCoefficientUOM",
+      "defaultUOM": {
+        "Metric": "heattransfer.Wm2K",
+        "English": "heattransfer.BTUsft2R"
+      },
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 26
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 127,
+      "fieldName": "Rin",
+      "label": "Rin",
+      "type": "number",
+      "fieldDisplayOrder": 26,
+      "isValidationRequired": false,
+      "validateActionType": null,
+      "gridSection": 1,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": 1,
+      "disabled": true,
+      "visible": true,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": null,
+      "infoText": "Insulation Reduction Factor",
+      "grid": "4",
+      "style": null,
+      "regex": null,
+      "uomFieldName": "",
+      "defaultUOM": null
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 128,
+      "fieldName": "SurfaceArea",
+      "label": "Surface Area",
+      "type": "inputUom",
+      "fieldDisplayOrder": 27,
+      "isValidationRequired": true,
+      "validateActionType": "both",
+      "gridSection": 1,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": "",
+      "disabled": false,
+      "disableUOM": false,
+      "visible": false,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": [
+        "area"
+      ],
+      "infoText": "Surface Area[A']",
+      "grid": "4",
+      "style": {
+        "gridTemplateColumns": "1.5fr 1.15fr 1.35fr"
+      },
+      "regex": null,
+      "uomFieldName": "AreaUOM",
+      "defaultUOM": {
+        "English": "area.in2",
+        "Metric": "area.mm2"
+      },
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 27
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 129,
+      "fieldName": "InsulatedPercentOfATilt",
+      "label": "Insulated Percent of Surface Area",
+      "type": "radioInput",
+      "fieldDisplayOrder": 28,
+      "isValidationRequired": true,
+      "validateActionType": "both",
+      "gridSection": 1,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": 0,
+      "disabled": false,
+      "visible": false,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": [
+        "%"
+      ],
+      "infoText": "Insulated Percent of A' [PercentAinp]",
+      "grid": "4",
+      "style": null,
+      "regex": null,
+      "uomFieldName": "",
+      "defaultUOM": {},
+      "fieldGroupType": "RADIO_GROUP",
+      "fieldGroupName": "Fl_Insulated_Surface_Area_per",
+      "defaultSelected": "InsulatedPercentOfATilt",
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 28
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 130,
+      "fieldName": "InsulatedSurfaceArea",
+      "label": "Insulated Surface Area",
+      "type": "radioInput",
+      "fieldDisplayOrder": 29,
+      "isValidationRequired": true,
+      "validateActionType": "both",
+      "gridSection": 1,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": 0,
+      "disabled": false,
+      "disableUOM": false,
+      "visible": false,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": [
+        "area"
+      ],
+      "infoText": "Insulated Surface Area [Ainp]",
+      "grid": "4",
+      "style": null,
+      "regex": null,
+      "uomFieldName": "AreaUOM",
+      "defaultUOM": {
+        "English": "area.in2",
+        "Metric": "area.mm2"
+      },
+      "fieldGroupType": "RADIO_GROUP",
+      "fieldGroupName": "Fl_Insulated_Surface_Area_per",
+      "defaultSelected": "InsulatedSurfaceArea",
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 29
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 131,
+      "fieldName": "OuterContSurAreaPer",
+      "label": "Percent Surface Area Outside Containment",
+      "type": "radioInput",
+      "fieldDisplayOrder": 30,
+      "isValidationRequired": true,
+      "validateActionType": "both",
+      "gridSection": 1,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": 0,
+      "disabled": false,
+      "visible": false,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": [
+        "%"
+      ],
+      "infoText": "",
+      "grid": "4",
+      "style": null,
+      "regex": null,
+      "uomFieldName": "",
+      "defaultUOM": {},
+      "fieldGroupType": "RADIO_GROUP",
+      "fieldGroupName": "Fl_Outer_Surface_Area_per",
+      "defaultSelected": "OuterContSurAreaPer",
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 30
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 132,
+      "fieldName": "OuterContSurArea",
+      "label": "Surface Area Outside Containment",
+      "type": "radioInput",
+      "fieldDisplayOrder": 31,
+      "isValidationRequired": true,
+      "validateActionType": "both",
+      "gridSection": 1,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": 0,
+      "disabled": false,
+      "disableUOM": false,
+      "visible": false,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": [
+        "area"
+      ],
+      "infoText": "Outer Containment Surface Area [Ac]",
+      "grid": "4",
+      "style": null,
+      "regex": null,
+      "uomFieldName": "AreaUOM",
+      "defaultUOM": {
+        "English": "area.in2",
+        "Metric": "area.mm2"
+      },
+      "fieldGroupType": "RADIO_GROUP",
+      "fieldGroupName": "Fl_Outer_Surface_Area_per",
+      "defaultSelected": "OuterContSurArea",
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 31
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 133,
+      "fieldName": "OutBreathing|InBreathing",
+      "label": "Pressure (Out-breathing)|Vacuum (In-breathing)",
+      "type": "label",
+      "fieldDisplayOrder": 32,
+      "isValidationRequired": false,
+      "validateActionType": null,
+      "gridSection": 2,
+      "popupFields": true,
+      "mandatory": [
+        {
+          "id": "OutBreathing",
+          "currentId": "OutBreathing",
+          "value": false
+        },
+        {
+          "id": "InBreathing",
+          "currentId": "InBreathing",
+          "value": false
+        }
+      ],
+      "defaultValue": [
+        {
+          "id": "OutBreathing",
+          "currentId": "OutBreathing",
+          "value": ""
+        },
+        {
+          "id": "InBreathing",
+          "currentId": "InBreathing",
+          "value": ""
+        }
+      ],
+      "disabled": [
+        {
+          "id": "OutBreathing",
+          "currentId": "OutBreathing",
+          "value": false
+        },
+        {
+          "id": "InBreathing",
+          "currentId": "InBreathing",
+          "value": false
+        }
+      ],
+      "visible": [
+        {
+          "id": "OutBreathing",
+          "currentId": "OutBreathing",
+          "value": true
+        },
+        {
+          "id": "InBreathing",
+          "currentId": "InBreathing",
+          "value": true
+        }
+      ],
+      "hideFromSideBar": [
+        {
+          "id": "OutBreathing",
+          "currentId": "OutBreathing",
+          "value": true
+        },
+        {
+          "id": "InBreathing",
+          "currentId": "InBreathing",
+          "value": true
+        }
+      ],
+      "options": [],
+      "dimensionName": null,
+      "infoText": "",
+      "grid": "6",
+      "style": {
+        "flex": 10
+      },
+      "regex": null,
+      "uomFieldName": "",
+      "defaultUOM": null
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 134,
+      "fieldName": "ProductMovementPressure|ProductMovementVacuum",
+      "label": "Product Movement",
+      "type": "multiInputUom",
+      "fieldDisplayOrder": 33,
+      "isValidationRequired": false,
+      "validateActionType": null,
+      "gridSection": 2,
+      "popupFields": true,
+      "mandatory": [
+        {
+          "id": "ProductMovementPressure",
+          "currentId": "ProductMovementPressure",
+          "value": false
+        },
+        {
+          "id": "ProductMovementVacuum",
+          "currentId": "ProductMovementVacuum",
+          "value": false
+        }
+      ],
+      "defaultValue": [
+        {
+          "id": "ProductMovementPressure",
+          "currentId": "ProductMovementPressure",
+          "value": ""
+        },
+        {
+          "id": "ProductMovementVacuum",
+          "currentId": "ProductMovementVacuum",
+          "value": ""
+        }
+      ],
+      "disabled": [
+        {
+          "id": "ProductMovementPressure",
+          "currentId": "ProductMovementPressure",
+          "value": true
+        },
+        {
+          "id": "ProductMovementVacuum",
+          "currentId": "ProductMovementVacuum",
+          "value": true
+        }
+      ],
+      "disableUOM": false,
+      "visible": [
+        {
+          "id": "ProductMovementPressure",
+          "currentId": "ProductMovementPressure",
+          "value": true
+        },
+        {
+          "id": "ProductMovementVacuum",
+          "currentId": "ProductMovementVacuum",
+          "value": true
+        }
+      ],
+      "hideFromSideBar": [
+        {
+          "id": "ProductMovementPressure",
+          "currentId": "ProductMovementPressure",
+          "value": true
+        },
+        {
+          "id": "ProductMovementVacuum",
+          "currentId": "ProductMovementVacuum",
+          "value": true
+        }
+      ],
+      "options": [],
+      "dimensionName": [
+        "gasvolflow"
+      ],
+      "infoText": "Product Movement (for Pressure) [Vmovement]",
+      "grid": "6",
+      "style": null,
+      "regex": null,
+      "uomFieldName": "FlowCapacityUOM",
+      "defaultUOM": {
+        "English": "gasvolflow.MMSCFD",
+        "Metric": "gasvolflow.Nm3day"
+      },
+      "fieldGroupType": "MULTI_INPUT_UOM_GROUP",
+      "fieldGroupName": "Fl_Prod_move_pres_vacu",
+      "defaultSelected": null
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 135,
+      "fieldName": "ThermalPressure|ThermalVacuum",
+      "label": "Thermal",
+      "type": "multiInputUom",
+      "fieldDisplayOrder": 34,
+      "isValidationRequired": false,
+      "validateActionType": null,
+      "gridSection": 2,
+      "popupFields": true,
+      "mandatory": [
+        {
+          "id": "ThermalPressure",
+          "currentId": "ThermalPressure",
+          "value": false
+        },
+        {
+          "id": "ThermalVacuum",
+          "currentId": "ThermalVacuum",
+          "value": false
+        }
+      ],
+      "defaultValue": [
+        {
+          "id": "ThermalPressure",
+          "currentId": "ThermalPressure",
+          "value": ""
+        },
+        {
+          "id": "ThermalVacuum",
+          "currentId": "ThermalVacuum",
+          "value": ""
+        }
+      ],
+      "disabled": [
+        {
+          "id": "ThermalPressure",
+          "currentId": "ThermalPressure",
+          "value": true
+        },
+        {
+          "id": "ThermalVacuum",
+          "currentId": "ThermalVacuum",
+          "value": true
+        }
+      ],
+      "disableUOM": false,
+      "visible": [
+        {
+          "id": "ThermalPressure",
+          "currentId": "ThermalPressure",
+          "value": true
+        },
+        {
+          "id": "ThermalVacuum",
+          "currentId": "ThermalVacuum",
+          "value": true
+        }
+      ],
+      "hideFromSideBar": [
+        {
+          "id": "ThermalPressure",
+          "currentId": "ThermalPressure",
+          "value": true
+        },
+        {
+          "id": "ThermalVacuum",
+          "currentId": "ThermalVacuum",
+          "value": true
+        }
+      ],
+      "options": [],
+      "dimensionName": [
+        "gasvolflow"
+      ],
+      "infoText": "Thermal (for Pressure) [Vthermal]",
+      "grid": "6",
+      "style": null,
+      "regex": null,
+      "uomFieldName": "FlowCapacityUOM",
+      "defaultUOM": {
+        "English": "gasvolflow.MMSCFD",
+        "Metric": "gasvolflow.Nm3day"
+      },
+      "fieldGroupType": "MULTI_INPUT_UOM_GROUP",
+      "fieldGroupName": "Fl_Thermal_pres_vacu",
+      "defaultSelected": null
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 136,
+      "fieldName": "FlashingLiquid",
+      "label": "Flashing Liquid",
+      "type": "inputUom",
+      "fieldDisplayOrder": 35,
+      "isValidationRequired": true,
+      "validateActionType": "both",
+      "gridSection": 2,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": 0,
+      "disabled": true,
+      "disableUOM": false,
+      "visible": true,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": [
+        "gasvolflow"
+      ],
+      "infoText": "Evaporation Rate [Vevap]",
+      "grid": "4",
+      "style": {
+        "gridTemplateColumns": "0.9fr 1fr 1fr 1fr"
+      },
+      "regex": null,
+      "uomFieldName": "FlowCapacityUOM",
+      "defaultUOM": {
+        "English": "gasvolflow.MMSCFD",
+        "Metric": "gasvolflow.Nm3day"
+      },
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 32
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 137,
+      "fieldName": "RegulatorFailure",
+      "label": "Regulator Failure",
+      "type": "inputUom",
+      "fieldDisplayOrder": 36,
+      "isValidationRequired": true,
+      "validateActionType": "both",
+      "gridSection": 2,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": "",
+      "disabled": false,
+      "disableUOM": false,
+      "visible": true,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": [
+        "gasvolflow"
+      ],
+      "infoText": "Regulator Failure [Vregfail]",
+      "grid": "4",
+      "style": {
+        "gridTemplateColumns": "0.9fr 1fr 1fr 1fr"
+      },
+      "regex": null,
+      "uomFieldName": "FlowCapacityUOM",
+      "defaultUOM": {
+        "English": "gasvolflow.MMSCFD",
+        "Metric": "gasvolflow.Nm3day"
+      },
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 33
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 138,
+      "fieldName": "Other",
+      "label": "Other",
+      "type": "inputUom",
+      "fieldDisplayOrder": 37,
+      "isValidationRequired": true,
+      "validateActionType": "both",
+      "gridSection": 2,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": "",
+      "disabled": false,
+      "disableUOM": false,
+      "visible": true,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": [
+        "gasvolflow"
+      ],
+      "infoText": "Spiked Product Flow [Vspike]",
+      "grid": "4",
+      "style": {
+        "gridTemplateColumns": "0.9fr 1fr 1fr 1fr"
+      },
+      "regex": null,
+      "uomFieldName": "FlowCapacityUOM",
+      "defaultUOM": {
+        "English": "gasvolflow.MMSCFD",
+        "Metric": "gasvolflow.Nm3day"
+      },
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 34
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 139,
+      "fieldName": "AdditionalCapacityPressure|AdditionalCapacityVacuum",
+      "label": "Additional Capacity",
+      "type": "multiInputUom",
+      "fieldDisplayOrder": 38,
+      "isValidationRequired": true,
+      "validateActionType": "onBlur",
+      "gridSection": 2,
+      "popupFields": true,
+      "mandatory": [
+        {
+          "id": "AdditionalCapacityPressure",
+          "currentId": "AdditionalCapacityPressure",
+          "value": false
+        },
+        {
+          "id": "AdditionalCapacityVacuum",
+          "currentId": "AdditionalCapacityVacuum",
+          "value": false
+        }
+      ],
+      "defaultValue": [
+        {
+          "id": "AdditionalCapacityPressure",
+          "currentId": "AdditionalCapacityPressure",
+          "value": ""
+        },
+        {
+          "id": "AdditionalCapacityVacuum",
+          "currentId": "AdditionalCapacityVacuum",
+          "value": ""
+        }
+      ],
+      "disabled": [
+        {
+          "id": "AdditionalCapacityPressure",
+          "currentId": "AdditionalCapacityPressure",
+          "value": true
+        },
+        {
+          "id": "AdditionalCapacityVacuum",
+          "currentId": "AdditionalCapacityVacuum",
+          "value": false
+        }
+      ],
+      "disableUOM": false,
+      "visible": [
+        {
+          "id": "AdditionalCapacityPressure",
+          "currentId": "AdditionalCapacityPressure",
+          "value": true
+        },
+        {
+          "id": "AdditionalCapacityVacuum",
+          "currentId": "AdditionalCapacityVacuum",
+          "value": true
+        }
+      ],
+      "hideFromSideBar": [
+        {
+          "id": "AdditionalCapacityPressure",
+          "currentId": "AdditionalCapacityPressure",
+          "value": true
+        },
+        {
+          "id": "AdditionalCapacityVacuum",
+          "currentId": "AdditionalCapacityVacuum",
+          "value": true
+        }
+      ],
+      "options": [],
+      "dimensionName": [
+        "gasvolflow"
+      ],
+      "infoText": "Additional Capacity (for Pressure) [VreqAdd]",
+      "grid": "6",
+      "style": null,
+      "regex": null,
+      "uomFieldName": "FlowCapacityUOM",
+      "defaultUOM": {
+        "English": "gasvolflow.MMSCFD",
+        "Metric": "gasvolflow.Nm3day"
+      },
+      "fieldGroupType": "MULTI_INPUT_UOM_GROUP",
+      "fieldGroupName": "Fl_Add_Cap_press_vacc",
+      "defaultSelected": null,
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 35
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 140,
+      "fieldName": "Wreq1|WreqV1",
+      "label": "Required Flow",
+      "type": "multiInputUom",
+      "fieldDisplayOrder": 39,
+      "isValidationRequired": false,
+      "validateActionType": null,
+      "gridSection": 2,
+      "popupFields": true,
+      "mandatory": [
+        {
+          "id": "Wreq1",
+          "currentId": "Wreq1",
+          "value": false
+        },
+        {
+          "id": "WreqV1",
+          "currentId": "WreqV1",
+          "value": false
+        }
+      ],
+      "defaultValue": [
+        {
+          "id": "Wreq1",
+          "currentId": "Wreq1",
+          "value": ""
+        },
+        {
+          "id": "WreqV1",
+          "currentId": "WreqV1",
+          "value": ""
+        }
+      ],
+      "disabled": [
+        {
+          "id": "Wreq1",
+          "currentId": "Wreq1",
+          "value": true
+        },
+        {
+          "id": "WreqV1",
+          "currentId": "WreqV1",
+          "value": true
+        }
+      ],
+      "disableUOM": false,
+      "visible": [
+        {
+          "id": "Wreq1",
+          "currentId": "Wreq1",
+          "value": true
+        },
+        {
+          "id": "WreqV1",
+          "currentId": "WreqV1",
+          "value": true
+        }
+      ],
+      "hideFromSideBar": [
+        {
+          "id": "Wreq1",
+          "currentId": "Wreq1",
+          "value": true
+        },
+        {
+          "id": "WreqV1",
+          "currentId": "WreqV1",
+          "value": true
+        }
+      ],
+      "options": [],
+      "dimensionName": [
+        "gasvolflow"
+      ],
+      "infoText": "Required Flow",
+      "grid": "6",
+      "style": null,
+      "regex": null,
+      "uomFieldName": "FlowCapacityUOM",
+      "defaultUOM": {
+        "English": "gasvolflow.MMSCFD",
+        "Metric": "gasvolflow.Nm3day"
+      },
+      "fieldGroupType": "MULTI_INPUT_UOM_GROUP",
+      "fieldGroupName": "Fl_Req_Flow_press_vacc",
+      "defaultSelected": null
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 141,
+      "fieldName": "NOTE",
+      "label": "NOTE: The calculated value(s) of Out-breathing / In-breathing capacity are in terms of Air. The fluid will be set and locked as Air when the calculated values are used for sizing / selection. The fluid can be unlocked by entering a value for required capacity on the sizing / selection screen.",
+      "type": "icon",
+      "fieldDisplayOrder": 40,
+      "isValidationRequired": false,
+      "validateActionType": null,
+      "gridSection": 2,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": "",
+      "disabled": false,
+      "visible": true,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": null,
+      "infoText": "",
+      "grid": "4",
+      "style": null,
+      "regex": null,
+      "uomFieldName": "",
+      "defaultUOM": null
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 142,
+      "fieldName": "CalculateTankData",
+      "label": {
+        "trueValue": "Enter Tank Data",
+        "falseValue": "Calculate Tank Data"
+      },
+      "type": "modal",
+      "fieldDisplayOrder": 41,
+      "isValidationRequired": true,
+      "validateActionType": "onBlur",
+      "gridSection": 4,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": false,
+      "disabled": false,
+      "visible": true,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": null,
+      "infoText": "",
+      "grid": "6",
+      "style": null,
+      "regex": null,
+      "uomFieldName": "",
+      "defaultUOM": null,
+      "copyAction": {
+        "type": "modal",
+        "target": "CalculateTankData"
+      }
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 143,
+      "fieldName": "TankShape",
+      "label": "Tank Shape",
+      "type": "select",
+      "fieldDisplayOrder": 42,
+      "isValidationRequired": true,
+      "validateActionType": "onChange",
+      "gridSection": 5,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": "Spherical",
+      "disabled": false,
+      "visible": false,
+      "hideFromSideBar": true,
+      "options": [
+        {
+          "label": "Spherical",
+          "value": "Spherical"
+        },
+        {
+          "label": "Rectangular",
+          "value": "Rectangular"
+        },
+        {
+          "label": "Cylindrical",
+          "value": "Cylindrical"
+        }
+      ],
+      "dimensionName": null,
+      "infoText": "",
+      "grid": "4",
+      "style": null,
+      "regex": null,
+      "uomFieldName": "",
+      "defaultUOM": null,
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 39
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 144,
+      "fieldName": "IsHorizontalOrientation",
+      "label": "Orientation",
+      "type": "label",
+      "fieldDisplayOrder": 43,
+      "isValidationRequired": true,
+      "validateActionType": null,
+      "gridSection": 5,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": "Horizontal",
+      "disabled": false,
+      "visible": false,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": null,
+      "infoText": "",
+      "grid": "6",
+      "style": {
+        "flex": 4
+      },
+      "regex": null,
+      "uomFieldName": "",
+      "defaultUOM": null,
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 40
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 145,
+      "fieldName": "Horizontal",
+      "label": "Horizontal",
+      "type": "radio",
+      "fieldDisplayOrder": 44,
+      "isValidationRequired": true,
+      "validateActionType": "onChange",
+      "gridSection": 5,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": true,
+      "disabled": false,
+      "visible": false,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": null,
+      "infoText": "",
+      "grid": "3",
+      "style": {
+        "gridDirection": "column",
+        "gridTemplateColumns": "0.8fr 0.7fr 0.8fr 0.8fr"
+      },
+      "regex": null,
+      "uomFieldName": "",
+      "defaultUOM": null,
+      "fieldGroupType": "RADIO_GROUP",
+      "fieldGroupName": "IsHorizontalOrientation",
+      "defaultSelected": "true",
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 41
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 146,
+      "fieldName": "Vertical",
+      "label": "Vertical",
+      "type": "radio",
+      "fieldDisplayOrder": 45,
+      "isValidationRequired": true,
+      "validateActionType": "onChange",
+      "gridSection": 5,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": false,
+      "disabled": false,
+      "visible": false,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": null,
+      "infoText": "",
+      "grid": "3",
+      "style": {
+        "gridDirection": "column",
+        "gridTemplateColumns": "0.8fr 0.7fr 0.8fr 0.8fr"
+      },
+      "regex": null,
+      "uomFieldName": "",
+      "defaultUOM": null,
+      "fieldGroupType": "RADIO_GROUP",
+      "fieldGroupName": "IsHorizontalOrientation",
+      "defaultSelected": "true",
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 42
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 147,
+      "fieldName": "EndsGroup",
+      "label": "Ends",
+      "type": "label",
+      "fieldDisplayOrder": 46,
+      "isValidationRequired": true,
+      "validateActionType": null,
+      "gridSection": 5,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": "FlatEnds",
+      "disabled": false,
+      "visible": false,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": null,
+      "infoText": "",
+      "grid": "6",
+      "style": {
+        "flex": 4
+      },
+      "regex": null,
+      "uomFieldName": "",
+      "defaultUOM": null,
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 43
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 148,
+      "fieldName": "FlatEnds",
+      "label": "Flat Ends",
+      "type": "radio",
+      "fieldDisplayOrder": 47,
+      "isValidationRequired": true,
+      "validateActionType": "onChange",
+      "gridSection": 5,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": true,
+      "disabled": false,
+      "visible": false,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": null,
+      "infoText": "",
+      "grid": "3",
+      "style": {
+        "gridDirection": "column",
+        "gridTemplateColumns": "0.8fr 0.7fr 0.8fr 0.8fr"
+      },
+      "regex": null,
+      "uomFieldName": "",
+      "defaultUOM": null,
+      "fieldGroupType": "RADIO_GROUP",
+      "fieldGroupName": "EndsGroup",
+      "defaultSelected": "FlatEnds",
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 44
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 149,
+      "fieldName": "HemisphericalEnds",
+      "label": "Hemispherical Ends",
+      "type": "radio",
+      "fieldDisplayOrder": 48,
+      "isValidationRequired": true,
+      "validateActionType": "onChange",
+      "gridSection": 5,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": false,
+      "disabled": false,
+      "visible": false,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": null,
+      "infoText": "",
+      "grid": "3",
+      "style": {
+        "gridDirection": "column",
+        "gridTemplateColumns": "0.8fr 0.7fr 0.8fr 0.8fr"
+      },
+      "regex": null,
+      "uomFieldName": "",
+      "defaultUOM": null,
+      "fieldGroupType": "RADIO_GROUP",
+      "fieldGroupName": "EndsGroup",
+      "defaultSelected": "FlatEnds",
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 45
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 150,
+      "fieldName": "Diameter_d",
+      "label": "Diameter(d)",
+      "type": "inputUom",
+      "fieldDisplayOrder": 49,
+      "isValidationRequired": true,
+      "validateActionType": "both",
+      "gridSection": 5,
+      "popupFields": true,
+      "mandatory": true,
+      "defaultValue": "",
+      "disabled": false,
+      "disableUOM": false,
+      "visible": true,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": [
+        "length"
+      ],
+      "infoText": "Diameter[d]",
+      "grid": "4",
+      "style": {
+        "gridTemplateColumns": "1.5fr 1.15fr 1.35fr"
+      },
+      "regex": null,
+      "uomFieldName": "LengthUOM",
+      "defaultUOM": {
+        "English": "length.ft",
+        "Metric": "length.cm"
+      },
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 46
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 151,
+      "fieldName": "Height_h",
+      "label": "Height(h)",
+      "type": "inputUom",
+      "fieldDisplayOrder": 50,
+      "isValidationRequired": true,
+      "validateActionType": "both",
+      "gridSection": 5,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": "",
+      "disabled": false,
+      "disableUOM": false,
+      "visible": false,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": [
+        "length"
+      ],
+      "infoText": "Height[h]",
+      "grid": "4",
+      "style": {
+        "gridTemplateColumns": "1.5fr 1.15fr 1.35fr"
+      },
+      "regex": null,
+      "uomFieldName": "LengthUOM",
+      "defaultUOM": {
+        "English": "length.ft",
+        "Metric": "length.cm"
+      },
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 47
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 152,
+      "fieldName": "VesselWidth_w",
+      "label": "Vessel Width(w)",
+      "type": "inputUom",
+      "fieldDisplayOrder": 51,
+      "isValidationRequired": true,
+      "validateActionType": "both",
+      "gridSection": 5,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": "",
+      "disabled": false,
+      "disableUOM": false,
+      "visible": false,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": [
+        "length"
+      ],
+      "infoText": "VesselWidth[w]",
+      "grid": "4",
+      "style": {
+        "gridTemplateColumns": "1.5fr 1.15fr 1.35fr"
+      },
+      "regex": null,
+      "uomFieldName": "LengthUOM",
+      "defaultUOM": {
+        "English": "length.ft",
+        "Metric": "length.cm"
+      },
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 48
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 153,
+      "fieldName": "Elevation_H",
+      "label": "Elevation (H)",
+      "type": "inputUom",
+      "fieldDisplayOrder": 52,
+      "isValidationRequired": true,
+      "validateActionType": "both",
+      "gridSection": 5,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": "",
+      "disabled": false,
+      "disableUOM": false,
+      "visible": false,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": [
+        "length"
+      ],
+      "infoText": "Elevation [H]",
+      "grid": "4",
+      "style": {
+        "gridTemplateColumns": "1.5fr 1.15fr 1.35fr"
+      },
+      "regex": null,
+      "uomFieldName": "LengthUOM",
+      "defaultUOM": {
+        "English": "length.ft",
+        "Metric": "length.cm"
+      },
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 49
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 154,
+      "fieldName": "BottomPlate_Y",
+      "label": "% Bottom Plate (Y)",
+      "type": "inputUom",
+      "fieldDisplayOrder": 53,
+      "isValidationRequired": true,
+      "validateActionType": "both",
+      "gridSection": 5,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": "",
+      "disabled": false,
+      "visible": false,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": [
+        "%"
+      ],
+      "infoText": "% Bottom Plate [Y]",
+      "grid": "4",
+      "style": {
+        "gridTemplateColumns": "1.5fr 1.15fr 1.35fr"
+      },
+      "regex": null,
+      "uomFieldName": "",
+      "defaultUOM": {},
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 50
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 155,
+      "fieldName": "LengthEndToEnd_ltin",
+      "label": "Length(End-to-End)(Lt)",
+      "type": "inputUom",
+      "fieldDisplayOrder": 54,
+      "isValidationRequired": true,
+      "validateActionType": "both",
+      "gridSection": 5,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": "",
+      "disabled": false,
+      "disableUOM": false,
+      "visible": false,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": [
+        "length"
+      ],
+      "infoText": "Length(End-to-End)[Lt]",
+      "grid": "4",
+      "style": {
+        "gridTemplateColumns": "1.5fr 1.15fr 1.35fr"
+      },
+      "regex": null,
+      "uomFieldName": "LengthUOM",
+      "defaultUOM": {
+        "English": "length.ft",
+        "Metric": "length.cm"
+      },
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 51
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 156,
+      "fieldName": "LengthEndToEnd_lt",
+      "label": "Length(End-to-End)(Lt)",
+      "type": "radioInput",
+      "fieldDisplayOrder": 55,
+      "isValidationRequired": true,
+      "validateActionType": "both",
+      "gridSection": 5,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": "",
+      "disabled": false,
+      "disableUOM": false,
+      "visible": false,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": [
+        "length"
+      ],
+      "infoText": "Length(End-to-End)[Lt]",
+      "grid": "4",
+      "style": null,
+      "regex": null,
+      "uomFieldName": "LengthUOM",
+      "defaultUOM": {
+        "English": "length.ft",
+        "Metric": "length.cm"
+      },
+      "fieldGroupType": "RADIO_GROUP",
+      "fieldGroupName": "IsLtOrLs",
+      "defaultSelected": "LengthEndToEnd_lt",
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 52
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 157,
+      "fieldName": "LengthSeamToSeam_Ls",
+      "label": "Length(Seam-to-Seam)(Ls)",
+      "type": "radioInput",
+      "fieldDisplayOrder": 56,
+      "isValidationRequired": true,
+      "validateActionType": "both",
+      "gridSection": 5,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": "",
+      "disabled": false,
+      "disableUOM": false,
+      "visible": false,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": [
+        "length"
+      ],
+      "infoText": "Length(Seam-to-Seam)[Ls]",
+      "grid": "4",
+      "style": null,
+      "regex": null,
+      "uomFieldName": "LengthUOM",
+      "defaultUOM": {
+        "English": "length.ft",
+        "Metric": "length.cm"
+      },
+      "fieldGroupType": "RADIO_GROUP",
+      "fieldGroupName": "IsLtOrLs",
+      "defaultSelected": "LengthEndToEnd_lt",
+      "isFieldActionRequired": true,
+      "actionType": "CALCULATE_FIELD_VALUE",
+      "actionId": 53
+    },
+    {
+      "sectionId": 18,
+      "fieldId": 158,
+      "fieldName": "TankImagesName",
+      "label": "Images",
+      "type": "image",
+      "fieldDisplayOrder": 57,
+      "isValidationRequired": false,
+      "validateActionType": null,
+      "gridSection": 6,
+      "popupFields": true,
+      "mandatory": false,
+      "defaultValue": "",
+      "disabled": false,
+      "visible": false,
+      "hideFromSideBar": true,
+      "options": [],
+      "dimensionName": null,
+      "infoText": "Tank Image",
+      "grid": "4",
+      "style": null,
+      "regex": null,
+      "uomFieldName": "",
+      "defaultUOM": null
+    }
+  ]
+}
