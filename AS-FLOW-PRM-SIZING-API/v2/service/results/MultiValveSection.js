@@ -5,6 +5,7 @@ const { getUOMs } = require("../getUom");
 const { getConstants, convertUnit } = require("../../utils/helper");
 const calculateKbKw = require("../../utils/calculateKb");
 const { calculations } = require("../calculations/Calculations");
+const { evaluateFireMultiValveRule, comparePressures } = require("../fieldCalculations/SectionVIIIFireMultiValveRules");
 
 const callFunctionByName = (functionName, ...args) => {
     // console.log('functionName >>>>>>>> ', functionName);
@@ -20,7 +21,6 @@ const callFunctionByName = (functionName, ...args) => {
 const ReCalculateFlowCapacityforSelectedValve= (row,highSetValues,lowSetValues,uoms,errors)=>{
     
     const P1= highSetValues.PsetH + highSetValues.PoverH + row?.Patm - row?.Ploss;
-            console.log('Calculated P1 >>>>>>>> ', P1,row?.P1);
             // if(P1 !== row?.P1){
     const ReResponse= JSON.parse(row?.ReResponse ?? '{}');
     const calculationFuntion= ReResponse?.calculationFuntion ?? ReResponse['calculationFuntion'] ?? '';
@@ -371,7 +371,10 @@ const getMultiValveSelectionCalculations = async (params,validateFlag=false) => 
             } 
             if(workFlowId==8 && header?.name !== 'ValvePset'){
                 header['disabled'] = true;
-            }  
+            }
+            if (valveData[0]?.SizingBasis?.toLowerCase() === 'fire case' && [true, 'true'].includes(valveData[0]?.IsASMESection8) && ['ValvePover', 'ValvePoverP'].includes(header?.name)) {
+                header['disabled'] = true;
+            }
             return header;
         });
     }
@@ -499,6 +502,7 @@ const validateMultiValveSelectionData = async (params) => {
     let PoverH1;
     const fixedDigit=7;
     let PsetHChangeFlag=false;
+    let fireRuleApplied=false;
     
     if(workFlowId==8 && (Pmawp ==='' || PsetL === Pmawp)){
         console.log('In workFlowId 8 >>>>>>>> ',workFlowId, PsetL, PsetH, PsetL <= PsetH, PsetH <= PsetL * (1.06/1.03), PsetL * (1.06/1.03));
@@ -559,7 +563,48 @@ const validateMultiValveSelectionData = async (params) => {
             PsetHTextValue='System MAWP';
             PsetHlimitvalve=(Pmawp * (1.06/1.03)).toFixed(2);
         }
+    }else if(SizingBasis?.toLowerCase() === 'fire case' && [true, 'true'].includes(rowToValidate?.IsASMESection8)){
+        // FRS Table10 cases 17?22 and 2026 Design Spec Part IV, notes 8?10.
+        // High-set overpressure is calculated from the common relieving pressure.
+        // A violated minimum produces an error; changing the calculated pressure
+        // would make the high and low valves relieve at different pressures.
+        const fireRule = evaluateFireMultiValveRule({
+            IsMultivalve: true,
+            IsASMESection8: true,
+            SizingBasis: 'Fire Case',
+            SetPressure: convertedPsetL,
+            SystemMAWP: Pmawp === '' ? '' : convertedPmawp,
+            OverPressure: convertedPoverL,
+            HighSetPressure: convertedPsetH,
+        });
+        fireRuleApplied = true;
+        if (!fireRule) {
+            errors.push({ type: 'MultiValve Error', rowId,
+                message: `In Selected valve ${rowToValidate?.ModelNumber}(row: ${rowId}), the lowest Set Pressure must be positive and must not exceed System MAWP.` });
+        } else {
+            convertedPoverH = fireRule.highSetOverPressure;
+            PoverH = convertUnit(convertedPoverH, uoms.find(uom => uom.UnitKey === requiredPressureUOM), uoms.find(uom => uom.UnitKey === receivedUnits?.pressureUOM));
+            ValvePover = PoverH;
+            PoverLowLimit = fireRule.minHighSetOverPressure;
+            PoverHighLimit = fireRule.maxHighSetOverPressure;
+            PoverMessageFlag = comparePressures(convertedPoverH, PoverLowLimit) < 0 || comparePressures(convertedPoverH, PoverHighLimit) > 0;
+            if (comparePressures(convertedPsetH, fireRule.minHighSetPressure) < 0) {
+                PsetHLtPseLMessageFlag = true;
+            } else if (!fireRule.highSetPressureValid) {
+                PsetHMessageFlag = true;
+                PsetHPercentage = 110;
+                PsetHTextValue = fireRule.caseNumber <= 19 ? 'the lowest Set Pressure' : 'System MAWP';
+                PsetHlimitvalve = convertUnit(fireRule.maxHighSetPressure, uoms.find(uom => uom.UnitKey === requiredPressureUOM), uoms.find(uom => uom.UnitKey === receivedUnits?.pressureUOM)).toFixed(7);
+            }
+            const maximumRelievingPressure = convertedPsetL + fireRule.maxOverPressure;
+            if (comparePressures(convertedPsetH + convertedPoverH, maximumRelievingPressure) > 0) {
+                PsetHPoverHValueCheckMessageFlag = true;
+                PsetHPoverHValueCheckMessageContent = PsetHPoverHValueCheckMessageContent.replace('<<$1>>', `${maximumRelievingPressure.toFixed(3)} psig`);
+            }
+        }
     }else if(SizingBasis?.toLowerCase() === 'fire case'){
+        // Preserve existing behavior for non-ASME/unspecified applications.
+        // The numbered Section VIII cases apply only when that code is enabled.
         if(Pmawp ==='' || PsetL === Pmawp){
             if ((PsetL <= PsetH) && (PsetH <= PsetL * 1.10)){
                 if(fieldName === 'ValvePset'){
@@ -931,7 +976,7 @@ const validateMultiValveSelectionData = async (params) => {
         PoverMessageFlag=false;
         // console.log(' >>>>>>>>>>>>>>>>>>>>>>> 444444444444 >>>>>>>>>>>>>>>>>>>>>>>>>>>>',{PsetL, PsetH, Pmawp, convertedPmawp, convertedPsetH, convertedPoverH, PoverLowLimit, PoverHighLimit}); 
     } 
-    if(PoverLowLimit >= PoverHighLimit && convertedPoverH == PoverLowLimit && PoverMessageFlag) {
+    if(!fireRuleApplied && PoverLowLimit >= PoverHighLimit && convertedPoverH == PoverLowLimit && PoverMessageFlag) {
         PoverMessageFlag=false;
     }
     if(PsetHLtPseLMessageFlag){
@@ -960,7 +1005,7 @@ const validateMultiValveSelectionData = async (params) => {
         errors.push({ type:'MultiValve Error', rowId, message: PsetHPoverHValueCheckMessageContent.replace('<<ModelNumber>>',rowToValidate?.ModelNumber).replace('<<RowNumber>>',rowId) });
     }
     
-    if(fieldName === 'ValvePset'){
+    if(fieldName === 'ValvePset' || fireRuleApplied){
         ValvePoverP = (PoverH / PsetH) * 100;
         PoverPH= ValvePoverP;
     }

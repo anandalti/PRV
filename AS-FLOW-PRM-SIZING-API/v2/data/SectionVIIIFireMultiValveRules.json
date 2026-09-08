@@ -1,0 +1,68 @@
+[
+  {
+    "caseNumber": 17,
+    "sourceRows": [26, 27],
+    "condition": "IsMultivalve && IsASMESection8 == true && SizingBasis == 'Fire Case' && SetPressure > 0 && (SystemMAWP == '' || SetPressure == SystemMAWP) && SetPressure <= (4/0.21)",
+    "defaultOverPressure": "0.21 * SetPressure",
+    "minOverPressure": "3",
+    "maxOverPressure": "4",
+    "minHighSetPressure": "SetPressure",
+    "maxHighSetPressure": "1.10 * SetPressure",
+    "highSetOverPressure": "SetPressure + OverPressure - HighSetPressure"
+  },
+  {
+    "caseNumber": 18,
+    "sourceRows": [28, 29],
+    "condition": "IsMultivalve && IsASMESection8 == true && SizingBasis == 'Fire Case' && SetPressure > 0 && (SystemMAWP == '' || SetPressure == SystemMAWP) && SetPressure > (4/0.21) && SetPressure < (3/0.10)",
+    "defaultOverPressure": "0.21 * SetPressure",
+    "minOverPressure": "3",
+    "maxOverPressure": "0.21 * SetPressure",
+    "minHighSetPressure": "SetPressure",
+    "maxHighSetPressure": "1.10 * SetPressure",
+    "highSetOverPressure": "SetPressure + OverPressure - HighSetPressure"
+  },
+  {
+    "caseNumber": 19,
+    "sourceRows": [30, 31],
+    "condition": "IsMultivalve && IsASMESection8 == true && SizingBasis == 'Fire Case' && SetPressure > 0 && (SystemMAWP == '' || SetPressure == SystemMAWP) && SetPressure >= (3/0.10)",
+    "defaultOverPressure": "0.21 * SetPressure",
+    "minOverPressure": "0.10 * SetPressure",
+    "maxOverPressure": "0.21 * SetPressure",
+    "minHighSetPressure": "SetPressure",
+    "maxHighSetPressure": "1.10 * SetPressure",
+    "highSetOverPressure": "SetPressure + OverPressure - HighSetPressure"
+  },
+  {
+    "caseNumber": 20,
+    "sourceRows": [32, 33],
+    "condition": "IsMultivalve && IsASMESection8 == true && SizingBasis == 'Fire Case' && SetPressure > 0 && SystemMAWP != '' && SetPressure < SystemMAWP && SystemMAWP <= (4/0.21) && SetPressure < (3/0.10)",
+    "defaultOverPressure": "0.21 * SetPressure",
+    "minOverPressure": "3",
+    "maxOverPressure": "4 + (SystemMAWP - SetPressure)",
+    "minHighSetPressure": "SetPressure",
+    "maxHighSetPressure": "1.10 * SystemMAWP",
+    "highSetOverPressure": "SetPressure + OverPressure - HighSetPressure"
+  },
+  {
+    "caseNumber": 21,
+    "sourceRows": [34, 35],
+    "condition": "IsMultivalve && IsASMESection8 == true && SizingBasis == 'Fire Case' && SetPressure > 0 && SystemMAWP != '' && SetPressure < SystemMAWP && SystemMAWP > (4/0.21) && SetPressure < (3/0.10)",
+    "defaultOverPressure": "0.21 * SetPressure",
+    "minOverPressure": "3",
+    "maxOverPressure": "0.21 * SystemMAWP + (SystemMAWP - SetPressure)",
+    "minHighSetPressure": "SetPressure",
+    "maxHighSetPressure": "1.10 * SystemMAWP",
+    "highSetOverPressure": "SetPressure + OverPressure - HighSetPressure"
+  },
+  {
+    "caseNumber": 22,
+    "sourceRows": [36, 37],
+    "condition": "IsMultivalve && IsASMESection8 == true && SizingBasis == 'Fire Case' && SetPressure > 0 && SystemMAWP != '' && SetPressure < SystemMAWP && SystemMAWP > (4/0.21) && SetPressure >= (3/0.10)",
+    "defaultOverPressure": "0.21 * SetPressure",
+    "minOverPressure": "0.10 * SetPressure",
+    "maxOverPressure": "0.21 * SystemMAWP + (SystemMAWP - SetPressure)",
+    "minHighSetPressure": "SetPressure",
+    "maxHighSetPressure": "1.10 * SystemMAWP",
+    "highSetOverPressure": "SetPressure + OverPressure - HighSetPressure"
+  }
+]

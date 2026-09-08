@@ -1,0 +1,62 @@
+[
+  {
+    "caseNumber": 17,
+    "previousExpression": "IsMultivalve && IsASMESection8 ==true && SizingBasis =='Fire Case' && SetPressure !='' && (SetPressure==SystemMAWP||SystemMAWP == '') && (SetPressure< (4/0.21)) && ((OverPressure < 3) || (OverPressure > 4))",
+    "expression": "IsMultivalve && IsASMESection8 == true && SizingBasis == 'Fire Case' && SetPressure > 0 && (SystemMAWP == '' || SetPressure == SystemMAWP) && SetPressure <= (4/0.21) && OverPressure != '' && (OverPressure < (3) || OverPressure > (4))"
+  },
+  {
+    "caseNumber": 18,
+    "previousExpression": "IsMultivalve && IsASMESection8 ==true && SizingBasis =='Fire Case' && SetPressure !='' && (SetPressure==SystemMAWP||SystemMAWP == '') && (SetPressure>= (4/0.21)) && SetPressure< (3/0.10) && ((OverPressure < 3) || (OverPressure > (SetPressure*0.21)))",
+    "expression": "IsMultivalve && IsASMESection8 == true && SizingBasis == 'Fire Case' && SetPressure > 0 && (SystemMAWP == '' || SetPressure == SystemMAWP) && SetPressure > (4/0.21) && SetPressure < (3/0.10) && OverPressure != '' && (OverPressure < (3) || OverPressure > (0.21 * SetPressure))"
+  },
+  {
+    "caseNumber": 19,
+    "previousExpression": "IsMultivalve && IsASMESection8 ==true && SizingBasis =='Fire Case' && SetPressure !='' && (SetPressure==SystemMAWP||SystemMAWP == '') && (SetPressure >= (3/0.10)) && ((OverPressure < (SetPressure*0.1)) || (OverPressure > (SetPressure*0.21)))",
+    "expression": "IsMultivalve && IsASMESection8 == true && SizingBasis == 'Fire Case' && SetPressure > 0 && (SystemMAWP == '' || SetPressure == SystemMAWP) && SetPressure >= (3/0.10) && OverPressure != '' && (OverPressure < (0.10 * SetPressure) || OverPressure > (0.21 * SetPressure))"
+  },
+  {
+    "caseNumber": 20,
+    "previousExpression": "IsMultivalve && IsASMESection8 ==true && SizingBasis =='Fire Case' && SetPressure !='' && SystemMAWP !='' && (SetPressure<SystemMAWP) && (SystemMAWP < (4/0.21)) && (SetPressure < (3/0.10)) && ((OverPressure < 3) || (OverPressure > (4+ (SystemMAWP-SetPressure))))",
+    "expression": "IsMultivalve && IsASMESection8 == true && SizingBasis == 'Fire Case' && SetPressure > 0 && SystemMAWP != '' && SetPressure < SystemMAWP && SystemMAWP <= (4/0.21) && SetPressure < (3/0.10) && OverPressure != '' && (OverPressure < (3) || OverPressure > (4 + (SystemMAWP - SetPressure)))"
+  },
+  {
+    "caseNumber": 21,
+    "previousExpression": "IsMultivalve && IsASMESection8 ==true && SizingBasis =='Fire Case' && SetPressure !='' && SystemMAWP !='' && (SetPressure<SystemMAWP) && (SystemMAWP >= (4/0.21)) && (SetPressure < (3/0.10)) && ((OverPressure < 3) || (OverPressure > ((SystemMAWP*0.21)+ (SystemMAWP-SetPressure))))",
+    "expression": "IsMultivalve && IsASMESection8 == true && SizingBasis == 'Fire Case' && SetPressure > 0 && SystemMAWP != '' && SetPressure < SystemMAWP && SystemMAWP > (4/0.21) && SetPressure < (3/0.10) && OverPressure != '' && (OverPressure < (3) || OverPressure > (0.21 * SystemMAWP + (SystemMAWP - SetPressure)))"
+  },
+  {
+    "caseNumber": 22,
+    "previousExpression": "IsMultivalve && IsASMESection8 ==true && SizingBasis =='Fire Case' && SetPressure !='' && SystemMAWP !='' && (SetPressure<SystemMAWP) && (SystemMAWP >= (4/0.21)) && (SetPressure >= (3/0.10)) && ((OverPressure < (SetPressure*0.10)) || (OverPressure > ((SystemMAWP*0.21)+ (SystemMAWP-SetPressure))))",
+    "expression": "IsMultivalve && IsASMESection8 == true && SizingBasis == 'Fire Case' && SetPressure > 0 && SystemMAWP != '' && SetPressure < SystemMAWP && SystemMAWP > (4/0.21) && SetPressure >= (3/0.10) && OverPressure != '' && (OverPressure < (0.10 * SetPressure) || OverPressure > (0.21 * SystemMAWP + (SystemMAWP - SetPressure)))"
+  },
+  {
+    "caseNumber": 17,
+    "previousExpression": "IsMultivalve && IsASMESection8 ==true && SizingBasis =='Fire Case' && SetPressure !='' && OverPressure !='' && (SetPressure==SystemMAWP||SystemMAWP == '') && (SetPressure< (4/0.21)) && ((SetPressure + OverPressure) > (SetPressure + 4))",
+    "expression": "IsMultivalve && IsASMESection8 == true && SizingBasis == 'Fire Case' && SetPressure > 0 && (SystemMAWP == '' || SetPressure == SystemMAWP) && SetPressure <= (4/0.21) && OverPressure != '' && (SetPressure + OverPressure) > (SetPressure + (4))"
+  },
+  {
+    "caseNumber": 18,
+    "previousExpression": "IsMultivalve && IsASMESection8 ==true && SizingBasis =='Fire Case' && SetPressure !='' && OverPressure !='' && (SetPressure==SystemMAWP||SystemMAWP == '') && (SetPressure>= (4/0.21)) && SetPressure< (3/0.10) && ((SetPressure + OverPressure) > (SetPressure * 1.21))",
+    "expression": "IsMultivalve && IsASMESection8 == true && SizingBasis == 'Fire Case' && SetPressure > 0 && (SystemMAWP == '' || SetPressure == SystemMAWP) && SetPressure > (4/0.21) && SetPressure < (3/0.10) && OverPressure != '' && (SetPressure + OverPressure) > (SetPressure + (0.21 * SetPressure))"
+  },
+  {
+    "caseNumber": 19,
+    "previousExpression": "IsMultivalve && IsASMESection8 ==true && SizingBasis =='Fire Case' && SetPressure !='' && OverPressure !='' && (SetPressure==SystemMAWP||SystemMAWP == '') && (SetPressure >= (3/0.10)) && ((SetPressure + OverPressure) > (SetPressure * 1.21))",
+    "expression": "IsMultivalve && IsASMESection8 == true && SizingBasis == 'Fire Case' && SetPressure > 0 && (SystemMAWP == '' || SetPressure == SystemMAWP) && SetPressure >= (3/0.10) && OverPressure != '' && (SetPressure + OverPressure) > (SetPressure + (0.21 * SetPressure))"
+  },
+  {
+    "caseNumber": 20,
+    "previousExpression": "IsMultivalve && IsASMESection8 ==true && SizingBasis =='Fire Case' && SetPressure !='' && OverPressure !='' && SystemMAWP !='' && (SetPressure<SystemMAWP) && (SystemMAWP < (4/0.21)) && (SetPressure < (3/0.10)) && ((SetPressure + OverPressure) > (SystemMAWP + 4))",
+    "expression": "IsMultivalve && IsASMESection8 == true && SizingBasis == 'Fire Case' && SetPressure > 0 && SystemMAWP != '' && SetPressure < SystemMAWP && SystemMAWP <= (4/0.21) && SetPressure < (3/0.10) && OverPressure != '' && (SetPressure + OverPressure) > (SetPressure + (4 + (SystemMAWP - SetPressure)))"
+  },
+  {
+    "caseNumber": 21,
+    "previousExpression": "IsMultivalve && IsASMESection8 ==true && SizingBasis =='Fire Case' && SetPressure !='' && OverPressure !='' && SystemMAWP !='' && (SetPressure<SystemMAWP) && (SystemMAWP >= (4/0.21)) && (SetPressure < (3/0.10)) && ((SetPressure + OverPressure) > (SystemMAWP * 1.21))",
+    "expression": "IsMultivalve && IsASMESection8 == true && SizingBasis == 'Fire Case' && SetPressure > 0 && SystemMAWP != '' && SetPressure < SystemMAWP && SystemMAWP > (4/0.21) && SetPressure < (3/0.10) && OverPressure != '' && (SetPressure + OverPressure) > (SetPressure + (0.21 * SystemMAWP + (SystemMAWP - SetPressure)))"
+  },
+  {
+    "caseNumber": 22,
+    "previousExpression": "IsMultivalve && IsASMESection8 ==true && SizingBasis =='Fire Case' && SetPressure !='' && OverPressure !='' && SystemMAWP !='' && (SetPressure<SystemMAWP) && (SystemMAWP >= (4/0.21)) && (SetPressure >= (3/0.10)) && ((SetPressure + OverPressure) > (SystemMAWP * 1.21))",
+    "expression": "IsMultivalve && IsASMESection8 == true && SizingBasis == 'Fire Case' && SetPressure > 0 && SystemMAWP != '' && SetPressure < SystemMAWP && SystemMAWP > (4/0.21) && SetPressure >= (3/0.10) && OverPressure != '' && (SetPressure + OverPressure) > (SetPressure + (0.21 * SystemMAWP + (SystemMAWP - SetPressure)))"
+  }
+]

@@ -162,7 +162,7 @@ const validate = async (uoms, validations, inputs, field) => {
                 acc[curField] = inputs[curField] ?? '';
                 return acc;
             }, {});
-            variables[field.FieldName] = field.FieldValue;
+            variables[field.FieldName] = field.FieldValue ?? '';
             const { convertedValues } = await getDefaultUnits(inputs, variables, CurrentId, Uom);
             const isError = evaluateExpression(Expression, convertedValues);
             if (isError) {
