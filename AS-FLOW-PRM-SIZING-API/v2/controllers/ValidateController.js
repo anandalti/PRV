@@ -80,7 +80,7 @@ const evalInputs = async (payload) => {
         [currentFieldName]: currentField.FieldValue
     }
     if (defaultValues && defaultValues?.length) {
-        newValues = await evaluateDefaultValues(defaultValues, resultInputs);
+        newValues = await evaluateDefaultValues(defaultValues, resultInputs, currentFieldName);
         // console.log('newValues >>>>> ', {newValues,defaultValues});
         resultInputs = {
             ...resultInputs,
@@ -186,7 +186,7 @@ const evalInputs = async (payload) => {
             //     console.log('currentErrors 111111111 >> 188 >>>>> ', fieldName, resultInputs);
             // }
             if (defaultValueExprs?.length) {
-                newValues = await evaluateDefaultValues(defaultValueExprs, resultInputs);
+                newValues = await evaluateDefaultValues(defaultValueExprs, resultInputs, currentFieldName);
                 
                 
                 resultInputs = {

@@ -11,6 +11,7 @@ const { CALCULATE } = require("../../utils/constants");
 const { CLIENT_RENEG_LIMIT } = require('tls');
 const { CalcSaturatedTempertureKsc } = require('../CalculateSaturatedTemperature');
 const { getMultiValveSelectionCalculations } = require('./MultiValveSection');
+const { refreshMultiValvePressure } = require('./MultiValvePressure');
 
 // --- Valve data cache (GetSimpleValvesWithLimits / GetComplexValvesWithLimits) ---
 const _valveDataCache = new Map();
@@ -746,6 +747,7 @@ const getWorkflowResults=async (params,id=null)=>{
     let inputs = { ...inputdata };
     const constants = getConstants(CalculationMethod);
     const uoms = await getUOMs();
+    inputs = await refreshMultiValvePressure({ ...inputs, CalculationMethod }, WorkFlowId, uoms);
 
     startTime = new Date().getTime();
     const service = mapServiceWithPACode(inputs.FluidType,WorkFlowId);
@@ -1676,6 +1678,7 @@ const getWorkflowResultsCalc=async (params,id=null,source='REST')=>{
     let inputs = { ...inputdata };
     const constants = getConstants(CalculationMethod);
     const uoms = await getUOMs();
+    inputs = await refreshMultiValvePressure({ ...inputs, CalculationMethod }, WorkFlowId, uoms);
 
     startTime = new Date().getTime();
     const service = mapServiceWithPACode(inputs.FluidType,WorkFlowId);

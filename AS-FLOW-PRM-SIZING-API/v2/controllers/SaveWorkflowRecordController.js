@@ -13,8 +13,13 @@ const SizingDetails = require("../models/SizingDetails");
 const SystemDetails = require("../models/SystemDetails");
 const TemperatureDetails = require("../models/TemperatureDetails");
 const SizingFieldProperties = require("../models/SizingFieldProperties");
+const { getUOMs } = require('../service/getUom');
+const { refreshMultiValvePressure } = require('../service/results/MultiValvePressure');
 
 const saveRecordUsingSP = async (data,saveSelectedValveFlag) => {
+    if (data.IsMultivalve === true && data.SelectedValve?.length) {
+        data = await refreshMultiValvePressure(data, data.WorkFlowId ?? data.WorkflowId ?? data.workflowId, await getUOMs());
+    }
     const SizingModelData= {...data, ValveType:data?.SizingValveType,ErrorWarnings: data?.error};
     // console.log(SizingModelData)
     let SizingData= new SizingDetails(SizingModelData);
