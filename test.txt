@@ -1,0 +1,46 @@
+ 
+Task1:
+To write an expression for case 17,18,19,20,21 and 22 conditions of MAWP &Set Pressure rules and Over Pressure rules
+ 
+Task 2:
+To create table that stores WorkflowId and Workflow details JSON in database while updating it to JSON files in the backend
+ 
+Task 3:
+The issue is with OverPressure calculation. After modifying Set Pressure and returning to the Multi-Valve section, OverPressure is not being derived from the applicable overpressure rule. Instead, it is being recalculated from the existing OverPressure % value, resulting in an incorrect OverPressure value (e.g., 0.902 psig instead of 4 psig).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Steps to test it yourself
+Pressure-rule check (works locally now)
+
+Pressure Relief → Gas/Vapor → ASME Section VIII → Next.
+Fluid Name Air (pick from the dropdown), Compressibility 1.
+Pressure Properties: Set Pressure 30 psig, press Tab → Over Pressure 3.000, % 10.000.
+Change Set Pressure to 5.6375, press Tab.
+Expected: Over Pressure stays 3.000, % becomes 53.215%. Fail = Over Pressure drops to 0.564 with % stuck at 10.
+Also try 50 → 5.000 / 10%, and 25 → 3.000.
+Multi-Valve check (needs the full valve-catalog DB)
+
+With a valve selection made at Set Pressure 30 (Pover 4.8 / 16%), tick Multivalve and select a valve.
+Go back to Pressure Properties, set Set Pressure 5.6375.
+Return to the Multi-Valve section.
+Expected: Over Pressure 4 psig, % ≈ 70.95. Fail = 0.902 psig / 16%.
+Save, reload the sizing, confirm 4 psig persisted.
+Negative check: leave Set Pressure at 30, type Over Pressure % 12 → 3.6 psig; revisiting Multi-Valve must not overwrite it. Same for switching psig → barg.
