@@ -1,0 +1,180 @@
+{
+    "English": [
+        {
+            "dimensionName": "length",
+            "options": [
+                "in"
+            ]
+        },
+        {
+            "dimensionName": "force",
+            "options": [
+                "lbf"
+            ]
+        },
+        {
+            "dimensionName": "noise",
+            "options": [
+                "db"
+            ]
+        },
+        {
+            "dimensionName": "length1",
+            "options": [
+                "ft"
+            ]
+        },
+        {
+            "dimensionName": "velocity",
+            "options": [
+                "ft/s"
+            ]
+        },
+        {
+            "dimensionName": "density",
+            "options": [
+                "lb/ft³",
+                "lb/gal(US)"
+            ]
+        },
+        {
+            "dimensionName": "pressure",
+            "options": [
+                "atm g",
+                "ft wc g",
+                "in Hg g",
+                "in wc g",
+                "lb/ft² g",
+                "oz/in² g",
+                "psig",
+                "Torr g"
+            ]
+        }
+    ],
+    "Metric": [
+        {
+            "dimensionName": "length",
+            "options": [
+                "mm",
+                "cm"
+            ]
+        },
+        {
+            "dimensionName": "force",
+            "options": [
+                "daN",
+                "kgf",
+                "N"
+            ]
+        },
+        {
+            "dimensionName": "noise",
+            "options": [
+                "db"
+            ]
+        },
+        {
+            "dimensionName": "length1",
+            "options": [
+                "m"
+            ]
+        },
+        {
+            "dimensionName": "velocity",
+            "options": [
+                "m/s"
+            ]
+        },
+        {
+            "dimensionName": "density",
+            "options": [
+                "kg/L",
+                "kg/m³"
+            ]
+        },
+        {
+            "dimensionName": "pressure",
+            "options": [
+                "barg",
+                "kg/cm² g",
+                "kPa g",
+                "mbarg",
+                "meter H2O g",
+                "mmH2O g",
+                "mmHg g",
+                "MPa g",
+                "Pa g"
+            ]
+        }
+    ],
+    "All": [
+        {
+            "dimensionName": "length",
+            "options": [
+                "in",
+                "mm",
+                "cm"
+            ]
+        },
+        {
+            "dimensionName": "force",
+            "options": [
+                "kgf",
+                "daN",
+                "lbf",
+                "N"
+            ]
+        },
+        {
+            "dimensionName": "noise",
+            "options": [
+                "db"
+            ]
+        },
+        {
+            "dimensionName": "length1",
+            "options": [
+                "ft",
+                "m"
+            ]
+        },
+        {
+            "dimensionName": "velocity",
+            "options": [
+                "ft/s",
+                "m/s"
+            ]
+        },
+        {
+            "dimensionName": "density",
+            "options": [
+                "lb/ft³",
+                "lb/gal(US)",
+                "kg/L",
+                "kg/m³"
+            ]
+        },
+        {
+            "dimensionName": "pressure",
+            "options": [
+                "atm g",
+                "barg",
+                "ft wc g",
+                "in Hg g",
+                "in wc g",
+                "kg/cm² g",
+                "kPa g",
+                "lb/ft² g",
+                "mbarg",
+                "meter H2O g",
+                "mmH2O g",
+                "mmHg g",
+                "oz/in² g",
+                "MPa g",
+                "Pa g",
+                "psig",
+                "Torr g"
+            ]
+        }
+    ]
+}

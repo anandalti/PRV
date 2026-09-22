@@ -1,0 +1,3 @@
+export const INIT_FIELDS = 'INIT_FIELDS';
+export const UPDATE_FIELD_VALUE = 'UPDATE_FIELD_VALUE';
+export const UPDATE_UOM = 'UPDATE_UOM';

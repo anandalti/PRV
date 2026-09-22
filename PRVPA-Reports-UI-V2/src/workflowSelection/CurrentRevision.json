@@ -1,0 +1,74 @@
+[
+  {
+    "title": "Current Revision",
+    "fields": [
+      {
+        "fieldName": "number",
+        "label": "Number",
+        "fieldType": "text",
+        "type": "input",
+        "grid": 6,
+        "defaultValue": "",
+        "disabled": true,
+        "infoText": "",
+        "dimensionName": "",
+        "validation": []
+      },
+      {
+        "fieldName": "preparedBy",
+        "label": "Prepared By",
+        "fieldType": "text",
+        "type": "input",
+        "grid": 6,
+        "defaultValue": "",
+        "infoText": "",
+        "dimensionName": "",
+        "validation": []
+      },
+      {
+        "fieldName": "checkedBy",
+        "label": "Checked By",
+        "fieldType": "text",
+        "type": "input",
+        "grid": 6,
+        "defaultValue": "",
+        "infoText": "",
+        "dimensionName": "",
+        "validation": []
+      },
+      {
+        "fieldName": "approvedBy",
+        "label": "Approved By",
+        "fieldType": "text",
+        "type": "input",
+        "grid": 6,
+        "defaultValue": "",
+        "infoText": "",
+        "dimensionName": "",
+        "validation": []
+      },
+      {
+        "fieldName": "date",
+        "label": "Date",
+        "fieldType": "date",
+        "type": "input",
+        "grid": 6,
+        "defaultValue": "",
+        "infoText": "",
+        "dimensionName": "",
+        "validation": []
+      },
+      {
+        "fieldName": "revision",
+        "label": "Reason",
+        "fieldType": "text",
+        "type": "input",
+        "grid": 6,
+        "defaultValue": "",
+        "infoText": "",
+        "dimensionName": "",
+        "validation": []
+      }
+    ]
+  }
+]

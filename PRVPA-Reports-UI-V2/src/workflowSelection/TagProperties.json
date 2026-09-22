@@ -1,0 +1,63 @@
+[
+    {
+        "title":"Tag Properties",
+        "fields": [
+            {
+                "fieldName": "TagNumber",
+                "label": "Tag Number",
+                "fieldType": "text",
+                "grid":6,
+                "type": "input",
+                "defaultValue": "",
+                "infoText": "",
+                "dimensionName": "",
+                "validation": []
+            },
+            {
+                "fieldName": "PID",
+                "label": "P&ID",
+                "grid":6,
+                "fieldType": "text",
+                "type": "input",
+                "defaultValue": "",
+                "infoText": "",
+                "dimensionName": "",
+                "validation": []
+            },
+            {
+                "fieldName": "Service",
+                "label": "Service",
+                "fieldType": "text",
+                "type": "input",
+                "grid":6,
+                "defaultValue": "",
+                "infoText": "",
+                "dimensionName": "",
+                "validation": []
+            },
+            {
+                "fieldName": "LineNumber",
+                "label": "Line Number",
+                "fieldType": "text",
+                "type": "input",
+                "grid":6,
+                "defaultValue": "",
+                "infoText": "",
+                "dimensionName": "",
+                "validation": []
+            },
+            {
+                "fieldName": "Quantity",
+                "label": "Quantity",
+                "fieldType": "number",
+                "type": "input",
+                "grid":6,
+                "defaultValue": "",
+                "infoText": "",
+                "dimensionName": "",
+                "validation": [],
+                "regex": "NOT_ALLOW_NEGATIVE"
+            }
+        ]
+    }
+]

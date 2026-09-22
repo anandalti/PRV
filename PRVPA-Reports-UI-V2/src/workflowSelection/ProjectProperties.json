@@ -1,0 +1,83 @@
+[
+    {
+        "title":"Project Properties",
+        "fields": [
+            {
+                "fieldName": "AddProjectDropdown",
+                "label": "",
+                "type": "dropdown",
+                "defaultValue": "",
+                "options": [],
+                "infoText": "",
+                "dimensionName": "",
+                "validation": []
+            },
+            {
+                "fieldName": "ProjectName",
+                "label": "Project Name",
+                "fieldType": "text",
+                "type": "input",
+                "grid":6,
+                "defaultValue": "",
+                "infoText": "",
+                "dimensionName": "",
+                "validation": []
+            },
+            {
+                "fieldName": "ProjectReferanceNumber",
+                "label": "Project Reference No",
+                "fieldType": "text",
+                "type": "input",
+                "grid":6,
+                "defaultValue": "",
+                "infoText": "",
+                "dimensionName": "",
+                "validation": []
+            },
+            {
+                "fieldName": "QuoteNumber",
+                "label": "Quote Number",
+                "fieldType": "text",
+                "type": "input",
+                "grid":6,
+                "defaultValue": "",
+                "infoText": "",
+                "dimensionName": "",
+                "validation": []
+            },
+            {
+                "fieldName": "Client",
+                "label": "Client",
+                "fieldType": "text",
+                "type": "input",
+                "grid":6,
+                "defaultValue": "",
+                "infoText": "",
+                "dimensionName": "",
+                "validation": []
+            },
+            {
+                "fieldName": "Location",
+                "label": "Location",
+                "fieldType": "text",
+                "type": "input",
+                "grid":6,
+                "defaultValue": "",
+                "infoText": "",
+                "dimensionName": "",
+                "validation": []
+            },
+            {
+                "fieldName": "EndUserRefNumber",
+                "label": "End User Reference No",
+                "fieldType": "text",
+                "type": "input",
+                "grid":6,
+                "defaultValue": "",
+                "infoText": "",
+                "dimensionName": "",
+                "validation": []
+            }
+        ]
+    }
+]

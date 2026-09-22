@@ -1,0 +1,232 @@
+[
+    {
+        "workflowId": [1,2,8,9,10,12],
+        "fields": [
+            {
+                "fieldName": "OutletDiameter",
+                "label": "Outlet Diameter",
+                "type": "inputUOM",
+                "disabled": true,
+                "defaultValue": "",
+                "infoText": "Outlet Diameter [Do]",
+                "dimensionName": "length",
+                "regex": "NOT_ALLOW_NEGATIVE",
+                "validation": []
+            },
+            {
+                "fieldName": "ReactionForce",
+                "label": "Reaction Force",
+                "type": "inputUOM",
+                "disabled": true,
+                "defaultValue": "",
+                "infoText": "Reaction Force [Fr]",
+                "dimensionName": "force",
+                "validation": []
+            },
+            {
+                "fieldName": "NoiseLevel",
+                "label": "Noise Level",
+                "type": "inputUOM",
+                "disabled": true,
+                "defaultValue": "",
+                "infoText": "Noise Level [Lp]",
+                "dimensionName": "noise",
+                "validation": []
+            },
+            {
+                "fieldName": "DistanceFromValve",
+                "label": "Distance From Valve",
+                "type": "inputUOM",
+                "defaultValue": {"ft": 100, "m": 30.48},
+                "infoText": "Distance from Valve [r]",
+                "dimensionName": "length1",
+                "regex": "NOT_ALLOW_NEGATIVE",
+                "validation": []
+            }
+        ]
+    },
+    {
+        "workflowId": [3,23],
+        "fields": [
+            {
+                "fieldName": "NoiseLevel",
+                "label": "Noise Level",
+                "type": "inputUOM",
+                "disabled": true,
+                "defaultValue": "",
+                "infoText": "Noise Level [Lp]",
+                "dimensionName": "noise",
+                "validation": []
+            },
+            {
+                "fieldName": "DistanceFromValve",
+                "label": "Distance From Valve",
+                "type": "inputUOM",
+                "defaultValue": {"ft": 100, "m": 30.48},
+                "infoText": "Distance from Valve [r]",
+                "dimensionName": "length1",
+                "regex": "NOT_ALLOW_NEGATIVE",
+                "validation": []
+            }
+        ]
+    },
+    {
+        "workflowId": [5,6,7,13,21],
+        "fields": [
+            {
+                "fieldName": "ReactionForce",
+                "label": "Reaction Force",
+                "type": "inputUOM",
+                "disabled": true,
+                "defaultValue": "",
+                "infoText": "Reaction Force [Fr]",
+                "dimensionName": "force",
+                "validation": []
+            },
+            {
+                "fieldName": "OutletDiameter",
+                "label": "Outlet Diameter",
+                "type": "inputUOM",
+                "disabled": true,
+                "defaultValue": "",
+                "infoText": "Outlet Diameter [Do]",
+                "dimensionName": "length",
+                "regex": "NOT_ALLOW_NEGATIVE",
+                "validation": []
+            }
+        ]
+    },
+    {
+        "workflowId": [4,11],
+        "fields": [
+            {
+                "fieldName": "Velocity",
+                "label": "Velocity",
+                "type": "inputUOM",
+                "defaultValue": "",
+                "infoText": "Velocity [u]",
+                "dimensionName": "velocity",
+                "regex": "NOT_ALLOW_NEGATIVE",
+                "validation": []
+            },
+            {
+                "fieldName": "OutletDiameter",
+                "label": "Outlet Diameter",
+                "type": "inputUOM",
+                "disabled": true,
+                "defaultValue": "",
+                "infoText": "Outlet Diameter [Do]",
+                "dimensionName": "length",
+                "regex": "NOT_ALLOW_NEGATIVE",
+                "validation": []
+            },
+            {
+                "fieldName": "ReactionForce",
+                "label": "Reaction Force",
+                "type": "inputUOM",
+                "disabled": true,
+                "defaultValue": "",
+                "infoText": "Reaction Force [Fr]",
+                "dimensionName": "force",
+                "validation": []
+            },
+            {
+                "fieldName": "SoundPowerLevel",
+                "label": "Sound Power Level",
+                "type": "inputUOM",
+                "disabled": true,
+                "defaultValue": "",
+                "infoText": "Sound Power Level [PWL]",
+                "dimensionName": "noise",
+                "validation": []
+            },
+            {
+                "fieldName": "SoundPressureLevelatDistancefromValve",
+                "label": "Sound Pressure Level at Distance from Valve",
+                "type": "inputUOM",
+                "disabled": true,
+                "defaultValue": "",
+                "infoText": "Sound Pressure Level at Distance from Valve [PSLr]",
+                "dimensionName": "noise",
+                "validation": []
+            },
+            {
+                "fieldName": "DistanceFromValve",
+                "label": "Distance From Valve",
+                "type": "inputUOM",
+                "defaultValue": {"ft": 100, "m": 30.48},
+                "infoText": "Distance from Valve [r]",
+                "dimensionName": "length1",
+                "regex": "NOT_ALLOW_NEGATIVE",
+                "validation": []
+            }
+        ]
+    },
+    {
+        "workflowId": [14,15,16,17,18,19,20],
+        "fields": [
+            {
+                "fieldName": "OutletGasMassFraction",
+                "label": "Outlet Gas Mass Fraction",
+                "type": "input",
+                "disabled": false,
+                "fieldType": "text",
+                "defaultValue": "",
+                "infoText": "Outlet Gas/Vapour Mass Fraction",
+                "dimensionName": "",
+                "regex": "NOT_ALLOW_NEGATIVE",
+                "validation": []
+            },
+            {
+                "fieldName": "GasOutletDensity",
+                "label": "Gas Outlet Density",
+                "type": "inputUOM",
+                "defaultValue": "",
+                "disabled": false,
+                "infoText": "Gas Outlet Density [ρg2]",
+                "dimensionName": "density",
+                "validation": []
+            },
+            {
+                "fieldName": "LiquidDensityOutlet",
+                "label": "Liquid Density @ Outlet",
+                "type": "inputUOM",
+                "disabled": false,
+                "defaultValue": "",
+                "infoText": "Liquid Density @ Outlet [ρl2]",
+                "dimensionName": "density",
+                "validation": []
+            },
+            {
+                "fieldName": "OutletStaticPressure",
+                "label": "Outlet Static Pressure",
+                "type": "inputUOM",
+                "disabled": false,
+                "defaultValue": "",
+                "infoText": "Gas Outlet Density [ρg2]",
+                "dimensionName": "pressure",
+                "validation": []
+            },
+            {
+                "fieldName": "OutletDiameter",
+                "label": "Outlet Diameter",
+                "type": "inputUOM",
+                "disabled": true,
+                "defaultValue": "",
+                "infoText": "Outlet Diameter [Do]",
+                "dimensionName": "length",
+                "validation": []
+            },
+            {
+                "fieldName": "ReactionForce",
+                "label": "Reaction Force",
+                "type": "inputUOM",
+                "disabled": true,
+                "defaultValue": "",
+                "infoText": "Reaction Force [Fr]",
+                "dimensionName": "force",
+                "validation": []
+            }
+        ]
+    }
+]

@@ -1,0 +1,94 @@
+[
+    {
+        "title":"Tag Notes",
+        "blocks": [
+            {
+                "title": "Data Sheet Notes",
+                "fields": [
+                    {
+                        "fieldName": "DataSheetNotes",
+                        "label": "Data Sheet Notes",
+                        "fieldType": "textarea",
+                        "grid":6,
+                        "type": "input",
+                        "defaultValue": "",
+                        "infoText": "",
+                        "dimensionName": "",
+                        "validation": [],
+                        "isNumbered": false,
+                        "dependsOn": "IsAutoNumberDSN"
+                    },
+                    {
+                        "fieldName": "IsAutoNumberDSN",
+                        "label": "Auto Number Notes?",
+                        "fieldType": "checkbox",
+                        "grid":6,
+                        "type": "input",
+                        "defaultValue": false,
+                        "infoText": "",
+                        "dimensionName": "",
+                        "validation": []
+                    }
+                ]
+            },
+            {
+                "title": "Calculation Notes",
+                "fields": [
+                    {
+                        "fieldName": "CalculationSheetNotes",
+                        "label": "Calculation Notes",
+                        "fieldType": "textarea",
+                        "grid":6,
+                        "type": "input",
+                        "defaultValue": "",
+                        "infoText": "",
+                        "dimensionName": "",
+                        "validation": [],
+                        "isNumbered": false,
+                        "dependsOn": "IsAutoNumberCSN"
+                    },
+                    {
+                        "fieldName": "IsAutoNumberCSN",
+                        "label": "Auto Number Notes?",
+                        "fieldType": "checkbox",
+                        "grid":6,
+                        "type": "input",
+                        "defaultValue": false,
+                        "infoText": "",
+                        "dimensionName": "",
+                        "validation": []
+                    }
+                ]
+            },
+            {
+                "title": "Drawing Sheet Notes",
+                "fields": [
+                    {
+                        "fieldName": "DrawingSheetNotes",
+                        "label": "Drawing Sheet Notes",
+                        "fieldType": "textarea",
+                        "grid":6,
+                        "type": "input",
+                        "defaultValue": "",
+                        "infoText": "",
+                        "dimensionName": "",
+                        "validation": [],
+                        "isNumbered": false,
+                        "dependsOn": "IsAutoNumberDWSN"
+                    },
+                    {
+                        "fieldName": "IsAutoNumberDWSN",
+                        "label": "Auto Number Notes?",
+                        "fieldType": "checkbox",
+                        "grid":6,
+                        "type": "input",
+                        "defaultValue": false,
+                        "infoText": "",
+                        "dimensionName": "",
+                        "validation": []
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,8 @@
+.logo {
+    height: 80px;
+    text-align: center;
+}
+
+#toggleLayout, #toggleLayout + label {
+    cursor: pointer;
+}

@@ -1,0 +1,29 @@
+.content-container .nav-link[role=tab], .content-container [role=tab]:hover, .content-container [role=tab]:active, .content-container [role=tab]:focus {
+    color: #000;
+    cursor: pointer;
+}
+
+.content-container .nav-link {
+    border-bottom: 1px solid #c0c0c0;
+    border-left: 1rem solid #dc3545;
+}
+
+.content-container .nav-link.active, .content-container .nav-link.completed {
+    border-left: 1rem solid #198754;
+}
+
+.content-container .nav-link.optional {
+    border-left: 1rem solid #000;
+}
+
+.card {
+    border-radius: 0;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0;
+    cursor: pointer;
+}
+
+.card:hover, .card.active {
+    background-color: #198754;
+    color: #fff;
+}
